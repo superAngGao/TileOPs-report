@@ -109,8 +109,9 @@ jobs:
           mkdir -p "${REPORT_DIR}"
           echo "report_dir=${REPORT_DIR}" >> "$GITHUB_OUTPUT"
 
-          cp dl/op_test/test_results.xml        "${REPORT_DIR}/"            2>/dev/null || true
-          cp dl/op_test/tileops_op_test.log      "${REPORT_DIR}/test_output.log" 2>/dev/null || true
+          cp dl/op_test/test_results.xml         "${REPORT_DIR}/"                    2>/dev/null || true
+          cp dl/op_test/tileops_op_test.log      "${REPORT_DIR}/test_output.log"     2>/dev/null || true
+          cp dl/benchmark/tileops_benchmarks.log "${REPORT_DIR}/tileops_benchmarks.log" 2>/dev/null || true
           cp dl/benchmark/tileops_benchmarks.log "${REPORT_DIR}/benchmark_report.md" 2>/dev/null || true
 
           TEST_EXIT=$(python3 -c "
@@ -158,6 +159,19 @@ jobs:
             --html-output  "${{ steps.prep.outputs.report_dir }}/report.html" \
             --progress-json "${{ steps.prep.outputs.report_dir }}/progress.json"
 
+      - name: Prune reports older than 21 days
+        run: |
+          CUTOFF=$(date -d "21 days ago" +%Y%m%d)
+          for dir in _gh_pages/nightly/*/; do
+            dirname=$(basename "${dir}")
+            # Directory names are YYYYMMDD_HHMMSS; compare date prefix
+            dir_date="${dirname:0:8}"
+            if [[ "${dir_date}" =~ ^[0-9]{8}$ ]] && [ "${dir_date}" -lt "${CUTOFF}" ]; then
+              echo "Removing old report: ${dirname}"
+              rm -rf "${dir}"
+            fi
+          done
+
       - name: Generate index.html
         run: |
           python scripts/gen_index.py \
@@ -165,13 +179,14 @@ jobs:
             --output      _gh_pages/nightly/index.html \
             --repo-url    "https://github.com/tile-ai/TileOPs"
 
-      - name: Push to gh-pages
+      - name: Push to gh-pages (orphan)
         run: |
           cd _gh_pages
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan new_gh_pages
           git add -A
-          git commit -m "nightly: ${{ steps.prep.outputs.date }} (run ${{ steps.run.outputs.run_id }})" \
-            || echo "nothing to commit"
-          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
+          git commit -m "nightly: ${{ steps.prep.outputs.date }} (run ${{ steps.run.outputs.run_id }})"
+          git push --force \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
             HEAD:gh-pages
