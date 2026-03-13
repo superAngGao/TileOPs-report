@@ -1,0 +1,177 @@
+name: Nightly Report
+
+on:
+  schedule:
+    - cron: "0 21 * * *"   # 21:00 UTC daily, ~3h after TileOPs nightly (18:00 UTC)
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "TileOPs nightly run ID (leave empty for latest)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nightly-report
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout report repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Find target nightly run
+        id: run
+        run: |
+          if [ -n "${{ github.event.inputs.run_id }}" ]; then
+            RUN_ID="${{ github.event.inputs.run_id }}"
+          else
+            RUN_ID=$(gh run list \
+              --repo tile-ai/TileOPs \
+              --workflow nightly.yml \
+              --status completed \
+              --limit 1 \
+              --json databaseId \
+              -q '.[0].databaseId')
+          fi
+
+          if [ -z "${RUN_ID}" ]; then
+            echo "::error::No completed nightly run found."
+            exit 1
+          fi
+
+          echo "run_id=${RUN_ID}" >> "$GITHUB_OUTPUT"
+          echo "Using nightly run: ${RUN_ID}"
+
+          gh run view "${RUN_ID}" \
+            --repo tile-ai/TileOPs \
+            --json headSha,createdAt,conclusion \
+            -q '"sha=\(.headSha)\nconclusion=\(.conclusion)"' \
+            >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download op_test artifact
+        uses: dawidd6/action-download-artifact@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo: tile-ai/TileOPs
+          run_id: ${{ steps.run.outputs.run_id }}
+          name_is_regexp: true
+          name: tileops_op_test_.*
+          path: dl/op_test/
+          if_no_artifact_found: warn
+
+      - name: Download benchmark artifact
+        uses: dawidd6/action-download-artifact@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo: tile-ai/TileOPs
+          run_id: ${{ steps.run.outputs.run_id }}
+          name_is_regexp: true
+          name: tileops_benchmark_.*
+          path: dl/benchmark/
+          if_no_artifact_found: warn
+
+      - name: Checkout TileOPs source
+        uses: actions/checkout@v4
+        with:
+          repository: tile-ai/TileOPs
+          path: TileOPs/
+          fetch-depth: 1
+
+      - name: Checkout existing gh-pages
+        run: |
+          git clone --depth 1 --branch gh-pages \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
+            _gh_pages 2>/dev/null \
+            || { mkdir -p _gh_pages/nightly && echo "(gh-pages branch not found, starting fresh)"; }
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Prepare report directory
+        id: prep
+        run: |
+          DATE=$(date +%Y%m%d_%H%M%S)
+          echo "date=${DATE}" >> "$GITHUB_OUTPUT"
+
+          REPORT_DIR="_gh_pages/nightly/${DATE}"
+          mkdir -p "${REPORT_DIR}"
+          echo "report_dir=${REPORT_DIR}" >> "$GITHUB_OUTPUT"
+
+          cp dl/op_test/test_results.xml        "${REPORT_DIR}/"            2>/dev/null || true
+          cp dl/op_test/tileops_op_test.log      "${REPORT_DIR}/test_output.log" 2>/dev/null || true
+          cp dl/benchmark/tileops_benchmarks.log "${REPORT_DIR}/benchmark_report.md" 2>/dev/null || true
+
+          TEST_EXIT=$(python3 -c "
+          import xml.etree.ElementTree as ET
+          try:
+            root = ET.parse('${REPORT_DIR}/test_results.xml').getroot()
+            suites = list(root) if root.tag == 'testsuites' else [root]
+            fails = sum(int(s.get('failures',0))+int(s.get('errors',0)) for s in suites)
+            print(1 if fails > 0 else 0)
+          except: print(1)
+          " 2>/dev/null || echo 1)
+          echo "test_exit=${TEST_EXIT}" >> "$GITHUB_OUTPUT"
+
+          BENCH_EXIT=$(python3 -c "
+          import xml.etree.ElementTree as ET
+          try:
+            root = ET.parse('dl/benchmark/bench_results.xml').getroot()
+            suites = list(root) if root.tag == 'testsuites' else [root]
+            fails = sum(int(s.get('failures',0))+int(s.get('errors',0)) for s in suites)
+            print(1 if fails > 0 else 0)
+          except: print(1)
+          " 2>/dev/null || echo 1)
+          echo "bench_exit=${BENCH_EXIT}" >> "$GITHUB_OUTPUT"
+
+      - name: Run fetch_progress.py
+        continue-on-error: true
+        run: |
+          python scripts/fetch_progress.py \
+            --repo-dir   TileOPs/ \
+            --manifest   scripts/op_manifest.json \
+            --test-xml   "${{ steps.prep.outputs.report_dir }}/test_results.xml" \
+            --bench-xml  dl/benchmark/bench_results.xml \
+            --output     "${{ steps.prep.outputs.report_dir }}/progress.json"
+
+      - name: Run generate_report.py
+        continue-on-error: true
+        run: |
+          python scripts/generate_report.py \
+            --date         "${{ steps.prep.outputs.date }}" \
+            --commit       "${{ steps.run.outputs.sha }}" \
+            --report-dir   "${{ steps.prep.outputs.report_dir }}" \
+            --test-exit    "${{ steps.prep.outputs.test_exit }}" \
+            --bench-exit   "${{ steps.prep.outputs.bench_exit }}" \
+            --output       "${{ steps.prep.outputs.report_dir }}/report.md" \
+            --html-output  "${{ steps.prep.outputs.report_dir }}/report.html" \
+            --progress-json "${{ steps.prep.outputs.report_dir }}/progress.json"
+
+      - name: Generate index.html
+        run: |
+          python scripts/gen_index.py \
+            --nightly-dir _gh_pages/nightly \
+            --output      _gh_pages/nightly/index.html \
+            --repo-url    "https://github.com/tile-ai/TileOPs"
+
+      - name: Push to gh-pages
+        run: |
+          cd _gh_pages
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "nightly: ${{ steps.prep.outputs.date }} (run ${{ steps.run.outputs.run_id }})" \
+            || echo "nothing to commit"
+          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
+            HEAD:gh-pages
