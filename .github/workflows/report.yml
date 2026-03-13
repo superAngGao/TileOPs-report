@@ -2,7 +2,7 @@ name: Nightly Report
 
 on:
   schedule:
-    - cron: "0 21 * * *"   # 21:00 UTC daily, ~3h after TileOPs nightly (18:00 UTC)
+    - cron: "0 22 * * *"   # 22:00 UTC daily, ~4h after TileOPs nightly (18:00 UTC)
   workflow_dispatch:
     inputs:
       run_id:
