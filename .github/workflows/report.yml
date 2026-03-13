@@ -159,9 +159,9 @@ jobs:
             --html-output  "${{ steps.prep.outputs.report_dir }}/report.html" \
             --progress-json "${{ steps.prep.outputs.report_dir }}/progress.json"
 
-      - name: Prune reports older than 21 days
+      - name: Prune reports older than 14 days
         run: |
-          CUTOFF=$(date -d "21 days ago" +%Y%m%d)
+          CUTOFF=$(date -d "14 days ago" +%Y%m%d)
           for dir in _gh_pages/nightly/*/; do
             dirname=$(basename "${dir}")
             # Directory names are YYYYMMDD_HHMMSS; compare date prefix
