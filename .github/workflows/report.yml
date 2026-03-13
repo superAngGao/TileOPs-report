@@ -30,6 +30,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install Python dependencies
+        run: pip install anthropic
+
       - name: Find target nightly run
         id: run
         run: |
@@ -146,18 +149,31 @@ jobs:
             --bench-xml  dl/benchmark/bench_results.xml \
             --output     "${{ steps.prep.outputs.report_dir }}/progress.json"
 
+      - name: Run analyze_report.py
+        continue-on-error: true
+        run: |
+          python scripts/analyze_report.py \
+            --progress-json "${{ steps.prep.outputs.report_dir }}/progress.json" \
+            --test-xml      "${{ steps.prep.outputs.report_dir }}/test_results.xml" \
+            --bench-log     "${{ steps.prep.outputs.report_dir }}/tileops_benchmarks.log" \
+            --output        "${{ steps.prep.outputs.report_dir }}/analysis.md"
+        env:
+          ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+
       - name: Run generate_report.py
         continue-on-error: true
         run: |
           python scripts/generate_report.py \
-            --date         "${{ steps.prep.outputs.date }}" \
-            --commit       "${{ steps.run.outputs.sha }}" \
-            --report-dir   "${{ steps.prep.outputs.report_dir }}" \
-            --test-exit    "${{ steps.prep.outputs.test_exit }}" \
-            --bench-exit   "${{ steps.prep.outputs.bench_exit }}" \
-            --output       "${{ steps.prep.outputs.report_dir }}/report.md" \
-            --html-output  "${{ steps.prep.outputs.report_dir }}/report.html" \
-            --progress-json "${{ steps.prep.outputs.report_dir }}/progress.json"
+            --date          "${{ steps.prep.outputs.date }}" \
+            --commit        "${{ steps.run.outputs.sha }}" \
+            --report-dir    "${{ steps.prep.outputs.report_dir }}" \
+            --test-exit     "${{ steps.prep.outputs.test_exit }}" \
+            --bench-exit    "${{ steps.prep.outputs.bench_exit }}" \
+            --output        "${{ steps.prep.outputs.report_dir }}/report.md" \
+            --html-output   "${{ steps.prep.outputs.report_dir }}/report.html" \
+            --progress-json "${{ steps.prep.outputs.report_dir }}/progress.json" \
+            --analysis-md   "${{ steps.prep.outputs.report_dir }}/analysis.md"
 
       - name: Prune reports older than 14 days
         run: |
