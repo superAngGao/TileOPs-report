@@ -31,7 +31,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install Python dependencies
-        run: pip install anthropic
+        run: pip install anthropic pyyaml
 
       - name: Find target nightly run
         id: run
@@ -64,7 +64,28 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Checkout existing gh-pages
+        run: |
+          git clone --depth 1 --branch gh-pages \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
+            _gh_pages 2>/dev/null \
+            || { mkdir -p _gh_pages/nightly && echo "(gh-pages branch not found, starting fresh)"; }
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for duplicate run
+        id: dedup
+        run: |
+          RUN_ID="${{ steps.run.outputs.run_id }}"
+          if grep -rl "^${RUN_ID}$" _gh_pages/nightly/ 2>/dev/null | grep -q "run_id.txt"; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Run ${RUN_ID} already processed — skipping."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Download op_test artifact
+        if: steps.dedup.outputs.skip != 'true'
         uses: dawidd6/action-download-artifact@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -76,6 +97,7 @@ jobs:
           if_no_artifact_found: warn
 
       - name: Download benchmark artifact
+        if: steps.dedup.outputs.skip != 'true'
         uses: dawidd6/action-download-artifact@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -87,22 +109,16 @@ jobs:
           if_no_artifact_found: warn
 
       - name: Checkout TileOPs source
+        if: steps.dedup.outputs.skip != 'true'
         uses: actions/checkout@v4
         with:
           repository: tile-ai/TileOPs
           path: TileOPs/
           fetch-depth: 1
-
-      - name: Checkout existing gh-pages
-        run: |
-          git clone --depth 1 --branch gh-pages \
-            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
-            _gh_pages 2>/dev/null \
-            || { mkdir -p _gh_pages/nightly && echo "(gh-pages branch not found, starting fresh)"; }
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Prepare report directory
+        if: steps.dedup.outputs.skip != 'true'
         id: prep
         run: |
           DATE=$(date +%Y%m%d_%H%M%S)
@@ -111,6 +127,8 @@ jobs:
           REPORT_DIR="_gh_pages/nightly/${DATE}"
           mkdir -p "${REPORT_DIR}"
           echo "report_dir=${REPORT_DIR}" >> "$GITHUB_OUTPUT"
+
+          echo "${{ steps.run.outputs.run_id }}" > "${REPORT_DIR}/run_id.txt"
 
           cp dl/op_test/test_results.xml         "${REPORT_DIR}/"                    2>/dev/null || true
           cp dl/op_test/tileops_op_test.log      "${REPORT_DIR}/test_output.log"     2>/dev/null || true
@@ -140,6 +158,7 @@ jobs:
           echo "bench_exit=${BENCH_EXIT}" >> "$GITHUB_OUTPUT"
 
       - name: Run fetch_progress.py
+        if: steps.dedup.outputs.skip != 'true'
         continue-on-error: true
         run: |
           python scripts/fetch_progress.py \
@@ -150,6 +169,7 @@ jobs:
             --output     "${{ steps.prep.outputs.report_dir }}/progress.json"
 
       - name: Run analyze_report.py
+        if: steps.dedup.outputs.skip != 'true'
         continue-on-error: true
         run: |
           python scripts/analyze_report.py \
@@ -161,7 +181,51 @@ jobs:
           ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
 
+      - name: Initialize registry if missing
+        if: steps.dedup.outputs.skip != 'true'
+        continue-on-error: true
+        run: |
+          if [ ! -f scripts/op_registry.json ] || [ ! -d scripts/op_data ]; then
+            echo "op_registry.json 不存在，使用 --skip-claude 生成骨架..."
+            python scripts/bootstrap_registry.py \
+              --manifest    scripts/op_manifest.json \
+              --repo-dir    TileOPs/ \
+              --registry    scripts/op_registry.json \
+              --op-data-dir scripts/op_data/ \
+              --skip-claude
+          fi
+
+      - name: Update op registry from PRs and nightly results
+        if: steps.dedup.outputs.skip != 'true'
+        continue-on-error: true
+        run: |
+          python scripts/update_registry.py \
+            --registry     scripts/op_registry.json \
+            --op-data-dir  scripts/op_data/ \
+            --test-xml     "${{ steps.prep.outputs.report_dir }}/test_results.xml" \
+            --bench-log    "${{ steps.prep.outputs.report_dir }}/tileops_benchmarks.log" \
+            --tileops-repo tile-ai/TileOPs
+        env:
+          ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit registry updates to main
+        if: steps.dedup.outputs.skip != 'true'
+        continue-on-error: true
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/op_registry.json scripts/op_data/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "Registry unchanged."
+          else
+            git commit -m "registry: nightly update ${{ steps.prep.outputs.date }}"
+            git push origin main
+          fi
+
       - name: Run generate_report.py
+        if: steps.dedup.outputs.skip != 'true'
         continue-on-error: true
         run: |
           python scripts/generate_report.py \
@@ -176,6 +240,7 @@ jobs:
             --analysis-md   "${{ steps.prep.outputs.report_dir }}/analysis.md"
 
       - name: Prune reports older than 14 days
+        if: steps.dedup.outputs.skip != 'true'
         run: |
           CUTOFF=$(date -d "14 days ago" +%Y%m%d)
           for dir in _gh_pages/nightly/*/; do
@@ -189,6 +254,7 @@ jobs:
           done
 
       - name: Generate index.html
+        if: steps.dedup.outputs.skip != 'true'
         run: |
           python scripts/gen_index.py \
             --nightly-dir _gh_pages/nightly \
@@ -196,6 +262,7 @@ jobs:
             --repo-url    "https://github.com/tile-ai/TileOPs"
 
       - name: Push to gh-pages (orphan)
+        if: steps.dedup.outputs.skip != 'true'
         run: |
           cd _gh_pages
           git config user.name  "github-actions[bot]"
