@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang='zh-CN'><head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>TileOPs 夜测报告 · 20260313_131549</title>
+<style>
+:root{--green:#22c55e;--yellow:#f59e0b;--red:#ef4444;--gray:#6b7280;--blue:#3b82f6;
+      --bg:#f9fafb;--card:#fff;--border:#e5e7eb;--text:#111827;--muted:#6b7280}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);padding:1rem}
+h1{font-size:1.6rem;font-weight:700;margin-bottom:.25rem}
+h2{font-size:1.1rem;font-weight:600;margin:1.5rem 0 .5rem;border-bottom:2px solid var(--border);padding-bottom:.25rem}
+h3{font-size:.95rem;font-weight:600;margin:.75rem 0 .25rem}
+.meta{color:var(--muted);font-size:.8rem;margin-bottom:1rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:.5rem;padding:1rem;margin-bottom:1rem}
+.badge{display:inline-block;padding:.15rem .5rem;border-radius:.25rem;font-size:.75rem;font-weight:600}
+.badge-pass{background:#dcfce7;color:#166534}.badge-fail{background:#fee2e2;color:#991b1b}
+.badge-skip{background:#fef3c7;color:#92400e}.badge-gray{background:#f3f4f6;color:#374151}
+table{width:100%;border-collapse:collapse;font-size:.82rem;margin:.5rem 0}
+th{background:#f3f4f6;text-align:left;padding:.4rem .6rem;border:1px solid var(--border);font-weight:600}
+td{padding:.35rem .6rem;border:1px solid var(--border);vertical-align:middle}
+tr:nth-child(even){background:#fafafa}
+.prog-wrap{background:#e5e7eb;border-radius:9999px;height:.75rem;min-width:80px;overflow:hidden}
+.prog-bar{height:100%;border-radius:9999px;transition:width .3s}
+.prog-done{background:var(--green)}.prog-impl{background:var(--yellow)}.prog-miss{background:#d1d5db}
+.icon-done{color:var(--green)}.icon-part{color:var(--yellow)}.icon-miss{color:var(--gray)}
+details>summary{cursor:pointer;user-select:none;padding:.35rem .5rem;border-radius:.25rem;font-size:.85rem}
+details>summary:hover{background:#f3f4f6}
+details[open]>summary{font-weight:600}
+.op-table td:nth-child(3),.op-table td:nth-child(4),.op-table td:nth-child(5){text-align:center;width:60px}
+pre{background:#1e1e1e;color:#d4d4d4;padding:.75rem;border-radius:.375rem;overflow-x:auto;font-size:.78rem;line-height:1.5}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.75rem;margin:.75rem 0}
+.stat-box{background:var(--card);border:1px solid var(--border);border-radius:.375rem;padding:.75rem;text-align:center}
+.stat-box .num{font-size:1.6rem;font-weight:700;line-height:1}.stat-box .lbl{font-size:.72rem;color:var(--muted);margin-top:.2rem}
+</style>
+<script>
+function toggle(id){var el=document.getElementById(id);el.open=!el.open}
+</script>
+</head><body>
+<h1>TileOPs 夜测综合报告</h1>
+<p class='meta'>日期: 20260313_131549 &nbsp;|&nbsp; Commit: <code>4d65362c5878dc31c77fcc7cc3c7932026c97f04</code> &nbsp;|&nbsp; 生成时间: 2026-03-13 13:15:50</p>
+<div class='card'>
+<h2 style='margin-top:0'>总体状态</h2>
+<div class='summary-grid'>
+<div class='stat-box'><div class='num'><span class='badge badge-fail'>FAIL</span></div><div class='lbl'>综合结果</div></div>
+<div class='stat-box'><div class='num'><span class='badge badge-fail'>FAIL</span></div><div class='lbl'>测试 (pytest)</div></div>
+<div class='stat-box'><div class='num'><span class='badge badge-skip'>FAIL/SKIP</span></div><div class='lbl'>Benchmark</div></div>
+</div></div>
+<div class='card'>
+<h2 style='margin-top:0'>开发进度</h2>
+<p style='font-size:.82rem;color:var(--muted)'>数据来源: <a href='https://github.com/tile-ai/TileOPs/issues/407'>#407</a> &nbsp;·&nbsp; 更新: 2026-03-13T13:15:50Z</p>
+<div class='summary-grid' style='margin-top:.75rem'>
+<div class='stat-box'><div class='num'>0/186</div><div class='lbl'>已完成 ops</div></div>
+<div class='stat-box'><div class='num' style='color:var(--yellow)'>102</div><div class='lbl'>已实现 (含未测)</div></div>
+<div class='stat-box'><div class='num' style='color:var(--blue)'>0</div><div class='lbl'>测试通过</div></div>
+<div class='stat-box'><div class='num'>0.0%</div><div class='lbl'>完成率</div></div>
+</div>
+<div style='margin:.75rem 0'>
+<div class="prog-wrap" title="0/186 done, 102 impl"><div class="prog-bar prog-done" style="width:0.0%;float:left"></div><div class="prog-bar prog-impl" style="width:54.8%;float:left"></div></div>
+<div style='font-size:.75rem;color:var(--muted);margin-top:.25rem'><span style='color:var(--green)'>■</span> 完成 &nbsp;<span style='color:var(--yellow)'>■</span> 已实现未达标 &nbsp;<span style='color:#d1d5db'>■</span> 未开始</div>
+</div>
+<table>
+<thead><tr><th>#</th><th>Category</th><th>Ops</th><th>Difficulty</th><th>Issue</th><th>进度</th><th>状态</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><b>Elementwise</b></td><td>72</td><td>⭐</td><td><a href='https://github.com/tile-ai/TileOPs/issues/397'>#397</a></td><td style='min-width:120px'><div class="prog-wrap" title="0/72 done, 55 impl"><div class="prog-bar prog-done" style="width:0.0%;float:left"></div><div class="prog-bar prog-impl" style="width:76.4%;float:left"></div></div><div style='font-size:.72rem;color:var(--muted)'>0/72</div></td><td><span class="icon-part">🔧 In Progress (0/72)</span></td></tr>
+<tr><td>2</td><td><b>Reduce</b></td><td>20</td><td>⭐</td><td><a href='https://github.com/tile-ai/TileOPs/issues/398'>#398</a></td><td style='min-width:120px'><div class="prog-wrap" title="0/20 done, 15 impl"><div class="prog-bar prog-done" style="width:0.0%;float:left"></div><div class="prog-bar prog-impl" style="width:75.0%;float:left"></div></div><div style='font-size:.72rem;color:var(--muted)'>0/20</div></td><td><span class="icon-part">🔧 In Progress (0/20)</span></td></tr>
+<tr><td>3</td><td><b>Norm</b></td><td>10</td><td>⭐</td><td><a href='https://github.com/tile-ai/TileOPs/issues/399'>#399</a></td><td style='min-width:120px'><div class="prog-wrap" title="0/10 done, 9 impl"><div class="prog-bar prog-done" style="width:0.0%;float:left"></div><div class="prog-bar prog-impl" style="width:90.0%;float:left"></div></div><div style='font-size:.72rem;color:var(--muted)'>0/10</div></td><td><span class="icon-part">🔧 In Progress (0/10)</span></td></tr>
+<tr><td>4</td><td><b>Conv &amp; Pooling</b></td><td>16</td><td>⭐</td><td><a href='https://github.com/tile-ai/TileOPs/issues/402'>#402</a></td><td style='min-width:120px'><div class="prog-wrap" title="0/16 done, 0 impl"><div class="prog-bar prog-done" style="width:0.0%;float:left"></div><div class="prog-bar prog-impl" style="width:0.0%;float:left"></div></div><div style='font-size:.72rem;color:var(--muted)'>0/16</div></td><td><span class="icon-miss">🔲 Not Started</span></td></tr>
+<tr><td>5</td><td><b>GEMM</b></td><td>19</td><td>⭐⭐</td><td><a href='https://github.com/tile-ai/TileOPs/issues/400'>#400</a></td><td style='min-width:120px'><div class="prog-wrap" title="0/19 done, 9 impl"><div class="prog-bar prog-done" style="width:0.0%;float:left"></div><div class="prog-bar prog-impl" style="width:47.4%;float:left"></div></div><div style='font-size:.72rem;color:var(--muted)'>0/19</div></td><td><span class="icon-part">🔧 In Progress (0/19)</span></td></tr>
+<tr><td>6</td><td><b>Quantize</b></td><td>10</td><td>⭐⭐</td><td><a href='https://github.com/tile-ai/TileOPs/issues/401'>#401</a></td><td style='min-width:120px'><div class="prog-wrap" title="0/10 done, 1 impl"><div class="prog-bar prog-done" style="width:0.0%;float:left"></div><div class="prog-bar prog-impl" style="width:10.0%;float:left"></div></div><div style='font-size:.72rem;color:var(--muted)'>0/10</div></td><td><span class="icon-part">🔧 In Progress (0/10)</span></td></tr>
+<tr><td>7</td><td><b>Sampling</b></td><td>7</td><td>⭐⭐</td><td><a href='https://github.com/tile-ai/TileOPs/issues/426'>#426</a></td><td style='min-width:120px'><div class="prog-wrap" title="0/7 done, 1 impl"><div class="prog-bar prog-done" style="width:0.0%;float:left"></div><div class="prog-bar prog-impl" style="width:14.3%;float:left"></div></div><div style='font-size:.72rem;color:var(--muted)'>0/7</div></td><td><span class="icon-part">🔧 In Progress (0/7)</span></td></tr>
+<tr><td>8</td><td><b>Flash Attention</b></td><td>16</td><td>⭐⭐⭐</td><td><a href='https://github.com/tile-ai/TileOPs/issues/403'>#403</a></td><td style='min-width:120px'><div class="prog-wrap" title="0/16 done, 8 impl"><div class="prog-bar prog-done" style="width:0.0%;float:left"></div><div class="prog-bar prog-impl" style="width:50.0%;float:left"></div></div><div style='font-size:.72rem;color:var(--muted)'>0/16</div></td><td><span class="icon-part">🔧 In Progress (0/16)</span></td></tr>
+<tr><td>9</td><td><b>MoE</b></td><td>6</td><td>⭐⭐⭐</td><td><a href='https://github.com/tile-ai/TileOPs/issues/404'>#404</a></td><td style='min-width:120px'><div class="prog-wrap" title="0/6 done, 0 impl"><div class="prog-bar prog-done" style="width:0.0%;float:left"></div><div class="prog-bar prog-impl" style="width:0.0%;float:left"></div></div><div style='font-size:.72rem;color:var(--muted)'>0/6</div></td><td><span class="icon-miss">🔲 Not Started</span></td></tr>
+<tr><td>10</td><td><b>Linear Attention</b></td><td>8</td><td>⭐⭐⭐</td><td><a href='https://github.com/tile-ai/TileOPs/issues/405'>#405</a></td><td style='min-width:120px'><div class="prog-wrap" title="0/8 done, 4 impl"><div class="prog-bar prog-done" style="width:0.0%;float:left"></div><div class="prog-bar prog-impl" style="width:50.0%;float:left"></div></div><div style='font-size:.72rem;color:var(--muted)'>0/8</div></td><td><span class="icon-part">🔧 In Progress (0/8)</span></td></tr>
+<tr><td>11</td><td><b>SSM</b></td><td>2</td><td>⭐⭐⭐</td><td><a href='https://github.com/tile-ai/TileOPs/issues/406'>#406</a></td><td style='min-width:120px'><div class="prog-wrap" title="0/2 done, 0 impl"><div class="prog-bar prog-done" style="width:0.0%;float:left"></div><div class="prog-bar prog-impl" style="width:0.0%;float:left"></div></div><div style='font-size:.72rem;color:var(--muted)'>0/2</div></td><td><span class="icon-miss">🔲 Not Started</span></td></tr>
+</tbody></table>
+
+<h3 style='margin-top:1rem'>各分类 op 明细</h3>
+<details>
+<summary>Elementwise — 0/72 ops (0%) <span class="icon-part">🔧 In Progress (0/72)</span></summary>
+<table class='op-table'>
+<thead><tr><th>Op</th><th>Sub-category</th><th>实现</th><th>测试</th><th>Bench</th></tr></thead>
+<tbody>
+<tr><td><code>add</code></td><td>binary_arith</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>sub</code></td><td>binary_arith</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>mul</code></td><td>binary_arith</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>div</code></td><td>binary_arith</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>remainder</code></td><td>binary_arith</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>pow</code></td><td>binary_arith</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>floor_divide</code></td><td>binary_arith</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>lerp</code></td><td>binary_arith</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>maximum</code></td><td>binary_arith</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>minimum</code></td><td>binary_arith</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>exp</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>log</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>sqrt</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>rsqrt</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>abs</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>neg</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>reciprocal</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>sign</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>sin</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>cos</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>floor</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>ceil</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>round</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>trunc</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>erf</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>log1p</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>expm1</code></td><td>unary_math</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>relu</code></td><td>activation</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>gelu</code></td><td>activation</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>silu</code></td><td>activation</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>sigmoid</code></td><td>activation</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>tanh</code></td><td>activation</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>leaky_relu</code></td><td>activation</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>elu</code></td><td>activation</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>selu</code></td><td>activation</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>hardswish</code></td><td>activation</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>hardsigmoid</code></td><td>activation</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>hardtanh</code></td><td>activation</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>softplus</code></td><td>activation</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>mish</code></td><td>activation</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>prelu</code></td><td>activation</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>silu_and_mul</code></td><td>fused_gated_activation</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>gelu_and_mul</code></td><td>fused_gated_activation</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>gelu_tanh_and_mul</code></td><td>fused_gated_activation</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>eq</code></td><td>comparison</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>ne</code></td><td>comparison</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>gt</code></td><td>comparison</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>lt</code></td><td>comparison</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>ge</code></td><td>comparison</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>le</code></td><td>comparison</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>bitwise_and</code></td><td>bitwise</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>bitwise_or</code></td><td>bitwise</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>bitwise_xor</code></td><td>bitwise</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>bitwise_not</code></td><td>bitwise</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>logical_not</code></td><td>logical</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>logical_and</code></td><td>logical</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>logical_or</code></td><td>logical</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>where</code></td><td>special_elementwise</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>clamp</code></td><td>special_elementwise</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>masked_fill</code></td><td>special_elementwise</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>nan_to_num</code></td><td>special_elementwise</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>isnan</code></td><td>special_elementwise</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>isinf</code></td><td>special_elementwise</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>isfinite</code></td><td>special_elementwise</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>dropout</code></td><td>dropout</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>rope_neox</code></td><td>rope</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>rope_non_neox</code></td><td>rope</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>rope_llama31</code></td><td>rope</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>yarn_rope</code></td><td>rope</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>longrope</code></td><td>rope</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>alibi</code></td><td>alibi</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>sinusoidal</code></td><td>sinusoidal</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+</tbody></table></details>
+<details>
+<summary>Reduce — 0/20 ops (0%) <span class="icon-part">🔧 In Progress (0/20)</span></summary>
+<table class='op-table'>
+<thead><tr><th>Op</th><th>Sub-category</th><th>实现</th><th>测试</th><th>Bench</th></tr></thead>
+<tbody>
+<tr><td><code>sum</code></td><td>reduce</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>mean</code></td><td>reduce</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>amin</code></td><td>reduce</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>amax</code></td><td>reduce</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>prod</code></td><td>reduce</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>std</code></td><td>reduce</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>var</code></td><td>reduce</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>var_mean</code></td><td>reduce</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>softmax</code></td><td>softmax</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>log_softmax</code></td><td>softmax</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>logsumexp</code></td><td>softmax</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>argmax</code></td><td>argreduce</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>argmin</code></td><td>argreduce</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>cumsum</code></td><td>cumulative</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>cumprod</code></td><td>cumulative</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>any</code></td><td>logical_reduce</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>all</code></td><td>logical_reduce</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>l1_norm</code></td><td>linalg_vector_norm</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>l2_norm</code></td><td>linalg_vector_norm</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>inf_norm</code></td><td>linalg_vector_norm</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+</tbody></table></details>
+<details>
+<summary>Norm — 0/10 ops (0%) <span class="icon-part">🔧 In Progress (0/10)</span></summary>
+<table class='op-table'>
+<thead><tr><th>Op</th><th>Sub-category</th><th>实现</th><th>测试</th><th>Bench</th></tr></thead>
+<tbody>
+<tr><td><code>layer_norm</code></td><td>layer_norm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>batch_norm</code></td><td>batch_norm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>group_norm</code></td><td>group_norm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>instance_norm</code></td><td>instance_norm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>rms_norm</code></td><td>rms_norm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>qk_norm</code></td><td>qk_norm</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>ada_layer_norm</code></td><td>ada_layer_norm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>ada_layer_norm_zero</code></td><td>ada_layer_norm_zero</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>fused_add_layer_norm</code></td><td>fused_add_norm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>fused_add_rmsnorm</code></td><td>fused_add_norm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+</tbody></table></details>
+<details>
+<summary>Conv &amp; Pooling — 0/16 ops (0%) <span class="icon-miss">🔲 Not Started</span></summary>
+<table class='op-table'>
+<thead><tr><th>Op</th><th>Sub-category</th><th>实现</th><th>测试</th><th>Bench</th></tr></thead>
+<tbody>
+<tr><td><code>conv1d</code></td><td>conv</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>conv2d</code></td><td>conv</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>conv3d</code></td><td>conv</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>conv_transpose1d</code></td><td>conv_transpose</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>conv_transpose2d</code></td><td>conv_transpose</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>depthwise_conv2d</code></td><td>depthwise</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>grouped_conv2d</code></td><td>grouped</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>dilated_conv2d</code></td><td>dilated</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>max_pool1d</code></td><td>max_pool</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>max_pool2d</code></td><td>max_pool</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>max_pool3d</code></td><td>max_pool</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>avg_pool1d</code></td><td>avg_pool</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>avg_pool2d</code></td><td>avg_pool</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>avg_pool3d</code></td><td>avg_pool</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>adaptive_avg_pool2d</code></td><td>adaptive_pool</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>adaptive_max_pool2d</code></td><td>adaptive_pool</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+</tbody></table></details>
+<details>
+<summary>GEMM — 0/19 ops (0%) <span class="icon-part">🔧 In Progress (0/19)</span></summary>
+<table class='op-table'>
+<thead><tr><th>Op</th><th>Sub-category</th><th>实现</th><th>测试</th><th>Bench</th></tr></thead>
+<tbody>
+<tr><td><code>gemm_fp16</code></td><td>gemm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>gemm_fp8</code></td><td>gemm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>gemm_fp8_block_scaled</code></td><td>gemm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>gemv_fp16</code></td><td>gemm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>gemv_fp8</code></td><td>gemm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>small_batch_gemm_fp16</code></td><td>gemm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>small_batch_gemm_fp8</code></td><td>gemm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>bmm_fp16</code></td><td>bmm</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>bmm_fp8</code></td><td>bmm</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>groupgemm_fp16</code></td><td>groupgemm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>groupgemm_fp8</code></td><td>groupgemm</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>outer</code></td><td>outer</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>w4a16</code></td><td>lowbit_gemm</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>w8a8</code></td><td>lowbit_gemm</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>w8a8_int8</code></td><td>lowbit_gemm</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>weight_only_int4</code></td><td>lowbit_gemm</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>fp4</code></td><td>lowbit_gemm</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>sparse_gemm_fp16</code></td><td>sparse_gemm_2_4</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>sparse_gemm_fp8</code></td><td>sparse_gemm_2_4</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+</tbody></table></details>
+<details>
+<summary>Quantize — 0/10 ops (0%) <span class="icon-part">🔧 In Progress (0/10)</span></summary>
+<table class='op-table'>
+<thead><tr><th>Op</th><th>Sub-category</th><th>实现</th><th>测试</th><th>Bench</th></tr></thead>
+<tbody>
+<tr><td><code>int8_per_tensor</code></td><td>int8_quantize</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>int8_per_channel</code></td><td>int8_quantize</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>int8_per_block</code></td><td>int8_quantize</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>smooth_quant</code></td><td>int8_quantize</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>int4_per_channel</code></td><td>int4_quantize</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>int4_per_block</code></td><td>int4_quantize</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>nf4</code></td><td>int4_quantize</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>fp8_per_tensor</code></td><td>fp8_quantize</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>fp8_per_block</code></td><td>fp8_quantize</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>fp8_cast_transpose</code></td><td>fp8_quantize</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+</tbody></table></details>
+<details>
+<summary>Sampling — 0/7 ops (0%) <span class="icon-part">🔧 In Progress (0/7)</span></summary>
+<table class='op-table'>
+<thead><tr><th>Op</th><th>Sub-category</th><th>实现</th><th>测试</th><th>Bench</th></tr></thead>
+<tbody>
+<tr><td><code>top_k</code></td><td>top_k</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>top_p</code></td><td>top_p</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>min_p</code></td><td>min_p</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>top_k_top_p</code></td><td>top_k_top_p</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>temperature_scale</code></td><td>temperature_scale</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>sampling_from_probs</code></td><td>sampling_from_probs</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>chain_speculative_sampling</code></td><td>chain_speculative_sampling</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+</tbody></table></details>
+<details>
+<summary>Flash Attention — 0/16 ops (0%) <span class="icon-part">🔧 In Progress (0/16)</span></summary>
+<table class='op-table'>
+<thead><tr><th>Op</th><th>Sub-category</th><th>实现</th><th>测试</th><th>Bench</th></tr></thead>
+<tbody>
+<tr><td><code>flash_prefill_fwd</code></td><td>flash_attention</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>flash_prefill_bwd</code></td><td>flash_attention</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>flash_prefill_varlen_fwd</code></td><td>flash_attention</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>flash_prefill_varlen_bwd</code></td><td>flash_attention</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>flash_decode_fwd</code></td><td>flash_attention</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>flash_decode_paged_fwd</code></td><td>flash_attention</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>flash_decode_varlen_fwd</code></td><td>flash_attention</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>flash_chunked_prefill_fwd</code></td><td>flash_attention</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>mla_prefill_fwd</code></td><td>mla</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>mla_prefill_bwd</code></td><td>mla</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>mla_decode_fwd</code></td><td>mla</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>mla_decode_paged_fwd</code></td><td>mla</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>nsa_prefill_fwd</code></td><td>nsa</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>nsa_decode_fwd</code></td><td>nsa</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>dsa_prefill_fwd</code></td><td>dsa</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>dsa_decode_fwd</code></td><td>dsa</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+</tbody></table></details>
+<details>
+<summary>MoE — 0/6 ops (0%) <span class="icon-miss">🔲 Not Started</span></summary>
+<table class='op-table'>
+<thead><tr><th>Op</th><th>Sub-category</th><th>实现</th><th>测试</th><th>Bench</th></tr></thead>
+<tbody>
+<tr><td><code>permute_align</code></td><td>permute_align</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>unpermute_depad</code></td><td>unpermute_depad</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>fused_moe_deepseek</code></td><td>fused_moe</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>fused_moe_glm</code></td><td>fused_moe</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>fused_moe_kimi</code></td><td>fused_moe</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>fused_moe_qwen</code></td><td>fused_moe</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+</tbody></table></details>
+<details>
+<summary>Linear Attention — 0/8 ops (0%) <span class="icon-part">🔧 In Progress (0/8)</span></summary>
+<table class='op-table'>
+<thead><tr><th>Op</th><th>Sub-category</th><th>实现</th><th>测试</th><th>Bench</th></tr></thead>
+<tbody>
+<tr><td><code>gated_deltanet_chunkwise</code></td><td>gated_deltanet</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>gated_deltanet_recurrence</code></td><td>gated_deltanet</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>deltanet_chunkwise</code></td><td>deltanet</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>deltanet_recurrence</code></td><td>deltanet</td><td><span style="color:var(--green)">✅</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>gla_chunkwise</code></td><td>gla</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>gla_recurrence</code></td><td>gla</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>retnet_chunkwise</code></td><td>retnet</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>retnet_recurrence</code></td><td>retnet</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+</tbody></table></details>
+<details>
+<summary>SSM — 0/2 ops (0%) <span class="icon-miss">🔲 Not Started</span></summary>
+<table class='op-table'>
+<thead><tr><th>Op</th><th>Sub-category</th><th>实现</th><th>测试</th><th>Bench</th></tr></thead>
+<tbody>
+<tr><td><code>mamba1</code></td><td>mamba1</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+<tr><td><code>mamba2</code></td><td>mamba2</td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--red)">❌</span></td><td><span style="color:var(--gray)">—</span></td></tr>
+</tbody></table></details>
+</div>
+<div class='card'>
+<h2 style='margin-top:0'>测试结果</h2>
+<p>测试结果文件未找到</p>
+</div>
+<div class='card'>
+<h2 style='margin-top:0'>Benchmark 结果</h2>
+<p>Benchmark 报告未生成（可能已跳过或运行失败）。</p>
+</div>
+</body></html>
