@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_binary_elementwise.py
 files_last_scanned: '2026-03-14T04:17:38Z'
 func_score: null
-func_score_notes: PR 标题表明已作为独立算子实现，但无测试状态和 bench 数据，无法评估功能完整性和性能。
+func_score_notes: PR 为新增特性（11 个独立 elementwise 算子），无测试状态和 bench 数据，功能完整性暂无法量化。
 func_score_updated: '2026-03-14'
 perf_score: null
 perf_details:
@@ -35,5 +35,5 @@ test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-14T04:36:07Z'
+last_updated: '2026-03-14T22:23:55Z'
 updated_by: claude-nightly

@@ -13,7 +13,7 @@ files:
   bench: []
 files_last_scanned: '2026-03-14T04:17:38Z'
 func_score: null
-func_score_notes: 测试状态和基准数据均缺失，无法评估功能完整性。
+func_score_notes: 无测试状态和 bench 数据，无法评估功能完整性；PR 标题显示为新增算子，当前分数均为 null。
 func_score_updated: '2026-03-14'
 perf_score: null
 perf_details:
@@ -33,5 +33,5 @@ test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-14T04:36:07Z'
+last_updated: '2026-03-14T22:23:55Z'
 updated_by: claude-nightly

@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_binary_arith.py
 files_last_scanned: '2026-03-14T04:17:38Z'
 func_score: null
-func_score_notes: 无测试状态和 benchmark 数据，PR 标题表明已实现，但无法评估权重超出 [0,1] 范围等边界情况。
+func_score_notes: 测试状态与 bench 数据均为 null，PR 仅涉及 benchmark 参数解耦，无法判断功能完整性。
 func_score_updated: '2026-03-14'
 perf_score: null
 perf_details:
@@ -35,5 +35,5 @@ test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-14T04:36:07Z'
+last_updated: '2026-03-14T22:23:55Z'
 updated_by: claude-nightly

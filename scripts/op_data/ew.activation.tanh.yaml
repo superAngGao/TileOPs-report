@@ -16,7 +16,7 @@ files:
   - benchmarks/ops/bench_activation.py
 files_last_scanned: '2026-03-14T04:17:38Z'
 func_score: null
-func_score_notes: PR 已提交但缺乏测试状态和 bench 数据，无法评估实际功能完整性。
+func_score_notes: 同属 benchmark 解耦 PR，缺乏测试结果和基准数据，无法评估。
 func_score_updated: '2026-03-14'
 perf_score: null
 perf_details:
@@ -36,5 +36,5 @@ test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-14T04:36:07Z'
+last_updated: '2026-03-14T22:23:55Z'
 updated_by: claude-nightly
