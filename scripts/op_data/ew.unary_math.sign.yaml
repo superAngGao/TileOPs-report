@@ -14,27 +14,27 @@ files:
   - tests/ops/test_unary_math.py::test_sign_edge
   bench:
   - benchmarks/ops/bench_binary_elementwise.py
-files_last_scanned: '2026-03-14T04:17:38Z'
+files_last_scanned: '2026-03-15T20:22:03Z'
 func_score: null
-func_score_notes: PR 标题显示新增 11 个独立算子并引入自定义签名，属于新增实现，但缺少测试结果与 bench 数据，功能完整性无法量化评分。
-func_score_updated: '2026-03-14'
+func_score_notes: ''
+func_score_updated: null
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: '2026-03-14'
+perf_score_updated: null
 has_bugs: null
 bugs: []
-kernel_last_updated: '2026-03-14T04:10:08Z'
-kernel_last_pr_number: 489
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/489
-kernel_last_pr_author: lcy-seso
-kernel_last_pr_title: '[Feat][Elementwise] Add 11 independent elementwise ops with custom signatures'
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
 test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-14T22:23:55Z'
-updated_by: claude-nightly
+last_updated: '2026-03-15T20:22:03Z'
+updated_by: bootstrap

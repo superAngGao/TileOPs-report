@@ -11,27 +11,27 @@ files:
   - tileops/ops/elementwise.py
   tests: []
   bench: []
-files_last_scanned: '2026-03-14T04:17:38Z'
+files_last_scanned: '2026-03-15T20:22:03Z'
 func_score: null
-func_score_notes: PR 为新增特性（11 个独立 elementwise 算子），无测试状态和 bench 数据，功能完整性暂无法量化。
-func_score_updated: '2026-03-14'
+func_score_notes: ''
+func_score_updated: null
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: '2026-03-14'
+perf_score_updated: null
 has_bugs: null
 bugs: []
-kernel_last_updated: '2026-03-14T04:10:08Z'
-kernel_last_pr_number: 489
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/489
-kernel_last_pr_author: lcy-seso
-kernel_last_pr_title: '[Feat][Elementwise] Add 11 independent elementwise ops with custom signatures'
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
 test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-14T22:23:55Z'
-updated_by: claude-nightly
+last_updated: '2026-03-15T20:22:03Z'
+updated_by: bootstrap
