@@ -18,25 +18,26 @@ files:
   - benchmarks/ops/bench_gqa.py
 files_last_scanned: '2026-03-15T20:22:03Z'
 func_score: null
-func_score_notes: ''
-func_score_updated: null
+func_score_notes: PR 修复了 MHA decode 自动调优对标量参数的失败问题，说明此前存在已知 bug，修复后状态待验证。
+func_score_updated: '2026-03-15'
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: null
+perf_score_updated: '2026-03-15'
 has_bugs: null
-bugs: []
-kernel_last_updated: null
-kernel_last_pr_number: null
-kernel_last_pr_url: null
-kernel_last_pr_author: null
-kernel_last_pr_title: null
+bugs:
+- auto-tuning 对标量参数处理存在历史 bug，已通过 PR 修复，需重新验证
+kernel_last_updated: '2026-03-15T11:06:14Z'
+kernel_last_pr_number: 518
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/518
+kernel_last_pr_author: superAngGao
+kernel_last_pr_title: '[Fix][MHA] Fix MHA decode auto-tuning failure for scalar params'
 test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-15T20:22:03Z'
-updated_by: bootstrap
+last_updated: '2026-03-15T22:26:29Z'
+updated_by: claude-nightly
