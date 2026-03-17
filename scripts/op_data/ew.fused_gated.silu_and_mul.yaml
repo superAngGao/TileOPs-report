@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_activation.py
 files_last_scanned: '2026-03-15T20:22:03Z'
 func_score: null
-func_score_notes: 无测试结果和 bench 数据，PR 标题与该算子无直接关联，无法评估功能完整性。
+func_score_notes: 无测试结果和 bench 数据，PR 为重构性变更，无法评估功能完整性。
 func_score_updated: '2026-03-17'
 perf_score: null
 perf_details:
@@ -26,14 +26,14 @@ perf_details:
 perf_score_updated: '2026-03-17'
 has_bugs: null
 bugs: []
-kernel_last_updated: '2026-03-17T02:43:28Z'
-kernel_last_pr_number: 539
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/539
+kernel_last_updated: '2026-03-17T07:47:09Z'
+kernel_last_pr_number: 535
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/535
 kernel_last_pr_author: lcy-seso
-kernel_last_pr_title: '[Perf][Elementwise] Optimize binary max/min kernels to close bandwidth gap with PyTorch'
+kernel_last_pr_title: '[Refactor][Elementwise] Extract shared _wrap_fp8_accumulation helper for fp8 kernels'
 test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-17T02:50:29Z'
+last_updated: '2026-03-17T12:42:59Z'
 updated_by: claude-nightly
