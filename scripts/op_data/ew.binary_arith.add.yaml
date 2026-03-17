@@ -37,5 +37,5 @@ test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-16T22:31:37Z'
-updated_by: claude-nightly
+last_updated: '2026-03-17T02:28:09Z'
+updated_by: nightly-auto
