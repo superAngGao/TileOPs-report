@@ -21,11 +21,16 @@
 
 import argparse
 import json
-import os
 import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+
+from claude_utils import (
+    call_claude_json,
+    get_api_config,
+    SYSTEM_KERNEL_MAPPER,
+)
 
 try:
     import yaml as _yaml
@@ -133,41 +138,8 @@ def auto_map_op(op: dict, repo_dir: str, category: dict) -> dict:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 2. Claude API 调用
+# 2. Claude API — Kernel 文件识别
 # ─────────────────────────────────────────────────────────────────────────────
-
-def call_claude(prompt: str, model: str, api_key: str, base_url: str | None,
-                max_tokens: int = 4096) -> str:
-    import anthropic
-    kwargs: dict = {"api_key": api_key}
-    if base_url:
-        kwargs["base_url"] = base_url
-    client = anthropic.Anthropic(**kwargs)
-    msg = client.messages.create(
-        model=model,
-        max_tokens=max_tokens,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    return msg.content[0].text
-
-
-def extract_json(text: str) -> dict:
-    """从 Claude 输出中提取 JSON 对象。"""
-    # 直接解析
-    try:
-        return json.loads(text.strip())
-    except json.JSONDecodeError:
-        pass
-    # 代码块
-    m = re.search(r"```(?:json)?\s*(\{[\s\S]*?\})\s*```", text)
-    if m:
-        return json.loads(m.group(1))
-    # 最外层大括号
-    m = re.search(r"(\{[\s\S]*\})", text)
-    if m:
-        return json.loads(m.group(1))
-    raise ValueError(f"无法提取 JSON:\n{text[:400]}")
-
 
 def build_kernel_prompt(ops_batch: list[dict], file_tree: str, cat_name: str) -> str:
     """
@@ -359,8 +331,7 @@ def main() -> None:
                         help="跳过 Claude API（仅自动映射，kernel 为空列表）")
     args = parser.parse_args()
 
-    api_key  = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")
-    base_url = os.environ.get("ANTHROPIC_BASE_URL")
+    api_key, base_url = get_api_config()
 
     if not args.skip_claude and not api_key:
         print("错误：需要设置 ANTHROPIC_API_KEY 或 ANTHROPIC_AUTH_TOKEN", file=sys.stderr)
@@ -408,9 +379,12 @@ def main() -> None:
         kernel_map: dict[str, list] = {}
         if not args.skip_claude and api_key:
             try:
-                prompt   = build_kernel_prompt(ops, file_tree, cat_name)
-                response = call_claude(prompt, args.model, api_key, base_url)
-                data     = extract_json(response)
+                prompt = build_kernel_prompt(ops, file_tree, cat_name)
+                data   = call_claude_json(
+                    prompt, args.model, api_key, base_url,
+                    system=SYSTEM_KERNEL_MAPPER,
+                    required_keys=["mappings"],
+                )
                 for item in data.get("mappings", []):
                     kernel_map[item["id"]] = item.get("kernel", [])
                 print(f"  Claude: {len(kernel_map)} 个 kernel 映射")

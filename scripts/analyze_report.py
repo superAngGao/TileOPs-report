@@ -11,11 +11,16 @@ Environment variables:
 
 import argparse
 import json
-import os
-import re
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
+
+from claude_utils import (
+    call_claude,
+    get_api_config,
+    require_anthropic,
+    SYSTEM_REPORT_ANALYZER,
+)
 
 
 def _load_progress(path: str | None) -> str:
@@ -144,8 +149,7 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    api_key  = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")
-    base_url = os.environ.get("ANTHROPIC_BASE_URL")
+    api_key, base_url = get_api_config()
 
     if not api_key:
         print(
@@ -155,30 +159,21 @@ def main() -> None:
         )
         sys.exit(0)
 
-    try:
-        import anthropic
-    except ImportError:
-        print(
-            "::warning::anthropic package not installed — skipping Claude analysis.",
-            file=sys.stderr,
-        )
+    if require_anthropic() is None:
         sys.exit(0)
 
     prompt = build_prompt(args.progress_json, args.test_xml, args.bench_log)
 
-    client_kwargs: dict = {"api_key": api_key}
-    if base_url:
-        client_kwargs["base_url"] = base_url
-
-    client = anthropic.Anthropic(**client_kwargs)
-
     try:
-        message = client.messages.create(
-            model=args.model,
+        analysis = call_claude(
+            prompt,
+            args.model,
+            api_key,
+            base_url,
+            system=SYSTEM_REPORT_ANALYZER,
             max_tokens=1500,
-            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3,
         )
-        analysis = message.content[0].text
     except Exception as exc:
         print(f"::warning::Claude API call failed: {exc}", file=sys.stderr)
         sys.exit(0)

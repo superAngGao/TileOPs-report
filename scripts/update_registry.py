@@ -26,13 +26,19 @@
 
 import argparse
 import json
-import os
 import re
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+
+from claude_utils import (
+    call_claude_json,
+    get_api_config,
+    require_anthropic,
+    SYSTEM_SCORE_EVALUATOR,
+)
 
 try:
     import yaml as _yaml
@@ -318,34 +324,6 @@ def get_op_bench_data(op_data: dict, bench_results: dict) -> dict | None:
 # 5. Claude 评估
 # ─────────────────────────────────────────────────────────────────────────────
 
-def call_claude(prompt: str, model: str, api_key: str, base_url: str | None) -> str:
-    import anthropic
-    kwargs: dict = {"api_key": api_key}
-    if base_url:
-        kwargs["base_url"] = base_url
-    client = anthropic.Anthropic(**kwargs)
-    msg = client.messages.create(
-        model=model,
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    return msg.content[0].text
-
-
-def extract_json(text: str) -> dict:
-    try:
-        return json.loads(text.strip())
-    except json.JSONDecodeError:
-        pass
-    m = re.search(r"```(?:json)?\s*(\{[\s\S]*?\})\s*```", text)
-    if m:
-        return json.loads(m.group(1))
-    m = re.search(r"(\{[\s\S]*\})", text)
-    if m:
-        return json.loads(m.group(1))
-    raise ValueError(f"无法提取 JSON:\n{text[:400]}")
-
-
 def build_score_prompt(ops_batch: list[dict]) -> str:
     return f"""你是 TileOPs 项目的代码审查专家。请根据以下信息为每个算子打分。
 
@@ -414,8 +392,7 @@ def main() -> None:
                         help="跳过 Claude 评估步骤")
     args = parser.parse_args()
 
-    api_key  = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")
-    base_url = os.environ.get("ANTHROPIC_BASE_URL")
+    api_key, base_url = get_api_config()
 
     since_date = args.since_date or str(TODAY - timedelta(days=1))
 
@@ -562,10 +539,7 @@ def main() -> None:
 
     # ── Claude 评分 ──────────────────────────────────────────────────────────
     if ops_to_score and not args.skip_claude and api_key:
-        try:
-            import anthropic  # noqa: F401
-        except ImportError:
-            print("  ⚠ anthropic 包未安装，跳过 Claude 评分", file=sys.stderr)
+        if require_anthropic() is None:
             args.skip_claude = True
 
     if ops_to_score and not args.skip_claude and api_key:
@@ -576,9 +550,12 @@ def main() -> None:
             print(f"  Claude 评分批次 {i // batch_size + 1}/{(len(ops_to_score) - 1) // batch_size + 1}"
                   f" ({len(batch)} 个算子) ...")
             try:
-                prompt   = build_score_prompt(batch)
-                response = call_claude(prompt, args.model, api_key, base_url)
-                data     = extract_json(response)
+                prompt = build_score_prompt(batch)
+                data   = call_claude_json(
+                    prompt, args.model, api_key, base_url,
+                    system=SYSTEM_SCORE_EVALUATOR,
+                    required_keys=["updates"],
+                )
 
                 for item in data.get("updates", []):
                     op_id = item.get("id")
