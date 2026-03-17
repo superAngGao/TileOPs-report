@@ -8,6 +8,10 @@ on:
       run_id:
         description: "TileOPs nightly run ID (leave empty for latest)"
         required: false
+      registry_only:
+        description: "Only update registry (scan PRs + Claude scoring), skip report generation"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -33,7 +37,19 @@ jobs:
       - name: Install Python dependencies
         run: pip install anthropic pyyaml
 
+      - name: Determine run mode
+        id: mode
+        run: |
+          if [ "${{ github.event.inputs.registry_only }}" = "true" ]; then
+            echo "registry_only=true" >> "$GITHUB_OUTPUT"
+            echo "Mode: registry-only (skip report generation)"
+          else
+            echo "registry_only=false" >> "$GITHUB_OUTPUT"
+            echo "Mode: full nightly report"
+          fi
+
       - name: Find target nightly run
+        if: steps.mode.outputs.registry_only != 'true'
         id: run
         run: |
           if [ -n "${{ github.event.inputs.run_id }}" ]; then
@@ -65,6 +81,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout existing gh-pages
+        if: steps.mode.outputs.registry_only != 'true'
         run: |
           git clone --depth 1 --branch gh-pages \
             "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
@@ -74,6 +91,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check for duplicate run
+        if: steps.mode.outputs.registry_only != 'true'
         id: dedup
         run: |
           RUN_ID="${{ steps.run.outputs.run_id }}"
@@ -85,7 +103,7 @@ jobs:
           fi
 
       - name: Download op_test artifact
-        if: steps.dedup.outputs.skip != 'true'
+        if: steps.dedup.outputs.skip != 'true' && steps.mode.outputs.registry_only != 'true'
         uses: dawidd6/action-download-artifact@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -97,7 +115,7 @@ jobs:
           if_no_artifact_found: warn
 
       - name: Download benchmark artifact
-        if: steps.dedup.outputs.skip != 'true'
+        if: steps.dedup.outputs.skip != 'true' && steps.mode.outputs.registry_only != 'true'
         uses: dawidd6/action-download-artifact@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -108,8 +126,8 @@ jobs:
           path: dl/benchmark/
           if_no_artifact_found: warn
 
-      - name: Checkout TileOPs source
-        if: steps.dedup.outputs.skip != 'true'
+      - name: Checkout TileOPs source (full report)
+        if: steps.dedup.outputs.skip != 'true' && steps.mode.outputs.registry_only != 'true'
         uses: actions/checkout@v4
         with:
           repository: tile-ai/TileOPs
@@ -118,7 +136,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Prepare report directory
-        if: steps.dedup.outputs.skip != 'true'
+        if: steps.dedup.outputs.skip != 'true' && steps.mode.outputs.registry_only != 'true'
         id: prep
         run: |
           DATE=$(date +%Y%m%d_%H%M%S)
@@ -158,7 +176,7 @@ jobs:
           echo "bench_exit=${BENCH_EXIT}" >> "$GITHUB_OUTPUT"
 
       - name: Run fetch_progress.py
-        if: steps.dedup.outputs.skip != 'true'
+        if: steps.dedup.outputs.skip != 'true' && steps.mode.outputs.registry_only != 'true'
         continue-on-error: true
         run: |
           python scripts/fetch_progress.py \
@@ -169,7 +187,7 @@ jobs:
             --output     "${{ steps.prep.outputs.report_dir }}/progress.json"
 
       - name: Run analyze_report.py
-        if: steps.dedup.outputs.skip != 'true'
+        if: steps.dedup.outputs.skip != 'true' && steps.mode.outputs.registry_only != 'true'
         continue-on-error: true
         run: |
           python scripts/analyze_report.py \
@@ -181,8 +199,10 @@ jobs:
           ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
 
+      # ── Registry update (runs in both full and registry-only modes) ──
+
       - name: Initialize registry if missing
-        if: steps.dedup.outputs.skip != 'true'
+        if: steps.dedup.outputs.skip != 'true' && steps.mode.outputs.registry_only != 'true'
         continue-on-error: true
         run: |
           if [ ! -f scripts/op_registry.json ] || [ ! -d scripts/op_data ]; then
@@ -195,15 +215,19 @@ jobs:
               --skip-claude
           fi
 
-      - name: Update op registry from PRs and nightly results
-        if: steps.dedup.outputs.skip != 'true'
+      - name: Update op registry from PRs (registry-only or full)
+        if: steps.dedup.outputs.skip != 'true' || steps.mode.outputs.registry_only == 'true'
         continue-on-error: true
         run: |
+          EXTRA_ARGS=""
+          if [ "${{ steps.mode.outputs.registry_only }}" != "true" ]; then
+            EXTRA_ARGS="--test-xml ${{ steps.prep.outputs.report_dir }}/test_results.xml"
+            EXTRA_ARGS="${EXTRA_ARGS} --bench-log ${{ steps.prep.outputs.report_dir }}/tileops_benchmarks.log"
+          fi
           python scripts/update_registry.py \
             --registry     scripts/op_registry.json \
             --op-data-dir  scripts/op_data/ \
-            --test-xml     "${{ steps.prep.outputs.report_dir }}/test_results.xml" \
-            --bench-log    "${{ steps.prep.outputs.report_dir }}/tileops_benchmarks.log" \
+            ${EXTRA_ARGS} \
             --tileops-repo tile-ai/TileOPs
         env:
           ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
@@ -211,7 +235,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit registry updates to main
-        if: steps.dedup.outputs.skip != 'true'
+        if: steps.dedup.outputs.skip != 'true' || steps.mode.outputs.registry_only == 'true'
         continue-on-error: true
         run: |
           git config user.name  "github-actions[bot]"
@@ -220,12 +244,16 @@ jobs:
           if git diff --staged --quiet; then
             echo "Registry unchanged."
           else
-            git commit -m "registry: nightly update ${{ steps.prep.outputs.date }}"
+            DATE=$(date +%Y%m%d_%H%M%S)
+            SUFFIX="${{ steps.mode.outputs.registry_only == 'true' && 'registry-only' || 'nightly' }}"
+            git commit -m "registry: ${SUFFIX} update ${DATE}"
             git push origin main
           fi
 
+      # ── Report generation (full mode only) ──
+
       - name: Run generate_report.py
-        if: steps.dedup.outputs.skip != 'true'
+        if: steps.dedup.outputs.skip != 'true' && steps.mode.outputs.registry_only != 'true'
         continue-on-error: true
         run: |
           python scripts/generate_report.py \
@@ -240,7 +268,7 @@ jobs:
             --analysis-md   "${{ steps.prep.outputs.report_dir }}/analysis.md"
 
       - name: Prune reports older than 14 days
-        if: steps.dedup.outputs.skip != 'true'
+        if: steps.dedup.outputs.skip != 'true' && steps.mode.outputs.registry_only != 'true'
         run: |
           CUTOFF=$(date -d "14 days ago" +%Y%m%d)
           for dir in _gh_pages/nightly/*/; do
@@ -254,7 +282,7 @@ jobs:
           done
 
       - name: Generate index.html
-        if: steps.dedup.outputs.skip != 'true'
+        if: steps.dedup.outputs.skip != 'true' && steps.mode.outputs.registry_only != 'true'
         run: |
           python scripts/gen_index.py \
             --nightly-dir _gh_pages/nightly \
@@ -262,7 +290,7 @@ jobs:
             --repo-url    "https://github.com/tile-ai/TileOPs"
 
       - name: Push to gh-pages (orphan)
-        if: steps.dedup.outputs.skip != 'true'
+        if: steps.dedup.outputs.skip != 'true' && steps.mode.outputs.registry_only != 'true'
         run: |
           cd _gh_pages
           git config user.name  "github-actions[bot]"
