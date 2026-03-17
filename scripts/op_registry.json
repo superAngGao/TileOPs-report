@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-03-17T02:28:09Z",
+  "generated_at": "2026-03-17T02:50:29Z",
   "total_ops": 186,
   "ops": {
     "ew.binary_arith.add": {
@@ -29,9 +29,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.binary_arith.sub": {
       "id": "ew.binary_arith.sub",
@@ -57,9 +57,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.binary_arith.mul": {
       "id": "ew.binary_arith.mul",
@@ -85,9 +85,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.binary_arith.div": {
       "id": "ew.binary_arith.div",
@@ -113,9 +113,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.binary_arith.remainder": {
       "id": "ew.binary_arith.remainder",
@@ -141,9 +141,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.binary_arith.pow": {
       "id": "ew.binary_arith.pow",
@@ -169,9 +169,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.binary_arith.floor_divide": {
       "id": "ew.binary_arith.floor_divide",
@@ -197,9 +197,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.binary_arith.lerp": {
       "id": "ew.binary_arith.lerp",
@@ -225,9 +225,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.binary_arith.maximum": {
       "id": "ew.binary_arith.maximum",
@@ -254,9 +254,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.binary_arith.minimum": {
       "id": "ew.binary_arith.minimum",
@@ -283,9 +283,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.exp": {
       "id": "ew.unary_math.exp",
@@ -312,9 +312,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.log": {
       "id": "ew.unary_math.log",
@@ -341,9 +341,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.sqrt": {
       "id": "ew.unary_math.sqrt",
@@ -370,9 +370,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.rsqrt": {
       "id": "ew.unary_math.rsqrt",
@@ -399,9 +399,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.abs": {
       "id": "ew.unary_math.abs",
@@ -427,9 +427,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.neg": {
       "id": "ew.unary_math.neg",
@@ -455,9 +455,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.reciprocal": {
       "id": "ew.unary_math.reciprocal",
@@ -484,9 +484,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.sign": {
       "id": "ew.unary_math.sign",
@@ -513,9 +513,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.sin": {
       "id": "ew.unary_math.sin",
@@ -541,9 +541,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.cos": {
       "id": "ew.unary_math.cos",
@@ -569,9 +569,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.floor": {
       "id": "ew.unary_math.floor",
@@ -597,9 +597,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.ceil": {
       "id": "ew.unary_math.ceil",
@@ -625,9 +625,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.round": {
       "id": "ew.unary_math.round",
@@ -653,9 +653,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.trunc": {
       "id": "ew.unary_math.trunc",
@@ -681,9 +681,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.erf": {
       "id": "ew.unary_math.erf",
@@ -710,9 +710,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.log1p": {
       "id": "ew.unary_math.log1p",
@@ -739,9 +739,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.unary_math.expm1": {
       "id": "ew.unary_math.expm1",
@@ -768,9 +768,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.relu": {
       "id": "ew.activation.relu",
@@ -797,9 +797,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.gelu": {
       "id": "ew.activation.gelu",
@@ -825,9 +825,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.silu": {
       "id": "ew.activation.silu",
@@ -853,9 +853,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.sigmoid": {
       "id": "ew.activation.sigmoid",
@@ -882,9 +882,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.tanh": {
       "id": "ew.activation.tanh",
@@ -911,9 +911,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.leaky_relu": {
       "id": "ew.activation.leaky_relu",
@@ -937,9 +937,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.elu": {
       "id": "ew.activation.elu",
@@ -963,9 +963,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.selu": {
       "id": "ew.activation.selu",
@@ -991,9 +991,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.hardswish": {
       "id": "ew.activation.hardswish",
@@ -1019,9 +1019,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.hardsigmoid": {
       "id": "ew.activation.hardsigmoid",
@@ -1047,9 +1047,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.hardtanh": {
       "id": "ew.activation.hardtanh",
@@ -1073,9 +1073,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.softplus": {
       "id": "ew.activation.softplus",
@@ -1099,9 +1099,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.mish": {
       "id": "ew.activation.mish",
@@ -1127,9 +1127,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.activation.prelu": {
       "id": "ew.activation.prelu",
@@ -1153,9 +1153,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.fused_gated.silu_and_mul": {
       "id": "ew.fused_gated.silu_and_mul",
@@ -1181,9 +1181,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.fused_gated.gelu_and_mul": {
       "id": "ew.fused_gated.gelu_and_mul",
@@ -1209,9 +1209,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.fused_gated.gelu_tanh_and_mul": {
       "id": "ew.fused_gated.gelu_tanh_and_mul",
@@ -1237,9 +1237,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.comparison.eq": {
       "id": "ew.comparison.eq",
@@ -1266,9 +1266,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.comparison.ne": {
       "id": "ew.comparison.ne",
@@ -1294,9 +1294,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.comparison.gt": {
       "id": "ew.comparison.gt",
@@ -1322,9 +1322,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.comparison.lt": {
       "id": "ew.comparison.lt",
@@ -1350,9 +1350,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.comparison.ge": {
       "id": "ew.comparison.ge",
@@ -1378,9 +1378,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.comparison.le": {
       "id": "ew.comparison.le",
@@ -1406,9 +1406,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.bitwise.and": {
       "id": "ew.bitwise.and",
@@ -1434,9 +1434,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.bitwise.or": {
       "id": "ew.bitwise.or",
@@ -1462,9 +1462,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.bitwise.xor": {
       "id": "ew.bitwise.xor",
@@ -1490,9 +1490,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.bitwise.not": {
       "id": "ew.bitwise.not",
@@ -1518,9 +1518,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.logical.not": {
       "id": "ew.logical.not",
@@ -1546,9 +1546,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.logical.and": {
       "id": "ew.logical.and",
@@ -1574,9 +1574,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.logical.or": {
       "id": "ew.logical.or",
@@ -1602,9 +1602,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.special.where": {
       "id": "ew.special.where",
@@ -1626,9 +1626,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.special.clamp": {
       "id": "ew.special.clamp",
@@ -1650,9 +1650,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.special.masked_fill": {
       "id": "ew.special.masked_fill",
@@ -1674,9 +1674,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.special.nan_to_num": {
       "id": "ew.special.nan_to_num",
@@ -1698,9 +1698,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.special.isnan": {
       "id": "ew.special.isnan",
@@ -1725,9 +1725,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.special.isinf": {
       "id": "ew.special.isinf",
@@ -1752,9 +1752,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.special.isfinite": {
       "id": "ew.special.isfinite",
@@ -1779,9 +1779,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.dropout.dropout": {
       "id": "ew.dropout.dropout",
@@ -1923,9 +1923,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "ew.sinusoidal.sinusoidal": {
       "id": "ew.sinusoidal.sinusoidal",
@@ -1947,9 +1947,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-16T04:34:21Z",
+      "kernel_last_updated": "2026-03-17T02:43:28Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-17T02:28:09Z"
+      "last_updated": "2026-03-17T02:50:29Z"
     },
     "reduce.reduce.sum": {
       "id": "reduce.reduce.sum",
