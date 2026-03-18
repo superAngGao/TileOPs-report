@@ -1,0 +1,39 @@
+id: ew.logical.or
+name: logical_or
+category: Elementwise
+category_id: 1
+sub: logical
+issue: 397
+files:
+  kernel:
+  - tileops/kernels/elementwise.py
+  op:
+  - tileops/ops/elementwise.py
+  tests:
+  - tests/ops/test_logical.py::test_logical_or_op
+  bench:
+  - benchmarks/ops/bench_binary_elementwise.py::bench_logical_or
+files_last_scanned: '2026-03-18T10:00:19Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
+perf_details:
+  baseline: null
+  last_run: null
+  summary: null
+  results: []
+perf_score_updated: null
+has_bugs: null
+bugs: []
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
+test_status:
+  last_run: null
+  passed: null
+  errors: []
+last_updated: '2026-03-18T10:00:19Z'
+updated_by: bootstrap

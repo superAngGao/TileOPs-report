@@ -1,0 +1,39 @@
+id: sampling.chain_spec
+name: chain_speculative_sampling
+category: Sampling
+category_id: 7
+sub: chain_speculative_sampling
+issue: 426
+files:
+  kernel:
+  - tileops/kernels/deepseek_mla/topk_selector.py
+  op:
+  - tileops/ops/topk_selector.py
+  tests:
+  - tests/ops/test_topk_selector.py::test_topk_selector_op
+  bench:
+  - benchmarks/ops/bench_topk_selector.py::bench_topk_selector
+files_last_scanned: '2026-03-18T10:00:19Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
+perf_details:
+  baseline: null
+  last_run: null
+  summary: null
+  results: []
+perf_score_updated: null
+has_bugs: null
+bugs: []
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
+test_status:
+  last_run: null
+  passed: null
+  errors: []
+last_updated: '2026-03-18T10:00:19Z'
+updated_by: bootstrap

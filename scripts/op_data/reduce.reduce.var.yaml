@@ -1,0 +1,42 @@
+id: reduce.reduce.var
+name: var
+category: Reduce
+category_id: 2
+sub: reduce
+issue: 398
+files:
+  kernel:
+  - tileops/kernels/reduction/reduce/fwd.py
+  op:
+  - tileops/ops/reduction/reduce.py
+  tests:
+  - tests/ops/test_reduce.py::test_var_1d
+  - tests/ops/test_reduce.py::test_var_3d
+  - tests/ops/test_reduce.py::test_var_bessel
+  - tests/ops/test_reduce.py::test_var_op
+  bench:
+  - benchmarks/ops/bench_reduce.py::bench_var
+files_last_scanned: '2026-03-18T10:00:19Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
+perf_details:
+  baseline: null
+  last_run: null
+  summary: null
+  results: []
+perf_score_updated: null
+has_bugs: null
+bugs: []
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
+test_status:
+  last_run: null
+  passed: null
+  errors: []
+last_updated: '2026-03-18T10:00:19Z'
+updated_by: bootstrap

@@ -1,0 +1,40 @@
+id: gemm.gemm.gemv_fp16
+name: gemv_fp16
+category: GEMM
+category_id: 5
+sub: gemm
+issue: 400
+files:
+  kernel:
+  - tileops/kernels/gemm/gemv.py
+  op:
+  - tileops/ops/gemm.py
+  tests:
+  - tests/ops/test_gemm.py::test_gemv_boundary_lhs_row
+  - tests/ops/test_gemm.py::test_gemv_boundary_rhs_col
+  bench:
+  - benchmarks/ops/bench_gemm.py::bench_gemv
+files_last_scanned: '2026-03-18T10:00:19Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
+perf_details:
+  baseline: null
+  last_run: null
+  summary: null
+  results: []
+perf_score_updated: null
+has_bugs: null
+bugs: []
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
+test_status:
+  last_run: null
+  passed: null
+  errors: []
+last_updated: '2026-03-18T10:00:19Z'
+updated_by: bootstrap
