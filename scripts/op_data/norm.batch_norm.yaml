@@ -16,7 +16,7 @@ files:
   - benchmarks/ops/bench_batch_norm.py::bench_batch_norm
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 测试通过，功能接近完整。benchmark 缺少 ratio 数据，性能无法量化评估。
+func_score_notes: 测试通过，功能接近完整。benchmark 无 ratio 数据，性能无法量化评估。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -37,7 +37,7 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T10:33:24Z'
+last_updated: '2026-03-18T10:54:49Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

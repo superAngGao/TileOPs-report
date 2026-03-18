@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_dropout.py::bench_dropout
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 2
-func_score_notes: 测试失败，功能存在缺陷。benchmark 显示性能超越 baseline 1.6x，但正确性未通过。
+func_score_notes: 测试失败，功能存在缺陷。benchmark 表现优异（ratio 1.60），但正确性未通过。
 func_score_updated: '2026-03-18'
 perf_score: 5
 perf_details:
@@ -31,7 +31,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试失败，功能正确性存在问题
+- 测试用例失败，功能正确性存在问题
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -42,7 +42,7 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T10:33:24Z'
+last_updated: '2026-03-18T10:54:49Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_topk_selector.py::bench_topk_selector
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 3
-func_score_notes: 测试通过但 benchmark 失败，功能主体实现，性能验证存在问题。
+func_score_notes: 测试通过但 benchmark 失败，功能主体实现，性能验证异常。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -37,7 +37,7 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T10:33:24Z'
+last_updated: '2026-03-18T10:54:49Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

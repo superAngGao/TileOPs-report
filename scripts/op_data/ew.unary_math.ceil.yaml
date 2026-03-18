@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_unary_elementwise.py::bench_ceil
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 测试全部通过，fp8 支持已扩展；benchmark ratio 缺失，性能无法评估。
+func_score_notes: 测试通过，fp8 支持已扩展。无 benchmark ratio 数据，性能未评估。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -36,8 +36,8 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T10:33:24Z'
-updated_by: nightly-auto
+last_updated: '2026-03-18T10:54:49Z'
+updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
   status: passed

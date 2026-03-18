@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_binary_elementwise.py::bench_bitwise_not
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 测试通过，功能基本完整。benchmark ratio 0.5，性能为 baseline 的 50%，存在性能问题。
+func_score_notes: 测试通过，功能完整。但性能仅为 baseline 的 50%，存在明显性能回退。
 func_score_updated: '2026-03-18'
 perf_score: 2
 perf_details:
@@ -30,8 +30,7 @@ perf_details:
     summary: TileOps 0.0067ms vs Baseline 0.0033ms (ratio 0.50)
 perf_score_updated: '2026-03-18'
 has_bugs: false
-bugs:
-- 性能仅达 baseline 的 50%，存在性能退化
+bugs: []
 kernel_last_updated: '2026-03-18T09:48:47Z'
 kernel_last_pr_number: 549
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/549
@@ -42,7 +41,7 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T10:33:24Z'
+last_updated: '2026-03-18T10:54:49Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
