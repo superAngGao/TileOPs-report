@@ -14,26 +14,33 @@ files:
   bench:
   - benchmarks/ops/bench_dropout.py::bench_dropout
 files_last_scanned: '2026-03-18T10:14:48Z'
-func_score: null
-func_score_notes: ''
-func_score_updated: null
+func_score: 2
+func_score_notes: 测试失败，功能存在缺陷。benchmark 通过说明基础路径可运行，但正确性未达标。
+func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: null
-has_bugs: null
-bugs: []
+perf_score_updated: '2026-03-18'
+has_bugs: true
+bugs:
+- 测试失败，功能正确性存在问题
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: null
-  passed: null
+  last_run: '2026-03-18'
+  passed: false
   errors: []
-last_updated: '2026-03-18T10:14:48Z'
-updated_by: bootstrap
+  status: failed
+last_updated: '2026-03-18T10:19:32Z'
+updated_by: claude-nightly
+bench_status:
+  last_run: '2026-03-18'
+  status: passed
+  ratio: null
+  details: []
