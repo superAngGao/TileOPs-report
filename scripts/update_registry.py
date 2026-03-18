@@ -577,6 +577,7 @@ def main() -> None:
         # 测试状态
         test_status = get_op_test_status(op_data, test_results)
         yaml_updates["test_status"] = test_status
+        registry_updates["test_status"] = test_status
         if test_status["status"] == "failed" and op_data.get("has_bugs") is None:
             registry_updates["has_bugs"] = True
             yaml_updates["has_bugs"]     = True
@@ -586,6 +587,7 @@ def main() -> None:
         # Benchmark 状态
         bench_status = get_op_bench_status(op_data, bench_results)
         yaml_updates["bench_status"] = bench_status
+        registry_updates["bench_status"] = bench_status
         if bench_status["details"]:
             yaml_updates.setdefault("perf_details", {})["results"] = bench_status["details"]
             yaml_updates.setdefault("perf_details", {})["last_run"] = NOW_DATE
