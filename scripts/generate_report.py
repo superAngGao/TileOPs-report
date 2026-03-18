@@ -47,6 +47,11 @@ h3{font-size:.95rem;font-weight:600;margin:.75rem 0 .25rem}
 .bar-impl{background:linear-gradient(90deg,#60a5fa,#3b82f6)}
 .bar-test{background:linear-gradient(90deg,#4ade80,#22c55e)}
 .bar-bench{background:linear-gradient(90deg,#a78bfa,#8b5cf6)}
+/* Stacked bar segments */
+.stacked-bar{display:flex;height:100%;border-radius:9999px;overflow:hidden}
+.stacked-bar .seg{height:100%;transition:width .6s ease}
+.seg-passed{background:#22c55e}.seg-failed{background:#ef4444}
+.seg-qualified{background:#7c3aed}.seg-underperforming{background:#f59e0b}
 .bar-row{display:flex;align-items:center;gap:.5rem;font-size:.82rem;margin:.2rem 0}
 .bar-label{width:50px;color:var(--muted);flex-shrink:0;font-weight:500}
 .bar-container{flex:1;min-width:60px}
@@ -107,7 +112,39 @@ def _score_badge(value, label: str, css_class: str) -> str:
     return f'<div class="score-badge {css_class}"><span class="val">{value}</span>{label}</div>'
 
 
-def build_html(args, prog: dict | None, analysis: dict | None) -> str:
+def _stacked_bar(segments: list[tuple[float, str]], total: int) -> str:
+    """Render a stacked progress bar. segments: [(count, css_class), ...]."""
+    if total == 0:
+        return '<div class="bar-wrap"><div class="stacked-bar"></div></div>'
+    inner = ""
+    for count, cls in segments:
+        pct = count / total * 100 if count else 0
+        if pct > 0:
+            inner += f'<div class="seg {cls}" style="width:{pct:.1f}%"></div>'
+    return f'<div class="bar-wrap"><div class="stacked-bar">{inner}</div></div>'
+
+
+def _count_status(registry_ops: dict, cat_name: str) -> dict:
+    """Count test/bench status for ops in a given category from registry."""
+    test_counts = {"passed": 0, "failed": 0, "missing": 0}
+    bench_counts = {"qualified": 0, "underperforming": 0, "failed": 0, "missing": 0}
+    for op in registry_ops.values():
+        if op.get("category") != cat_name:
+            continue
+        ts = op.get("test_status", {}).get("status", "missing")
+        if ts in test_counts:
+            test_counts[ts] += 1
+        else:
+            test_counts["missing"] += 1
+        bs = op.get("bench_status", {}).get("status", "missing")
+        if bs in bench_counts:
+            bench_counts[bs] += 1
+        else:
+            bench_counts["missing"] += 1
+    return {"test": test_counts, "bench": bench_counts}
+
+
+def build_html(args, prog: dict | None, analysis: dict | None, registry_ops: dict | None = None) -> str:
     date_str = args.date
     commit   = args.commit
     gen_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -141,6 +178,16 @@ def build_html(args, prog: dict | None, analysis: dict | None) -> str:
         done    = prog["done_ops"]
         pct     = done / total * 100 if total else 0
 
+        # Aggregate test/bench status counts from registry
+        all_test = {"passed": 0, "failed": 0, "missing": 0}
+        all_bench = {"qualified": 0, "underperforming": 0, "failed": 0, "missing": 0}
+        if registry_ops:
+            for op in registry_ops.values():
+                ts = op.get("test_status", {}).get("status", "missing")
+                all_test[ts] = all_test.get(ts, 0) + 1
+                bs = op.get("bench_status", {}).get("status", "missing")
+                all_bench[bs] = all_bench.get(bs, 0) + 1
+
         parts += [
             "<div class='card'>",
             "<h2 style='margin-top:0'>Overall Progress</h2>",
@@ -151,22 +198,52 @@ def build_html(args, prog: dict | None, analysis: dict | None) -> str:
             f"<div class='stat-box'><div class='num' style='color:var(--purple)'>{benched}</div><div class='lbl'>Bench Pass</div></div>",
             f"<div class='stat-box'><div class='num' style='font-size:1.1rem'>{done}/{total}</div><div class='lbl'>Done ({pct:.0f}%)</div></div>",
             "</div>",
-            # Overall 3-bar
+            # Overall 3-bar: Impl is simple, Test/Bench are stacked
             "<div style='margin-top:.5rem'>",
         ]
-        impl_pct  = impl / total * 100 if total else 0
-        test_pct  = tested / total * 100 if total else 0
-        bench_pct = benched / total * 100 if total else 0
-        for label, p, cls, count in [
-            ("Impl",  impl_pct,  "bar-impl",  f"{impl}/{total}"),
-            ("Test",  test_pct,  "bar-test",  f"{tested}/{total}"),
-            ("Bench", bench_pct, "bar-bench", f"{benched}/{total}"),
-        ]:
+        impl_pct = impl / total * 100 if total else 0
+        parts.append(
+            f'<div class="bar-row"><span class="bar-label">Impl</span>'
+            f'<div class="bar-container">{_bar_html(impl_pct, "bar-impl")}</div>'
+            f'<span class="bar-count">{impl}/{total}</span></div>'
+        )
+        if registry_ops:
+            # Test stacked bar: passed(green) + failed(red), rest is gray background
+            test_bar = _stacked_bar([
+                (all_test["passed"], "seg-passed"),
+                (all_test["failed"], "seg-failed"),
+            ], total)
+            test_label = f'{all_test["passed"]}✓ {all_test["failed"]}✗ {all_test["missing"]}—'
             parts.append(
-                f'<div class="bar-row"><span class="bar-label">{label}</span>'
-                f'<div class="bar-container">{_bar_html(p, cls)}</div>'
-                f'<span class="bar-count">{count}</span></div>'
+                f'<div class="bar-row"><span class="bar-label">Test</span>'
+                f'<div class="bar-container">{test_bar}</div>'
+                f'<span class="bar-count" style="width:auto">{test_label}</span></div>'
             )
+            # Bench stacked bar: qualified(purple) + underperforming(yellow), rest is gray
+            bench_bar = _stacked_bar([
+                (all_bench["qualified"], "seg-qualified"),
+                (all_bench["underperforming"], "seg-underperforming"),
+                (all_bench["failed"], "seg-failed"),
+            ], total)
+            bench_label = f'{all_bench["qualified"]}✓ {all_bench["underperforming"]}△ {all_bench["failed"]}✗ {all_bench["missing"]}—'
+            parts.append(
+                f'<div class="bar-row"><span class="bar-label">Bench</span>'
+                f'<div class="bar-container">{bench_bar}</div>'
+                f'<span class="bar-count" style="width:auto">{bench_label}</span></div>'
+            )
+        else:
+            # Fallback: simple bars when registry not available
+            test_pct = tested / total * 100 if total else 0
+            bench_pct = benched / total * 100 if total else 0
+            for label, p, cls, count in [
+                ("Test",  test_pct,  "bar-test",  f"{tested}/{total}"),
+                ("Bench", bench_pct, "bar-bench", f"{benched}/{total}"),
+            ]:
+                parts.append(
+                    f'<div class="bar-row"><span class="bar-label">{label}</span>'
+                    f'<div class="bar-container">{_bar_html(p, cls)}</div>'
+                    f'<span class="bar-count">{count}</span></div>'
+                )
         parts += ["</div>", "</div>"]
 
     # ── Section 3: Per-category progress + scores ────────────────────────────
@@ -179,29 +256,62 @@ def build_html(args, prog: dict | None, analysis: dict | None) -> str:
         name  = cat["name"]
         t     = cat["total_ops"]
         im    = cat["impl_ops"]
-        te    = cat.get("tested_ops", 0)
-        be    = cat.get("benched_ops", 0)
         ca    = cat_analysis.get(name, {})
         ps    = ca.get("perf_score")
         fs    = ca.get("func_score")
 
-        impl_pct  = im / t * 100 if t else 0
-        test_pct  = te / t * 100 if t else 0
-        bench_pct = be / t * 100 if t else 0
+        impl_pct = im / t * 100 if t else 0
+
+        # Get per-category status counts from registry
+        cat_status = _count_status(registry_ops, name) if registry_ops else None
 
         parts.append('<div class="cat-card">')
         parts.append('<div class="cat-bars">')
         parts.append(f'<h3 style="margin-bottom:.35rem">{_esc(name)}</h3>')
-        for label, p, cls, count in [
-            ("Impl",  impl_pct,  "bar-impl",  f"{im}/{t}"),
-            ("Test",  test_pct,  "bar-test",  f"{te}/{t}"),
-            ("Bench", bench_pct, "bar-bench", f"{be}/{t}"),
-        ]:
+
+        # Impl bar (always simple)
+        parts.append(
+            f'<div class="bar-row"><span class="bar-label">Impl</span>'
+            f'<div class="bar-container">{_bar_html(impl_pct, "bar-impl")}</div>'
+            f'<span class="bar-count">{im}/{t}</span></div>'
+        )
+
+        if cat_status:
+            tc = cat_status["test"]
+            test_bar = _stacked_bar([
+                (tc["passed"], "seg-passed"),
+                (tc["failed"], "seg-failed"),
+            ], t)
             parts.append(
-                f'<div class="bar-row"><span class="bar-label">{label}</span>'
-                f'<div class="bar-container">{_bar_html(p, cls)}</div>'
-                f'<span class="bar-count">{count}</span></div>'
+                f'<div class="bar-row"><span class="bar-label">Test</span>'
+                f'<div class="bar-container">{test_bar}</div>'
+                f'<span class="bar-count" style="width:auto">{tc["passed"]}✓ {tc["failed"]}✗ {tc["missing"]}—</span></div>'
             )
+            bc = cat_status["bench"]
+            bench_bar = _stacked_bar([
+                (bc["qualified"], "seg-qualified"),
+                (bc["underperforming"], "seg-underperforming"),
+                (bc["failed"], "seg-failed"),
+            ], t)
+            parts.append(
+                f'<div class="bar-row"><span class="bar-label">Bench</span>'
+                f'<div class="bar-container">{bench_bar}</div>'
+                f'<span class="bar-count" style="width:auto">{bc["qualified"]}✓ {bc["underperforming"]}△ {bc["failed"]}✗ {bc["missing"]}—</span></div>'
+            )
+        else:
+            te = cat.get("tested_ops", 0)
+            be = cat.get("benched_ops", 0)
+            test_pct  = te / t * 100 if t else 0
+            bench_pct = be / t * 100 if t else 0
+            for label, p, cls, count in [
+                ("Test",  test_pct,  "bar-test",  f"{te}/{t}"),
+                ("Bench", bench_pct, "bar-bench", f"{be}/{t}"),
+            ]:
+                parts.append(
+                    f'<div class="bar-row"><span class="bar-label">{label}</span>'
+                    f'<div class="bar-container">{_bar_html(p, cls)}</div>'
+                    f'<span class="bar-count">{count}</span></div>'
+                )
         parts.append('</div>')  # cat-bars
         parts.append('<div class="cat-scores">')
         parts.append(_score_badge(ps, "Perf", "score-perf"))
@@ -272,6 +382,7 @@ def main() -> None:
     parser.add_argument("--html-output",   required=True, help="HTML output path")
     parser.add_argument("--progress-json", default=None,  help="progress.json path")
     parser.add_argument("--analysis-json", default=None,  help="analysis.json path")
+    parser.add_argument("--registry",      default=None,  help="op_registry.json path")
     args = parser.parse_args()
 
     # Load progress.json
@@ -290,7 +401,16 @@ def main() -> None:
         except Exception:
             pass
 
-    html = build_html(args, prog, analysis)
+    # Load op_registry.json
+    registry_ops = None
+    if args.registry and os.path.exists(args.registry):
+        try:
+            reg = json.loads(Path(args.registry).read_text())
+            registry_ops = reg.get("ops")
+        except Exception:
+            pass
+
+    html = build_html(args, prog, analysis, registry_ops)
     Path(args.html_output).parent.mkdir(parents=True, exist_ok=True)
     Path(args.html_output).write_text(html)
     print(f"HTML report: {args.html_output}")

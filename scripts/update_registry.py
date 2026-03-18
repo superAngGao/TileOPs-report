@@ -232,14 +232,24 @@ def parse_test_xml(test_xml: str | None) -> dict[str, dict]:
     return results
 
 
-def get_op_test_status(op_data: dict, test_results: dict) -> dict | None:
+def get_op_test_status(op_data: dict, test_results: dict) -> dict:
     """
     计算算子的测试状态。
-    返回 {last_run, passed, errors} 或 None（无测试映射时）。
+    返回 {last_run, passed, errors, status}。
+
+    status 取值：
+      - "passed"  : tests 映射存在 且 全部通过
+      - "failed"  : tests 映射存在，但有失败或 XML 中无结果
+      - "missing" : tests 映射为空（无 test 文件）
     """
     test_entries = op_data.get("files", {}).get("tests", [])
     if not test_entries:
-        return None
+        return {
+            "last_run": NOW_DATE,
+            "passed":   None,
+            "errors":   [],
+            "status":   "missing",
+        }
 
     all_errors: list[str] = []
     all_passed = True
@@ -255,12 +265,19 @@ def get_op_test_status(op_data: dict, test_results: dict) -> dict | None:
                 all_errors.extend(r["errors"])
 
     if not any_found:
-        return None
+        # 有映射但 XML 中没找到结果 → 视为 failed
+        return {
+            "last_run": NOW_DATE,
+            "passed":   False,
+            "errors":   [],
+            "status":   "failed",
+        }
 
     return {
         "last_run": NOW_DATE,
         "passed":   all_passed,
-        "errors":   all_errors[:5],   # 最多保留 5 条错误
+        "errors":   all_errors[:5],
+        "status":   "passed" if all_passed else "failed",
     }
 
 
@@ -332,6 +349,63 @@ def get_op_bench_data(op_data: dict, bench_results: dict) -> dict | None:
                     found[key] = data
 
     return found if found else None
+
+
+BENCH_QUALIFIED_RATIO = 0.8   # ratio >= 0.8 即达标
+
+
+def get_op_bench_status(op_data: dict, bench_results: dict) -> dict:
+    """
+    计算算子的 benchmark 状态。
+    返回 {last_run, status, ratio, details}。
+
+    status 取值：
+      - "qualified"        : bench 存在 且 ratio >= 0.8
+      - "underperforming"  : bench 存在 且 ratio < 0.8
+      - "failed"           : bench 映射存在，但 log 中无结果或运行失败
+      - "missing"          : bench 映射为空（无 bench 文件）
+    """
+    bench_entries = op_data.get("files", {}).get("bench", [])
+    if not bench_entries:
+        return {
+            "last_run": NOW_DATE,
+            "status":   "missing",
+            "ratio":    None,
+            "details":  [],
+        }
+
+    bench_data = get_op_bench_data(op_data, bench_results)
+    if not bench_data:
+        # 有映射但 log 中没找到结果
+        return {
+            "last_run": NOW_DATE,
+            "status":   "failed",
+            "ratio":    None,
+            "details":  [],
+        }
+
+    # 汇总所有 bench 函数的 ratio，取最小值作为整体 ratio
+    details = [{"bench_fn": fn, **v} for fn, v in bench_data.items()]
+    ratios = [v["ratio"] for v in bench_data.values() if v.get("ratio") is not None]
+
+    if not ratios:
+        # 有结果但无 ratio 数据
+        return {
+            "last_run": NOW_DATE,
+            "status":   "failed",
+            "ratio":    None,
+            "details":  details,
+        }
+
+    min_ratio = min(ratios)
+    status = "qualified" if min_ratio >= BENCH_QUALIFIED_RATIO else "underperforming"
+
+    return {
+        "last_run": NOW_DATE,
+        "status":   status,
+        "ratio":    round(min_ratio, 4),
+        "details":  details,
+    }
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -502,23 +576,20 @@ def main() -> None:
 
         # 测试状态
         test_status = get_op_test_status(op_data, test_results)
-        if test_status is not None:
-            yaml_updates["test_status"] = test_status
-            # 有测试失败时初步标记 has_bugs
-            if not test_status["passed"] and op_data.get("has_bugs") is None:
-                registry_updates["has_bugs"] = True
-                yaml_updates["has_bugs"]     = True
+        yaml_updates["test_status"] = test_status
+        if test_status["status"] == "failed" and op_data.get("has_bugs") is None:
+            registry_updates["has_bugs"] = True
+            yaml_updates["has_bugs"]     = True
+        if test_status["status"] != "missing":
             needs_score = True
 
-        # Benchmark 数据（写入 YAML perf_details.results，供 Claude 参考）
-        bench_data = get_op_bench_data(op_data, bench_results)
-        if bench_data:
-            results_list = [
-                {"bench_fn": fn, **v}
-                for fn, v in bench_data.items()
-            ]
-            yaml_updates.setdefault("perf_details", {})["results"] = results_list
+        # Benchmark 状态
+        bench_status = get_op_bench_status(op_data, bench_results)
+        yaml_updates["bench_status"] = bench_status
+        if bench_status["details"]:
+            yaml_updates.setdefault("perf_details", {})["results"] = bench_status["details"]
             yaml_updates.setdefault("perf_details", {})["last_run"] = NOW_DATE
+        if bench_status["status"] not in ("missing",):
             needs_score = True
 
         # 收集需要评分的算子信息
@@ -531,8 +602,8 @@ def main() -> None:
                 "current_perf_score":  op_data.get("perf_score"),
                 "current_has_bugs":    op_data.get("has_bugs"),
                 "test_status":         test_status,
+                "bench_status":        bench_status,
                 "pr_title":            pr_any_updates.get(op_id, {}).get("title"),
-                "bench_data":          bench_data,
             })
 
         # 写回注册表

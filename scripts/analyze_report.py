@@ -34,8 +34,22 @@ _CATEGORIES = [
 # Data loaders
 # ─────────────────────────────────────────────────────────────────────────────
 
-def _load_progress_detail(path: str | None) -> str:
-    """Load progress.json and format per-category, per-op status for the prompt."""
+def _load_registry(path: str | None) -> dict:
+    """Load op_registry.json, return {op_id: op_data} or empty dict."""
+    if not path or not Path(path).exists():
+        return {}
+    try:
+        reg = json.loads(Path(path).read_text())
+        return reg.get("ops", {})
+    except Exception:
+        return {}
+
+
+def _load_progress_detail(path: str | None, registry_ops: dict) -> str:
+    """Load progress.json and format per-category, per-op status for the prompt.
+
+    Uses registry data for test_status/bench_status when available.
+    """
     if not path or not Path(path).exists():
         return "No progress data available.\n"
     try:
@@ -56,9 +70,25 @@ def _load_progress_detail(path: str | None) -> str:
             d  = cat["done_ops"]
             lines.append(f"### {cat['name']} ({im}/{t} impl, {te}/{t} tested, {be}/{t} benched, {d}/{t} done)")
             for op in cat.get("ops", []):
-                impl_s  = "Y" if op.get("implemented") else "N"
-                test_s  = "pass" if op.get("tested") else ("FAIL" if op.get("test_failed") else "-")
-                bench_s = "pass" if op.get("bench_ok") is True else ("FAIL" if op.get("bench_ok") is False else "-")
+                impl_s = "Y" if op.get("implemented") else "N"
+
+                # Use registry status if available, fallback to progress data
+                reg = registry_ops.get(op.get("id", ""), {})
+                ts = reg.get("test_status", {})
+                bs = reg.get("bench_status", {})
+
+                if ts.get("status"):
+                    test_s = ts["status"]  # passed / failed / missing
+                else:
+                    test_s = "passed" if op.get("tested") else ("failed" if op.get("test_failed") else "missing")
+
+                if bs.get("status"):
+                    bench_s = bs["status"]  # qualified / underperforming / failed / missing
+                    if bs.get("ratio") is not None:
+                        bench_s += f"({bs['ratio']:.2f})"
+                else:
+                    bench_s = "qualified" if op.get("bench_ok") is True else ("failed" if op.get("bench_ok") is False else "missing")
+
                 lines.append(f"  {op['name']} [{op.get('sub','')}]: impl={impl_s} test={test_s} bench={bench_s}")
             lines.append("")
         return "\n".join(lines)
@@ -154,7 +184,10 @@ SYSTEM_PROMPT = (
 )
 
 _CATEGORY_JSON_TEMPLATE = ",\n".join(
-    f'    "{c}": {{"perf_score": <1-5 or null>, "func_score": <1-5 or null>, "issues": "<text>", "evaluation": "<text>"}}'
+    f'    "{c}": {{"perf_score": <1-5 or null>, "func_score": <1-5 or null>, '
+    f'"test_summary": {{"passed": N, "failed": N, "missing": N}}, '
+    f'"bench_summary": {{"qualified": N, "underperforming": N, "failed": N, "missing": N}}, '
+    f'"issues": "<text>", "evaluation": "<text>"}}'
     for c in _CATEGORIES
 )
 
@@ -165,6 +198,21 @@ def build_prompt(progress_text: str, test_text: str, bench_text: str) -> str:
 
 ## Operator Categories
 {cat_list}
+
+## Status Definitions
+
+Each operator has a **test status** and a **bench status**:
+
+**Test status** (3 levels):
+- `passed`  — all mapped test functions pass
+- `failed`  — mapped tests exist but some fail, or test results not found in XML
+- `missing` — no test mapping exists for this operator
+
+**Bench status** (4 levels, threshold: ratio >= 0.80 = qualified):
+- `qualified(ratio)`       — benchmark exists and performance >= 80% of baseline
+- `underperforming(ratio)` — benchmark exists but performance < 80% of baseline
+- `failed`                 — benchmark mapping exists but no results in log
+- `missing`                — no benchmark mapping exists for this operator
 
 ## Implementation Progress
 {progress_text}
@@ -195,9 +243,15 @@ Score each category on TWO dimensions:
 - 5 = All or nearly all tests pass
 - null = no test data for this category
 
+For each category, also count the operators in each status:
+- "test_summary":  {{"passed": N, "failed": N, "missing": N}}
+- "bench_summary": {{"qualified": N, "underperforming": N, "failed": N, "missing": N}}
+
 For each category, provide:
 - "perf_score": performance score 1-5 or null
 - "func_score": functional score 1-5 or null
+- "test_summary": count of operators in each test status
+- "bench_summary": count of operators in each bench status
 - "issues": concise description of problems (empty string if none)
 - "evaluation": brief assessment of current status and 1-2 actionable recommendations
 
@@ -229,6 +283,7 @@ def main() -> None:
     parser.add_argument("--test-xml",      default=None, help="Path to test_results.xml")
     parser.add_argument("--bench-log",     default=None, help="Path to tileops_benchmarks.log")
     parser.add_argument("--manifest",      default=None, help="Path to op_manifest.json")
+    parser.add_argument("--registry",      default=None, help="Path to op_registry.json")
     parser.add_argument("--output",        required=True, help="Output path for analysis.json")
     parser.add_argument(
         "--model",
@@ -251,7 +306,8 @@ def main() -> None:
         sys.exit(0)
 
     # Load data
-    progress_text = _load_progress_detail(args.progress_json)
+    registry_ops = _load_registry(args.registry)
+    progress_text = _load_progress_detail(args.progress_json, registry_ops)
     fn_to_cat = _build_test_fn_to_cat(args.manifest)
     test_text = _load_test_summary(args.test_xml, fn_to_cat)
     bench_text = _load_bench_log(args.bench_log)
