@@ -71,7 +71,28 @@ def parse_passed_tests(xml_path: str | None) -> tuple[set[str], set[str]]:
 
 
 def parse_passed_benches(bench_xml_path: str | None) -> tuple[set[str], set[str]]:
-    return _parse_junit(bench_xml_path)
+    """Parse bench XML, return (passed_classnames, failed_classnames).
+
+    Uses classname (e.g. 'benchmarks.ops.bench_activation') instead of
+    function name, because bench function names don't match manifest entries.
+    """
+    passed: set[str] = set()
+    failed: set[str] = set()
+    if not bench_xml_path or not os.path.exists(bench_xml_path):
+        return passed, failed
+    try:
+        tree = ET.parse(bench_xml_path)
+        root = tree.getroot()
+    except ET.ParseError:
+        return passed, failed
+    for tc in root.iter("testcase"):
+        classname = tc.get("classname", "")
+        has_failure = tc.find("failure") is not None or tc.find("error") is not None
+        if has_failure:
+            failed.add(classname)
+        else:
+            passed.add(classname)
+    return passed, failed
 
 
 # ── 3. 逐 op 判断状态 ────────────────────────────────────────────────────────
@@ -100,16 +121,12 @@ def check_op(
     tested = bool(test_fns) and any(fn in passed_tests for fn in test_fns)
     test_failed = bool(test_fns) and any(fn in failed_tests for fn in test_fns)
 
-    # benchmark: 只有传入了 bench_xml 才做判断
+    # benchmark: match via classname (e.g. bench_file="benchmarks/ops/bench_activation.py"
+    # → classname="benchmarks.ops.bench_activation")
     if bench_file and (passed_benches or failed_benches):
-        # 根据 bench_file 的文件名前缀匹配 bench 函数名
-        bench_stem = Path(bench_file).stem  # e.g. "bench_binary_arith"
-        bench_ok: bool | None = any(
-            fn.startswith("bench_") and bench_stem.lstrip("bench_") in fn
-            for fn in passed_benches
-        ) or any(fn.startswith(bench_stem) for fn in passed_benches)
-        # 更简单的策略：只要该 bench_file 对应的任意 bench 函数通过，即认为 bench_ok
-        # 具体做法：bench_xml 中 classname 包含 bench_file stem
+        # Convert file path to dotted classname: benchmarks/ops/bench_activation.py → benchmarks.ops.bench_activation
+        bench_module = bench_file.replace("/", ".").removesuffix(".py")
+        bench_ok: bool | None = bench_module in passed_benches
     else:
         bench_ok = None
 
