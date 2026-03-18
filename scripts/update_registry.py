@@ -43,6 +43,7 @@ from claude_utils import (
     get_api_config,
     require_anthropic,
     SYSTEM_SCORE_EVALUATOR,
+    SYSTEM_KERNEL_MAPPER,
 )
 
 try:
@@ -213,6 +214,73 @@ def is_kernel_file(op_data: dict, filepath: str) -> bool:
         if _path_matches(filepath, mapped):
             return True
     return False
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 2b. Claude 增量映射重建（对 PR 受影响的算子）
+# ─────────────────────────────────────────────────────────────────────────────
+
+def remap_affected_ops(
+    registry: dict,
+    affected_op_ids: set[str],
+    manifest: dict,
+    repo_dir: str,
+    model: str,
+    api_key: str,
+    base_url: str | None,
+) -> dict[str, dict]:
+    """对受 PR 影响的算子，调用 Claude 重建 kernel/test/bench 文件映射。
+
+    Returns: {op_id: {kernel: [...], tests: [...], bench: [...]}}
+    """
+    from bootstrap_registry import get_compact_tree, build_file_mapping_prompt
+
+    if not affected_op_ids or not repo_dir or not api_key:
+        return {}
+
+    # 构建文件树（传给 Claude）
+    file_tree = get_compact_tree(repo_dir)
+
+    # 按 category 分组受影响的算子
+    ops_by_cat: dict[str, list[dict]] = {}
+    op_id_to_cat: dict[str, str] = {}
+    for cat in manifest.get("categories", []):
+        for op in cat.get("ops", []):
+            if op["id"] in affected_op_ids:
+                cat_name = cat["name"]
+                ops_by_cat.setdefault(cat_name, [])
+                # 附加已有的 auto_files 信息
+                reg_op = registry.get("ops", {}).get(op["id"], {})
+                op_copy = dict(op)
+                op_copy["_auto_files"] = {
+                    "op":    reg_op.get("files", {}).get("op", []),
+                    "tests": reg_op.get("files", {}).get("tests", []),
+                    "bench": reg_op.get("files", {}).get("bench", []),
+                }
+                ops_by_cat[cat_name].append(op_copy)
+
+    result: dict[str, dict] = {}
+
+    for cat_name, ops_batch in ops_by_cat.items():
+        try:
+            prompt = build_file_mapping_prompt(ops_batch, file_tree, cat_name)
+            data = call_claude_json(
+                prompt, model, api_key, base_url,
+                system=SYSTEM_KERNEL_MAPPER,
+                required_keys=["mappings"],
+                max_tokens=8192,
+            )
+            for item in data.get("mappings", []):
+                result[item["id"]] = {
+                    "kernel": item.get("kernel", []),
+                    "tests":  item.get("tests", []),
+                    "bench":  item.get("bench", []),
+                }
+            print(f"  Claude 映射重建 [{cat_name}]: {len(ops_batch)} 个算子")
+        except Exception as exc:
+            print(f"  ⚠ Claude 映射重建失败 [{cat_name}]: {exc}", file=sys.stderr)
+
+    return result
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -749,6 +817,29 @@ def main() -> None:
 
     print(f"  {len(pr_any_updates)} 个算子受 PR 影响, "
           f"其中 {len(pr_kernel_updates)} 个有 kernel 变更")
+
+    # ── Claude 增量映射重建（对受影响的算子）──────────────────────────────────
+    if pr_any_updates and args.repo_dir and not args.skip_claude and api_key:
+        manifest_for_remap = None
+        if args.manifest:
+            mp = Path(args.manifest)
+            if mp.exists():
+                manifest_for_remap = json.loads(mp.read_text())
+        if manifest_for_remap:
+            print(f"\n对 {len(pr_any_updates)} 个受影响算子重建文件映射 ...")
+            remap_results = remap_affected_ops(
+                registry, set(pr_any_updates.keys()), manifest_for_remap,
+                args.repo_dir, args.model, api_key, base_url,
+            )
+            for op_id, new_files in remap_results.items():
+                if op_id in registry.get("ops", {}):
+                    op = registry["ops"][op_id]
+                    # 更新映射，保留 op 文件（op 不由 Claude 管理）
+                    op["files"]["kernel"] = new_files.get("kernel", op["files"].get("kernel", []))
+                    op["files"]["tests"]  = new_files.get("tests",  op["files"].get("tests", []))
+                    op["files"]["bench"]  = new_files.get("bench",  op["files"].get("bench", []))
+                    op["files_last_scanned"] = NOW_ISO
+            print(f"  更新了 {len(remap_results)} 个算子的文件映射")
 
     # ── 代码库扫描（判断 implemented）────────────────────────────────────────
     all_classes = None

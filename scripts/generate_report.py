@@ -50,8 +50,11 @@ h3{font-size:.95rem;font-weight:600;margin:.75rem 0 .25rem}
 /* Stacked bar segments */
 .stacked-bar{display:flex;height:100%;border-radius:9999px;overflow:hidden}
 .stacked-bar .seg{height:100%;transition:width .6s ease}
-.seg-passed{background:#22c55e}.seg-failed{background:#ef4444}
-.seg-qualified{background:#7c3aed}.seg-underperforming{background:#f59e0b}
+.stacked-bar .seg:first-child{border-radius:9999px 0 0 9999px}
+.stacked-bar .seg:last-child{border-radius:0 9999px 9999px 0}
+.stacked-bar .seg:only-child{border-radius:9999px}
+.seg-passed{background:linear-gradient(90deg,#4ade80,#22c55e)}.seg-failed{background:linear-gradient(90deg,#f87171,#ef4444)}
+.seg-qualified{background:linear-gradient(90deg,#a78bfa,#7c3aed)}.seg-underperforming{background:linear-gradient(90deg,#fbbf24,#f59e0b)}
 .bar-row{display:flex;align-items:center;gap:.5rem;font-size:.82rem;margin:.2rem 0}
 .bar-label{width:50px;color:var(--muted);flex-shrink:0;font-weight:500}
 .bar-container{flex:1;min-width:60px}
