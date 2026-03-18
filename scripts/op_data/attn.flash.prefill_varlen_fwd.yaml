@@ -1,0 +1,39 @@
+id: attn.flash.prefill_varlen_fwd
+name: flash_prefill_varlen_fwd
+category: Flash Attention
+category_id: 8
+sub: flash_attention
+issue: 403
+files:
+  kernel:
+  - tileops/kernels/deepseek_nsa/gqa_sliding_window_varlen_fwd.py
+  op:
+  - tileops/ops/gqa_sliding_window_varlen_fwd.py
+  tests:
+  - tests/ops/test_gqa_sliding_window_varlen_fwd.py::test_gqa_sliding_window_varlen_fwd_op
+  bench:
+  - benchmarks/ops/bench_gqa_sliding_window_varlen_fwd.py::bench_gqa_sliding_window_varlen_fwd
+files_last_scanned: '2026-03-18T09:47:05Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
+perf_details:
+  baseline: null
+  last_run: null
+  summary: null
+  results: []
+perf_score_updated: null
+has_bugs: null
+bugs: []
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
+test_status:
+  last_run: null
+  passed: null
+  errors: []
+last_updated: '2026-03-18T09:47:05Z'
+updated_by: bootstrap

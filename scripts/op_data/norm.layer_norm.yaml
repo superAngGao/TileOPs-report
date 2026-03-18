@@ -1,0 +1,40 @@
+id: norm.layer_norm
+name: layer_norm
+category: Norm
+category_id: 3
+sub: layer_norm
+issue: 399
+files:
+  kernel:
+  - tileops/kernels/norm/layer_norm.py
+  op:
+  - tileops/ops/norm/layer_norm.py
+  tests:
+  - tests/ops/test_layer_norm.py::test_layer_norm_3d
+  - tests/ops/test_layer_norm.py::test_layer_norm_op
+  bench:
+  - benchmarks/ops/bench_layer_norm.py::bench_layer_norm
+files_last_scanned: '2026-03-18T09:47:05Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
+perf_details:
+  baseline: null
+  last_run: null
+  summary: null
+  results: []
+perf_score_updated: null
+has_bugs: null
+bugs: []
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
+test_status:
+  last_run: null
+  passed: null
+  errors: []
+last_updated: '2026-03-18T09:47:05Z'
+updated_by: bootstrap
