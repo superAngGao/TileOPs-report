@@ -308,15 +308,29 @@ def parse_bench_log(bench_log: str | None) -> dict[str, dict]:
 
 
 def get_op_bench_data(op_data: dict, bench_results: dict) -> dict | None:
-    """提取算子对应的 benchmark 数据。"""
+    """提取算子对应的 benchmark 数据。
+
+    优先按 ::fn_name 精确匹配（与 test 粒度一致），
+    无函数名后缀时降级为文件 stem 匹配。
+    """
     bench_entries = op_data.get("files", {}).get("bench", [])
+    if not bench_entries:
+        return None
+
     found = {}
     for entry in bench_entries:
-        # 取文件 stem，如 benchmarks/ops/bench_binary_arith.py -> bench_binary_arith
-        stem = Path(entry.split("::")[0]).stem.lower()
-        for key, data in bench_results.items():
-            if key.startswith(stem) or stem.startswith(key.split("_")[0]):
-                found[key] = data
+        if "::" in entry:
+            # 函数级匹配：benchmarks/ops/bench_activation.py::bench_relu -> bench_relu
+            fn = entry.split("::")[-1].lower()
+            if fn in bench_results:
+                found[fn] = bench_results[fn]
+        else:
+            # 降级：文件级匹配（兼容旧格式）
+            stem = Path(entry).stem.lower()
+            for key, data in bench_results.items():
+                if key.startswith(stem) or stem.startswith(key.split("_")[0]):
+                    found[key] = data
+
     return found if found else None
 
 

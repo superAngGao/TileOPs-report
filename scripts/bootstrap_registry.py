@@ -141,10 +141,10 @@ def auto_map_op(op: dict, repo_dir: str, category: dict) -> dict:
 # 2. Claude API — Kernel 文件识别
 # ─────────────────────────────────────────────────────────────────────────────
 
-def build_kernel_prompt(ops_batch: list[dict], file_tree: str, cat_name: str) -> str:
+def build_file_mapping_prompt(ops_batch: list[dict], file_tree: str, cat_name: str) -> str:
     """
-    构建让 Claude 识别 kernel 文件的 prompt。
-    ops_batch 中每项已含 auto_files（op/test/bench 路径）。
+    构建让 Claude 识别 kernel/test/bench 文件的 prompt。
+    ops_batch 中每项已含 auto_files（op 路径由 grep 预填）。
     """
     ops_summary = []
     for op in ops_batch:
@@ -152,6 +152,8 @@ def build_kernel_prompt(ops_batch: list[dict], file_tree: str, cat_name: str) ->
         ops_summary.append(
             f"  - id={op['id']}, name={op['name']}, sub={op.get('sub','')}"
             f", op_files={af.get('op', [])}"
+            f", auto_tests={af.get('tests', [])}"
+            f", auto_bench={af.get('bench', [])}"
         )
     ops_text = "\n".join(ops_summary)
 
@@ -163,29 +165,46 @@ def build_kernel_prompt(ops_batch: list[dict], file_tree: str, cat_name: str) ->
 ```
 
 ## 任务
-为类别「{cat_name}」下的算子找到对应的 **kernel 实现文件**。
+为类别「{cat_name}」下的每个算子找到对应的三类文件：
 
-Kernel 文件是实际执行 GPU/tile 计算的核心实现文件，通常位于 tilelang/ 或 tileops/kernels/ 下，
-**与** tileops/ops/ 下的高层封装（op 文件）区分。
+1. **kernel** — 实际执行 GPU/tile 计算的核心实现文件，通常位于 `tilelang/` 或 `tileops/kernels/` 下，
+   与 `tileops/ops/` 下的高层封装（op 文件）区分。
 
-## 算子列表（已知 op 封装文件）
+2. **tests** — 测试该算子正确性的测试文件，通常位于 `tests/` 下。
+   格式为 `文件路径::函数名`，例如 `tests/ops/test_activation.py::test_relu_op`。
+   如果一个文件中有多个测试函数对应同一个算子，全部列出。
+
+3. **bench** — 对该算子做性能基准测试的 benchmark 文件，通常位于 `benchmarks/` 下。
+   格式为 `文件路径::函数名`，例如 `benchmarks/ops/bench_activation.py::bench_relu`。
+   与 tests 粒度一致，需要定位到具体的 bench 函数。
+   如果一个文件中有多个 bench 函数对应同一个算子，全部列出。
+
+## 算子列表（已知 op 封装文件及自动扫描结果）
 {ops_text}
+
+## 匹配指南
+- 算子名称和文件名可能不完全一致，请根据语义理解匹配
+- `auto_tests` 和 `auto_bench` 是自动 grep 的初步结果，可能遗漏或不精确。请在此基础上补充未被发现的测试函数和 benchmark 函数
+- 对于测试文件，请仔细判断哪些 test 函数与该算子相关，即使函数名不包含算子名称
+- 对于 benchmark 文件，请找出文件中以 `bench_` 开头的函数，判断其与算子的对应关系
+- 一个测试/bench 文件可能覆盖多个算子（如 bench_activation.py 覆盖 relu/gelu/silu 等）
+- 多个算子共享同一文件时均列出
+- 找不到对应文件时对应字段为空列表 []
 
 ## 输出格式
 严格输出 JSON，不含其他文字：
 {{
   "mappings": [
     {{
-      "id": "ew.binary_arith.add",
-      "kernel": ["tilelang/ops/elementwise/binary_arith.py"]
+      "id": "ew.activation.relu",
+      "kernel": ["tileops/kernels/elementwise.py"],
+      "tests": ["tests/ops/test_activation.py::test_relu_op", "tests/ops/test_activation.py::test_relu_strategies"],
+      "bench": ["benchmarks/ops/bench_activation.py::bench_relu", "benchmarks/ops/bench_activation.py::bench_relu_strategies"]
     }}
   ]
 }}
 
-说明：
-- 多个算子共享同一 kernel 文件时均列出
-- 找不到对应 kernel 文件时 kernel 为 []
-- 路径相对于仓库根目录"""
+路径相对于仓库根目录。"""
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -375,33 +394,43 @@ def main() -> None:
             op["issue"]       = cat.get("issue")
             op["_auto_files"] = auto_map_op(op, args.repo_dir, cat)
 
-        # Step B: Claude 识别 kernel 文件
-        kernel_map: dict[str, list] = {}
+        # Step B: Claude 识别 kernel/test/bench 文件
+        claude_map: dict[str, dict] = {}
         if not args.skip_claude and api_key:
             try:
-                prompt = build_kernel_prompt(ops, file_tree, cat_name)
+                prompt = build_file_mapping_prompt(ops, file_tree, cat_name)
                 data   = call_claude_json(
                     prompt, args.model, api_key, base_url,
                     system=SYSTEM_KERNEL_MAPPER,
                     required_keys=["mappings"],
+                    max_tokens=8192,
                 )
                 for item in data.get("mappings", []):
-                    kernel_map[item["id"]] = item.get("kernel", [])
-                print(f"  Claude: {len(kernel_map)} 个 kernel 映射")
+                    claude_map[item["id"]] = {
+                        "kernel": item.get("kernel", []),
+                        "tests":  item.get("tests", []),
+                        "bench":  item.get("bench", []),
+                    }
+                n_kernel = sum(1 for v in claude_map.values() if v["kernel"])
+                n_tests  = sum(1 for v in claude_map.values() if v["tests"])
+                n_bench  = sum(1 for v in claude_map.values() if v["bench"])
+                print(f"  Claude: {n_kernel} kernel, {n_tests} test, {n_bench} bench 映射")
             except Exception as exc:
                 print(f"  ⚠ Claude 失败: {exc}", file=sys.stderr)
         else:
-            print("  跳过 Claude kernel 映射")
+            print("  跳过 Claude 文件映射")
 
-        # Step C: 合并 + 写 YAML
+        # Step C: 合并 Claude + auto 结果，写 YAML
+        # Claude 结果优先；auto grep 结果作为补充
         for op in ops:
             op_id  = op["id"]
             auto   = op["_auto_files"]
+            cm     = claude_map.get(op_id, {})
             files  = {
-                "kernel": kernel_map.get(op_id, []),
+                "kernel": cm.get("kernel", []),
                 "op":     auto["op"],
-                "tests":  auto["tests"],
-                "bench":  auto["bench"],
+                "tests":  cm.get("tests", []) or auto["tests"],
+                "bench":  cm.get("bench", []) or auto["bench"],
             }
             all_files[op_id] = files
 

@@ -104,6 +104,7 @@ def check_op(
     failed_tests: set[str],
     passed_benches: set[str],
     failed_benches: set[str],
+    registry_files: dict | None = None,
 ) -> dict:
     """
     返回单个 op 的状态字典：
@@ -111,24 +112,45 @@ def check_op(
       tested       : bool  — test_fns 中至少一个函数通过了测试
       test_failed  : bool  — test_fns 中至少一个函数失败
       bench_ok     : bool | None — benchmark 运行通过（None=未映射/无 bench_xml）
-      status       : "done" | "impl_only" | "partial" | "missing"
+      status       : "done" | "tested" | "impl_only" | "partial" | "missing"
+
+    registry_files: optional {kernel, op, tests, bench} from op_registry.json,
+                    provides Claude-identified file mappings.
     """
     op_classes: list[str] = op.get("op_classes", [])
-    test_fns: list[str] = op.get("test_fns", [])
-    bench_file: str | None = op.get("bench_file")
+
+    # ── Test function names: merge manifest + registry ───────────────────
+    test_fns: list[str] = list(op.get("test_fns", []))
+    if registry_files:
+        # Registry tests are "path::fn_name" format → extract fn_name
+        for entry in registry_files.get("tests", []):
+            if "::" in entry:
+                fn = entry.split("::")[-1]
+                if fn not in test_fns:
+                    test_fns.append(fn)
+
+    # ── Bench files: merge manifest + registry ───────────────────────────
+    bench_files: list[str] = []
+    if bf := op.get("bench_file"):
+        bench_files.append(bf)
+    if registry_files:
+        for bf in registry_files.get("bench", []):
+            if bf not in bench_files:
+                bench_files.append(bf)
 
     implemented = bool(op_classes) and any(c in all_classes for c in op_classes)
     tested = bool(test_fns) and any(fn in passed_tests for fn in test_fns)
     test_failed = bool(test_fns) and any(fn in failed_tests for fn in test_fns)
 
-    # benchmark: match via classname (e.g. bench_file="benchmarks/ops/bench_activation.py"
-    # → classname="benchmarks.ops.bench_activation")
-    if bench_file and (passed_benches or failed_benches):
-        # Convert file path to dotted classname: benchmarks/ops/bench_activation.py → benchmarks.ops.bench_activation
-        bench_module = bench_file.replace("/", ".").removesuffix(".py")
-        bench_ok: bool | None = bench_module in passed_benches
-    else:
-        bench_ok = None
+    # benchmark: match via classname
+    # bench_file="benchmarks/ops/bench_activation.py" → classname="benchmarks.ops.bench_activation"
+    bench_ok: bool | None = None
+    if bench_files and (passed_benches or failed_benches):
+        for bf in bench_files:
+            bench_module = bf.replace("/", ".").removesuffix(".py")
+            if bench_module in passed_benches:
+                bench_ok = True
+                break
 
     if implemented and tested and bench_ok is True:
         status = "done"        # 三项全部通过
@@ -159,6 +181,7 @@ def compute_progress(
     failed_tests: set[str],
     passed_benches: set[str],
     failed_benches: set[str],
+    registry: dict | None = None,
 ) -> dict:
     now_iso = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     total_ops = manifest["total_ops"]
@@ -178,10 +201,17 @@ def compute_progress(
         ops_out = []
 
         for op in cat["ops"]:
+            # Look up registry files for this op (Claude-identified mappings)
+            reg_files = None
+            if registry:
+                reg_entry = registry.get("ops", {}).get(op["id"])
+                if reg_entry:
+                    reg_files = reg_entry.get("files")
             st = check_op(
                 op, all_classes,
                 passed_tests, failed_tests,
                 passed_benches, failed_benches,
+                registry_files=reg_files,
             )
             if st["implemented"]:
                 cat_impl += 1
