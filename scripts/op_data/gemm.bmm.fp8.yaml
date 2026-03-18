@@ -34,10 +34,10 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T08:34:47Z'
+last_updated: '2026-03-18T08:44:43Z'
 updated_by: nightly-auto
 bench_status:
   last_run: '2026-03-18'
-  status: passed
+  status: failed
   ratio: null
   details: []

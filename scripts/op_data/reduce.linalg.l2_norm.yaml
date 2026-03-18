@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_vector_norm.py::bench_l2_norm
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 2
-func_score_notes: 有 PR 提交但测试失败，基础结构存在但功能未完全正确实现。
+func_score_notes: PR 已提交 vector_norm 子类别实现，但测试仍失败，存在已知 bug。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -26,7 +26,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试未通过，norm 计算结果存在错误
+- 测试未通过，benchmark 运行失败
 kernel_last_updated: '2026-03-17T11:19:03Z'
 kernel_last_pr_number: 547
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/547
@@ -37,10 +37,10 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T08:34:47Z'
+last_updated: '2026-03-18T08:44:43Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
+  status: failed
   ratio: null
   details: []

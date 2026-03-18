@@ -16,7 +16,7 @@ files:
   - benchmarks/ops/bench_softmax.py::bench_log_softmax
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 2
-func_score_notes: benchmark 可运行，但测试失败，log_softmax 数值稳定性或正确性存在问题。
+func_score_notes: 测试与 benchmark 均失败，log-sum-exp 实现或数值稳定性存在缺陷。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -27,7 +27,8 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试失败，log_softmax 输出不正确
+- 测试失败
+- benchmark 运行失败
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -38,10 +39,10 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T08:34:47Z'
+last_updated: '2026-03-18T08:44:43Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
+  status: failed
   ratio: null
   details: []

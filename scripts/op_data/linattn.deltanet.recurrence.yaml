@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_engram_decode.py::bench_engram_decode
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 3
-func_score_notes: 测试通过，无 PR 信息，bench ratio 为 null，功能基本可用但覆盖范围不明。
+func_score_notes: 测试未通过，功能状态不明，无 PR 信息。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -24,8 +24,9 @@ perf_details:
   summary: null
   results: []
 perf_score_updated: '2026-03-18'
-has_bugs: false
-bugs: []
+has_bugs: true
+bugs:
+- 测试失败，benchmark 无法运行
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -33,13 +34,13 @@ kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
   last_run: '2026-03-18'
-  passed: true
+  passed: false
   errors: []
-  status: passed
-last_updated: '2026-03-18T08:34:47Z'
+  status: failed
+last_updated: '2026-03-18T08:44:43Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
+  status: failed
   ratio: null
   details: []

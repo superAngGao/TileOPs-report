@@ -17,7 +17,7 @@ files:
   - benchmarks/ops/bench_cumulative.py::bench_cumprod
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 2
-func_score_notes: 测试通过但无 benchmark ratio，推测仅覆盖基础场景，边界情况未验证。
+func_score_notes: 测试失败，仅基础功能实现，边界情况未覆盖。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -26,8 +26,9 @@ perf_details:
   summary: null
   results: []
 perf_score_updated: '2026-03-18'
-has_bugs: false
-bugs: []
+has_bugs: true
+bugs:
+- 测试未通过，benchmark 运行失败
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -35,13 +36,13 @@ kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
   last_run: '2026-03-18'
-  passed: true
+  passed: false
   errors: []
-  status: passed
-last_updated: '2026-03-18T08:34:47Z'
+  status: failed
+last_updated: '2026-03-18T08:44:43Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
+  status: failed
   ratio: null
   details: []

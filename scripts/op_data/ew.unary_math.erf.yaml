@@ -16,7 +16,7 @@ files:
   - benchmarks/ops/bench_unary_elementwise.py::bench_erf
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 2
-func_score_notes: 测试失败，功能存在缺陷。PR 为重构性变更，未修复已有问题。
+func_score_notes: 测试失败，功能未通过验证。PR 为重构性变更，可能引入回归。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -27,7 +27,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试未通过，功能不可靠
+- 测试状态 failed，benchmark 无法运行
 kernel_last_updated: '2026-03-17T07:47:09Z'
 kernel_last_pr_number: 535
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/535
@@ -38,10 +38,10 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T08:34:47Z'
+last_updated: '2026-03-18T08:44:43Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
+  status: failed
   ratio: null
   details: []
