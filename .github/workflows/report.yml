@@ -354,6 +354,22 @@ jobs:
             --progress-json "${{ steps.report.outputs.report_dir }}/progress.json" \
             --analysis-md   "${{ steps.report.outputs.report_dir }}/analysis.md"
 
+      # ── Send report email ──────────────────────────────────────────────
+
+      - name: Send HTML report email
+        if: steps.go.outputs.proceed == 'true'
+        continue-on-error: true
+        run: |
+          python scripts/send_report_email.py \
+            --html-file "${{ steps.report.outputs.report_dir }}/report.html" \
+            --subject   "TileOPs Nightly Report ${{ steps.report.outputs.date }}" \
+            --to        gaoang0125@163.com
+        env:
+          MAIL_SMTP_SERVER: ${{ secrets.MAIL_SMTP_SERVER }}
+          MAIL_SMTP_PORT:   ${{ secrets.MAIL_SMTP_PORT }}
+          MAIL_USERNAME:    ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD:    ${{ secrets.MAIL_PASSWORD }}
+
       # ── Deploy to gh-pages (both modes) ─────────────────────────────────
 
       - name: Prune reports older than 14 days
