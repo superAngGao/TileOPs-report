@@ -13,7 +13,7 @@ files:
   bench: []
 files_last_scanned: '2026-03-15T20:22:03Z'
 func_score: null
-func_score_notes: 无测试结果和 bench 数据，无法评估。
+func_score_notes: 无测试结果或实现信息，PR 仅为重构辅助函数，无法评估功能完整性。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -33,5 +33,5 @@ test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-18T03:59:34Z'
+last_updated: '2026-03-18T04:12:24Z'
 updated_by: claude-nightly

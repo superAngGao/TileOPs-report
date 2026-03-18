@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_binary_elementwise.py
 files_last_scanned: '2026-03-15T20:22:03Z'
 func_score: 4
-func_score_notes: 测试全部通过，PR 为 fp8 重构，功能基本完整。无 bench 数据，性能无法评估。
+func_score_notes: 同 add，PR 为重构性变更，无新增功能或测试数据。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -35,5 +35,5 @@ test_status:
   last_run: '2026-03-18'
   passed: true
   errors: []
-last_updated: '2026-03-18T03:59:34Z'
+last_updated: '2026-03-18T04:12:24Z'
 updated_by: claude-nightly
