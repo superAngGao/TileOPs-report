@@ -799,25 +799,32 @@ def main() -> None:
             yaml_updates.update(meta)
             needs_score = True
 
-        # 测试状态
-        test_status = get_op_test_status(op_data, test_results)
-        yaml_updates["test_status"] = test_status
-        registry_updates["test_status"] = test_status
-        if test_status["status"] == "failed" and op_data.get("has_bugs") is None:
-            registry_updates["has_bugs"] = True
-            yaml_updates["has_bugs"]     = True
-        if test_status["status"] != "missing":
-            needs_score = True
+        # 测试状态（仅当有 test 数据时更新，否则保留已有值）
+        if test_results:
+            test_status = get_op_test_status(op_data, test_results)
+            yaml_updates["test_status"] = test_status
+            registry_updates["test_status"] = test_status
+            if test_status["status"] == "failed" and op_data.get("has_bugs") is None:
+                registry_updates["has_bugs"] = True
+                yaml_updates["has_bugs"]     = True
+            if test_status["status"] != "missing":
+                needs_score = True
+        else:
+            test_status = op_data.get("test_status") or {"status": "missing"}
 
-        # Benchmark 状态
-        bench_status = get_op_bench_status(op_data, bench_results, bench_xml_passed, bench_xml_failed)
-        yaml_updates["bench_status"] = bench_status
-        registry_updates["bench_status"] = bench_status
-        if bench_status["details"]:
-            yaml_updates.setdefault("perf_details", {})["results"] = bench_status["details"]
-            yaml_updates.setdefault("perf_details", {})["last_run"] = NOW_DATE
-        if bench_status["status"] not in ("missing",):
-            needs_score = True
+        # Benchmark 状态（仅当有 bench 数据时更新，否则保留已有值）
+        has_bench_data = bench_results or bench_xml_passed or bench_xml_failed
+        if has_bench_data:
+            bench_status = get_op_bench_status(op_data, bench_results, bench_xml_passed, bench_xml_failed)
+            yaml_updates["bench_status"] = bench_status
+            registry_updates["bench_status"] = bench_status
+            if bench_status["details"]:
+                yaml_updates.setdefault("perf_details", {})["results"] = bench_status["details"]
+                yaml_updates.setdefault("perf_details", {})["last_run"] = NOW_DATE
+            if bench_status["status"] not in ("missing",):
+                needs_score = True
+        else:
+            bench_status = op_data.get("bench_status") or {"status": "missing"}
 
         # 收集需要评分的算子信息
         if needs_score or op_id in pr_any_updates:
