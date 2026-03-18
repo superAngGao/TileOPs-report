@@ -370,6 +370,7 @@ jobs:
         run: |
           python scripts/gen_readme.py \
             --registry scripts/op_registry.json \
+            --analysis "${{ steps.report.outputs.report_dir }}/analysis.json" \
             --output   README.md
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
