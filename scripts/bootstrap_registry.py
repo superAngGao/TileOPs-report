@@ -190,6 +190,7 @@ def build_file_mapping_prompt(ops_batch: list[dict], file_tree: str, cat_name: s
 - 一个测试/bench 文件可能覆盖多个算子（如 bench_activation.py 覆盖 relu/gelu/silu 等）
 - 多个算子共享同一文件时均列出
 - 找不到对应文件时对应字段为空列表 []
+- **重要**：代码库中可能存在不在上述算子列表中的算子（如 engram 等）。这些算子的 kernel/test/bench 文件不应被归属到列表中的任何算子。如果一个文件明确属于列表外的算子，请忽略它，不要强行匹配到列表中的相似算子
 
 ## 输出格式
 严格输出 JSON，不含其他文字：

@@ -57,21 +57,6 @@ NOW_DATE = datetime.now(tz=timezone.utc).strftime("%Y-%m-%d")
 TODAY    = datetime.now(tz=timezone.utc).date()
 
 
-def scan_classes(repo_dir: str) -> set[str]:
-    """递归扫描 tileops/ 下所有 .py 文件，返回所有 class 名的集合。"""
-    classes: set[str] = set()
-    tileops_dir = Path(repo_dir) / "tileops"
-    if not tileops_dir.exists():
-        return classes
-    for py_file in tileops_dir.rglob("*.py"):
-        try:
-            text = py_file.read_text(encoding="utf-8", errors="replace")
-        except OSError:
-            continue
-        for m in re.finditer(r"^class\s+(\w+)", text, re.MULTILINE):
-            classes.add(m.group(1))
-    return classes
-
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 1. 注册表 I/O
@@ -635,15 +620,9 @@ def build_score_prompt(ops_batch: list[dict]) -> str:
 # 6. 汇总统计
 # ─────────────────────────────────────────────────────────────────────────────
 
-def compute_summary(registry: dict, manifest: dict, all_classes: set[str] | None = None) -> dict:
+def compute_summary(registry: dict, manifest: dict) -> dict:
     """从 registry 计算汇总统计，替代 progress.json。"""
     ops = registry.get("ops", {})
-
-    # Build op_id -> op_classes map from manifest
-    op_classes_map: dict[str, list[str]] = {}
-    for cat in manifest.get("categories", []):
-        for op in cat.get("ops", []):
-            op_classes_map[op["id"]] = op.get("op_classes", [])
 
     categories_out = []
     grand_impl = grand_tested = grand_benched = grand_done = 0
@@ -656,13 +635,8 @@ def compute_summary(registry: dict, manifest: dict, all_classes: set[str] | None
             op_id = mop["id"]
             op_data = ops.get(op_id, {})
 
-            # implemented: check op_classes against scanned classes
-            op_cls = op_classes_map.get(op_id, [])
-            if all_classes is not None:
-                implemented = bool(op_cls) and any(c in all_classes for c in op_cls)
-            else:
-                # If no repo scan, use existing value or check if kernel files exist
-                implemented = op_data.get("implemented", bool(op_data.get("files", {}).get("kernel")))
+            # implemented: registry 中有 kernel 文件映射即为已实现
+            implemented = bool(op_data.get("files", {}).get("kernel"))
 
             # test status
             ts = op_data.get("test_status", {})
@@ -754,7 +728,7 @@ def main() -> None:
     parser.add_argument("--model",        default="claude-sonnet-4-6")
     parser.add_argument("--skip-claude",  action="store_true",
                         help="跳过 Claude 评估步骤")
-    parser.add_argument("--repo-dir",     default=None,  help="TileOPs 仓库根目录（用于判断 implemented）")
+    parser.add_argument("--repo-dir",     default=None,  help="TileOPs 仓库根目录（用于 Claude 增量映射重建）")
     parser.add_argument("--manifest",     default=None,  help="op_manifest.json 路径（用于类别结构和 op_classes）")
     args = parser.parse_args()
 
@@ -840,13 +814,6 @@ def main() -> None:
                     op["files"]["bench"]  = new_files.get("bench",  op["files"].get("bench", []))
                     op["files_last_scanned"] = NOW_ISO
             print(f"  更新了 {len(remap_results)} 个算子的文件映射")
-
-    # ── 代码库扫描（判断 implemented）────────────────────────────────────────
-    all_classes = None
-    if args.repo_dir:
-        print(f"\n扫描代码库: {args.repo_dir}")
-        all_classes = scan_classes(args.repo_dir)
-        print(f"  找到 {len(all_classes)} 个 class 定义")
 
     # ── 测试结果 ─────────────────────────────────────────────────────────────
     print(f"\n解析测试结果: {args.test_xml or '(未提供)'}")
@@ -1014,7 +981,7 @@ def main() -> None:
 
     if manifest:
         print("\n计算汇总统计 ...")
-        summary = compute_summary(registry, manifest, all_classes)
+        summary = compute_summary(registry, manifest)
         registry["summary"] = summary
         print(f"  impl={summary['impl_ops']} tested={summary['tested_ops']} "
               f"benched={summary['benched_ops']} done={summary['done_ops']}/{summary['total_ops']}")
