@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_vector_norm.py::bench_l1_norm
 files_last_scanned: '2026-03-18T05:54:04Z'
 func_score: 1
-func_score_notes: 有对应 PR（vector_norm 子类别），但测试仍失败，实现尚未通过验证。
+func_score_notes: 有对应 PR（vector_norm 子类别），但测试仍失败，实现尚未达到可用状态。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -37,7 +37,7 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T07:30:01Z'
+last_updated: '2026-03-18T07:34:57Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

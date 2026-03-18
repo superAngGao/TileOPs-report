@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-03-18T07:30:01Z",
+  "generated_at": "2026-03-18T07:34:57Z",
   "total_ops": 186,
   "ops": {
     "ew.binary_arith.add": {
@@ -34,7 +34,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.binary_arith.sub": {
       "id": "ew.binary_arith.sub",
@@ -62,7 +74,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.binary_arith.mul": {
       "id": "ew.binary_arith.mul",
@@ -90,7 +114,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.binary_arith.div": {
       "id": "ew.binary_arith.div",
@@ -118,7 +154,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.binary_arith.remainder": {
       "id": "ew.binary_arith.remainder",
@@ -146,7 +194,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.binary_arith.pow": {
       "id": "ew.binary_arith.pow",
@@ -174,7 +234,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.binary_arith.floor_divide": {
       "id": "ew.binary_arith.floor_divide",
@@ -202,7 +274,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.binary_arith.lerp": {
       "id": "ew.binary_arith.lerp",
@@ -230,7 +314,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.binary_arith.maximum": {
       "id": "ew.binary_arith.maximum",
@@ -259,7 +355,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.binary_arith.minimum": {
       "id": "ew.binary_arith.minimum",
@@ -288,7 +396,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.exp": {
       "id": "ew.unary_math.exp",
@@ -317,7 +437,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.log": {
       "id": "ew.unary_math.log",
@@ -346,7 +478,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.sqrt": {
       "id": "ew.unary_math.sqrt",
@@ -375,7 +519,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.rsqrt": {
       "id": "ew.unary_math.rsqrt",
@@ -404,7 +560,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.abs": {
       "id": "ew.unary_math.abs",
@@ -432,7 +600,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.neg": {
       "id": "ew.unary_math.neg",
@@ -460,7 +640,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.reciprocal": {
       "id": "ew.unary_math.reciprocal",
@@ -489,7 +681,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.sign": {
       "id": "ew.unary_math.sign",
@@ -518,7 +722,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.sin": {
       "id": "ew.unary_math.sin",
@@ -546,7 +762,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.cos": {
       "id": "ew.unary_math.cos",
@@ -574,7 +802,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.floor": {
       "id": "ew.unary_math.floor",
@@ -602,7 +842,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.ceil": {
       "id": "ew.unary_math.ceil",
@@ -630,7 +882,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.round": {
       "id": "ew.unary_math.round",
@@ -658,7 +922,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.trunc": {
       "id": "ew.unary_math.trunc",
@@ -686,7 +962,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.erf": {
       "id": "ew.unary_math.erf",
@@ -715,7 +1003,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.log1p": {
       "id": "ew.unary_math.log1p",
@@ -744,7 +1044,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.unary_math.expm1": {
       "id": "ew.unary_math.expm1",
@@ -773,7 +1085,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.relu": {
       "id": "ew.activation.relu",
@@ -803,7 +1127,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.gelu": {
       "id": "ew.activation.gelu",
@@ -831,7 +1167,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.silu": {
       "id": "ew.activation.silu",
@@ -859,7 +1207,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.sigmoid": {
       "id": "ew.activation.sigmoid",
@@ -888,7 +1248,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.tanh": {
       "id": "ew.activation.tanh",
@@ -917,7 +1289,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.leaky_relu": {
       "id": "ew.activation.leaky_relu",
@@ -943,7 +1327,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.elu": {
       "id": "ew.activation.elu",
@@ -969,7 +1365,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.selu": {
       "id": "ew.activation.selu",
@@ -997,7 +1405,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.hardswish": {
       "id": "ew.activation.hardswish",
@@ -1025,7 +1445,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.hardsigmoid": {
       "id": "ew.activation.hardsigmoid",
@@ -1053,7 +1485,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.hardtanh": {
       "id": "ew.activation.hardtanh",
@@ -1079,7 +1523,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.softplus": {
       "id": "ew.activation.softplus",
@@ -1105,7 +1561,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.mish": {
       "id": "ew.activation.mish",
@@ -1133,7 +1601,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.activation.prelu": {
       "id": "ew.activation.prelu",
@@ -1159,7 +1639,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.fused_gated.silu_and_mul": {
       "id": "ew.fused_gated.silu_and_mul",
@@ -1187,7 +1679,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.fused_gated.gelu_and_mul": {
       "id": "ew.fused_gated.gelu_and_mul",
@@ -1215,7 +1719,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.fused_gated.gelu_tanh_and_mul": {
       "id": "ew.fused_gated.gelu_tanh_and_mul",
@@ -1243,7 +1759,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.comparison.eq": {
       "id": "ew.comparison.eq",
@@ -1272,7 +1800,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.comparison.ne": {
       "id": "ew.comparison.ne",
@@ -1300,7 +1840,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.comparison.gt": {
       "id": "ew.comparison.gt",
@@ -1328,7 +1880,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.comparison.lt": {
       "id": "ew.comparison.lt",
@@ -1356,7 +1920,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.comparison.ge": {
       "id": "ew.comparison.ge",
@@ -1384,7 +1960,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.comparison.le": {
       "id": "ew.comparison.le",
@@ -1412,7 +2000,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.bitwise.and": {
       "id": "ew.bitwise.and",
@@ -1440,7 +2040,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.bitwise.or": {
       "id": "ew.bitwise.or",
@@ -1468,7 +2080,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.bitwise.xor": {
       "id": "ew.bitwise.xor",
@@ -1496,7 +2120,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.bitwise.not": {
       "id": "ew.bitwise.not",
@@ -1524,7 +2160,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.logical.not": {
       "id": "ew.logical.not",
@@ -1552,7 +2200,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.logical.and": {
       "id": "ew.logical.and",
@@ -1580,7 +2240,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.logical.or": {
       "id": "ew.logical.or",
@@ -1608,7 +2280,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.special.where": {
       "id": "ew.special.where",
@@ -1632,7 +2316,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.special.clamp": {
       "id": "ew.special.clamp",
@@ -1656,7 +2352,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.special.masked_fill": {
       "id": "ew.special.masked_fill",
@@ -1680,7 +2388,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.special.nan_to_num": {
       "id": "ew.special.nan_to_num",
@@ -1704,7 +2424,19 @@
       "has_bugs": null,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.special.isnan": {
       "id": "ew.special.isnan",
@@ -1731,7 +2463,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.special.isinf": {
       "id": "ew.special.isinf",
@@ -1758,7 +2502,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.special.isfinite": {
       "id": "ew.special.isfinite",
@@ -1785,7 +2541,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.dropout.dropout": {
       "id": "ew.dropout.dropout",
@@ -1813,7 +2581,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.rope.neox": {
       "id": "ew.rope.neox",
@@ -1841,7 +2621,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.rope.non_neox": {
       "id": "ew.rope.non_neox",
@@ -1869,7 +2661,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.rope.llama31": {
       "id": "ew.rope.llama31",
@@ -1897,7 +2701,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.rope.yarn": {
       "id": "ew.rope.yarn",
@@ -1917,7 +2733,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.rope.longrope": {
       "id": "ew.rope.longrope",
@@ -1937,7 +2765,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.alibi.alibi": {
       "id": "ew.alibi.alibi",
@@ -1961,7 +2801,19 @@
       "has_bugs": null,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "ew.sinusoidal.sinusoidal": {
       "id": "ew.sinusoidal.sinusoidal",
@@ -1985,7 +2837,19 @@
       "has_bugs": null,
       "kernel_last_updated": "2026-03-17T07:47:09Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.reduce.sum": {
       "id": "reduce.reduce.sum",
@@ -2016,7 +2880,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.reduce.mean": {
       "id": "reduce.reduce.mean",
@@ -2044,7 +2920,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.reduce.amin": {
       "id": "reduce.reduce.amin",
@@ -2072,7 +2960,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.reduce.amax": {
       "id": "reduce.reduce.amax",
@@ -2100,7 +3000,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.reduce.prod": {
       "id": "reduce.reduce.prod",
@@ -2128,7 +3040,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.reduce.std": {
       "id": "reduce.reduce.std",
@@ -2158,7 +3082,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.reduce.var": {
       "id": "reduce.reduce.var",
@@ -2189,7 +3125,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.reduce.var_mean": {
       "id": "reduce.reduce.var_mean",
@@ -2218,7 +3166,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.softmax.softmax": {
       "id": "reduce.softmax.softmax",
@@ -2248,7 +3208,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.softmax.log_softmax": {
       "id": "reduce.softmax.log_softmax",
@@ -2277,7 +3249,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.softmax.logsumexp": {
       "id": "reduce.softmax.logsumexp",
@@ -2306,7 +3290,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.argreduce.argmax": {
       "id": "reduce.argreduce.argmax",
@@ -2336,7 +3332,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.argreduce.argmin": {
       "id": "reduce.argreduce.argmin",
@@ -2366,7 +3374,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.cumulative.cumsum": {
       "id": "reduce.cumulative.cumsum",
@@ -2396,7 +3416,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.cumulative.cumprod": {
       "id": "reduce.cumulative.cumprod",
@@ -2426,7 +3458,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.logical_reduce.any": {
       "id": "reduce.logical_reduce.any",
@@ -2454,7 +3498,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.logical_reduce.all": {
       "id": "reduce.logical_reduce.all",
@@ -2482,7 +3538,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.linalg.l1_norm": {
       "id": "reduce.linalg.l1_norm",
@@ -2510,7 +3578,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T11:19:03Z",
       "kernel_last_pr_author": "zhen8838",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.linalg.l2_norm": {
       "id": "reduce.linalg.l2_norm",
@@ -2538,7 +3618,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T11:19:03Z",
       "kernel_last_pr_author": "zhen8838",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "reduce.linalg.inf_norm": {
       "id": "reduce.linalg.inf_norm",
@@ -2566,7 +3658,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T11:19:03Z",
       "kernel_last_pr_author": "zhen8838",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "norm.layer_norm": {
       "id": "norm.layer_norm",
@@ -2595,7 +3699,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "norm.batch_norm": {
       "id": "norm.batch_norm",
@@ -2624,7 +3740,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "norm.group_norm": {
       "id": "norm.group_norm",
@@ -2653,7 +3781,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "norm.instance_norm": {
       "id": "norm.instance_norm",
@@ -2682,7 +3822,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "norm.rms_norm": {
       "id": "norm.rms_norm",
@@ -2711,7 +3863,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "norm.qk_norm": {
       "id": "norm.qk_norm",
@@ -2733,7 +3897,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "norm.ada_layer_norm": {
       "id": "norm.ada_layer_norm",
@@ -2762,7 +3938,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "norm.ada_layer_norm_zero": {
       "id": "norm.ada_layer_norm_zero",
@@ -2791,7 +3979,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "norm.fused_add_layer_norm": {
       "id": "norm.fused_add_layer_norm",
@@ -2820,7 +4020,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "norm.fused_add_rmsnorm": {
       "id": "norm.fused_add_rmsnorm",
@@ -2849,7 +4061,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.conv.conv1d": {
       "id": "conv.conv.conv1d",
@@ -2869,7 +4093,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.conv.conv2d": {
       "id": "conv.conv.conv2d",
@@ -2889,7 +4125,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.conv.conv3d": {
       "id": "conv.conv.conv3d",
@@ -2909,7 +4157,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.conv_transpose.conv_t1d": {
       "id": "conv.conv_transpose.conv_t1d",
@@ -2929,7 +4189,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.conv_transpose.conv_t2d": {
       "id": "conv.conv_transpose.conv_t2d",
@@ -2949,7 +4221,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.depthwise.depthwise_conv2d": {
       "id": "conv.depthwise.depthwise_conv2d",
@@ -2969,7 +4253,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.grouped.grouped_conv2d": {
       "id": "conv.grouped.grouped_conv2d",
@@ -2989,7 +4285,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.dilated.dilated_conv2d": {
       "id": "conv.dilated.dilated_conv2d",
@@ -3009,7 +4317,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.max_pool.max_pool1d": {
       "id": "conv.max_pool.max_pool1d",
@@ -3029,7 +4349,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.max_pool.max_pool2d": {
       "id": "conv.max_pool.max_pool2d",
@@ -3049,7 +4381,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.max_pool.max_pool3d": {
       "id": "conv.max_pool.max_pool3d",
@@ -3069,7 +4413,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.avg_pool.avg_pool1d": {
       "id": "conv.avg_pool.avg_pool1d",
@@ -3089,7 +4445,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.avg_pool.avg_pool2d": {
       "id": "conv.avg_pool.avg_pool2d",
@@ -3109,7 +4477,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.avg_pool.avg_pool3d": {
       "id": "conv.avg_pool.avg_pool3d",
@@ -3129,7 +4509,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.adaptive.adaptive_avg_pool2d": {
       "id": "conv.adaptive.adaptive_avg_pool2d",
@@ -3149,7 +4541,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "conv.adaptive.adaptive_max_pool2d": {
       "id": "conv.adaptive.adaptive_max_pool2d",
@@ -3169,7 +4573,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.gemm.fp16": {
       "id": "gemm.gemm.fp16",
@@ -3197,7 +4613,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.gemm.fp8": {
       "id": "gemm.gemm.fp8",
@@ -3223,7 +4651,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.gemm.fp8_block_scaled": {
       "id": "gemm.gemm.fp8_block_scaled",
@@ -3249,7 +4689,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.gemm.gemv_fp16": {
       "id": "gemm.gemm.gemv_fp16",
@@ -3278,7 +4730,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.gemm.gemv_fp8": {
       "id": "gemm.gemm.gemv_fp8",
@@ -3304,7 +4768,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.gemm.small_batch_fp16": {
       "id": "gemm.gemm.small_batch_fp16",
@@ -3330,7 +4806,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.gemm.small_batch_fp8": {
       "id": "gemm.gemm.small_batch_fp8",
@@ -3356,7 +4844,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.bmm.fp16": {
       "id": "gemm.bmm.fp16",
@@ -3380,7 +4880,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.bmm.fp8": {
       "id": "gemm.bmm.fp8",
@@ -3404,7 +4916,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.groupgemm.fp16": {
       "id": "gemm.groupgemm.fp16",
@@ -3432,7 +4956,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.groupgemm.fp8": {
       "id": "gemm.groupgemm.fp8",
@@ -3458,7 +4994,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.outer.outer": {
       "id": "gemm.outer.outer",
@@ -3478,7 +5026,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.lowbit.w4a16": {
       "id": "gemm.lowbit.w4a16",
@@ -3498,7 +5058,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.lowbit.w8a8": {
       "id": "gemm.lowbit.w8a8",
@@ -3518,7 +5090,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.lowbit.w8a8_int8": {
       "id": "gemm.lowbit.w8a8_int8",
@@ -3538,7 +5122,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.lowbit.weight_only_int4": {
       "id": "gemm.lowbit.weight_only_int4",
@@ -3558,7 +5154,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.lowbit.fp4": {
       "id": "gemm.lowbit.fp4",
@@ -3578,7 +5186,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.sparse.fp16": {
       "id": "gemm.sparse.fp16",
@@ -3598,7 +5218,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "gemm.sparse.fp8": {
       "id": "gemm.sparse.fp8",
@@ -3618,7 +5250,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "quant.int8.per_tensor": {
       "id": "quant.int8.per_tensor",
@@ -3638,7 +5282,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "quant.int8.per_channel": {
       "id": "quant.int8.per_channel",
@@ -3658,7 +5314,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "quant.int8.per_block": {
       "id": "quant.int8.per_block",
@@ -3678,7 +5346,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "quant.int8.smooth_quant": {
       "id": "quant.int8.smooth_quant",
@@ -3698,7 +5378,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "quant.int4.per_channel": {
       "id": "quant.int4.per_channel",
@@ -3718,7 +5410,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "quant.int4.per_block": {
       "id": "quant.int4.per_block",
@@ -3738,7 +5442,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "quant.int4.nf4": {
       "id": "quant.int4.nf4",
@@ -3758,7 +5474,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "quant.fp8.per_tensor": {
       "id": "quant.fp8.per_tensor",
@@ -3786,7 +5514,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "quant.fp8.per_block": {
       "id": "quant.fp8.per_block",
@@ -3810,7 +5550,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "quant.fp8.cast_transpose": {
       "id": "quant.fp8.cast_transpose",
@@ -3830,7 +5582,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "sampling.top_k": {
       "id": "sampling.top_k",
@@ -3850,7 +5614,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "sampling.top_p": {
       "id": "sampling.top_p",
@@ -3870,7 +5646,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "sampling.min_p": {
       "id": "sampling.min_p",
@@ -3890,7 +5678,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "sampling.top_k_top_p": {
       "id": "sampling.top_k_top_p",
@@ -3910,7 +5710,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "sampling.temperature_scale": {
       "id": "sampling.temperature_scale",
@@ -3930,7 +5742,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "sampling.from_probs": {
       "id": "sampling.from_probs",
@@ -3950,7 +5774,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "sampling.chain_spec": {
       "id": "sampling.chain_spec",
@@ -3978,7 +5814,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.flash.prefill_fwd": {
       "id": "attn.flash.prefill_fwd",
@@ -4009,7 +5857,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.flash.prefill_bwd": {
       "id": "attn.flash.prefill_bwd",
@@ -4040,7 +5900,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.flash.prefill_varlen_fwd": {
       "id": "attn.flash.prefill_varlen_fwd",
@@ -4068,7 +5940,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.flash.prefill_varlen_bwd": {
       "id": "attn.flash.prefill_varlen_bwd",
@@ -4088,7 +5972,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.flash.decode_fwd": {
       "id": "attn.flash.decode_fwd",
@@ -4120,7 +6016,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.flash.decode_paged_fwd": {
       "id": "attn.flash.decode_paged_fwd",
@@ -4152,7 +6060,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.flash.decode_varlen_fwd": {
       "id": "attn.flash.decode_varlen_fwd",
@@ -4172,7 +6092,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.flash.chunked_prefill": {
       "id": "attn.flash.chunked_prefill",
@@ -4192,7 +6124,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.mla.prefill_fwd": {
       "id": "attn.mla.prefill_fwd",
@@ -4212,7 +6156,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.mla.prefill_bwd": {
       "id": "attn.mla.prefill_bwd",
@@ -4232,7 +6188,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.mla.decode_fwd": {
       "id": "attn.mla.decode_fwd",
@@ -4261,7 +6229,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.mla.decode_paged_fwd": {
       "id": "attn.mla.decode_paged_fwd",
@@ -4281,7 +6261,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.nsa.prefill_fwd": {
       "id": "attn.nsa.prefill_fwd",
@@ -4312,7 +6304,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.nsa.decode_fwd": {
       "id": "attn.nsa.decode_fwd",
@@ -4332,7 +6336,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.dsa.prefill_fwd": {
       "id": "attn.dsa.prefill_fwd",
@@ -4352,7 +6368,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "attn.dsa.decode_fwd": {
       "id": "attn.dsa.decode_fwd",
@@ -4380,7 +6408,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "moe.permute_align": {
       "id": "moe.permute_align",
@@ -4406,7 +6446,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-18T05:36:31Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "moe.unpermute_depad": {
       "id": "moe.unpermute_depad",
@@ -4426,7 +6478,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "moe.fused_moe.deepseek": {
       "id": "moe.fused_moe.deepseek",
@@ -4446,7 +6510,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "moe.fused_moe.glm": {
       "id": "moe.fused_moe.glm",
@@ -4466,7 +6542,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "moe.fused_moe.kimi": {
       "id": "moe.fused_moe.kimi",
@@ -4486,7 +6574,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "moe.fused_moe.qwen": {
       "id": "moe.fused_moe.qwen",
@@ -4506,7 +6606,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "linattn.gated_deltanet.chunkwise": {
       "id": "linattn.gated_deltanet.chunkwise",
@@ -4540,7 +6652,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "linattn.gated_deltanet.recurrence": {
       "id": "linattn.gated_deltanet.recurrence",
@@ -4569,7 +6693,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "linattn.deltanet.chunkwise": {
       "id": "linattn.deltanet.chunkwise",
@@ -4599,7 +6735,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "linattn.deltanet.recurrence": {
       "id": "linattn.deltanet.recurrence",
@@ -4627,7 +6775,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "linattn.gla.chunkwise": {
       "id": "linattn.gla.chunkwise",
@@ -4656,7 +6816,19 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T06:35:03Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "linattn.gla.recurrence": {
       "id": "linattn.gla.recurrence",
@@ -4682,7 +6854,19 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T14:16:55Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-18T07:30:01Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      }
     },
     "linattn.retnet.chunkwise": {
       "id": "linattn.retnet.chunkwise",
@@ -4702,7 +6886,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "linattn.retnet.recurrence": {
       "id": "linattn.retnet.recurrence",
@@ -4722,7 +6918,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "ssm.mamba1": {
       "id": "ssm.mamba1",
@@ -4742,7 +6950,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     },
     "ssm.mamba2": {
       "id": "ssm.mamba2",
@@ -4762,7 +6982,19 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T07:34:57Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      }
     }
   }
 }
