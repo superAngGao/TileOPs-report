@@ -292,6 +292,7 @@ jobs:
           EXTRA_ARGS=""
           if [ "${{ steps.mode.outputs.registry_only }}" != "true" ]; then
             EXTRA_ARGS="--test-xml ${{ steps.report.outputs.report_dir }}/test_results.xml"
+            EXTRA_ARGS="${EXTRA_ARGS} --test-log ${{ steps.report.outputs.report_dir }}/test_output.log"
             EXTRA_ARGS="${EXTRA_ARGS} --bench-log ${{ steps.report.outputs.report_dir }}/tileops_benchmarks.log"
             EXTRA_ARGS="${EXTRA_ARGS} --bench-xml ${{ steps.report.outputs.report_dir }}/bench_results.xml"
             EXTRA_ARGS="${EXTRA_ARGS} --repo-dir TileOPs/"

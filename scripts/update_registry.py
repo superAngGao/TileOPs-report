@@ -253,6 +253,34 @@ def parse_test_xml(test_xml: str | None) -> dict[str, dict]:
     return results
 
 
+def parse_test_log(test_log: str | None) -> dict[str, dict]:
+    """
+    解析 pytest 文本日志，返回 {fn_name: {passed: bool, errors: [str]}}。
+    匹配格式：tests/ops/test_activation.py::test_relu_op[params] PASSED/FAILED
+    """
+    results: dict[str, dict] = {}
+    if not test_log or not Path(test_log).exists():
+        return results
+    try:
+        text = Path(test_log).read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return results
+
+    pat = re.compile(
+        r"^(tests/\S+?)::(\w+)(?:\[.*?\])?\s+(PASSED|FAILED|ERROR)",
+        re.MULTILINE,
+    )
+    for m in pat.finditer(text):
+        fn = m.group(2)
+        status = m.group(3)
+        if fn not in results:
+            results[fn] = {"passed": True, "errors": []}
+        if status in ("FAILED", "ERROR"):
+            results[fn]["passed"] = False
+
+    return results
+
+
 def get_op_test_status(op_data: dict, test_results: dict) -> dict:
     """
     计算算子的测试状态。
@@ -648,6 +676,7 @@ def main() -> None:
     parser.add_argument("--registry",     required=True, help="op_registry.json 路径")
     parser.add_argument("--op-data-dir",  required=True, help="op_data/ 目录路径")
     parser.add_argument("--test-xml",     default=None,  help="test_results.xml 路径")
+    parser.add_argument("--test-log",     default=None,  help="tileops_op_test.log 路径（XML 不存在时的 fallback）")
     parser.add_argument("--bench-log",    default=None,  help="tileops_benchmarks.log 路径")
     parser.add_argument("--bench-xml",    default=None,  help="bench_results.xml 路径")
     parser.add_argument("--tileops-repo", default="tile-ai/TileOPs",
@@ -731,6 +760,9 @@ def main() -> None:
     # ── 测试结果 ─────────────────────────────────────────────────────────────
     print(f"\n解析测试结果: {args.test_xml or '(未提供)'}")
     test_results = parse_test_xml(args.test_xml)
+    if not test_results and args.test_log:
+        print(f"  XML 为空，fallback 到 pytest log: {args.test_log}")
+        test_results = parse_test_log(args.test_log)
     print(f"  {len(test_results)} 个测试函数")
 
     # ── Benchmark 日志 ───────────────────────────────────────────────────────
