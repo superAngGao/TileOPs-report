@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-03-18T05:54:04Z",
+  "generated_at": "2026-03-18T06:35:03Z",
   "total_ops": 186,
   "ops": {
     "ew.binary_arith.add": {
@@ -31,10 +31,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.binary_arith.sub": {
       "id": "ew.binary_arith.sub",
@@ -59,10 +59,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.binary_arith.mul": {
       "id": "ew.binary_arith.mul",
@@ -87,10 +87,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.binary_arith.div": {
       "id": "ew.binary_arith.div",
@@ -115,10 +115,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.binary_arith.remainder": {
       "id": "ew.binary_arith.remainder",
@@ -143,10 +143,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.binary_arith.pow": {
       "id": "ew.binary_arith.pow",
@@ -171,10 +171,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.binary_arith.floor_divide": {
       "id": "ew.binary_arith.floor_divide",
@@ -199,10 +199,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.binary_arith.lerp": {
       "id": "ew.binary_arith.lerp",
@@ -227,10 +227,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.binary_arith.maximum": {
       "id": "ew.binary_arith.maximum",
@@ -256,10 +256,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.binary_arith.minimum": {
       "id": "ew.binary_arith.minimum",
@@ -285,10 +285,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.exp": {
       "id": "ew.unary_math.exp",
@@ -314,10 +314,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.log": {
       "id": "ew.unary_math.log",
@@ -343,10 +343,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.sqrt": {
       "id": "ew.unary_math.sqrt",
@@ -372,10 +372,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.rsqrt": {
       "id": "ew.unary_math.rsqrt",
@@ -401,10 +401,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.abs": {
       "id": "ew.unary_math.abs",
@@ -429,10 +429,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.neg": {
       "id": "ew.unary_math.neg",
@@ -457,10 +457,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.reciprocal": {
       "id": "ew.unary_math.reciprocal",
@@ -486,10 +486,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.sign": {
       "id": "ew.unary_math.sign",
@@ -515,10 +515,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.sin": {
       "id": "ew.unary_math.sin",
@@ -543,10 +543,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.cos": {
       "id": "ew.unary_math.cos",
@@ -571,10 +571,10 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.floor": {
       "id": "ew.unary_math.floor",
@@ -597,12 +597,12 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_floor"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.ceil": {
       "id": "ew.unary_math.ceil",
@@ -625,12 +625,12 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_ceil"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.round": {
       "id": "ew.unary_math.round",
@@ -653,12 +653,12 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_round"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.trunc": {
       "id": "ew.unary_math.trunc",
@@ -681,12 +681,12 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_trunc"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.erf": {
       "id": "ew.unary_math.erf",
@@ -710,12 +710,12 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_erf"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.log1p": {
       "id": "ew.unary_math.log1p",
@@ -739,12 +739,12 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_log1p"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.unary_math.expm1": {
       "id": "ew.unary_math.expm1",
@@ -768,12 +768,12 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_expm1"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.relu": {
       "id": "ew.activation.relu",
@@ -798,12 +798,12 @@
           "benchmarks/ops/bench_activation.py::bench_relu_strategies"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.gelu": {
       "id": "ew.activation.gelu",
@@ -826,12 +826,12 @@
           "benchmarks/ops/bench_activation.py::bench_gelu"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.silu": {
       "id": "ew.activation.silu",
@@ -854,12 +854,12 @@
           "benchmarks/ops/bench_activation.py::bench_silu"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.sigmoid": {
       "id": "ew.activation.sigmoid",
@@ -883,12 +883,12 @@
           "benchmarks/ops/bench_activation.py::bench_sigmoid"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.tanh": {
       "id": "ew.activation.tanh",
@@ -912,12 +912,12 @@
           "benchmarks/ops/bench_activation.py::bench_tanh"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.leaky_relu": {
       "id": "ew.activation.leaky_relu",
@@ -938,12 +938,12 @@
           "benchmarks/ops/bench_activation.py::bench_leaky_relu"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.elu": {
       "id": "ew.activation.elu",
@@ -964,12 +964,12 @@
           "benchmarks/ops/bench_activation.py::bench_elu"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.selu": {
       "id": "ew.activation.selu",
@@ -992,12 +992,12 @@
           "benchmarks/ops/bench_activation.py::bench_selu"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.hardswish": {
       "id": "ew.activation.hardswish",
@@ -1020,12 +1020,12 @@
           "benchmarks/ops/bench_activation.py::bench_hardswish"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.hardsigmoid": {
       "id": "ew.activation.hardsigmoid",
@@ -1048,12 +1048,12 @@
           "benchmarks/ops/bench_activation.py::bench_hardsigmoid"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.hardtanh": {
       "id": "ew.activation.hardtanh",
@@ -1074,12 +1074,12 @@
           "benchmarks/ops/bench_activation.py::bench_hardtanh"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.softplus": {
       "id": "ew.activation.softplus",
@@ -1100,12 +1100,12 @@
           "benchmarks/ops/bench_activation.py::bench_softplus"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.mish": {
       "id": "ew.activation.mish",
@@ -1128,12 +1128,12 @@
           "benchmarks/ops/bench_activation.py::bench_mish"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.activation.prelu": {
       "id": "ew.activation.prelu",
@@ -1154,12 +1154,12 @@
           "benchmarks/ops/bench_activation.py::bench_prelu"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.fused_gated.silu_and_mul": {
       "id": "ew.fused_gated.silu_and_mul",
@@ -1182,12 +1182,12 @@
           "benchmarks/ops/bench_activation.py::bench_silu_and_mul"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.fused_gated.gelu_and_mul": {
       "id": "ew.fused_gated.gelu_and_mul",
@@ -1210,12 +1210,12 @@
           "benchmarks/ops/bench_activation.py::bench_gelu_and_mul"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.fused_gated.gelu_tanh_and_mul": {
       "id": "ew.fused_gated.gelu_tanh_and_mul",
@@ -1238,12 +1238,12 @@
           "benchmarks/ops/bench_activation.py::bench_gelu_tanh_and_mul"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.comparison.eq": {
       "id": "ew.comparison.eq",
@@ -1267,12 +1267,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_eq"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.comparison.ne": {
       "id": "ew.comparison.ne",
@@ -1295,12 +1295,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_ne"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.comparison.gt": {
       "id": "ew.comparison.gt",
@@ -1323,12 +1323,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_gt"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.comparison.lt": {
       "id": "ew.comparison.lt",
@@ -1351,12 +1351,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_lt"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.comparison.ge": {
       "id": "ew.comparison.ge",
@@ -1379,12 +1379,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_ge"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.comparison.le": {
       "id": "ew.comparison.le",
@@ -1407,12 +1407,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_le"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.bitwise.and": {
       "id": "ew.bitwise.and",
@@ -1435,12 +1435,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_bitwise_and"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.bitwise.or": {
       "id": "ew.bitwise.or",
@@ -1463,12 +1463,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_bitwise_or"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.bitwise.xor": {
       "id": "ew.bitwise.xor",
@@ -1491,12 +1491,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_bitwise_xor"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.bitwise.not": {
       "id": "ew.bitwise.not",
@@ -1519,12 +1519,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_bitwise_not"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.logical.not": {
       "id": "ew.logical.not",
@@ -1547,12 +1547,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_logical_not"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.logical.and": {
       "id": "ew.logical.and",
@@ -1575,12 +1575,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_logical_and"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.logical.or": {
       "id": "ew.logical.or",
@@ -1603,12 +1603,12 @@
           "benchmarks/ops/bench_binary_elementwise.py::bench_logical_or"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.special.where": {
       "id": "ew.special.where",
@@ -1627,12 +1627,12 @@
         "tests": [],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.special.clamp": {
       "id": "ew.special.clamp",
@@ -1651,12 +1651,12 @@
         "tests": [],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.special.masked_fill": {
       "id": "ew.special.masked_fill",
@@ -1675,12 +1675,12 @@
         "tests": [],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.special.nan_to_num": {
       "id": "ew.special.nan_to_num",
@@ -1699,12 +1699,12 @@
         "tests": [],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.special.isnan": {
       "id": "ew.special.isnan",
@@ -1726,12 +1726,12 @@
         ],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.special.isinf": {
       "id": "ew.special.isinf",
@@ -1753,12 +1753,12 @@
         ],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.special.isfinite": {
       "id": "ew.special.isfinite",
@@ -1780,12 +1780,12 @@
         ],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.dropout.dropout": {
       "id": "ew.dropout.dropout",
@@ -1808,12 +1808,12 @@
           "benchmarks/ops/bench_dropout.py::bench_dropout"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.rope.neox": {
       "id": "ew.rope.neox",
@@ -1836,12 +1836,12 @@
           "benchmarks/ops/bench_rope.py::bench_rope_neox"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.rope.non_neox": {
       "id": "ew.rope.non_neox",
@@ -1864,12 +1864,12 @@
           "benchmarks/ops/bench_rope.py::bench_rope_non_neox"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.rope.llama31": {
       "id": "ew.rope.llama31",
@@ -1892,12 +1892,12 @@
           "benchmarks/ops/bench_rope.py::bench_rope_llama31"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.rope.yarn": {
       "id": "ew.rope.yarn",
@@ -1956,12 +1956,12 @@
         "tests": [],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "ew.sinusoidal.sinusoidal": {
       "id": "ew.sinusoidal.sinusoidal",
@@ -1980,12 +1980,12 @@
         "tests": [],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.reduce.sum": {
       "id": "reduce.reduce.sum",
@@ -2011,12 +2011,12 @@
           "benchmarks/ops/bench_reduce.py::bench_sum"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.reduce.mean": {
       "id": "reduce.reduce.mean",
@@ -2039,12 +2039,12 @@
           "benchmarks/ops/bench_reduce.py::bench_mean"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.reduce.amin": {
       "id": "reduce.reduce.amin",
@@ -2067,12 +2067,12 @@
           "benchmarks/ops/bench_reduce.py::bench_amin"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.reduce.amax": {
       "id": "reduce.reduce.amax",
@@ -2095,12 +2095,12 @@
           "benchmarks/ops/bench_reduce.py::bench_amax"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.reduce.prod": {
       "id": "reduce.reduce.prod",
@@ -2123,12 +2123,12 @@
           "benchmarks/ops/bench_reduce.py::bench_prod"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.reduce.std": {
       "id": "reduce.reduce.std",
@@ -2153,12 +2153,12 @@
           "benchmarks/ops/bench_reduce.py::bench_std"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.reduce.var": {
       "id": "reduce.reduce.var",
@@ -2184,12 +2184,12 @@
           "benchmarks/ops/bench_reduce.py::bench_var"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.reduce.var_mean": {
       "id": "reduce.reduce.var_mean",
@@ -2213,12 +2213,12 @@
           "benchmarks/ops/bench_reduce.py::bench_var_mean"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.softmax.softmax": {
       "id": "reduce.softmax.softmax",
@@ -2243,12 +2243,12 @@
           "benchmarks/ops/bench_softmax.py::bench_softmax"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.softmax.log_softmax": {
       "id": "reduce.softmax.log_softmax",
@@ -2272,12 +2272,12 @@
           "benchmarks/ops/bench_softmax.py::bench_log_softmax"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.softmax.logsumexp": {
       "id": "reduce.softmax.logsumexp",
@@ -2301,12 +2301,12 @@
           "benchmarks/ops/bench_softmax.py::bench_logsumexp"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.argreduce.argmax": {
       "id": "reduce.argreduce.argmax",
@@ -2331,12 +2331,12 @@
           "benchmarks/ops/bench_argreduce.py::bench_argmax"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.argreduce.argmin": {
       "id": "reduce.argreduce.argmin",
@@ -2361,12 +2361,12 @@
           "benchmarks/ops/bench_argreduce.py::bench_argmin"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.cumulative.cumsum": {
       "id": "reduce.cumulative.cumsum",
@@ -2391,12 +2391,12 @@
           "benchmarks/ops/bench_cumulative.py::bench_cumsum"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.cumulative.cumprod": {
       "id": "reduce.cumulative.cumprod",
@@ -2421,12 +2421,12 @@
           "benchmarks/ops/bench_cumulative.py::bench_cumprod"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.logical_reduce.any": {
       "id": "reduce.logical_reduce.any",
@@ -2449,12 +2449,12 @@
           "benchmarks/ops/bench_logical_reduce.py::bench_any"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.logical_reduce.all": {
       "id": "reduce.logical_reduce.all",
@@ -2477,12 +2477,12 @@
           "benchmarks/ops/bench_logical_reduce.py::bench_all"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.linalg.l1_norm": {
       "id": "reduce.linalg.l1_norm",
@@ -2505,12 +2505,12 @@
           "benchmarks/ops/bench_vector_norm.py::bench_l1_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T11:19:03Z",
+      "kernel_last_pr_author": "zhen8838",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.linalg.l2_norm": {
       "id": "reduce.linalg.l2_norm",
@@ -2533,12 +2533,12 @@
           "benchmarks/ops/bench_vector_norm.py::bench_l2_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T11:19:03Z",
+      "kernel_last_pr_author": "zhen8838",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "reduce.linalg.inf_norm": {
       "id": "reduce.linalg.inf_norm",
@@ -2561,12 +2561,12 @@
           "benchmarks/ops/bench_vector_norm.py::bench_inf_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T11:19:03Z",
+      "kernel_last_pr_author": "zhen8838",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "norm.layer_norm": {
       "id": "norm.layer_norm",
@@ -2590,12 +2590,12 @@
           "benchmarks/ops/bench_layer_norm.py::bench_layer_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "norm.batch_norm": {
       "id": "norm.batch_norm",
@@ -2619,12 +2619,12 @@
           "benchmarks/ops/bench_batch_norm.py::bench_batch_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "norm.group_norm": {
       "id": "norm.group_norm",
@@ -2648,12 +2648,12 @@
           "benchmarks/ops/bench_group_norm.py::bench_group_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "norm.instance_norm": {
       "id": "norm.instance_norm",
@@ -2677,12 +2677,12 @@
           "benchmarks/ops/bench_instance_norm.py::bench_instance_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "norm.rms_norm": {
       "id": "norm.rms_norm",
@@ -2706,12 +2706,12 @@
           "benchmarks/ops/bench_rms_norm.py::bench_rms_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "norm.qk_norm": {
       "id": "norm.qk_norm",
@@ -2757,12 +2757,12 @@
           "benchmarks/ops/bench_ada_layer_norm.py::bench_ada_layer_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "norm.ada_layer_norm_zero": {
       "id": "norm.ada_layer_norm_zero",
@@ -2786,12 +2786,12 @@
           "benchmarks/ops/bench_ada_layer_norm.py::bench_ada_layer_norm_zero"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "norm.fused_add_layer_norm": {
       "id": "norm.fused_add_layer_norm",
@@ -2815,12 +2815,12 @@
           "benchmarks/ops/bench_fused_add_layer_norm.py::bench_fused_add_layer_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "norm.fused_add_rmsnorm": {
       "id": "norm.fused_add_rmsnorm",
@@ -2844,12 +2844,12 @@
           "benchmarks/ops/bench_fused_add_layer_norm.py::bench_fused_add_rmsnorm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "conv.conv.conv1d": {
       "id": "conv.conv.conv1d",
@@ -3192,12 +3192,12 @@
           "benchmarks/ops/bench_gemm.py::bench_gemm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "gemm.gemm.fp8": {
       "id": "gemm.gemm.fp8",
@@ -3218,12 +3218,12 @@
           "benchmarks/ops/bench_gemm.py::bench_gemm_fp8"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "gemm.gemm.fp8_block_scaled": {
       "id": "gemm.gemm.fp8_block_scaled",
@@ -3244,12 +3244,12 @@
           "benchmarks/ops/bench_gemm.py::bench_gemm_fp8_block_scaled"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "gemm.gemm.gemv_fp16": {
       "id": "gemm.gemm.gemv_fp16",
@@ -3273,12 +3273,12 @@
           "benchmarks/ops/bench_gemm.py::bench_gemv"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "gemm.gemm.gemv_fp8": {
       "id": "gemm.gemm.gemv_fp8",
@@ -3299,12 +3299,12 @@
           "benchmarks/ops/bench_gemm.py::bench_gemv_fp8"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "gemm.gemm.small_batch_fp16": {
       "id": "gemm.gemm.small_batch_fp16",
@@ -3325,12 +3325,12 @@
           "benchmarks/ops/bench_gemm.py::bench_small_batch_gemm"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "gemm.gemm.small_batch_fp8": {
       "id": "gemm.gemm.small_batch_fp8",
@@ -3351,12 +3351,12 @@
           "benchmarks/ops/bench_gemm.py::bench_small_batch_gemm_fp8"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "gemm.bmm.fp16": {
       "id": "gemm.bmm.fp16",
@@ -3375,12 +3375,12 @@
           "benchmarks/ops/bench_gemm.py::bench_bmm"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "gemm.bmm.fp8": {
       "id": "gemm.bmm.fp8",
@@ -3399,12 +3399,12 @@
           "benchmarks/ops/bench_gemm.py::bench_bmm_fp8"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "gemm.groupgemm.fp16": {
       "id": "gemm.groupgemm.fp16",
@@ -3427,12 +3427,12 @@
           "benchmarks/ops/bench_grouped_gemm.py::bench_grouped_gemm"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "gemm.groupgemm.fp8": {
       "id": "gemm.groupgemm.fp8",
@@ -3453,12 +3453,12 @@
           "benchmarks/ops/bench_grouped_gemm.py::bench_grouped_gemm_fp8"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "gemm.outer.outer": {
       "id": "gemm.outer.outer",
@@ -3781,12 +3781,12 @@
           "benchmarks/ops/bench_fp8_quant.py::bench_fp8_quant"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "quant.fp8.per_block": {
       "id": "quant.fp8.per_block",
@@ -3805,12 +3805,12 @@
           "benchmarks/ops/bench_fp8_quant.py::bench_fp8_block_quant"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "quant.fp8.cast_transpose": {
       "id": "quant.fp8.cast_transpose",
@@ -3973,12 +3973,12 @@
           "benchmarks/ops/bench_topk_selector.py::bench_topk_selector"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "attn.flash.prefill_fwd": {
       "id": "attn.flash.prefill_fwd",
@@ -4004,12 +4004,12 @@
           "benchmarks/ops/bench_mha.py::bench_mha_fwd"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "attn.flash.prefill_bwd": {
       "id": "attn.flash.prefill_bwd",
@@ -4035,12 +4035,12 @@
           "benchmarks/ops/bench_mha.py::bench_mha_bwd"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "attn.flash.prefill_varlen_fwd": {
       "id": "attn.flash.prefill_varlen_fwd",
@@ -4063,12 +4063,12 @@
           "benchmarks/ops/bench_gqa_sliding_window_varlen_fwd.py::bench_gqa_sliding_window_varlen_fwd"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "attn.flash.prefill_varlen_bwd": {
       "id": "attn.flash.prefill_varlen_bwd",
@@ -4115,12 +4115,12 @@
           "benchmarks/ops/bench_mha_decode.py::bench_mha_decode"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "attn.flash.decode_paged_fwd": {
       "id": "attn.flash.decode_paged_fwd",
@@ -4147,12 +4147,12 @@
           "benchmarks/ops/bench_mha_decode_paged.py::bench_mha_decode_paged"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "attn.flash.decode_varlen_fwd": {
       "id": "attn.flash.decode_varlen_fwd",
@@ -4256,12 +4256,12 @@
           "benchmarks/ops/bench_deepseek_mla_decode.py::bench_mla_decode"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "attn.mla.decode_paged_fwd": {
       "id": "attn.mla.decode_paged_fwd",
@@ -4307,12 +4307,12 @@
           "benchmarks/ops/bench_deepseek_nsa_cmp_fwd.py::bench_nsa_cmp_fwd"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "attn.nsa.decode_fwd": {
       "id": "attn.nsa.decode_fwd",
@@ -4375,12 +4375,12 @@
           "benchmarks/ops/bench_deepseek_dsa_decode.py::bench_dsa_decode"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "moe.permute_align": {
       "id": "moe.permute_align",
@@ -4401,12 +4401,12 @@
           "benchmarks/ops/bench_moe_permute_align.py::bench_permute_align"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-18T05:36:31Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "moe.unpermute_depad": {
       "id": "moe.unpermute_depad",
@@ -4535,12 +4535,12 @@
           "benchmarks/ops/bench_gated_deltanet_vs_fla.py::bench_gated_deltanet_bwd"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "linattn.gated_deltanet.recurrence": {
       "id": "linattn.gated_deltanet.recurrence",
@@ -4564,12 +4564,12 @@
           "benchmarks/ops/bench_gated_deltanet_decode.py::bench_gated_deltanet_decode"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "linattn.deltanet.chunkwise": {
       "id": "linattn.deltanet.chunkwise",
@@ -4594,12 +4594,12 @@
           "benchmarks/ops/bench_engram_fwd.py::bench_engram_fwd"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "linattn.deltanet.recurrence": {
       "id": "linattn.deltanet.recurrence",
@@ -4622,12 +4622,12 @@
           "benchmarks/ops/bench_engram_decode.py::bench_engram_decode"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "linattn.gla.chunkwise": {
       "id": "linattn.gla.chunkwise",
@@ -4651,12 +4651,12 @@
           "benchmarks/ops/bench_gla.py::bench_gla_bwd"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "linattn.gla.recurrence": {
       "id": "linattn.gla.recurrence",
@@ -4677,12 +4677,12 @@
           "benchmarks/ops/bench_gla_decode.py::bench_gla_decode"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T05:54:04Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T14:16:55Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-18T06:35:03Z"
     },
     "linattn.retnet.chunkwise": {
       "id": "linattn.retnet.chunkwise",

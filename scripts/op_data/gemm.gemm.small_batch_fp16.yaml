@@ -13,26 +13,34 @@ files:
   bench:
   - benchmarks/ops/bench_gemm.py::bench_small_batch_gemm
 files_last_scanned: '2026-03-18T05:54:04Z'
-func_score: null
-func_score_notes: ''
-func_score_updated: null
-perf_score: null
+func_score: 1
+func_score_notes: 测试缺失，benchmark 失败，无法评估功能完整性。
+func_score_updated: '2026-03-18'
+perf_score: 1
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: null
-has_bugs: null
-bugs: []
+perf_score_updated: '2026-03-18'
+has_bugs: true
+bugs:
+- 测试文件缺失
+- benchmark 运行失败
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: null
+  last_run: '2026-03-18'
   passed: null
   errors: []
-last_updated: '2026-03-18T05:54:04Z'
-updated_by: bootstrap
+  status: missing
+last_updated: '2026-03-18T06:35:03Z'
+updated_by: claude-nightly
+bench_status:
+  last_run: '2026-03-18'
+  status: failed
+  ratio: null
+  details: []
