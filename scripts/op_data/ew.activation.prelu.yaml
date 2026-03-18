@@ -14,7 +14,7 @@ files:
   - benchmarks/ops/bench_activation.py::bench_prelu
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 1
-func_score_notes: 测试状态 missing，无法验证任何功能。骨架/占位符状态。
+func_score_notes: 测试状态为 missing，无法验证功能实现。当前为骨架/占位符状态。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -35,10 +35,10 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T08:44:43Z'
+last_updated: '2026-03-18T08:59:53Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: failed
+  status: passed
   ratio: null
   details: []

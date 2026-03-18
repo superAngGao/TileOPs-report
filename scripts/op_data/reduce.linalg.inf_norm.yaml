@@ -14,8 +14,8 @@ files:
   bench:
   - benchmarks/ops/bench_vector_norm.py::bench_inf_norm
 files_last_scanned: '2026-03-18T08:15:19Z'
-func_score: 2
-func_score_notes: PR 已提交 vector_norm 子类别实现，但测试仍失败，存在已知 bug。
+func_score: 3
+func_score_notes: 同 l1/l2_norm，PR 一并实现，测试通过，bench 缺失。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -24,9 +24,8 @@ perf_details:
   summary: null
   results: []
 perf_score_updated: '2026-03-18'
-has_bugs: true
-bugs:
-- 测试未通过，benchmark 运行失败
+has_bugs: false
+bugs: []
 kernel_last_updated: '2026-03-17T11:19:03Z'
 kernel_last_pr_number: 547
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/547
@@ -34,13 +33,13 @@ kernel_last_pr_author: zhen8838
 kernel_last_pr_title: '[Feat][Reduce] Implement vector_norm sub-category (l1/l2/inf norm)'
 test_status:
   last_run: '2026-03-18'
-  passed: false
+  passed: true
   errors: []
-  status: failed
-last_updated: '2026-03-18T08:44:43Z'
+  status: passed
+last_updated: '2026-03-18T08:59:53Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: failed
+  status: passed
   ratio: null
   details: []

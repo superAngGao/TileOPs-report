@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_logical_reduce.py::bench_all
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 2
-func_score_notes: 测试失败，仅基础功能实现，边界情况未覆盖。
+func_score_notes: 同 any，测试通过但 bench 缺失，功能覆盖有限。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -24,9 +24,8 @@ perf_details:
   summary: null
   results: []
 perf_score_updated: '2026-03-18'
-has_bugs: true
-bugs:
-- 测试未通过，benchmark 运行失败
+has_bugs: false
+bugs: []
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -34,13 +33,13 @@ kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
   last_run: '2026-03-18'
-  passed: false
+  passed: true
   errors: []
-  status: failed
-last_updated: '2026-03-18T08:44:43Z'
+  status: passed
+last_updated: '2026-03-18T08:59:53Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: failed
+  status: passed
   ratio: null
   details: []

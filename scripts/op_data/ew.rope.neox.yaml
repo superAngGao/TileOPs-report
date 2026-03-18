@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_rope.py::bench_rope_neox
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 2
-func_score_notes: 测试与 benchmark 均失败，基础旋转位置编码逻辑未能正确运行。
+func_score_notes: 测试失败，bench 通过但无 ratio 数据，功能存在缺陷。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -26,8 +26,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试失败
-- benchmark 运行失败
+- 测试用例失败，功能正确性未验证
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -38,10 +37,10 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T08:44:43Z'
+last_updated: '2026-03-18T08:59:53Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: failed
+  status: passed
   ratio: null
   details: []

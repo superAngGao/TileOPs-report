@@ -14,7 +14,7 @@ files:
   - benchmarks/ops/bench_activation.py::bench_leaky_relu
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 1
-func_score_notes: 测试用例缺失，benchmark 失败，实现处于骨架阶段。
+func_score_notes: 测试状态为 missing，无法验证功能正确性，属于骨架或占位符实现。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -25,7 +25,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试用例 missing，benchmark 无法运行
+- 测试用例缺失，功能未经验证
 kernel_last_updated: '2026-03-17T07:47:09Z'
 kernel_last_pr_number: 535
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/535
@@ -36,10 +36,10 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T08:44:43Z'
+last_updated: '2026-03-18T08:59:53Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: failed
+  status: passed
   ratio: null
   details: []

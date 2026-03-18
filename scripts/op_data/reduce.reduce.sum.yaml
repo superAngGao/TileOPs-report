@@ -17,8 +17,8 @@ files:
   bench:
   - benchmarks/ops/bench_reduce.py::bench_sum
 files_last_scanned: '2026-03-18T08:15:19Z'
-func_score: 2
-func_score_notes: 测试与 benchmark 均失败，基础 reduce 逻辑存在缺陷，轴处理或类型支持不完整。
+func_score: 3
+func_score_notes: 测试与 bench 均通过，基本功能可用，但 has_bugs 标记为 true 且无 ratio 数据，边界情况处理存疑。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -29,8 +29,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试失败
-- benchmark 运行失败
+- 历史标记存在 bug，具体场景待确认
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -38,13 +37,13 @@ kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
   last_run: '2026-03-18'
-  passed: false
+  passed: true
   errors: []
-  status: failed
-last_updated: '2026-03-18T08:44:43Z'
+  status: passed
+last_updated: '2026-03-18T08:59:53Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: failed
+  status: passed
   ratio: null
   details: []

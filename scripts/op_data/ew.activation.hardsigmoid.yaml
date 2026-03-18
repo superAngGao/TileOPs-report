@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_activation.py::bench_hardsigmoid
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 3
-func_score_notes: 主要功能已实现，但测试当前失败，可能为重构引入的回归问题。
+func_score_notes: 测试通过，主要功能实现，has_bugs 标记与测试结果不符，建议清除旧 bug 标记。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -24,9 +24,8 @@ perf_details:
   summary: null
   results: []
 perf_score_updated: '2026-03-18'
-has_bugs: true
-bugs:
-- 测试状态 failed，benchmark 无法运行
+has_bugs: false
+bugs: []
 kernel_last_updated: '2026-03-17T07:47:09Z'
 kernel_last_pr_number: 535
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/535
@@ -34,13 +33,13 @@ kernel_last_pr_author: lcy-seso
 kernel_last_pr_title: '[Refactor][Elementwise] Extract shared _wrap_fp8_accumulation helper for fp8 kernels'
 test_status:
   last_run: '2026-03-18'
-  passed: false
+  passed: true
   errors: []
-  status: failed
-last_updated: '2026-03-18T08:44:43Z'
+  status: passed
+last_updated: '2026-03-18T08:59:53Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: failed
+  status: passed
   ratio: null
   details: []

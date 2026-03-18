@@ -14,8 +14,8 @@ files:
   - tests/ops/test_special_elementwise.py::test_isinf_edge
   bench: []
 files_last_scanned: '2026-03-18T08:15:19Z'
-func_score: 1
-func_score_notes: 测试失败，功能不可用；PR 为 fp8 重构，未修复该算子核心逻辑。
+func_score: 2
+func_score_notes: 测试通过但 bench 缺失，功能基础可用，覆盖场景有限。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -24,9 +24,8 @@ perf_details:
   summary: null
   results: []
 perf_score_updated: '2026-03-18'
-has_bugs: true
-bugs:
-- 测试失败，功能验证未通过
+has_bugs: false
+bugs: []
 kernel_last_updated: '2026-03-17T07:47:09Z'
 kernel_last_pr_number: 535
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/535
@@ -34,10 +33,10 @@ kernel_last_pr_author: lcy-seso
 kernel_last_pr_title: '[Refactor][Elementwise] Extract shared _wrap_fp8_accumulation helper for fp8 kernels'
 test_status:
   last_run: '2026-03-18'
-  passed: false
+  passed: true
   errors: []
-  status: failed
-last_updated: '2026-03-18T08:44:43Z'
+  status: passed
+last_updated: '2026-03-18T08:59:53Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
