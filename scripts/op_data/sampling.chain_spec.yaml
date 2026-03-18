@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_topk_selector.py::bench_topk_selector
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 1
-func_score_notes: 测试通过但 benchmark 失败，功能骨架级别，性能无法评估。
+func_score_notes: 测试通过但 benchmark 失败，功能实现存疑，性能无法评估。
 func_score_updated: '2026-03-18'
 perf_score: 1
 perf_details:
@@ -26,7 +26,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- benchmark 运行失败，性能数据异常
+- benchmark 运行失败
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -37,7 +37,7 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T08:59:53Z'
+last_updated: '2026-03-18T09:12:59Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

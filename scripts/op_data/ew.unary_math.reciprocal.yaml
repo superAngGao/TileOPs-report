@@ -16,7 +16,7 @@ files:
   - benchmarks/ops/bench_unary_elementwise.py::bench_reciprocal
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 2
-func_score_notes: 测试通过，但 benchmark ratio 缺失，unary 算子 fp8 支持尚不完整，类型覆盖有限。
+func_score_notes: 同 exp，重构 PR 未引入新功能，性能数据缺失。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -37,7 +37,7 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T08:59:53Z'
+last_updated: '2026-03-18T09:12:59Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

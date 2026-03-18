@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_binary_arith.py::bench_mul
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 3
-func_score_notes: 测试通过，功能基本实现，但 benchmark ratio 缺失，fp8 累积路径刚完成重构，边界情况覆盖待验证。
+func_score_notes: 同 add，重构 PR 未引入新功能，测试通过，性能数据缺失。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -36,7 +36,7 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T08:59:53Z'
+last_updated: '2026-03-18T09:12:59Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

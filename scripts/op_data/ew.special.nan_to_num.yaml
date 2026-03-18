@@ -31,10 +31,10 @@ kernel_last_pr_author: lcy-seso
 kernel_last_pr_title: '[Refactor][Elementwise] Extract shared _wrap_fp8_accumulation helper for fp8 kernels'
 test_status:
   last_run: '2026-03-18'
-  passed: null
+  passed: true
   errors: []
-  status: missing
-last_updated: '2026-03-18T08:59:53Z'
+  status: passed
+last_updated: '2026-03-18T09:12:59Z'
 updated_by: nightly-auto
 bench_status:
   last_run: '2026-03-18'

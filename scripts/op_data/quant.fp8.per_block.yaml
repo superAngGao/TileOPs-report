@@ -13,7 +13,7 @@ files:
   - benchmarks/ops/bench_fp8_quant.py::bench_fp8_block_quant
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 1
-func_score_notes: 测试缺失且 benchmark 失败，实现不完整。
+func_score_notes: 测试缺失且 benchmark 失败，实现基本不可用。
 func_score_updated: '2026-03-18'
 perf_score: 1
 perf_details:
@@ -36,7 +36,7 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T08:59:53Z'
+last_updated: '2026-03-18T09:12:59Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
