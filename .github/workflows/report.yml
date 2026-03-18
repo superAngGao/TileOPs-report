@@ -195,6 +195,11 @@ jobs:
 
           echo "${{ steps.run.outputs.run_id }}" > "${REPORT_DIR}/run_id.txt"
 
+          # dawidd6/action-download-artifact@v3 with name_is_regexp nests files
+          # inside artifact-named subdirectories — flatten them first.
+          find dl/op_test/    -mindepth 2 -type f -exec mv -t dl/op_test/    {} + 2>/dev/null || true
+          find dl/benchmark/  -mindepth 2 -type f -exec mv -t dl/benchmark/  {} + 2>/dev/null || true
+
           cp dl/op_test/test_results.xml         "${REPORT_DIR}/"                    2>/dev/null || true
           cp dl/op_test/tileops_op_test.log      "${REPORT_DIR}/test_output.log"     2>/dev/null || true
           cp dl/benchmark/tileops_benchmarks.log "${REPORT_DIR}/tileops_benchmarks.log" 2>/dev/null || true
