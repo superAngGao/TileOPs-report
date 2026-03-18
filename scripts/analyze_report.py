@@ -244,6 +244,97 @@ def _load_bench_log(path: str | None) -> str:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Phase 0: Op completion progress (pure data, no Claude call)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def build_progress_report(prog: dict | None) -> str:
+    """Generate a per-category completion statistics section from progress.json.
+
+    Returns ready-to-use Markdown text. No Claude API call needed.
+    """
+    if not prog:
+        return (
+            "## Op Completion Progress\n\n"
+            "> No progress data available (progress.json missing or failed to generate).\n"
+        )
+
+    done  = prog["done_ops"]
+    total = prog["total_ops"]
+    impl  = prog["impl_ops"]
+    tested = prog["tested_ops"]
+    pct   = done / total * 100 if total else 0
+
+    lines = [
+        "## Op Completion Progress",
+        "",
+        f"**Overall: {done} / {total} ops completed ({pct:.1f}%)**  ",
+        f"Implemented: {impl} | Tests passing: {tested}",
+        "",
+        "| # | Category | Total | Impl | Tested | Done | Completion | Status |",
+        "|---|----------|------:|-----:|-------:|-----:|-----------:|--------|",
+    ]
+
+    for cat in prog.get("categories", []):
+        cid   = cat["id"]
+        name  = cat["name"]
+        t     = cat["total_ops"]
+        im    = cat["impl_ops"]
+        te    = cat.get("tested_ops", 0)
+        d     = cat["done_ops"]
+        cp    = d / t * 100 if t else 0
+
+        if d == t:
+            status = "✅ Done"
+        elif im > 0 or d > 0:
+            status = "🔧 In Progress"
+        else:
+            status = "🔲 Not Started"
+
+        bar = _progress_bar_text(cp)
+        lines.append(
+            f"| {cid} | **{name}** | {t} | {im} | {te} | {d} "
+            f"| {bar} {cp:.0f}% | {status} |"
+        )
+
+    lines += [""]
+
+    # Per-category op-level detail in collapsible sections
+    lines.append("### Per-Op Detail")
+    lines.append("")
+    for cat in prog.get("categories", []):
+        d, t = cat["done_ops"], cat["total_ops"]
+        im   = cat["impl_ops"]
+        te   = cat.get("tested_ops", 0)
+        lines += [
+            f"<details>",
+            f"<summary><b>{cat['name']}</b> — {d}/{t} done, {im} impl, {te} tested</summary>",
+            "",
+            "| Op | Sub | Impl | Test | Bench |",
+            "|---|---|:---:|:---:|:---:|",
+        ]
+        for op in cat.get("ops", []):
+            impl_s  = "✅" if op.get("implemented") else "🔲"
+            test_s  = "✅" if op.get("tested") else ("❌" if op.get("test_failed") else "—")
+            bench_s = "✅" if op.get("bench_ok") is True else (
+                "❌" if op.get("bench_ok") is False else "—"
+            )
+            lines.append(
+                f"| `{op['name']}` | {op.get('sub', '')} "
+                f"| {impl_s} | {test_s} | {bench_s} |"
+            )
+        lines += ["", "</details>", ""]
+
+    return "\n".join(lines)
+
+
+def _progress_bar_text(pct: float, width: int = 10) -> str:
+    """Generate a simple text progress bar like [████░░░░░░]."""
+    filled = round(pct / 100 * width)
+    empty  = width - filled
+    return f"[{'█' * filled}{'░' * empty}]"
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Phase 1: Performance analysis (benchmark only)
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -475,6 +566,11 @@ def main() -> None:
     # Build test_fn → category map from manifest
     fn_to_cat = _build_test_fn_to_cat(args.manifest)
 
+    # ── Phase 0: Op completion progress (pure data) ──────────────────────────
+    print("Phase 0: Generating per-category completion statistics ...")
+    progress_report = build_progress_report(prog)
+    print(f"  Progress report: {len(progress_report)} chars")
+
     # ── Phase 1: Performance analysis (benchmark only, per-category) ─────────
     perf_analysis = None
     perf_prompt = build_perf_prompt(args.bench_log, progress_detail)
@@ -533,9 +629,12 @@ def main() -> None:
             parts.append("## Correctness Analysis\n" + correctness_analysis)
         analysis = "\n\n".join(parts) if parts else "Analysis unavailable."
 
+    # Prepend Phase 0 progress report to final analysis
+    full_analysis = progress_report + "\n---\n\n" + analysis
+
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)
-    Path(args.output).write_text(analysis)
-    print(f"Analysis written: {args.output} ({len(analysis)} chars)")
+    Path(args.output).write_text(full_analysis)
+    print(f"Analysis written: {args.output} ({len(full_analysis)} chars)")
 
 
 if __name__ == "__main__":
