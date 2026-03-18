@@ -415,13 +415,15 @@ def _md_to_html(text: str) -> str:
                 close_lists()
             if not in_ul:
                 out.append("<ul>"); in_ul = True
-            out.append(f"<li>{inline(re.sub(r'^[-*]\s+', '', stripped))}</li>")
+            content = re.sub(r'^[-*]\s+', '', stripped)
+            out.append(f"<li>{inline(content)}</li>")
         elif re.match(r"^\d+\.\s+", stripped):
             if in_ul:
                 close_lists()
             if not in_ol:
                 out.append("<ol>"); in_ol = True
-            out.append(f"<li>{inline(re.sub(r'^\d+[.]\s+', '', stripped))}</li>")
+            content = re.sub(r'^\d+[.]\s+', '', stripped)
+            out.append(f"<li>{inline(content)}</li>")
         elif stripped == "":
             close_lists()
         else:
