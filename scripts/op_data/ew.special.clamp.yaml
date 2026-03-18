@@ -13,7 +13,7 @@ files:
   bench: []
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 1
-func_score_notes: 测试和 benchmark 均 missing，实现为骨架或占位符，基本不可用。
+func_score_notes: 测试和 benchmark 均缺失，实现为骨架或占位符，基本不可用。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -26,17 +26,17 @@ has_bugs: true
 bugs:
 - 测试缺失
 - benchmark 缺失，实现未完成
-kernel_last_updated: '2026-03-18T09:48:47Z'
-kernel_last_pr_number: 549
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/549
+kernel_last_updated: '2026-03-18T12:11:41Z'
+kernel_last_pr_number: 560
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/560
 kernel_last_pr_author: lcy-seso
-kernel_last_pr_title: '[Feat][Elementwise] Extend fp8 support to independent kernels'
+kernel_last_pr_title: '[Perf][Elementwise] Generalize kernel caching and autotune to all kernel families'
 test_status:
   last_run: '2026-03-18'
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T11:15:24Z'
+last_updated: '2026-03-18T22:30:25Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

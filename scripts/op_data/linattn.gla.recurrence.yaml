@@ -23,10 +23,10 @@ perf_details:
   summary: null
   results: &id001
   - bench_fn: gla_decode
-    tileops: 0.0456 ms
+    tileops: 0.0462 ms
     baseline: 0.1731 ms
-    ratio: 3.7945
-    summary: TileOps 0.0456ms vs Baseline 0.1731ms (ratio 3.79)
+    ratio: 3.7432
+    summary: TileOps 0.0462ms vs Baseline 0.1731ms (ratio 3.74)
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
@@ -40,10 +40,10 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T11:15:24Z'
+last_updated: '2026-03-18T22:30:25Z'
 updated_by: nightly-auto
 bench_status:
   last_run: '2026-03-18'
   status: qualified
-  ratio: 3.7945
+  ratio: 3.7432
   details: *id001

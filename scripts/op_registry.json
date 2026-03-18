@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-03-18T11:15:24Z",
+  "generated_at": "2026-03-18T22:30:25Z",
   "total_ops": 186,
   "ops": {
     "ew.binary_arith.add": {
@@ -30,10 +30,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -80,10 +80,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -130,10 +130,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -180,10 +180,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -230,10 +230,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -280,10 +280,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -330,10 +330,10 @@
       "func_score": 4,
       "perf_score": 5,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -380,10 +380,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -431,10 +431,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -482,10 +482,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -533,10 +533,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -584,10 +584,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -627,10 +627,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -670,10 +670,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -712,10 +712,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -754,10 +754,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -797,10 +797,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -840,10 +840,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -882,10 +882,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -924,10 +924,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -966,10 +966,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1008,10 +1008,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1050,10 +1050,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1092,10 +1092,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1135,10 +1135,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1178,10 +1178,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1221,10 +1221,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1265,10 +1265,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1315,10 +1315,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1365,10 +1365,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1408,10 +1408,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1451,10 +1451,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1491,10 +1491,10 @@
       "func_score": 2,
       "perf_score": 4,
       "has_bugs": true,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -1539,10 +1539,10 @@
       "func_score": 2,
       "perf_score": 3,
       "has_bugs": true,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -1589,10 +1589,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1631,10 +1631,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1673,10 +1673,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1713,10 +1713,10 @@
       "func_score": 2,
       "perf_score": 4,
       "has_bugs": true,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -1761,10 +1761,10 @@
       "func_score": 2,
       "perf_score": 3,
       "has_bugs": true,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -1774,14 +1774,14 @@
       "bench_status": {
         "last_run": "2026-03-18",
         "status": "qualified",
-        "ratio": 0.96,
+        "ratio": 0.9231,
         "details": [
           {
             "bench_fn": "softplus",
-            "tileops": "0.0278 ms",
+            "tileops": "0.0289 ms",
             "baseline": "0.0267 ms",
-            "ratio": 0.96,
-            "summary": "TileOps 0.0278ms vs Baseline 0.0267ms (ratio 0.96)"
+            "ratio": 0.9231,
+            "summary": "TileOps 0.0289ms vs Baseline 0.0267ms (ratio 0.92)"
           }
         ]
       },
@@ -1811,10 +1811,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1851,10 +1851,10 @@
       "func_score": 2,
       "perf_score": 5,
       "has_bugs": true,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -1901,10 +1901,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1943,10 +1943,10 @@
       "func_score": 4,
       "perf_score": 5,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1993,10 +1993,10 @@
       "func_score": 4,
       "perf_score": 5,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2044,10 +2044,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2086,10 +2086,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2128,10 +2128,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2170,10 +2170,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2212,10 +2212,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2254,10 +2254,10 @@
       "func_score": 4,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2296,10 +2296,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2346,10 +2346,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2396,10 +2396,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2444,12 +2444,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": 2,
+      "perf_score": 1,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2459,14 +2459,14 @@
       "bench_status": {
         "last_run": "2026-03-18",
         "status": "underperforming",
-        "ratio": 0.5,
+        "ratio": 0.3333,
         "details": [
           {
             "bench_fn": "bitwise_not",
-            "tileops": "0.0067 ms",
+            "tileops": "0.0100 ms",
             "baseline": "0.0033 ms",
-            "ratio": 0.5,
-            "summary": "TileOps 0.0067ms vs Baseline 0.0033ms (ratio 0.50)"
+            "ratio": 0.3333,
+            "summary": "TileOps 0.0100ms vs Baseline 0.0033ms (ratio 0.33)"
           }
         ]
       },
@@ -2496,10 +2496,10 @@
       "func_score": 4,
       "perf_score": 4,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2546,10 +2546,10 @@
       "func_score": 4,
       "perf_score": 1,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2596,10 +2596,10 @@
       "func_score": 4,
       "perf_score": 1,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2642,10 +2642,10 @@
       "func_score": 1,
       "perf_score": null,
       "has_bugs": true,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -2680,10 +2680,10 @@
       "func_score": 1,
       "perf_score": null,
       "has_bugs": true,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -2718,10 +2718,10 @@
       "func_score": 1,
       "perf_score": null,
       "has_bugs": true,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -2756,10 +2756,10 @@
       "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -2797,10 +2797,10 @@
       "func_score": 3,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2838,10 +2838,10 @@
       "func_score": 3,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2879,10 +2879,10 @@
       "func_score": 3,
       "perf_score": null,
       "has_bugs": false,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2923,7 +2923,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -2972,7 +2972,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -3013,7 +3013,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -3054,7 +3054,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -3087,7 +3087,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3120,7 +3120,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3155,10 +3155,10 @@
       "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3193,10 +3193,10 @@
       "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-18T09:48:47Z",
+      "kernel_last_updated": "2026-03-18T12:11:41Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3231,7 +3231,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3266,7 +3266,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3301,7 +3301,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3336,7 +3336,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3371,7 +3371,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3406,7 +3406,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3441,7 +3441,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3476,7 +3476,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3511,7 +3511,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3546,7 +3546,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3581,7 +3581,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3616,7 +3616,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3651,7 +3651,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3686,7 +3686,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3721,7 +3721,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3756,7 +3756,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3791,7 +3791,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3832,8 +3832,8 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T11:19:03Z",
       "kernel_last_pr_author": "zhen8838",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -3874,8 +3874,8 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T11:19:03Z",
       "kernel_last_pr_author": "zhen8838",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -3916,8 +3916,8 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-17T11:19:03Z",
       "kernel_last_pr_author": "zhen8838",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -3959,7 +3959,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4001,7 +4001,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4043,7 +4043,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4085,7 +4085,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4127,7 +4127,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4162,7 +4162,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4204,7 +4204,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4214,14 +4214,14 @@
       "bench_status": {
         "last_run": "2026-03-18",
         "status": "qualified",
-        "ratio": 1.3636,
+        "ratio": 1.25,
         "details": [
           {
             "bench_fn": "ada_layer_norm",
-            "tileops": "0.0275 ms",
+            "tileops": "0.0300 ms",
             "baseline": "0.0375 ms",
-            "ratio": 1.3636,
-            "summary": "TileOps 0.0275ms vs Baseline 0.0375ms (ratio 1.36)"
+            "ratio": 1.25,
+            "summary": "TileOps 0.0300ms vs Baseline 0.0375ms (ratio 1.25)"
           }
         ]
       },
@@ -4254,7 +4254,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4304,7 +4304,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4346,7 +4346,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4379,7 +4379,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4412,7 +4412,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4445,7 +4445,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4478,7 +4478,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4511,7 +4511,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4544,7 +4544,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4577,7 +4577,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4610,7 +4610,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4643,7 +4643,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4676,7 +4676,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4709,7 +4709,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4742,7 +4742,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4775,7 +4775,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4808,7 +4808,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4841,7 +4841,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4874,7 +4874,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4915,7 +4915,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4954,7 +4954,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4993,7 +4993,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5035,7 +5035,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -5074,7 +5074,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5113,7 +5113,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5152,7 +5152,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5189,7 +5189,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5226,7 +5226,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5267,7 +5267,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -5306,7 +5306,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5339,7 +5339,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5372,7 +5372,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5405,7 +5405,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5438,7 +5438,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5471,7 +5471,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5504,7 +5504,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5537,7 +5537,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5570,7 +5570,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5603,7 +5603,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5636,7 +5636,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5669,7 +5669,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5702,7 +5702,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5735,7 +5735,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5768,7 +5768,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5801,7 +5801,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5842,7 +5842,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -5879,7 +5879,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5912,7 +5912,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5945,7 +5945,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5978,7 +5978,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6011,7 +6011,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6044,7 +6044,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6077,7 +6077,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6110,7 +6110,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6151,7 +6151,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6195,7 +6195,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6239,7 +6239,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6280,7 +6280,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6313,7 +6313,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6358,7 +6358,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6403,7 +6403,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6436,7 +6436,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6469,7 +6469,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6502,7 +6502,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6535,7 +6535,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6576,7 +6576,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6617,7 +6617,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6661,7 +6661,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6671,21 +6671,21 @@
       "bench_status": {
         "last_run": "2026-03-18",
         "status": "qualified",
-        "ratio": 2.4313,
+        "ratio": 2.434,
         "details": [
           {
             "bench_fn": "nsa_fwd",
-            "tileops": "145.5000 ms",
-            "baseline": "353.7567 ms",
-            "ratio": 2.4313,
-            "summary": "TileOps 145.5000ms vs Baseline 353.7567ms (ratio 2.43)"
+            "tileops": "145.3700 ms",
+            "baseline": "353.8367 ms",
+            "ratio": 2.434,
+            "summary": "TileOps 145.3700ms vs Baseline 353.8367ms (ratio 2.43)"
           },
           {
             "bench_fn": "nsa_cmp_fwd",
-            "tileops": "79.0200 ms",
-            "baseline": "450.0900 ms",
-            "ratio": 5.6959,
-            "summary": "TileOps 79.0200ms vs Baseline 450.0900ms (ratio 5.70)"
+            "tileops": "79.2450 ms",
+            "baseline": "450.3200 ms",
+            "ratio": 5.6826,
+            "summary": "TileOps 79.2450ms vs Baseline 450.3200ms (ratio 5.68)"
           }
         ]
       },
@@ -6709,7 +6709,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6742,7 +6742,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6783,7 +6783,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6822,8 +6822,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T05:36:31Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6856,7 +6856,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6889,7 +6889,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6922,7 +6922,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6955,7 +6955,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6988,7 +6988,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -7035,7 +7035,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -7045,21 +7045,21 @@
       "bench_status": {
         "last_run": "2026-03-18",
         "status": "underperforming",
-        "ratio": 0.1203,
+        "ratio": 0.1165,
         "details": [
           {
             "bench_fn": "gated_deltanet_fwd",
-            "tileops": "339.0217 ms",
-            "baseline": "257.0792 ms",
-            "ratio": 0.7583,
-            "summary": "TileOps 339.0217ms vs Baseline 257.0792ms (ratio 0.76)"
+            "tileops": "269.3175 ms",
+            "baseline": "257.6183 ms",
+            "ratio": 0.9566,
+            "summary": "TileOps 269.3175ms vs Baseline 257.6183ms (ratio 0.96)"
           },
           {
             "bench_fn": "gated_deltanet_bwd",
-            "tileops": "608.4940 ms",
-            "baseline": "73.2020 ms",
-            "ratio": 0.1203,
-            "summary": "TileOps 608.4940ms vs Baseline 73.2020ms (ratio 0.12)"
+            "tileops": "629.4950 ms",
+            "baseline": "73.3190 ms",
+            "ratio": 0.1165,
+            "summary": "TileOps 629.4950ms vs Baseline 73.3190ms (ratio 0.12)"
           }
         ]
       },
@@ -7092,7 +7092,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -7135,7 +7135,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -7170,7 +7170,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -7212,7 +7212,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -7251,8 +7251,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-17T14:16:55Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-18T11:15:24Z",
-      "files_last_scanned": "2026-03-18T10:54:49Z",
+      "last_updated": "2026-03-18T22:30:25Z",
+      "files_last_scanned": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -7262,14 +7262,14 @@
       "bench_status": {
         "last_run": "2026-03-18",
         "status": "qualified",
-        "ratio": 3.7945,
+        "ratio": 3.7432,
         "details": [
           {
             "bench_fn": "gla_decode",
-            "tileops": "0.0456 ms",
+            "tileops": "0.0462 ms",
             "baseline": "0.1731 ms",
-            "ratio": 3.7945,
-            "summary": "TileOps 0.0456ms vs Baseline 0.1731ms (ratio 3.79)"
+            "ratio": 3.7432,
+            "summary": "TileOps 0.0462ms vs Baseline 0.1731ms (ratio 3.74)"
           }
         ]
       },
@@ -7293,7 +7293,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -7326,7 +7326,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -7359,7 +7359,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -7392,7 +7392,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T11:15:24Z",
+      "last_updated": "2026-03-18T22:30:25Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -7409,7 +7409,7 @@
     }
   },
   "summary": {
-    "generated_at": "2026-03-18T11:15:24Z",
+    "generated_at": "2026-03-18T22:30:25Z",
     "total_ops": 186,
     "impl_ops": 110,
     "tested_ops": 82,

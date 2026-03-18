@@ -30,19 +30,19 @@ perf_details:
   summary: null
   results: &id001
   - bench_fn: gated_deltanet_fwd
-    tileops: 339.0217 ms
-    baseline: 257.0792 ms
-    ratio: 0.7583
-    summary: TileOps 339.0217ms vs Baseline 257.0792ms (ratio 0.76)
+    tileops: 269.3175 ms
+    baseline: 257.6183 ms
+    ratio: 0.9566
+    summary: TileOps 269.3175ms vs Baseline 257.6183ms (ratio 0.96)
   - bench_fn: gated_deltanet_bwd
-    tileops: 608.4940 ms
-    baseline: 73.2020 ms
-    ratio: 0.1203
-    summary: TileOps 608.4940ms vs Baseline 73.2020ms (ratio 0.12)
+    tileops: 629.4950 ms
+    baseline: 73.3190 ms
+    ratio: 0.1165
+    summary: TileOps 629.4950ms vs Baseline 73.3190ms (ratio 0.12)
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- gated_deltanet_bwd 耗时 608ms vs baseline 73ms，ratio 仅 0.12，反向传播性能严重低于 baseline
+- gated_deltanet_bwd 耗时 629ms vs baseline 73ms，ratio 仅 0.12，反向传播性能严重低于 baseline
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -53,10 +53,10 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T11:15:24Z'
+last_updated: '2026-03-18T22:30:25Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
   status: underperforming
-  ratio: 0.1203
+  ratio: 0.1165
   details: *id001

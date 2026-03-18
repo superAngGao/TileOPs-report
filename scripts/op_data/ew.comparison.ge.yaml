@@ -26,17 +26,17 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
-kernel_last_updated: '2026-03-18T09:48:47Z'
-kernel_last_pr_number: 549
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/549
+kernel_last_updated: '2026-03-18T12:11:41Z'
+kernel_last_pr_number: 560
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/560
 kernel_last_pr_author: lcy-seso
-kernel_last_pr_title: '[Feat][Elementwise] Extend fp8 support to independent kernels'
+kernel_last_pr_title: '[Perf][Elementwise] Generalize kernel caching and autotune to all kernel families'
 test_status:
   last_run: '2026-03-18'
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T11:15:24Z'
+last_updated: '2026-03-18T22:30:25Z'
 updated_by: nightly-auto
 bench_status:
   last_run: '2026-03-18'

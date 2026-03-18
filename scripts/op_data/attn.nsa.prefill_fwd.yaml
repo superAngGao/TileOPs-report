@@ -27,15 +27,15 @@ perf_details:
   summary: null
   results: &id001
   - bench_fn: nsa_fwd
-    tileops: 145.5000 ms
-    baseline: 353.7567 ms
-    ratio: 2.4313
-    summary: TileOps 145.5000ms vs Baseline 353.7567ms (ratio 2.43)
+    tileops: 145.3700 ms
+    baseline: 353.8367 ms
+    ratio: 2.434
+    summary: TileOps 145.3700ms vs Baseline 353.8367ms (ratio 2.43)
   - bench_fn: nsa_cmp_fwd
-    tileops: 79.0200 ms
-    baseline: 450.0900 ms
-    ratio: 5.6959
-    summary: TileOps 79.0200ms vs Baseline 450.0900ms (ratio 5.70)
+    tileops: 79.2450 ms
+    baseline: 450.3200 ms
+    ratio: 5.6826
+    summary: TileOps 79.2450ms vs Baseline 450.3200ms (ratio 5.68)
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
@@ -49,10 +49,10 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T11:15:24Z'
+last_updated: '2026-03-18T22:30:25Z'
 updated_by: nightly-auto
 bench_status:
   last_run: '2026-03-18'
   status: qualified
-  ratio: 2.4313
+  ratio: 2.434
   details: *id001
