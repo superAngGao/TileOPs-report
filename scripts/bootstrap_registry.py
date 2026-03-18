@@ -191,6 +191,7 @@ def build_file_mapping_prompt(ops_batch: list[dict], file_tree: str, cat_name: s
 - 多个算子共享同一文件时均列出
 - 找不到对应文件时对应字段为空列表 []
 - **重要**：代码库中可能存在不在上述算子列表中的算子（如 engram 等）。这些算子的 kernel/test/bench 文件不应被归属到列表中的任何算子。如果一个文件明确属于列表外的算子，请忽略它，不要强行匹配到列表中的相似算子
+- **重要**：如果一个算子找不到 kernel 实现文件，那么它通常也不会有对应的 test 和 benchmark 文件。此时 kernel/tests/bench 三个字段都应为空列表 []
 
 ## 输出格式
 严格输出 JSON，不含其他文字：
