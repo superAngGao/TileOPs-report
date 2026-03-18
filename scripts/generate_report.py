@@ -55,7 +55,7 @@ h3{font-size:.95rem;font-weight:600;margin:.75rem 0 .25rem}
 .bar-row{display:flex;align-items:center;gap:.5rem;font-size:.82rem;margin:.2rem 0}
 .bar-label{width:50px;color:var(--muted);flex-shrink:0;font-weight:500}
 .bar-container{flex:1;min-width:60px}
-.bar-count{width:55px;text-align:right;color:var(--muted);flex-shrink:0}
+.bar-count{width:120px;text-align:right;color:var(--muted);flex-shrink:0;font-size:.75rem}
 /* Category card */
 .cat-card{display:grid;grid-template-columns:1fr auto;gap:.75rem;padding:.75rem 0;border-bottom:1px solid var(--border)}
 .cat-card:last-child{border-bottom:none}
@@ -84,7 +84,7 @@ h3{font-size:.95rem;font-weight:600;margin:.75rem 0 .25rem}
   .bar-wrap{height:1rem}
   .bar-row{gap:.35rem;font-size:.8rem;margin:.3rem 0}
   .bar-label{width:42px;font-size:.75rem}
-  .bar-count{width:50px;font-size:.75rem}
+  .bar-count{width:105px;font-size:.68rem}
   .cat-card{grid-template-columns:1fr;gap:.5rem}
   .cat-scores{justify-content:flex-start}
   .score-badge{padding:.2rem .4rem}
@@ -217,7 +217,7 @@ def build_html(args, prog: dict | None, analysis: dict | None, registry_ops: dic
             parts.append(
                 f'<div class="bar-row"><span class="bar-label">Test</span>'
                 f'<div class="bar-container">{test_bar}</div>'
-                f'<span class="bar-count" style="width:auto">{test_label}</span></div>'
+                f'<span class="bar-count">{test_label}</span></div>'
             )
             # Bench stacked bar: qualified(purple) + underperforming(yellow), rest is gray
             bench_bar = _stacked_bar([
@@ -229,7 +229,7 @@ def build_html(args, prog: dict | None, analysis: dict | None, registry_ops: dic
             parts.append(
                 f'<div class="bar-row"><span class="bar-label">Bench</span>'
                 f'<div class="bar-container">{bench_bar}</div>'
-                f'<span class="bar-count" style="width:auto">{bench_label}</span></div>'
+                f'<span class="bar-count">{bench_label}</span></div>'
             )
         else:
             # Fallback: simple bars when registry not available
@@ -285,7 +285,7 @@ def build_html(args, prog: dict | None, analysis: dict | None, registry_ops: dic
             parts.append(
                 f'<div class="bar-row"><span class="bar-label">Test</span>'
                 f'<div class="bar-container">{test_bar}</div>'
-                f'<span class="bar-count" style="width:auto">{tc["passed"]}✓ {tc["failed"]}✗ {tc["missing"]}—</span></div>'
+                f'<span class="bar-count">{tc["passed"]}✓ {tc["failed"]}✗ {tc["missing"]}—</span></div>'
             )
             bc = cat_status["bench"]
             bench_bar = _stacked_bar([
@@ -296,7 +296,7 @@ def build_html(args, prog: dict | None, analysis: dict | None, registry_ops: dic
             parts.append(
                 f'<div class="bar-row"><span class="bar-label">Bench</span>'
                 f'<div class="bar-container">{bench_bar}</div>'
-                f'<span class="bar-count" style="width:auto">{bc["qualified"]}✓ {bc["underperforming"]}△ {bc["failed"]}✗ {bc["missing"]}—</span></div>'
+                f'<span class="bar-count">{bc["qualified"]}✓ {bc["underperforming"]}△ {bc["failed"]}✗ {bc["missing"]}—</span></div>'
             )
         else:
             te = cat.get("tested_ops", 0)
