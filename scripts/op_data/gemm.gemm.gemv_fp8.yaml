@@ -13,16 +13,16 @@ files:
   bench:
   - benchmarks/ops/bench_gemm.py::bench_gemv_fp8
 files_last_scanned: '2026-03-18T08:15:19Z'
-func_score: null
-func_score_notes: ''
-func_score_updated: null
+func_score: 1
+func_score_notes: 测试缺失，无法验证功能完整性。
+func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: null
+perf_score_updated: '2026-03-18'
 has_bugs: null
 bugs: []
 kernel_last_updated: null
@@ -31,8 +31,14 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: null
+  last_run: '2026-03-18'
   passed: null
   errors: []
-last_updated: '2026-03-18T08:15:19Z'
-updated_by: bootstrap
+  status: missing
+last_updated: '2026-03-18T08:19:40Z'
+updated_by: claude-nightly
+bench_status:
+  last_run: '2026-03-18'
+  status: passed
+  ratio: null
+  details: []

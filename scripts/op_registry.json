@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-03-18T08:15:19Z",
+  "generated_at": "2026-03-18T08:19:40Z",
   "total_ops": 186,
   "ops": {
     "ew.binary_arith.add": {
@@ -31,10 +31,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.binary_arith.sub": {
       "id": "ew.binary_arith.sub",
@@ -59,10 +72,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.binary_arith.mul": {
       "id": "ew.binary_arith.mul",
@@ -87,10 +113,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.binary_arith.div": {
       "id": "ew.binary_arith.div",
@@ -115,10 +154,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.binary_arith.remainder": {
       "id": "ew.binary_arith.remainder",
@@ -143,10 +195,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.binary_arith.pow": {
       "id": "ew.binary_arith.pow",
@@ -171,10 +236,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.binary_arith.floor_divide": {
       "id": "ew.binary_arith.floor_divide",
@@ -199,10 +277,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.binary_arith.lerp": {
       "id": "ew.binary_arith.lerp",
@@ -227,10 +318,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.binary_arith.maximum": {
       "id": "ew.binary_arith.maximum",
@@ -256,10 +360,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.binary_arith.minimum": {
       "id": "ew.binary_arith.minimum",
@@ -285,10 +402,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.exp": {
       "id": "ew.unary_math.exp",
@@ -314,10 +444,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.log": {
       "id": "ew.unary_math.log",
@@ -343,10 +486,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.sqrt": {
       "id": "ew.unary_math.sqrt",
@@ -372,10 +528,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.rsqrt": {
       "id": "ew.unary_math.rsqrt",
@@ -401,10 +570,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.abs": {
       "id": "ew.unary_math.abs",
@@ -429,10 +611,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.neg": {
       "id": "ew.unary_math.neg",
@@ -457,10 +652,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.reciprocal": {
       "id": "ew.unary_math.reciprocal",
@@ -486,10 +694,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.sign": {
       "id": "ew.unary_math.sign",
@@ -515,10 +736,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.sin": {
       "id": "ew.unary_math.sin",
@@ -543,10 +777,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.cos": {
       "id": "ew.unary_math.cos",
@@ -571,10 +818,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.floor": {
       "id": "ew.unary_math.floor",
@@ -597,12 +857,25 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_floor"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.ceil": {
       "id": "ew.unary_math.ceil",
@@ -625,12 +898,25 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_ceil"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.round": {
       "id": "ew.unary_math.round",
@@ -653,12 +939,25 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_round"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.trunc": {
       "id": "ew.unary_math.trunc",
@@ -681,12 +980,25 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_trunc"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.erf": {
       "id": "ew.unary_math.erf",
@@ -710,12 +1022,25 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_erf"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.log1p": {
       "id": "ew.unary_math.log1p",
@@ -739,12 +1064,25 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_log1p"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.unary_math.expm1": {
       "id": "ew.unary_math.expm1",
@@ -768,12 +1106,25 @@
           "benchmarks/ops/bench_unary_elementwise.py::bench_expm1"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.relu": {
       "id": "ew.activation.relu",
@@ -798,12 +1149,25 @@
           "benchmarks/ops/bench_activation.py::bench_relu_strategies"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.gelu": {
       "id": "ew.activation.gelu",
@@ -826,12 +1190,25 @@
           "benchmarks/ops/bench_activation.py::bench_gelu"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.silu": {
       "id": "ew.activation.silu",
@@ -854,12 +1231,25 @@
           "benchmarks/ops/bench_activation.py::bench_silu"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.sigmoid": {
       "id": "ew.activation.sigmoid",
@@ -883,12 +1273,25 @@
           "benchmarks/ops/bench_activation.py::bench_sigmoid"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.tanh": {
       "id": "ew.activation.tanh",
@@ -912,12 +1315,25 @@
           "benchmarks/ops/bench_activation.py::bench_tanh"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.leaky_relu": {
       "id": "ew.activation.leaky_relu",
@@ -938,12 +1354,25 @@
           "benchmarks/ops/bench_activation.py::bench_leaky_relu"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.elu": {
       "id": "ew.activation.elu",
@@ -964,12 +1393,25 @@
           "benchmarks/ops/bench_activation.py::bench_elu"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.selu": {
       "id": "ew.activation.selu",
@@ -992,12 +1434,25 @@
           "benchmarks/ops/bench_activation.py::bench_selu"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.hardswish": {
       "id": "ew.activation.hardswish",
@@ -1020,12 +1475,25 @@
           "benchmarks/ops/bench_activation.py::bench_hardswish"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.hardsigmoid": {
       "id": "ew.activation.hardsigmoid",
@@ -1048,12 +1516,25 @@
           "benchmarks/ops/bench_activation.py::bench_hardsigmoid"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.hardtanh": {
       "id": "ew.activation.hardtanh",
@@ -1074,12 +1555,25 @@
           "benchmarks/ops/bench_activation.py::bench_hardtanh"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.softplus": {
       "id": "ew.activation.softplus",
@@ -1100,12 +1594,25 @@
           "benchmarks/ops/bench_activation.py::bench_softplus"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.mish": {
       "id": "ew.activation.mish",
@@ -1128,12 +1635,25 @@
           "benchmarks/ops/bench_activation.py::bench_mish"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.activation.prelu": {
       "id": "ew.activation.prelu",
@@ -1157,9 +1677,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.fused_gated.silu_and_mul": {
       "id": "ew.fused_gated.silu_and_mul",
@@ -1184,10 +1717,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.fused_gated.gelu_and_mul": {
       "id": "ew.fused_gated.gelu_and_mul",
@@ -1212,10 +1758,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.fused_gated.gelu_tanh_and_mul": {
       "id": "ew.fused_gated.gelu_tanh_and_mul",
@@ -1240,10 +1799,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.comparison.eq": {
       "id": "ew.comparison.eq",
@@ -1269,10 +1841,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.comparison.ne": {
       "id": "ew.comparison.ne",
@@ -1297,10 +1882,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.comparison.gt": {
       "id": "ew.comparison.gt",
@@ -1325,10 +1923,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.comparison.lt": {
       "id": "ew.comparison.lt",
@@ -1353,10 +1964,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.comparison.ge": {
       "id": "ew.comparison.ge",
@@ -1381,10 +2005,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.comparison.le": {
       "id": "ew.comparison.le",
@@ -1409,10 +2046,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.bitwise.and": {
       "id": "ew.bitwise.and",
@@ -1437,10 +2087,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.bitwise.or": {
       "id": "ew.bitwise.or",
@@ -1465,10 +2128,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.bitwise.xor": {
       "id": "ew.bitwise.xor",
@@ -1493,10 +2169,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.bitwise.not": {
       "id": "ew.bitwise.not",
@@ -1521,10 +2210,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.logical.not": {
       "id": "ew.logical.not",
@@ -1549,10 +2251,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.logical.and": {
       "id": "ew.logical.and",
@@ -1577,10 +2292,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.logical.or": {
       "id": "ew.logical.or",
@@ -1605,10 +2333,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.special.where": {
       "id": "ew.special.where",
@@ -1630,9 +2371,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.special.clamp": {
       "id": "ew.special.clamp",
@@ -1654,9 +2408,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.special.masked_fill": {
       "id": "ew.special.masked_fill",
@@ -1678,9 +2445,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.special.nan_to_num": {
       "id": "ew.special.nan_to_num",
@@ -1699,12 +2479,25 @@
         "tests": [],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.special.isnan": {
       "id": "ew.special.isnan",
@@ -1726,12 +2519,25 @@
         ],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.special.isinf": {
       "id": "ew.special.isinf",
@@ -1753,12 +2559,25 @@
         ],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.special.isfinite": {
       "id": "ew.special.isfinite",
@@ -1780,12 +2599,25 @@
         ],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.dropout.dropout": {
       "id": "ew.dropout.dropout",
@@ -1808,12 +2640,25 @@
           "benchmarks/ops/bench_dropout.py::bench_dropout"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.rope.neox": {
       "id": "ew.rope.neox",
@@ -1836,12 +2681,25 @@
           "benchmarks/ops/bench_rope.py::bench_rope_neox"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.rope.non_neox": {
       "id": "ew.rope.non_neox",
@@ -1864,12 +2722,25 @@
           "benchmarks/ops/bench_rope.py::bench_rope_non_neox"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.rope.llama31": {
       "id": "ew.rope.llama31",
@@ -1892,12 +2763,25 @@
           "benchmarks/ops/bench_rope.py::bench_rope_llama31"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.rope.yarn": {
       "id": "ew.rope.yarn",
@@ -1917,7 +2801,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.rope.longrope": {
       "id": "ew.rope.longrope",
@@ -1937,7 +2834,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.alibi.alibi": {
       "id": "ew.alibi.alibi",
@@ -1956,12 +2866,25 @@
         "tests": [],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "ew.sinusoidal.sinusoidal": {
       "id": "ew.sinusoidal.sinusoidal",
@@ -1980,12 +2903,25 @@
         "tests": [],
         "bench": []
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "kernel_last_updated": "2026-03-17T07:47:09Z",
+      "kernel_last_pr_author": "lcy-seso",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.sum": {
       "id": "reduce.reduce.sum",
@@ -2011,12 +2947,25 @@
           "benchmarks/ops/bench_reduce.py::bench_sum"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.mean": {
       "id": "reduce.reduce.mean",
@@ -2039,12 +2988,25 @@
           "benchmarks/ops/bench_reduce.py::bench_mean"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.amin": {
       "id": "reduce.reduce.amin",
@@ -2067,12 +3029,25 @@
           "benchmarks/ops/bench_reduce.py::bench_amin"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.amax": {
       "id": "reduce.reduce.amax",
@@ -2095,12 +3070,25 @@
           "benchmarks/ops/bench_reduce.py::bench_amax"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.prod": {
       "id": "reduce.reduce.prod",
@@ -2123,12 +3111,25 @@
           "benchmarks/ops/bench_reduce.py::bench_prod"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.std": {
       "id": "reduce.reduce.std",
@@ -2153,12 +3154,25 @@
           "benchmarks/ops/bench_reduce.py::bench_std"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.var": {
       "id": "reduce.reduce.var",
@@ -2184,12 +3198,25 @@
           "benchmarks/ops/bench_reduce.py::bench_var"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.var_mean": {
       "id": "reduce.reduce.var_mean",
@@ -2213,12 +3240,25 @@
           "benchmarks/ops/bench_reduce.py::bench_var_mean"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.softmax.softmax": {
       "id": "reduce.softmax.softmax",
@@ -2243,12 +3283,25 @@
           "benchmarks/ops/bench_softmax.py::bench_softmax"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.softmax.log_softmax": {
       "id": "reduce.softmax.log_softmax",
@@ -2272,12 +3325,25 @@
           "benchmarks/ops/bench_softmax.py::bench_log_softmax"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.softmax.logsumexp": {
       "id": "reduce.softmax.logsumexp",
@@ -2301,12 +3367,25 @@
           "benchmarks/ops/bench_softmax.py::bench_logsumexp"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.argreduce.argmax": {
       "id": "reduce.argreduce.argmax",
@@ -2331,12 +3410,25 @@
           "benchmarks/ops/bench_argreduce.py::bench_argmax"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.argreduce.argmin": {
       "id": "reduce.argreduce.argmin",
@@ -2361,12 +3453,25 @@
           "benchmarks/ops/bench_argreduce.py::bench_argmin"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.cumulative.cumsum": {
       "id": "reduce.cumulative.cumsum",
@@ -2391,12 +3496,25 @@
           "benchmarks/ops/bench_cumulative.py::bench_cumsum"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.cumulative.cumprod": {
       "id": "reduce.cumulative.cumprod",
@@ -2421,12 +3539,25 @@
           "benchmarks/ops/bench_cumulative.py::bench_cumprod"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.logical_reduce.any": {
       "id": "reduce.logical_reduce.any",
@@ -2449,12 +3580,25 @@
           "benchmarks/ops/bench_logical_reduce.py::bench_any"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.logical_reduce.all": {
       "id": "reduce.logical_reduce.all",
@@ -2477,12 +3621,25 @@
           "benchmarks/ops/bench_logical_reduce.py::bench_all"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.linalg.l1_norm": {
       "id": "reduce.linalg.l1_norm",
@@ -2505,12 +3662,25 @@
           "benchmarks/ops/bench_vector_norm.py::bench_l1_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T11:19:03Z",
+      "kernel_last_pr_author": "zhen8838",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.linalg.l2_norm": {
       "id": "reduce.linalg.l2_norm",
@@ -2533,12 +3703,25 @@
           "benchmarks/ops/bench_vector_norm.py::bench_l2_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T11:19:03Z",
+      "kernel_last_pr_author": "zhen8838",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.linalg.inf_norm": {
       "id": "reduce.linalg.inf_norm",
@@ -2561,12 +3744,25 @@
           "benchmarks/ops/bench_vector_norm.py::bench_inf_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T11:19:03Z",
+      "kernel_last_pr_author": "zhen8838",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "norm.layer_norm": {
       "id": "norm.layer_norm",
@@ -2590,12 +3786,25 @@
           "benchmarks/ops/bench_layer_norm.py::bench_layer_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "norm.batch_norm": {
       "id": "norm.batch_norm",
@@ -2619,12 +3828,25 @@
           "benchmarks/ops/bench_batch_norm.py::bench_batch_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "norm.group_norm": {
       "id": "norm.group_norm",
@@ -2648,12 +3870,25 @@
           "benchmarks/ops/bench_group_norm.py::bench_group_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "norm.instance_norm": {
       "id": "norm.instance_norm",
@@ -2677,12 +3912,25 @@
           "benchmarks/ops/bench_instance_norm.py::bench_instance_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "norm.rms_norm": {
       "id": "norm.rms_norm",
@@ -2706,12 +3954,25 @@
           "benchmarks/ops/bench_rms_norm.py::bench_rms_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "norm.qk_norm": {
       "id": "norm.qk_norm",
@@ -2733,7 +3994,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "norm.ada_layer_norm": {
       "id": "norm.ada_layer_norm",
@@ -2757,12 +4031,25 @@
           "benchmarks/ops/bench_ada_layer_norm.py::bench_ada_layer_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "norm.ada_layer_norm_zero": {
       "id": "norm.ada_layer_norm_zero",
@@ -2786,12 +4073,25 @@
           "benchmarks/ops/bench_ada_layer_norm.py::bench_ada_layer_norm_zero"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "norm.fused_add_layer_norm": {
       "id": "norm.fused_add_layer_norm",
@@ -2815,12 +4115,25 @@
           "benchmarks/ops/bench_fused_add_layer_norm.py::bench_fused_add_layer_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "norm.fused_add_rmsnorm": {
       "id": "norm.fused_add_rmsnorm",
@@ -2844,12 +4157,25 @@
           "benchmarks/ops/bench_fused_add_layer_norm.py::bench_fused_add_rmsnorm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "conv.conv.conv1d": {
       "id": "conv.conv.conv1d",
@@ -2869,7 +4195,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.conv.conv2d": {
       "id": "conv.conv.conv2d",
@@ -2889,7 +4228,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.conv.conv3d": {
       "id": "conv.conv.conv3d",
@@ -2909,7 +4261,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.conv_transpose.conv_t1d": {
       "id": "conv.conv_transpose.conv_t1d",
@@ -2929,7 +4294,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.conv_transpose.conv_t2d": {
       "id": "conv.conv_transpose.conv_t2d",
@@ -2949,7 +4327,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.depthwise.depthwise_conv2d": {
       "id": "conv.depthwise.depthwise_conv2d",
@@ -2969,7 +4360,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.grouped.grouped_conv2d": {
       "id": "conv.grouped.grouped_conv2d",
@@ -2989,7 +4393,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.dilated.dilated_conv2d": {
       "id": "conv.dilated.dilated_conv2d",
@@ -3009,7 +4426,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.max_pool.max_pool1d": {
       "id": "conv.max_pool.max_pool1d",
@@ -3029,7 +4459,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.max_pool.max_pool2d": {
       "id": "conv.max_pool.max_pool2d",
@@ -3049,7 +4492,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.max_pool.max_pool3d": {
       "id": "conv.max_pool.max_pool3d",
@@ -3069,7 +4525,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.avg_pool.avg_pool1d": {
       "id": "conv.avg_pool.avg_pool1d",
@@ -3089,7 +4558,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.avg_pool.avg_pool2d": {
       "id": "conv.avg_pool.avg_pool2d",
@@ -3109,7 +4591,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.avg_pool.avg_pool3d": {
       "id": "conv.avg_pool.avg_pool3d",
@@ -3129,7 +4624,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.adaptive.adaptive_avg_pool2d": {
       "id": "conv.adaptive.adaptive_avg_pool2d",
@@ -3149,7 +4657,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.adaptive.adaptive_max_pool2d": {
       "id": "conv.adaptive.adaptive_max_pool2d",
@@ -3169,7 +4690,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.gemm.fp16": {
       "id": "gemm.gemm.fp16",
@@ -3192,12 +4726,25 @@
           "benchmarks/ops/bench_gemm.py::bench_gemm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.gemm.fp8": {
       "id": "gemm.gemm.fp8",
@@ -3218,12 +4765,25 @@
           "benchmarks/ops/bench_gemm.py::bench_gemm_fp8"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.gemm.fp8_block_scaled": {
       "id": "gemm.gemm.fp8_block_scaled",
@@ -3244,12 +4804,25 @@
           "benchmarks/ops/bench_gemm.py::bench_gemm_fp8_block_scaled"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.gemm.gemv_fp16": {
       "id": "gemm.gemm.gemv_fp16",
@@ -3273,12 +4846,25 @@
           "benchmarks/ops/bench_gemm.py::bench_gemv"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.gemm.gemv_fp8": {
       "id": "gemm.gemm.gemv_fp8",
@@ -3299,12 +4885,25 @@
           "benchmarks/ops/bench_gemm.py::bench_gemv_fp8"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.gemm.small_batch_fp16": {
       "id": "gemm.gemm.small_batch_fp16",
@@ -3325,12 +4924,25 @@
           "benchmarks/ops/bench_gemm.py::bench_small_batch_gemm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.gemm.small_batch_fp8": {
       "id": "gemm.gemm.small_batch_fp8",
@@ -3351,12 +4963,25 @@
           "benchmarks/ops/bench_gemm.py::bench_small_batch_gemm_fp8"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.bmm.fp16": {
       "id": "gemm.bmm.fp16",
@@ -3375,12 +5000,25 @@
           "benchmarks/ops/bench_gemm.py::bench_bmm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.bmm.fp8": {
       "id": "gemm.bmm.fp8",
@@ -3399,12 +5037,25 @@
           "benchmarks/ops/bench_gemm.py::bench_bmm_fp8"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.groupgemm.fp16": {
       "id": "gemm.groupgemm.fp16",
@@ -3427,12 +5078,25 @@
           "benchmarks/ops/bench_grouped_gemm.py::bench_grouped_gemm"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.groupgemm.fp8": {
       "id": "gemm.groupgemm.fp8",
@@ -3453,12 +5117,25 @@
           "benchmarks/ops/bench_grouped_gemm.py::bench_grouped_gemm_fp8"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.outer.outer": {
       "id": "gemm.outer.outer",
@@ -3478,7 +5155,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.lowbit.w4a16": {
       "id": "gemm.lowbit.w4a16",
@@ -3498,7 +5188,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.lowbit.w8a8": {
       "id": "gemm.lowbit.w8a8",
@@ -3518,7 +5221,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.lowbit.w8a8_int8": {
       "id": "gemm.lowbit.w8a8_int8",
@@ -3538,7 +5254,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.lowbit.weight_only_int4": {
       "id": "gemm.lowbit.weight_only_int4",
@@ -3558,7 +5287,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.lowbit.fp4": {
       "id": "gemm.lowbit.fp4",
@@ -3578,7 +5320,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.sparse.fp16": {
       "id": "gemm.sparse.fp16",
@@ -3598,7 +5353,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.sparse.fp8": {
       "id": "gemm.sparse.fp8",
@@ -3618,7 +5386,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int8.per_tensor": {
       "id": "quant.int8.per_tensor",
@@ -3638,7 +5419,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int8.per_channel": {
       "id": "quant.int8.per_channel",
@@ -3658,7 +5452,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int8.per_block": {
       "id": "quant.int8.per_block",
@@ -3678,7 +5485,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int8.smooth_quant": {
       "id": "quant.int8.smooth_quant",
@@ -3698,7 +5518,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int4.per_channel": {
       "id": "quant.int4.per_channel",
@@ -3718,7 +5551,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int4.per_block": {
       "id": "quant.int4.per_block",
@@ -3738,7 +5584,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int4.nf4": {
       "id": "quant.int4.nf4",
@@ -3758,7 +5617,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.fp8.per_tensor": {
       "id": "quant.fp8.per_tensor",
@@ -3781,12 +5653,25 @@
           "benchmarks/ops/bench_fp8_quant.py::bench_fp8_quant"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "quant.fp8.per_block": {
       "id": "quant.fp8.per_block",
@@ -3805,12 +5690,25 @@
           "benchmarks/ops/bench_fp8_quant.py::bench_fp8_block_quant"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.fp8.cast_transpose": {
       "id": "quant.fp8.cast_transpose",
@@ -3830,7 +5728,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.top_k": {
       "id": "sampling.top_k",
@@ -3850,7 +5761,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.top_p": {
       "id": "sampling.top_p",
@@ -3870,7 +5794,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.min_p": {
       "id": "sampling.min_p",
@@ -3890,7 +5827,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.top_k_top_p": {
       "id": "sampling.top_k_top_p",
@@ -3910,7 +5860,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.temperature_scale": {
       "id": "sampling.temperature_scale",
@@ -3930,7 +5893,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.from_probs": {
       "id": "sampling.from_probs",
@@ -3950,7 +5926,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.chain_spec": {
       "id": "sampling.chain_spec",
@@ -3973,12 +5962,25 @@
           "benchmarks/ops/bench_topk_selector.py::bench_topk_selector"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 1,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "failed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "attn.flash.prefill_fwd": {
       "id": "attn.flash.prefill_fwd",
@@ -4004,12 +6006,25 @@
           "benchmarks/ops/bench_mha.py::bench_mha_fwd"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "attn.flash.prefill_bwd": {
       "id": "attn.flash.prefill_bwd",
@@ -4035,12 +6050,25 @@
           "benchmarks/ops/bench_mha.py::bench_mha_bwd"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "attn.flash.prefill_varlen_fwd": {
       "id": "attn.flash.prefill_varlen_fwd",
@@ -4063,12 +6091,25 @@
           "benchmarks/ops/bench_gqa_sliding_window_varlen_fwd.py::bench_gqa_sliding_window_varlen_fwd"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "attn.flash.prefill_varlen_bwd": {
       "id": "attn.flash.prefill_varlen_bwd",
@@ -4088,7 +6129,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.flash.decode_fwd": {
       "id": "attn.flash.decode_fwd",
@@ -4115,12 +6169,25 @@
           "benchmarks/ops/bench_mha_decode.py::bench_mha_decode"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "attn.flash.decode_paged_fwd": {
       "id": "attn.flash.decode_paged_fwd",
@@ -4147,12 +6214,25 @@
           "benchmarks/ops/bench_mha_decode_paged.py::bench_mha_decode_paged"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "attn.flash.decode_varlen_fwd": {
       "id": "attn.flash.decode_varlen_fwd",
@@ -4172,7 +6252,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.flash.chunked_prefill": {
       "id": "attn.flash.chunked_prefill",
@@ -4192,7 +6285,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.mla.prefill_fwd": {
       "id": "attn.mla.prefill_fwd",
@@ -4212,7 +6318,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.mla.prefill_bwd": {
       "id": "attn.mla.prefill_bwd",
@@ -4232,7 +6351,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.mla.decode_fwd": {
       "id": "attn.mla.decode_fwd",
@@ -4256,12 +6388,25 @@
           "benchmarks/ops/bench_deepseek_mla_decode.py::bench_mla_decode"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "attn.mla.decode_paged_fwd": {
       "id": "attn.mla.decode_paged_fwd",
@@ -4281,7 +6426,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.nsa.prefill_fwd": {
       "id": "attn.nsa.prefill_fwd",
@@ -4307,12 +6465,25 @@
           "benchmarks/ops/bench_deepseek_nsa_cmp_fwd.py::bench_nsa_cmp_fwd"
         ]
       },
-      "func_score": null,
+      "func_score": 2,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "attn.nsa.decode_fwd": {
       "id": "attn.nsa.decode_fwd",
@@ -4332,7 +6503,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.dsa.prefill_fwd": {
       "id": "attn.dsa.prefill_fwd",
@@ -4352,7 +6536,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.dsa.decode_fwd": {
       "id": "attn.dsa.decode_fwd",
@@ -4377,10 +6574,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "moe.permute_align": {
       "id": "moe.permute_align",
@@ -4403,10 +6613,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-18T05:36:31Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "moe.unpermute_depad": {
       "id": "moe.unpermute_depad",
@@ -4426,7 +6649,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "moe.fused_moe.deepseek": {
       "id": "moe.fused_moe.deepseek",
@@ -4446,7 +6682,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "moe.fused_moe.glm": {
       "id": "moe.fused_moe.glm",
@@ -4466,7 +6715,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "moe.fused_moe.kimi": {
       "id": "moe.fused_moe.kimi",
@@ -4486,7 +6748,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "moe.fused_moe.qwen": {
       "id": "moe.fused_moe.qwen",
@@ -4506,7 +6781,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "linattn.gated_deltanet.chunkwise": {
       "id": "linattn.gated_deltanet.chunkwise",
@@ -4537,10 +6825,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "linattn.gated_deltanet.recurrence": {
       "id": "linattn.gated_deltanet.recurrence",
@@ -4566,10 +6867,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "linattn.deltanet.chunkwise": {
       "id": "linattn.deltanet.chunkwise",
@@ -4596,10 +6910,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "linattn.deltanet.recurrence": {
       "id": "linattn.deltanet.recurrence",
@@ -4624,10 +6951,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "linattn.gla.chunkwise": {
       "id": "linattn.gla.chunkwise",
@@ -4653,10 +6993,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "linattn.gla.recurrence": {
       "id": "linattn.gla.recurrence",
@@ -4679,10 +7032,23 @@
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "has_bugs": true,
+      "kernel_last_updated": "2026-03-17T14:16:55Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": false,
+        "errors": [],
+        "status": "failed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "linattn.retnet.chunkwise": {
       "id": "linattn.retnet.chunkwise",
@@ -4702,7 +7068,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "linattn.retnet.recurrence": {
       "id": "linattn.retnet.recurrence",
@@ -4722,7 +7101,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ssm.mamba1": {
       "id": "ssm.mamba1",
@@ -4742,7 +7134,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ssm.mamba2": {
       "id": "ssm.mamba2",
@@ -4762,7 +7167,2033 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T08:15:19Z"
+      "last_updated": "2026-03-18T08:19:40Z",
+      "test_status": {
+        "last_run": "2026-03-18",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-18",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     }
+  },
+  "summary": {
+    "generated_at": "2026-03-18T08:19:40Z",
+    "total_ops": 186,
+    "impl_ops": 122,
+    "tested_ops": 0,
+    "benched_ops": 116,
+    "done_ops": 0,
+    "categories": [
+      {
+        "id": 1,
+        "name": "Elementwise",
+        "issue": 397,
+        "difficulty": 1,
+        "total_ops": 72,
+        "impl_ops": 70,
+        "tested_ops": 0,
+        "benched_ops": 61,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "ew.binary_arith.add",
+            "name": "add",
+            "sub": "binary_arith",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.binary_arith.sub",
+            "name": "sub",
+            "sub": "binary_arith",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.binary_arith.mul",
+            "name": "mul",
+            "sub": "binary_arith",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.binary_arith.div",
+            "name": "div",
+            "sub": "binary_arith",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.binary_arith.remainder",
+            "name": "remainder",
+            "sub": "binary_arith",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.binary_arith.pow",
+            "name": "pow",
+            "sub": "binary_arith",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.binary_arith.floor_divide",
+            "name": "floor_divide",
+            "sub": "binary_arith",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.binary_arith.lerp",
+            "name": "lerp",
+            "sub": "binary_arith",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.binary_arith.maximum",
+            "name": "maximum",
+            "sub": "binary_arith",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.binary_arith.minimum",
+            "name": "minimum",
+            "sub": "binary_arith",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.exp",
+            "name": "exp",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.log",
+            "name": "log",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.sqrt",
+            "name": "sqrt",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.rsqrt",
+            "name": "rsqrt",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.abs",
+            "name": "abs",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.neg",
+            "name": "neg",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.reciprocal",
+            "name": "reciprocal",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.sign",
+            "name": "sign",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.sin",
+            "name": "sin",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.cos",
+            "name": "cos",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.floor",
+            "name": "floor",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.ceil",
+            "name": "ceil",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.round",
+            "name": "round",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.trunc",
+            "name": "trunc",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.erf",
+            "name": "erf",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.log1p",
+            "name": "log1p",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.unary_math.expm1",
+            "name": "expm1",
+            "sub": "unary_math",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.activation.relu",
+            "name": "relu",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.activation.gelu",
+            "name": "gelu",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.activation.silu",
+            "name": "silu",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.activation.sigmoid",
+            "name": "sigmoid",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.activation.tanh",
+            "name": "tanh",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.activation.leaky_relu",
+            "name": "leaky_relu",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "ew.activation.elu",
+            "name": "elu",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "ew.activation.selu",
+            "name": "selu",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.activation.hardswish",
+            "name": "hardswish",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.activation.hardsigmoid",
+            "name": "hardsigmoid",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.activation.hardtanh",
+            "name": "hardtanh",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "ew.activation.softplus",
+            "name": "softplus",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "ew.activation.mish",
+            "name": "mish",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.activation.prelu",
+            "name": "prelu",
+            "sub": "activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "ew.fused_gated.silu_and_mul",
+            "name": "silu_and_mul",
+            "sub": "fused_gated_activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.fused_gated.gelu_and_mul",
+            "name": "gelu_and_mul",
+            "sub": "fused_gated_activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.fused_gated.gelu_tanh_and_mul",
+            "name": "gelu_tanh_and_mul",
+            "sub": "fused_gated_activation",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.comparison.eq",
+            "name": "eq",
+            "sub": "comparison",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.comparison.ne",
+            "name": "ne",
+            "sub": "comparison",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.comparison.gt",
+            "name": "gt",
+            "sub": "comparison",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.comparison.lt",
+            "name": "lt",
+            "sub": "comparison",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.comparison.ge",
+            "name": "ge",
+            "sub": "comparison",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.comparison.le",
+            "name": "le",
+            "sub": "comparison",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.bitwise.and",
+            "name": "bitwise_and",
+            "sub": "bitwise",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.bitwise.or",
+            "name": "bitwise_or",
+            "sub": "bitwise",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.bitwise.xor",
+            "name": "bitwise_xor",
+            "sub": "bitwise",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.bitwise.not",
+            "name": "bitwise_not",
+            "sub": "bitwise",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.logical.not",
+            "name": "logical_not",
+            "sub": "logical",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.logical.and",
+            "name": "logical_and",
+            "sub": "logical",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.logical.or",
+            "name": "logical_or",
+            "sub": "logical",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.special.where",
+            "name": "where",
+            "sub": "special_elementwise",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "impl_only"
+          },
+          {
+            "id": "ew.special.clamp",
+            "name": "clamp",
+            "sub": "special_elementwise",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "impl_only"
+          },
+          {
+            "id": "ew.special.masked_fill",
+            "name": "masked_fill",
+            "sub": "special_elementwise",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "impl_only"
+          },
+          {
+            "id": "ew.special.nan_to_num",
+            "name": "nan_to_num",
+            "sub": "special_elementwise",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "impl_only"
+          },
+          {
+            "id": "ew.special.isnan",
+            "name": "isnan",
+            "sub": "special_elementwise",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": null,
+            "status": "partial"
+          },
+          {
+            "id": "ew.special.isinf",
+            "name": "isinf",
+            "sub": "special_elementwise",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": null,
+            "status": "partial"
+          },
+          {
+            "id": "ew.special.isfinite",
+            "name": "isfinite",
+            "sub": "special_elementwise",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": null,
+            "status": "partial"
+          },
+          {
+            "id": "ew.dropout.dropout",
+            "name": "dropout",
+            "sub": "dropout",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.rope.neox",
+            "name": "rope_neox",
+            "sub": "rope",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.rope.non_neox",
+            "name": "rope_non_neox",
+            "sub": "rope",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.rope.llama31",
+            "name": "rope_llama31",
+            "sub": "rope",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "ew.rope.yarn",
+            "name": "yarn_rope",
+            "sub": "rope",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.rope.longrope",
+            "name": "longrope",
+            "sub": "rope",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.alibi.alibi",
+            "name": "alibi",
+            "sub": "alibi",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "impl_only"
+          },
+          {
+            "id": "ew.sinusoidal.sinusoidal",
+            "name": "sinusoidal",
+            "sub": "sinusoidal",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "impl_only"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Reduce",
+        "issue": 398,
+        "difficulty": 1,
+        "total_ops": 20,
+        "impl_ops": 20,
+        "tested_ops": 0,
+        "benched_ops": 20,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "reduce.reduce.sum",
+            "name": "sum",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.reduce.mean",
+            "name": "mean",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.reduce.amin",
+            "name": "amin",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.reduce.amax",
+            "name": "amax",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.reduce.prod",
+            "name": "prod",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.reduce.std",
+            "name": "std",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.reduce.var",
+            "name": "var",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.reduce.var_mean",
+            "name": "var_mean",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.softmax.softmax",
+            "name": "softmax",
+            "sub": "softmax",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.softmax.log_softmax",
+            "name": "log_softmax",
+            "sub": "softmax",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.softmax.logsumexp",
+            "name": "logsumexp",
+            "sub": "softmax",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.argreduce.argmax",
+            "name": "argmax",
+            "sub": "argreduce",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.argreduce.argmin",
+            "name": "argmin",
+            "sub": "argreduce",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.cumulative.cumsum",
+            "name": "cumsum",
+            "sub": "cumulative",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.cumulative.cumprod",
+            "name": "cumprod",
+            "sub": "cumulative",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.logical_reduce.any",
+            "name": "any",
+            "sub": "logical_reduce",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.logical_reduce.all",
+            "name": "all",
+            "sub": "logical_reduce",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.linalg.l1_norm",
+            "name": "l1_norm",
+            "sub": "linalg_vector_norm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.linalg.l2_norm",
+            "name": "l2_norm",
+            "sub": "linalg_vector_norm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "reduce.linalg.inf_norm",
+            "name": "inf_norm",
+            "sub": "linalg_vector_norm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Norm",
+        "issue": 399,
+        "difficulty": 1,
+        "total_ops": 10,
+        "impl_ops": 9,
+        "tested_ops": 0,
+        "benched_ops": 9,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "norm.layer_norm",
+            "name": "layer_norm",
+            "sub": "layer_norm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "norm.batch_norm",
+            "name": "batch_norm",
+            "sub": "batch_norm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "norm.group_norm",
+            "name": "group_norm",
+            "sub": "group_norm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "norm.instance_norm",
+            "name": "instance_norm",
+            "sub": "instance_norm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "norm.rms_norm",
+            "name": "rms_norm",
+            "sub": "rms_norm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "norm.qk_norm",
+            "name": "qk_norm",
+            "sub": "qk_norm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "norm.ada_layer_norm",
+            "name": "ada_layer_norm",
+            "sub": "ada_layer_norm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "norm.ada_layer_norm_zero",
+            "name": "ada_layer_norm_zero",
+            "sub": "ada_layer_norm_zero",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "norm.fused_add_layer_norm",
+            "name": "fused_add_layer_norm",
+            "sub": "fused_add_norm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "norm.fused_add_rmsnorm",
+            "name": "fused_add_rmsnorm",
+            "sub": "fused_add_norm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Conv & Pooling",
+        "issue": 402,
+        "difficulty": 1,
+        "total_ops": 16,
+        "impl_ops": 0,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "conv.conv.conv1d",
+            "name": "conv1d",
+            "sub": "conv",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.conv.conv2d",
+            "name": "conv2d",
+            "sub": "conv",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.conv.conv3d",
+            "name": "conv3d",
+            "sub": "conv",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.conv_transpose.conv_t1d",
+            "name": "conv_transpose1d",
+            "sub": "conv_transpose",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.conv_transpose.conv_t2d",
+            "name": "conv_transpose2d",
+            "sub": "conv_transpose",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.depthwise.depthwise_conv2d",
+            "name": "depthwise_conv2d",
+            "sub": "depthwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.grouped.grouped_conv2d",
+            "name": "grouped_conv2d",
+            "sub": "grouped",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.dilated.dilated_conv2d",
+            "name": "dilated_conv2d",
+            "sub": "dilated",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.max_pool.max_pool1d",
+            "name": "max_pool1d",
+            "sub": "max_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.max_pool.max_pool2d",
+            "name": "max_pool2d",
+            "sub": "max_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.max_pool.max_pool3d",
+            "name": "max_pool3d",
+            "sub": "max_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.avg_pool.avg_pool1d",
+            "name": "avg_pool1d",
+            "sub": "avg_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.avg_pool.avg_pool2d",
+            "name": "avg_pool2d",
+            "sub": "avg_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.avg_pool.avg_pool3d",
+            "name": "avg_pool3d",
+            "sub": "avg_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.adaptive.adaptive_avg_pool2d",
+            "name": "adaptive_avg_pool2d",
+            "sub": "adaptive_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.adaptive.adaptive_max_pool2d",
+            "name": "adaptive_max_pool2d",
+            "sub": "adaptive_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "GEMM",
+        "issue": 400,
+        "difficulty": 2,
+        "total_ops": 19,
+        "impl_ops": 9,
+        "tested_ops": 0,
+        "benched_ops": 11,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "gemm.gemm.fp16",
+            "name": "gemm_fp16",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "gemm.gemm.fp8",
+            "name": "gemm_fp8",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.gemm.fp8_block_scaled",
+            "name": "gemm_fp8_block_scaled",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.gemm.gemv_fp16",
+            "name": "gemv_fp16",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "gemm.gemm.gemv_fp8",
+            "name": "gemv_fp8",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.gemm.small_batch_fp16",
+            "name": "small_batch_gemm_fp16",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.gemm.small_batch_fp8",
+            "name": "small_batch_gemm_fp8",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.bmm.fp16",
+            "name": "bmm_fp16",
+            "sub": "bmm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.bmm.fp8",
+            "name": "bmm_fp8",
+            "sub": "bmm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.groupgemm.fp16",
+            "name": "groupgemm_fp16",
+            "sub": "groupgemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "gemm.groupgemm.fp8",
+            "name": "groupgemm_fp8",
+            "sub": "groupgemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.outer.outer",
+            "name": "outer",
+            "sub": "outer",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.lowbit.w4a16",
+            "name": "w4a16",
+            "sub": "lowbit_gemm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.lowbit.w8a8",
+            "name": "w8a8",
+            "sub": "lowbit_gemm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.lowbit.w8a8_int8",
+            "name": "w8a8_int8",
+            "sub": "lowbit_gemm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.lowbit.weight_only_int4",
+            "name": "weight_only_int4",
+            "sub": "lowbit_gemm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.lowbit.fp4",
+            "name": "fp4",
+            "sub": "lowbit_gemm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.sparse.fp16",
+            "name": "sparse_gemm_fp16",
+            "sub": "sparse_gemm_2_4",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.sparse.fp8",
+            "name": "sparse_gemm_fp8",
+            "sub": "sparse_gemm_2_4",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Quantize",
+        "issue": 401,
+        "difficulty": 2,
+        "total_ops": 10,
+        "impl_ops": 1,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "quant.int8.per_tensor",
+            "name": "int8_per_tensor",
+            "sub": "int8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.int8.per_channel",
+            "name": "int8_per_channel",
+            "sub": "int8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.int8.per_block",
+            "name": "int8_per_block",
+            "sub": "int8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.int8.smooth_quant",
+            "name": "smooth_quant",
+            "sub": "int8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.int4.per_channel",
+            "name": "int4_per_channel",
+            "sub": "int4_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.int4.per_block",
+            "name": "int4_per_block",
+            "sub": "int4_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.int4.nf4",
+            "name": "nf4",
+            "sub": "int4_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.fp8.per_tensor",
+            "name": "fp8_per_tensor",
+            "sub": "fp8_quantize",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": false,
+            "status": "partial"
+          },
+          {
+            "id": "quant.fp8.per_block",
+            "name": "fp8_per_block",
+            "sub": "fp8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": false,
+            "status": "missing"
+          },
+          {
+            "id": "quant.fp8.cast_transpose",
+            "name": "fp8_cast_transpose",
+            "sub": "fp8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Sampling",
+        "issue": 426,
+        "difficulty": 2,
+        "total_ops": 7,
+        "impl_ops": 1,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "sampling.top_k",
+            "name": "top_k",
+            "sub": "top_k",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "sampling.top_p",
+            "name": "top_p",
+            "sub": "top_p",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "sampling.min_p",
+            "name": "min_p",
+            "sub": "min_p",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "sampling.top_k_top_p",
+            "name": "top_k_top_p",
+            "sub": "top_k_top_p",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "sampling.temperature_scale",
+            "name": "temperature_scale",
+            "sub": "temperature_scale",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "sampling.from_probs",
+            "name": "sampling_from_probs",
+            "sub": "sampling_from_probs",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "sampling.chain_spec",
+            "name": "chain_speculative_sampling",
+            "sub": "chain_speculative_sampling",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": false,
+            "status": "partial"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Flash Attention",
+        "issue": 403,
+        "difficulty": 3,
+        "total_ops": 16,
+        "impl_ops": 8,
+        "tested_ops": 0,
+        "benched_ops": 8,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "attn.flash.prefill_fwd",
+            "name": "flash_prefill_fwd",
+            "sub": "flash_attention",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "attn.flash.prefill_bwd",
+            "name": "flash_prefill_bwd",
+            "sub": "flash_attention",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "attn.flash.prefill_varlen_fwd",
+            "name": "flash_prefill_varlen_fwd",
+            "sub": "flash_attention",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "attn.flash.prefill_varlen_bwd",
+            "name": "flash_prefill_varlen_bwd",
+            "sub": "flash_attention",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.flash.decode_fwd",
+            "name": "flash_decode_fwd",
+            "sub": "flash_attention",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "attn.flash.decode_paged_fwd",
+            "name": "flash_decode_paged_fwd",
+            "sub": "flash_attention",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "attn.flash.decode_varlen_fwd",
+            "name": "flash_decode_varlen_fwd",
+            "sub": "flash_attention",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.flash.chunked_prefill",
+            "name": "flash_chunked_prefill_fwd",
+            "sub": "flash_attention",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.mla.prefill_fwd",
+            "name": "mla_prefill_fwd",
+            "sub": "mla",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.mla.prefill_bwd",
+            "name": "mla_prefill_bwd",
+            "sub": "mla",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.mla.decode_fwd",
+            "name": "mla_decode_fwd",
+            "sub": "mla",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "attn.mla.decode_paged_fwd",
+            "name": "mla_decode_paged_fwd",
+            "sub": "mla",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.nsa.prefill_fwd",
+            "name": "nsa_prefill_fwd",
+            "sub": "nsa",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "attn.nsa.decode_fwd",
+            "name": "nsa_decode_fwd",
+            "sub": "nsa",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.dsa.prefill_fwd",
+            "name": "dsa_prefill_fwd",
+            "sub": "dsa",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.dsa.decode_fwd",
+            "name": "dsa_decode_fwd",
+            "sub": "dsa",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "MoE",
+        "issue": 404,
+        "difficulty": 3,
+        "total_ops": 6,
+        "impl_ops": 0,
+        "tested_ops": 0,
+        "benched_ops": 1,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "moe.permute_align",
+            "name": "permute_align",
+            "sub": "permute_align",
+            "implemented": false,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "missing"
+          },
+          {
+            "id": "moe.unpermute_depad",
+            "name": "unpermute_depad",
+            "sub": "unpermute_depad",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "moe.fused_moe.deepseek",
+            "name": "fused_moe_deepseek",
+            "sub": "fused_moe",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "moe.fused_moe.glm",
+            "name": "fused_moe_glm",
+            "sub": "fused_moe",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "moe.fused_moe.kimi",
+            "name": "fused_moe_kimi",
+            "sub": "fused_moe",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "moe.fused_moe.qwen",
+            "name": "fused_moe_qwen",
+            "sub": "fused_moe",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Linear Attention",
+        "issue": 405,
+        "difficulty": 3,
+        "total_ops": 8,
+        "impl_ops": 4,
+        "tested_ops": 0,
+        "benched_ops": 6,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "linattn.gated_deltanet.chunkwise",
+            "name": "gated_deltanet_chunkwise",
+            "sub": "gated_deltanet",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "linattn.gated_deltanet.recurrence",
+            "name": "gated_deltanet_recurrence",
+            "sub": "gated_deltanet",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "linattn.deltanet.chunkwise",
+            "name": "deltanet_chunkwise",
+            "sub": "deltanet",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "linattn.deltanet.recurrence",
+            "name": "deltanet_recurrence",
+            "sub": "deltanet",
+            "implemented": true,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "partial"
+          },
+          {
+            "id": "linattn.gla.chunkwise",
+            "name": "gla_chunkwise",
+            "sub": "gla",
+            "implemented": false,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "missing"
+          },
+          {
+            "id": "linattn.gla.recurrence",
+            "name": "gla_recurrence",
+            "sub": "gla",
+            "implemented": false,
+            "tested": false,
+            "test_failed": true,
+            "bench_ok": true,
+            "status": "missing"
+          },
+          {
+            "id": "linattn.retnet.chunkwise",
+            "name": "retnet_chunkwise",
+            "sub": "retnet",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "linattn.retnet.recurrence",
+            "name": "retnet_recurrence",
+            "sub": "retnet",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "SSM",
+        "issue": 406,
+        "difficulty": 3,
+        "total_ops": 2,
+        "impl_ops": 0,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "ssm.mamba1",
+            "name": "mamba1",
+            "sub": "mamba1",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ssm.mamba2",
+            "name": "mamba2",
+            "sub": "mamba2",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      }
+    ]
   }
 }
