@@ -1,711 +1,282 @@
 #!/usr/bin/env python3
-"""generate_report.py — 将 pytest junit XML + benchmark markdown + 开发进度合并为综合报告。
+"""generate_report.py — Generate self-contained HTML report from progress.json + analysis.json.
 
-生成两种格式：
-  - <output>        — Markdown 报告
-  - <html-output>   — 自包含 HTML 报告（可直接用浏览器打开或由 HTTP server 提供）
+Usage:
+    python generate_report.py \
+        --date          20260318_220000 \
+        --commit        abc123 \
+        --report-dir    _gh_pages/nightly/20260318_220000 \
+        --html-output   report.html \
+        --progress-json progress.json \
+        --analysis-json analysis.json
 """
 
 import argparse
 import json
 import os
-import xml.etree.ElementTree as ET
 from datetime import datetime
 from pathlib import Path
-
-# ──────────────────────────────────────────────────────────────────────────────
-# 一、测试结果解析
-# ──────────────────────────────────────────────────────────────────────────────
-
-def parse_junit(xml_path: str) -> dict:
-    if not os.path.exists(xml_path):
-        return {"error": "测试结果文件未找到"}
-    tree = ET.parse(xml_path)
-    root = tree.getroot()
-    suites = list(root) if root.tag == "testsuites" else [root]
-    total = errors = failures = skipped = 0
-    failed_tests = []
-    for suite in suites:
-        total    += int(suite.get("tests",    0))
-        errors   += int(suite.get("errors",   0))
-        failures += int(suite.get("failures", 0))
-        skipped  += int(suite.get("skipped",  0))
-        for tc in suite.iter("testcase"):
-            failure = tc.find("failure")
-            error   = tc.find("error")
-            if failure is not None or error is not None:
-                classname = tc.get("classname", "")
-                name = tc.get("name", "")
-                node = f"{classname}::{name}" if classname else name
-                elem = failure if failure is not None else error
-                message = (elem.get("message") or "")[:300]
-                text    = (elem.text or "").strip()[:500]
-                failed_tests.append({"node": node, "message": message, "text": text})
-    passed = total - errors - failures - skipped
-    return {
-        "total": total, "passed": passed,
-        "failed": failures + errors, "skipped": skipped,
-        "failed_tests": failed_tests,
-    }
-
-
-def read_file_tail(path: Path, n: int = 50) -> list[str]:
-    if not path.exists():
-        return []
-    return path.read_text().splitlines()[-n:]
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# 二、开发进度节（Markdown）
-# ──────────────────────────────────────────────────────────────────────────────
-
-_STATUS_ICON = {
-    "done":      "✅",
-    "partial":   "🔧",
-    "impl_only": "🔧",
-    "missing":   "🔲",
-}
-
-_DIFFICULTY_STAR = {1: "⭐", 2: "⭐⭐", 3: "⭐⭐⭐"}
-
-
-def _cat_status_label(cat: dict) -> str:
-    done  = cat["done_ops"]
-    total = cat["total_ops"]
-    impl  = cat["impl_ops"]
-    if done == total:
-        return "✅ Done"
-    if impl > 0 or done > 0:
-        return f"🔧 In Progress ({done}/{total})"
-    return "🔲 Not Started"
-
-
-def build_progress_section(progress_json_path: str | None) -> list[str]:
-    if not progress_json_path or not os.path.exists(progress_json_path):
-        return [
-            "## 开发进度",
-            "",
-            "> 进度数据未生成（fetch_progress.py 未运行或运行失败）。",
-            "",
-        ]
-
-    prog = json.loads(Path(progress_json_path).read_text())
-    done    = prog["done_ops"]
-    total   = prog["total_ops"]
-    impl    = prog["impl_ops"]
-    tested  = prog["tested_ops"]
-    benched = prog.get("benched_ops", 0)
-    pct     = done / total * 100 if total else 0
-
-    lines: list[str] = [
-        "## 开发进度",
-        "",
-        f"> 数据来源：[issue #407](https://github.com/tile-ai/TileOPs/issues/407)  ",
-        f"> 更新时间：{prog['generated_at']}",
-        "",
-        f"**总进度：{done} / {total} ops 已完成（{pct:.1f}%）**  "
-        f"（已实现: {impl}，已通过测试: {tested}，Benchmark 通过: {benched}）",
-        "",
-        "> 算子需同时通过实现、测试和 Benchmark 三项才算「已完成」。",
-        "",
-        "| # | Category | Ops | Difficulty | Issue | 状态 |",
-        "|---|---|---|---|---|---|",
-    ]
-
-    for cat in prog["categories"]:
-        diff = _DIFFICULTY_STAR.get(cat["difficulty"], "")
-        status = _cat_status_label(cat)
-        lines.append(
-            f"| {cat['id']} | {cat['name']} | {cat['total_ops']} "
-            f"| {diff} | #{cat['issue']} | {status} |"
-        )
-
-    lines += ["", "### 各分类 op 详情", ""]
-    for cat in prog["categories"]:
-        done_c  = cat["done_ops"]
-        total_c = cat["total_ops"]
-        pct_c   = done_c / total_c * 100 if total_c else 0
-        lines += [
-            f"<details>",
-            f"<summary><b>{cat['name']}</b> — {done_c}/{total_c} ops "
-            f"({pct_c:.0f}%) [{_cat_status_label(cat)}]</summary>",
-            "",
-            "| Op | Sub-category | 实现 | 测试 | Benchmark |",
-            "|---|---|:---:|:---:|:---:|",
-        ]
-        for op in cat["ops"]:
-            impl_icon  = "✅" if op["implemented"] else "🔲"
-            test_icon  = "✅" if op["tested"] else ("❌" if op["test_failed"] else "—")
-            bench_icon = "✅" if op["bench_ok"] is True else ("❌" if op["bench_ok"] is False else "—")
-            lines.append(
-                f"| `{op['name']}` | {op['sub']} | {impl_icon} | {test_icon} | {bench_icon} |"
-            )
-        lines += ["", "</details>", ""]
-
-    return lines
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# 三、Markdown 报告组装
-# ──────────────────────────────────────────────────────────────────────────────
-
-def build_report(args) -> str:
-    report_dir = Path(args.report_dir)
-    lines: list[str] = []
-
-    # 标题
-    lines += [
-        "# TileOPs 夜测综合报告",
-        "",
-        f"- **日期**: {args.date}",
-        f"- **Commit**: `{args.commit}`",
-        f"- **生成时间**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
-        "",
-    ]
-
-    # 总体状态
-    test_ok  = int(args.test_exit)  == 0
-    bench_ok = int(args.bench_exit) == 0
-    overall  = "✅ PASS" if (test_ok and bench_ok) else "❌ FAIL"
-    lines += [
-        "## 总体状态",
-        "",
-        "| 项目 | 状态 |",
-        "|------|------|",
-        f"| 测试（pytest） | {'✅ PASS' if test_ok else '❌ FAIL'} |",
-        f"| Benchmark | {'✅ PASS' if bench_ok else '❌ FAIL（或已跳过）'} |",
-        f"| **综合** | **{overall}** |",
-        "",
-    ]
-
-    # AI 分析节（可选）
-    analysis_md_path = getattr(args, "analysis_md", None)
-    if analysis_md_path and os.path.exists(analysis_md_path):
-        analysis_text = Path(analysis_md_path).read_text().strip()
-        lines += [
-            "## AI Analysis",
-            "",
-            analysis_text,
-            "",
-        ]
-
-    # 开发进度节
-    lines += build_progress_section(getattr(args, "progress_json", None))
-
-    # 测试结果
-    lines += ["## 测试结果", ""]
-    stats = parse_junit(str(report_dir / "test_results.xml"))
-    if "error" in stats:
-        lines.append(f"> {stats['error']}")
-    else:
-        pass_rate = (
-            f"{stats['passed'] / stats['total'] * 100:.1f}%"
-            if stats["total"] > 0 else "N/A"
-        )
-        lines += [
-            "| 总计 | 通过 | 失败 | 跳过 | 通过率 |",
-            "|------|------|------|------|--------|",
-            f"| {stats['total']} | {stats['passed']} | {stats['failed']} "
-            f"| {stats['skipped']} | {pass_rate} |",
-            "",
-        ]
-        if stats["failed_tests"]:
-            lines += ["### 失败用例", ""]
-            for t in stats["failed_tests"]:
-                lines.append(f"#### `{t['node']}`")
-                if t["message"]:
-                    lines += ["```", t["message"], "```"]
-                if t["text"] and t["text"] != t["message"]:
-                    lines += [
-                        "<details><summary>详细信息</summary>",
-                        "", "```", t["text"], "```", "</details>",
-                    ]
-                lines.append("")
-        else:
-            lines += ["**所有用例均通过。**", ""]
-
-    # Benchmark 结果
-    lines += ["## Benchmark 结果", ""]
-    bench_path = report_dir / "benchmark_report.md"
-    if bench_path.exists():
-        lines += (report_dir / "benchmark_report.md").read_text().splitlines()[2:]
-    else:
-        lines.append("> Benchmark 报告未生成（可能已跳过或运行失败）。")
-    lines.append("")
-
-    # 附录：测试输出末 50 行
-    test_log = report_dir / "test_output.log"
-    if test_log.exists():
-        lines += [
-            "## 附录：测试输出（末 50 行）",
-            "", "```",
-            *read_file_tail(test_log, 50),
-            "```", "",
-        ]
-
-    return "\n".join(lines)
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# 四、HTML 报告生成
-# ──────────────────────────────────────────────────────────────────────────────
-
-_HTML_CSS = """
-:root{--green:#22c55e;--yellow:#f59e0b;--red:#ef4444;--gray:#6b7280;--blue:#3b82f6;
-      --bg:#f9fafb;--card:#fff;--border:#e5e7eb;--text:#111827;--muted:#6b7280}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);padding:1rem}
-h1{font-size:1.6rem;font-weight:700;margin-bottom:.25rem}
-h2{font-size:1.1rem;font-weight:600;margin:1.5rem 0 .5rem;border-bottom:2px solid var(--border);padding-bottom:.25rem}
-h3{font-size:.95rem;font-weight:600;margin:.75rem 0 .25rem}
-.meta{color:var(--muted);font-size:.8rem;margin-bottom:1rem}
-.card{background:var(--card);border:1px solid var(--border);border-radius:.5rem;padding:1rem;margin-bottom:1rem}
-.badge{display:inline-block;padding:.15rem .5rem;border-radius:.25rem;font-size:.75rem;font-weight:600}
-.badge-pass{background:#dcfce7;color:#166534}.badge-fail{background:#fee2e2;color:#991b1b}
-.badge-skip{background:#fef3c7;color:#92400e}.badge-gray{background:#f3f4f6;color:#374151}
-table{width:100%;border-collapse:collapse;font-size:.82rem;margin:.5rem 0}
-th{background:#f3f4f6;text-align:left;padding:.4rem .6rem;border:1px solid var(--border);font-weight:600}
-td{padding:.35rem .6rem;border:1px solid var(--border);vertical-align:middle}
-tr:nth-child(even){background:#fafafa}
-.prog-wrap{background:#e5e7eb;border-radius:9999px;height:.75rem;min-width:80px;overflow:hidden}
-.prog-bar{height:100%;border-radius:9999px;transition:width .3s}
-.prog-done{background:var(--green)}.prog-impl{background:var(--yellow)}.prog-miss{background:#d1d5db}
-.icon-done{color:var(--green)}.icon-part{color:var(--yellow)}.icon-miss{color:var(--gray)}
-details>summary{cursor:pointer;user-select:none;padding:.35rem .5rem;border-radius:.25rem;font-size:.85rem}
-details>summary:hover{background:#f3f4f6}
-details[open]>summary{font-weight:600}
-.op-table td:nth-child(3),.op-table td:nth-child(4),.op-table td:nth-child(5){text-align:center;width:60px}
-pre{background:#1e1e1e;color:#d4d4d4;padding:.75rem;border-radius:.375rem;overflow-x:auto;font-size:.78rem;line-height:1.5}
-.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.75rem;margin:.75rem 0}
-.stat-box{background:var(--card);border:1px solid var(--border);border-radius:.375rem;padding:.75rem;text-align:center}
-.stat-box .num{font-size:1.6rem;font-weight:700;line-height:1}.stat-box .lbl{font-size:.72rem;color:var(--muted);margin-top:.2rem}
-"""
-
-_HTML_JS = """
-function toggle(id){var el=document.getElementById(id);el.open=!el.open}
-"""
 
 
 def _esc(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def _inline_md_to_html(s: str) -> str:
-    """Convert inline Markdown (bold, inline-code) in an already-escaped string."""
-    import re
-    s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
-    s = re.sub(r"`(.+?)`", r"<code>\1</code>", s)
-    return s
+# ──────────────────────────────────────────────────────────────────────────────
+# CSS
+# ──────────────────────────────────────────────────────────────────────────────
+
+_CSS = """
+:root{--green:#22c55e;--yellow:#f59e0b;--red:#ef4444;--blue:#3b82f6;--purple:#8b5cf6;
+      --bg:#f9fafb;--card:#fff;--border:#e5e7eb;--text:#111827;--muted:#6b7280}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);padding:1.5rem;max-width:1100px;margin:0 auto}
+h1{font-size:1.5rem;font-weight:700;margin-bottom:.25rem}
+h2{font-size:1.15rem;font-weight:600;margin:1.5rem 0 .75rem;border-bottom:2px solid var(--border);padding-bottom:.25rem}
+h3{font-size:.95rem;font-weight:600;margin:.75rem 0 .25rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.5rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:.5rem;padding:1rem 1.25rem;margin-bottom:1rem}
+/* Overall progress */
+.overall-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.75rem;margin:.75rem 0}
+.stat-box{background:var(--card);border:1px solid var(--border);border-radius:.375rem;padding:.6rem;text-align:center}
+.stat-box .num{font-size:1.4rem;font-weight:700;line-height:1}
+.stat-box .lbl{font-size:.72rem;color:var(--muted);margin-top:.15rem}
+/* Progress bars */
+.bar-wrap{background:#e5e7eb;border-radius:9999px;height:.6rem;overflow:hidden;margin:.2rem 0;box-shadow:inset 0 1px 2px rgba(0,0,0,.06)}
+.bar-fill{height:100%;border-radius:9999px;transition:width .6s ease;position:relative}
+.bar-impl{background:linear-gradient(90deg,#60a5fa,#3b82f6)}
+.bar-test{background:linear-gradient(90deg,#4ade80,#22c55e)}
+.bar-bench{background:linear-gradient(90deg,#a78bfa,#8b5cf6)}
+.bar-row{display:flex;align-items:center;gap:.5rem;font-size:.78rem;margin:.15rem 0}
+.bar-label{width:50px;color:var(--muted);flex-shrink:0}
+.bar-container{flex:1;min-width:80px}
+.bar-count{width:55px;text-align:right;color:var(--muted);flex-shrink:0}
+/* Category card */
+.cat-card{display:grid;grid-template-columns:1fr auto;gap:.75rem;padding:.75rem 0;border-bottom:1px solid var(--border)}
+.cat-card:last-child{border-bottom:none}
+.cat-bars{min-width:0}
+.cat-scores{display:flex;gap:.4rem;align-items:flex-start;flex-shrink:0}
+.score-badge{display:inline-flex;flex-direction:column;align-items:center;padding:.25rem .4rem;
+             border-radius:.25rem;font-size:.7rem;font-weight:600;min-width:42px}
+.score-badge .val{font-size:1rem;line-height:1}
+.score-perf{background:#ede9fe;color:#5b21b6}.score-func{background:#dcfce7;color:#166534}
+.score-null{background:#f3f4f6;color:#9ca3af}
+/* Detail section */
+.detail-item{margin:.75rem 0;padding:.75rem;background:#fafafa;border-radius:.375rem;border:1px solid var(--border)}
+.detail-item h3{margin:0 0 .35rem;font-size:.88rem}
+.detail-issues{color:var(--red);font-size:.82rem;margin:.25rem 0}
+.detail-eval{font-size:.82rem;color:var(--text);margin:.25rem 0}
+/* Overall assessment */
+.rec-list{margin:.5rem 0;padding-left:1.25rem}
+.rec-list li{margin:.25rem 0;font-size:.85rem}
+"""
 
 
-def _md_to_html(text: str) -> str:
-    """Minimal Markdown → HTML converter for Claude analysis output.
+# ──────────────────────────────────────────────────────────────────────────────
+# HTML builders
+# ──────────────────────────────────────────────────────────────────────────────
 
-    Supports: headings, bold, inline-code, bullet/numbered lists, fenced code
-    blocks, Markdown tables, horizontal rules, and HTML pass-through
-    (<details>, <summary>, etc.).
-    """
-    import re
-    lines = text.splitlines()
-    out: list[str] = []
-    in_ul = False
-    in_ol = False
-    in_pre = False
-    in_table = False
-
-    def close_lists() -> None:
-        nonlocal in_ul, in_ol
-        if in_ul:
-            out.append("</ul>")
-            in_ul = False
-        if in_ol:
-            out.append("</ol>")
-            in_ol = False
-
-    def close_table() -> None:
-        nonlocal in_table
-        if in_table:
-            out.append("</tbody></table>")
-            in_table = False
-
-    def inline(raw: str) -> str:
-        return _inline_md_to_html(_esc(raw))
-
-    def _is_table_sep(line: str) -> bool:
-        """Check if line is a Markdown table separator like |---|---|, |:---:|, |-----:|."""
-        return bool(re.match(r"^\|[\s:\-]+(\|[\s:\-]*)+\|?\s*$", line.strip()))
-
-    def _render_table_row(line: str, tag: str = "td") -> str:
-        """Render a Markdown table row to HTML."""
-        cells = line.strip().strip("|").split("|")
-        cells_html = "".join(
-            f"<{tag}>{_inline_md_to_html(_esc(c.strip()))}</{tag}>"
-            for c in cells
-        )
-        return f"<tr>{cells_html}</tr>"
-
-    for line in lines:
-        stripped = line.strip()
-
-        # fenced code block toggle
-        if stripped.startswith("```"):
-            close_lists()
-            close_table()
-            if in_pre:
-                out.append("</pre>")
-                in_pre = False
-            else:
-                out.append("<pre>")
-                in_pre = True
-            continue
-        if in_pre:
-            out.append(_esc(line))
-            continue
-
-        # HTML pass-through: <details>, <summary>, </details>, </summary>
-        if re.match(r"^</?(?:details|summary)\b", stripped):
-            close_lists()
-            close_table()
-            out.append(line)
-            continue
-
-        # Horizontal rule
-        if re.match(r"^-{3,}$", stripped) or re.match(r"^\*{3,}$", stripped):
-            close_lists()
-            close_table()
-            out.append("<hr>")
-            continue
-
-        # Markdown table
-        if stripped.startswith("|") and stripped.endswith("|"):
-            close_lists()
-            if _is_table_sep(stripped):
-                # separator row — skip (already handled when opening table)
-                continue
-            if not in_table:
-                # First row is the header
-                in_table = True
-                out.append("<table>")
-                out.append(f"<thead>{_render_table_row(line, 'th')}</thead>")
-                out.append("<tbody>")
-            else:
-                out.append(_render_table_row(line, "td"))
-            continue
-
-        # If we were in a table but this line isn't a table row, close it
-        if in_table:
-            close_table()
-
-        # Blockquote
-        if stripped.startswith("> "):
-            close_lists()
-            out.append(f"<blockquote>{inline(stripped[2:])}</blockquote>")
-            continue
-
-        if stripped.startswith("#### "):
-            close_lists(); out.append(f"<h5>{inline(stripped[5:])}</h5>")
-        elif stripped.startswith("### "):
-            close_lists(); out.append(f"<h4>{inline(stripped[4:])}</h4>")
-        elif stripped.startswith("## "):
-            close_lists(); out.append(f"<h3>{inline(stripped[3:])}</h3>")
-        elif stripped.startswith("# "):
-            close_lists(); out.append(f"<h3>{inline(stripped[2:])}</h3>")
-        elif re.match(r"^[-*]\s+", stripped):
-            if in_ol:
-                close_lists()
-            if not in_ul:
-                out.append("<ul>"); in_ul = True
-            content = re.sub(r'^[-*]\s+', '', stripped)
-            out.append(f"<li>{inline(content)}</li>")
-        elif re.match(r"^\d+\.\s+", stripped):
-            if in_ul:
-                close_lists()
-            if not in_ol:
-                out.append("<ol>"); in_ol = True
-            content = re.sub(r'^\d+[.]\s+', '', stripped)
-            out.append(f"<li>{inline(content)}</li>")
-        elif stripped == "":
-            close_lists()
-        else:
-            close_lists()
-            out.append(f"<p>{inline(stripped)}</p>")
-
-    if in_pre:
-        out.append("</pre>")
-    close_table()
-    close_lists()
-    return "\n".join(out)
-
-
-def _progress_bar_html(done: int, impl: int, total: int) -> str:
-    if total == 0:
-        return ""
-    pct_done = done / total * 100
-    pct_impl = (impl - done) / total * 100
+def _bar_html(pct: float, css_class: str) -> str:
     return (
-        f'<div class="prog-wrap" title="{done}/{total} done, {impl} impl">'
-        f'<div class="prog-bar prog-done" style="width:{pct_done:.1f}%;float:left"></div>'
-        f'<div class="prog-bar prog-impl" style="width:{pct_impl:.1f}%;float:left"></div>'
+        f'<div class="bar-wrap">'
+        f'<div class="bar-fill {css_class}" style="width:{pct:.1f}%"></div>'
         f'</div>'
     )
 
 
-def _cat_status_html(cat: dict) -> str:
-    done  = cat["done_ops"]
-    total = cat["total_ops"]
-    impl  = cat["impl_ops"]
-    if done == total:
-        return '<span class="icon-done">✅ Done</span>'
-    if impl > 0 or done > 0:
-        return f'<span class="icon-part">🔧 In Progress ({done}/{total})</span>'
-    return '<span class="icon-miss">🔲 Not Started</span>'
+def _score_badge(value, label: str, css_class: str) -> str:
+    if value is None:
+        return f'<div class="score-badge score-null"><span class="val">—</span>{label}</div>'
+    return f'<div class="score-badge {css_class}"><span class="val">{value}</span>{label}</div>'
 
 
-def _op_icon(flag: bool | None, fail: bool = False) -> str:
-    if flag is True:
-        return '<span style="color:var(--green)">✅</span>'
-    if fail:
-        return '<span style="color:var(--red)">❌</span>'
-    if flag is False:
-        return '<span style="color:var(--red)">❌</span>'
-    return '<span style="color:var(--gray)">—</span>'
+def build_html(args, prog: dict | None, analysis: dict | None) -> str:
+    date_str = args.date
+    commit   = args.commit
+    gen_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+    if analysis is None:
+        analysis = {"categories": {}, "overall": {"summary": "No analysis available.", "recommendations": []}}
 
-def build_html_report(args, prog: dict | None, test_stats: dict) -> str:
-    date_str  = args.date
-    commit    = args.commit
-    gen_time  = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    test_ok   = int(args.test_exit)  == 0
-    bench_ok  = int(args.bench_exit) == 0
-    overall   = "PASS" if (test_ok and bench_ok) else "FAIL"
-    ov_cls    = "badge-pass" if overall == "PASS" else "badge-fail"
-
-    # ── 进度摘要数字 ──────────────────────────────────────────────────────────
-    if prog:
-        done_ops   = prog["done_ops"]
-        total_ops  = prog["total_ops"]
-        impl_ops   = prog["impl_ops"]
-        tested_ops = prog["tested_ops"]
-        pct        = done_ops / total_ops * 100 if total_ops else 0
-        prog_ts    = prog.get("generated_at", "")
-    else:
-        done_ops = impl_ops = tested_ops = total_ops = 0
-        pct = 0.0
-        prog_ts = ""
-
-    # ── HTML 骨架 ─────────────────────────────────────────────────────────────
-    html_parts = [
+    parts = [
         "<!DOCTYPE html><html lang='zh-CN'><head>",
         "<meta charset='UTF-8'>",
         "<meta name='viewport' content='width=device-width,initial-scale=1'>",
-        f"<title>TileOPs 夜测报告 · {date_str}</title>",
-        f"<style>{_HTML_CSS}</style>",
-        f"<script>{_HTML_JS}</script>",
+        f"<title>TileOPs Report · {_esc(date_str)}</title>",
+        f"<style>{_CSS}</style>",
         "</head><body>",
-        f"<h1>TileOPs 夜测综合报告</h1>",
-        f"<p class='meta'>日期: {_esc(date_str)} &nbsp;|&nbsp; Commit: <code>{_esc(commit)}</code>"
-        f" &nbsp;|&nbsp; 生成时间: {gen_time}</p>",
     ]
 
-    # ── 总体状态卡 ────────────────────────────────────────────────────────────
-    html_parts += [
-        "<div class='card'>",
-        "<h2 style='margin-top:0'>总体状态</h2>",
-        "<div class='summary-grid'>",
-        f"<div class='stat-box'><div class='num'><span class='badge {ov_cls}'>{overall}</span></div>"
-        f"<div class='lbl'>综合结果</div></div>",
-        f"<div class='stat-box'><div class='num'><span class='badge {'badge-pass' if test_ok else 'badge-fail'}'>"
-        f"{'PASS' if test_ok else 'FAIL'}</span></div><div class='lbl'>测试 (pytest)</div></div>",
-        f"<div class='stat-box'><div class='num'><span class='badge {'badge-pass' if bench_ok else 'badge-skip'}'>"
-        f"{'PASS' if bench_ok else 'FAIL/SKIP'}</span></div><div class='lbl'>Benchmark</div></div>",
+    # ── Section 1: Header ────────────────────────────────────────────────────
+    parts += [
+        "<h1>TileOPs Nightly Report</h1>",
+        f"<p class='meta'>Date: {_esc(date_str)} &nbsp;|&nbsp; "
+        f"Commit: <code>{_esc(commit)}</code> &nbsp;|&nbsp; "
+        f"Generated: {gen_time}</p>",
     ]
-    if not ("error" in test_stats):
-        prate = f"{test_stats['passed']/test_stats['total']*100:.1f}%" if test_stats["total"] else "N/A"
-        html_parts += [
-            f"<div class='stat-box'><div class='num'>{test_stats['total']}</div><div class='lbl'>总测试数</div></div>",
-            f"<div class='stat-box'><div class='num' style='color:var(--green)'>{test_stats['passed']}</div><div class='lbl'>通过</div></div>",
-            f"<div class='stat-box'><div class='num' style='color:var(--red)'>{test_stats['failed']}</div><div class='lbl'>失败</div></div>",
-            f"<div class='stat-box'><div class='num'>{prate}</div><div class='lbl'>通过率</div></div>",
-        ]
-    html_parts += ["</div></div>"]  # summary-grid + card
 
-    # ── AI 分析节（可选） ─────────────────────────────────────────────────────
-    report_dir = Path(args.report_dir)
-    analysis_md_path = getattr(args, "analysis_md", None)
-    if analysis_md_path and os.path.exists(analysis_md_path):
-        analysis_text = Path(analysis_md_path).read_text().strip()
-        analysis_html = _md_to_html(analysis_text)
-        html_parts += [
-            "<div class='card'>",
-            "<h2 style='margin-top:0'>🤖 AI Analysis</h2>",
-            "<div style='font-size:.82rem;color:var(--muted);margin-bottom:.75rem'>",
-            "Generated by Claude — review for accuracy before acting on recommendations.",
-            "</div>",
-            "<div style='font-size:.88rem;line-height:1.6'>",
-            analysis_html,
-            "</div>",
-            "</div>",
-        ]
-
-    # ── 开发进度节 ────────────────────────────────────────────────────────────
+    # ── Section 2: Overall progress ──────────────────────────────────────────
     if prog:
-        html_parts += [
+        total   = prog["total_ops"]
+        impl    = prog["impl_ops"]
+        tested  = prog["tested_ops"]
+        benched = prog.get("benched_ops", 0)
+        done    = prog["done_ops"]
+        pct     = done / total * 100 if total else 0
+
+        parts += [
             "<div class='card'>",
-            "<h2 style='margin-top:0'>开发进度</h2>",
-            f"<p style='font-size:.82rem;color:var(--muted)'>数据来源: "
-            f"<a href='https://github.com/tile-ai/TileOPs/issues/407'>#407</a>"
-            f" &nbsp;·&nbsp; 更新: {_esc(prog_ts)}</p>",
-            "<div class='summary-grid' style='margin-top:.75rem'>",
-            f"<div class='stat-box'><div class='num'>{done_ops}/{total_ops}</div><div class='lbl'>已完成 ops</div></div>",
-            f"<div class='stat-box'><div class='num' style='color:var(--yellow)'>{impl_ops}</div><div class='lbl'>已实现 (含未测)</div></div>",
-            f"<div class='stat-box'><div class='num' style='color:var(--blue)'>{tested_ops}</div><div class='lbl'>测试通过</div></div>",
-            f"<div class='stat-box'><div class='num'>{pct:.1f}%</div><div class='lbl'>完成率</div></div>",
+            "<h2 style='margin-top:0'>Overall Progress</h2>",
+            "<div class='overall-grid'>",
+            f"<div class='stat-box'><div class='num'>{total}</div><div class='lbl'>Total Ops</div></div>",
+            f"<div class='stat-box'><div class='num' style='color:var(--blue)'>{impl}</div><div class='lbl'>Implemented</div></div>",
+            f"<div class='stat-box'><div class='num' style='color:var(--green)'>{tested}</div><div class='lbl'>Tests Pass</div></div>",
+            f"<div class='stat-box'><div class='num' style='color:var(--purple)'>{benched}</div><div class='lbl'>Bench Pass</div></div>",
+            f"<div class='stat-box'><div class='num' style='font-size:1.1rem'>{done}/{total}</div><div class='lbl'>Done ({pct:.0f}%)</div></div>",
             "</div>",
-            # 全局进度条
-            "<div style='margin:.75rem 0'>",
-            _progress_bar_html(done_ops, impl_ops, total_ops),
-            f"<div style='font-size:.75rem;color:var(--muted);margin-top:.25rem'>"
-            f"<span style='color:var(--green)'>■</span> 完成 &nbsp;"
-            f"<span style='color:var(--yellow)'>■</span> 已实现未达标 &nbsp;"
-            f"<span style='color:#d1d5db'>■</span> 未开始</div>",
-            "</div>",
-            # 各分类表格
-            "<table>",
-            "<thead><tr><th>#</th><th>Category</th><th>Ops</th>"
-            "<th>Difficulty</th><th>Issue</th><th>进度</th><th>状态</th></tr></thead>",
-            "<tbody>",
+            # Overall 3-bar
+            "<div style='margin-top:.5rem'>",
         ]
-        diff_map = {1: "⭐", 2: "⭐⭐", 3: "⭐⭐⭐"}
-        for cat in prog["categories"]:
-            bar = _progress_bar_html(cat["done_ops"], cat["impl_ops"], cat["total_ops"])
-            html_parts.append(
-                f"<tr><td>{cat['id']}</td><td><b>{_esc(cat['name'])}</b></td>"
-                f"<td>{cat['total_ops']}</td>"
-                f"<td>{diff_map.get(cat['difficulty'],'')}</td>"
-                f"<td><a href='https://github.com/tile-ai/TileOPs/issues/{cat['issue']}'>#{cat['issue']}</a></td>"
-                f"<td style='min-width:120px'>{bar}"
-                f"<div style='font-size:.72rem;color:var(--muted)'>{cat['done_ops']}/{cat['total_ops']}</div></td>"
-                f"<td>{_cat_status_html(cat)}</td></tr>"
+        impl_pct  = impl / total * 100 if total else 0
+        test_pct  = tested / total * 100 if total else 0
+        bench_pct = benched / total * 100 if total else 0
+        for label, p, cls, count in [
+            ("Impl",  impl_pct,  "bar-impl",  f"{impl}/{total}"),
+            ("Test",  test_pct,  "bar-test",  f"{tested}/{total}"),
+            ("Bench", bench_pct, "bar-bench", f"{benched}/{total}"),
+        ]:
+            parts.append(
+                f'<div class="bar-row"><span class="bar-label">{label}</span>'
+                f'<div class="bar-container">{_bar_html(p, cls)}</div>'
+                f'<span class="bar-count">{count}</span></div>'
             )
-        html_parts += ["</tbody></table>", ""]
+        parts += ["</div>", "</div>"]
 
-        # 各分类 op 明细（折叠）
-        html_parts.append("<h3 style='margin-top:1rem'>各分类 op 明细</h3>")
-        for cat in prog["categories"]:
-            done_c  = cat["done_ops"]
-            total_c = cat["total_ops"]
-            pct_c   = done_c / total_c * 100 if total_c else 0
-            html_parts += [
-                f"<details>",
-                f"<summary>{_esc(cat['name'])} — {done_c}/{total_c} ops ({pct_c:.0f}%)"
-                f" {_cat_status_html(cat)}</summary>",
-                "<table class='op-table'>",
-                "<thead><tr><th>Op</th><th>Sub-category</th>"
-                "<th>实现</th><th>测试</th><th>Bench</th></tr></thead>",
-                "<tbody>",
-            ]
-            for op in cat["ops"]:
-                impl_icon  = _op_icon(op["implemented"])
-                test_icon  = _op_icon(op["tested"], fail=op["test_failed"])
-                bench_icon = _op_icon(op["bench_ok"])
-                html_parts.append(
-                    f"<tr><td><code>{_esc(op['name'])}</code></td>"
-                    f"<td>{_esc(op['sub'])}</td>"
-                    f"<td>{impl_icon}</td><td>{test_icon}</td><td>{bench_icon}</td></tr>"
-                )
-            html_parts += ["</tbody></table></details>"]
+    # ── Section 3: Per-category progress + scores ────────────────────────────
+    parts += ["<div class='card'>", "<h2 style='margin-top:0'>Category Progress</h2>"]
 
-        html_parts.append("</div>")  # close card
-    else:
-        html_parts += [
-            "<div class='card'><h2 style='margin-top:0'>开发进度</h2>",
-            "<p>进度数据未生成（fetch_progress.py 未运行或运行失败）。</p></div>",
-        ]
+    categories = prog.get("categories", []) if prog else []
+    cat_analysis = analysis.get("categories", {})
 
-    # ── 测试结果节 ────────────────────────────────────────────────────────────
-    html_parts += ["<div class='card'>", "<h2 style='margin-top:0'>测试结果</h2>"]
-    if "error" in test_stats:
-        html_parts.append(f"<p>{_esc(test_stats['error'])}</p>")
-    else:
-        prate = f"{test_stats['passed']/test_stats['total']*100:.1f}%" if test_stats["total"] else "N/A"
-        html_parts += [
-            "<table><thead><tr><th>总计</th><th>通过</th><th>失败</th><th>跳过</th><th>通过率</th></tr></thead>",
-            f"<tbody><tr><td>{test_stats['total']}</td>"
-            f"<td style='color:var(--green)'>{test_stats['passed']}</td>"
-            f"<td style='color:var(--red)'>{test_stats['failed']}</td>"
-            f"<td>{test_stats['skipped']}</td>"
-            f"<td><b>{prate}</b></td></tr></tbody></table>",
-        ]
-        if test_stats["failed_tests"]:
-            html_parts.append("<h3>失败用例</h3>")
-            for t in test_stats["failed_tests"]:
-                html_parts += [
-                    f"<details><summary><code>{_esc(t['node'])}</code></summary>",
-                    f"<pre>{_esc(t['message'])}</pre>",
-                ]
-                if t["text"] and t["text"] != t["message"]:
-                    html_parts.append(f"<pre>{_esc(t['text'])}</pre>")
-                html_parts.append("</details>")
-        else:
-            html_parts.append("<p style='color:var(--green);font-weight:600'>所有用例均通过。</p>")
-    html_parts.append("</div>")
+    for cat in categories:
+        name  = cat["name"]
+        t     = cat["total_ops"]
+        im    = cat["impl_ops"]
+        te    = cat.get("tested_ops", 0)
+        be    = cat.get("benched_ops", 0)
+        ca    = cat_analysis.get(name, {})
+        ps    = ca.get("perf_score")
+        fs    = ca.get("func_score")
 
-    # ── Benchmark 结果节 ──────────────────────────────────────────────────────
-    bench_path = report_dir / "benchmark_report.md"
-    html_parts += ["<div class='card'>", "<h2 style='margin-top:0'>Benchmark 结果</h2>"]
-    if bench_path.exists():
-        bench_lines = bench_path.read_text().splitlines()[2:]
-        html_parts.append("<pre>" + _esc("\n".join(bench_lines)) + "</pre>")
-    else:
-        html_parts.append("<p>Benchmark 报告未生成（可能已跳过或运行失败）。</p>")
-    html_parts.append("</div>")
+        impl_pct  = im / t * 100 if t else 0
+        test_pct  = te / t * 100 if t else 0
+        bench_pct = be / t * 100 if t else 0
 
-    # ── 附录：测试日志末 50 行 ─────────────────────────────────────────────────
-    test_log = report_dir / "test_output.log"
-    if test_log.exists():
-        tail = read_file_tail(test_log, 50)
-        html_parts += [
-            "<div class='card'>",
-            "<h2 style='margin-top:0'>附录：测试输出（末 50 行）</h2>",
-            "<pre>" + _esc("\n".join(tail)) + "</pre>",
-            "</div>",
-        ]
+        parts.append('<div class="cat-card">')
+        parts.append('<div class="cat-bars">')
+        parts.append(f'<h3 style="margin-bottom:.35rem">{_esc(name)}</h3>')
+        for label, p, cls, count in [
+            ("Impl",  impl_pct,  "bar-impl",  f"{im}/{t}"),
+            ("Test",  test_pct,  "bar-test",  f"{te}/{t}"),
+            ("Bench", bench_pct, "bar-bench", f"{be}/{t}"),
+        ]:
+            parts.append(
+                f'<div class="bar-row"><span class="bar-label">{label}</span>'
+                f'<div class="bar-container">{_bar_html(p, cls)}</div>'
+                f'<span class="bar-count">{count}</span></div>'
+            )
+        parts.append('</div>')  # cat-bars
+        parts.append('<div class="cat-scores">')
+        parts.append(_score_badge(ps, "Perf", "score-perf"))
+        parts.append(_score_badge(fs, "Func", "score-func"))
+        parts.append('</div>')  # cat-scores
+        parts.append('</div>')  # cat-card
 
-    html_parts += ["</body></html>"]
-    return "\n".join(html_parts)
+    parts.append("</div>")  # card
+
+    # ── Section 4: Per-category issues & evaluation ──────────────────────────
+    parts += ["<div class='card'>", "<h2 style='margin-top:0'>Category Analysis</h2>"]
+
+    for cat in categories:
+        name = cat["name"]
+        ca   = cat_analysis.get(name, {})
+        issues = ca.get("issues", "")
+        evaluation = ca.get("evaluation", "")
+
+        if not issues and not evaluation:
+            continue
+
+        parts.append('<div class="detail-item">')
+        parts.append(f'<h3>{_esc(name)}</h3>')
+        if issues:
+            parts.append(f'<div class="detail-issues"><strong>Issues:</strong> {_esc(issues)}</div>')
+        if evaluation:
+            parts.append(f'<div class="detail-eval"><strong>Evaluation:</strong> {_esc(evaluation)}</div>')
+        parts.append('</div>')
+
+    parts.append("</div>")  # card
+
+    # ── Section 5: Overall assessment ────────────────────────────────────────
+    overall = analysis.get("overall", {})
+    summary = overall.get("summary", "")
+    recs    = overall.get("recommendations", [])
+
+    parts += ["<div class='card'>", "<h2 style='margin-top:0'>Overall Assessment</h2>"]
+    if summary:
+        parts.append(f"<p style='font-size:.88rem;line-height:1.6'>{_esc(summary)}</p>")
+    if recs:
+        parts.append("<h3>Recommendations</h3>")
+        parts.append("<ol class='rec-list'>")
+        for r in recs:
+            parts.append(f"<li>{_esc(r)}</li>")
+        parts.append("</ol>")
+    parts.append("</div>")
+
+    # ── Footer ───────────────────────────────────────────────────────────────
+    parts += [
+        "<p style='text-align:center;color:var(--muted);font-size:.72rem;margin-top:1.5rem'>",
+        "Generated by Claude &mdash; review for accuracy before acting on recommendations.",
+        "</p>",
+        "</body></html>",
+    ]
+
+    return "\n".join(parts)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 五、入口
+# Main
 # ──────────────────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="生成 TileOPs 夜测综合报告")
-    parser.add_argument("--date",          required=True, help="运行日期时间戳")
+    parser = argparse.ArgumentParser(description="Generate TileOPs nightly HTML report")
+    parser.add_argument("--date",          required=True, help="Run date timestamp")
     parser.add_argument("--commit",        required=True, help="Git commit hash")
-    parser.add_argument("--report-dir",    required=True, help="报告目录")
-    parser.add_argument("--test-exit",     default="0",   help="pytest 退出码")
-    parser.add_argument("--bench-exit",    default="0",   help="benchmark 退出码")
-    parser.add_argument("--output",        required=True, help="Markdown 报告输出路径")
-    parser.add_argument("--progress-json", default=None,  help="progress.json 路径（可选）")
-    parser.add_argument("--html-output",   default=None,  help="HTML 报告输出路径（可选）")
-    parser.add_argument("--analysis-md",   default=None,  help="Claude 分析 Markdown 路径（可选）")
+    parser.add_argument("--report-dir",    required=True, help="Report directory")
+    parser.add_argument("--html-output",   required=True, help="HTML output path")
+    parser.add_argument("--progress-json", default=None,  help="progress.json path")
+    parser.add_argument("--analysis-json", default=None,  help="analysis.json path")
     args = parser.parse_args()
 
-    # Markdown
-    md_content = build_report(args)
-    Path(args.output).write_text(md_content)
-    print(f"Markdown 报告已保存：{args.output}")
-
-    # HTML（如果指定了路径）
-    if args.html_output:
-        prog = None
-        if args.progress_json and os.path.exists(args.progress_json):
+    # Load progress.json
+    prog = None
+    if args.progress_json and os.path.exists(args.progress_json):
+        try:
             prog = json.loads(Path(args.progress_json).read_text())
-        test_stats = parse_junit(str(Path(args.report_dir) / "test_results.xml"))
-        html_content = build_html_report(args, prog, test_stats)
-        Path(args.html_output).write_text(html_content)
-        print(f"HTML  报告已保存：{args.html_output}")
+        except Exception:
+            pass
+
+    # Load analysis.json
+    analysis = None
+    if args.analysis_json and os.path.exists(args.analysis_json):
+        try:
+            analysis = json.loads(Path(args.analysis_json).read_text())
+        except Exception:
+            pass
+
+    html = build_html(args, prog, analysis)
+    Path(args.html_output).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.html_output).write_text(html)
+    print(f"HTML report: {args.html_output}")
 
 
 if __name__ == "__main__":

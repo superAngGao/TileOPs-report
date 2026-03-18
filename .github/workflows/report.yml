@@ -334,7 +334,7 @@ jobs:
             --test-xml      "${{ steps.report.outputs.report_dir }}/test_results.xml" \
             --bench-log     "${{ steps.report.outputs.report_dir }}/tileops_benchmarks.log" \
             --manifest      scripts/op_manifest.json \
-            --output        "${{ steps.report.outputs.report_dir }}/analysis.md"
+            --output        "${{ steps.report.outputs.report_dir }}/analysis.json"
         env:
           ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
@@ -347,12 +347,9 @@ jobs:
             --date          "${{ steps.report.outputs.date }}" \
             --commit        "${{ steps.report.outputs.sha }}" \
             --report-dir    "${{ steps.report.outputs.report_dir }}" \
-            --test-exit     "${{ steps.report.outputs.test_exit }}" \
-            --bench-exit    "${{ steps.report.outputs.bench_exit }}" \
-            --output        "${{ steps.report.outputs.report_dir }}/report.md" \
             --html-output   "${{ steps.report.outputs.report_dir }}/report.html" \
             --progress-json "${{ steps.report.outputs.report_dir }}/progress.json" \
-            --analysis-md   "${{ steps.report.outputs.report_dir }}/analysis.md"
+            --analysis-json "${{ steps.report.outputs.report_dir }}/analysis.json"
 
       # ── Send report email ──────────────────────────────────────────────
 
