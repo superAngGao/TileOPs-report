@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_activation.py
 files_last_scanned: '2026-03-15T20:22:03Z'
 func_score: null
-func_score_notes: 无测试结果和 bench 数据，PR 为重构性变更，无法评估功能完整性。
+func_score_notes: PR 为重构性变更，无测试结果或 bench 数据，无法评估功能完整性。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -35,5 +35,5 @@ test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-18T02:06:24Z'
+last_updated: '2026-03-18T02:12:22Z'
 updated_by: claude-nightly
