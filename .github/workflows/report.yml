@@ -12,6 +12,10 @@ on:
         description: "Update registry + regenerate report from latest data (no new artifacts)"
         type: boolean
         default: false
+      force:
+        description: "Skip dedup check (force re-run even if run_id was already processed)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -97,12 +101,17 @@ jobs:
         if: steps.mode.outputs.registry_only != 'true'
         id: dedup
         run: |
-          RUN_ID="${{ steps.run.outputs.run_id }}"
-          if grep -rl "^${RUN_ID}$" _gh_pages/nightly/ 2>/dev/null | grep -q "run_id.txt"; then
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-            echo "Run ${RUN_ID} already processed — skipping."
-          else
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
             echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "Force mode — skipping dedup check."
+          else
+            RUN_ID="${{ steps.run.outputs.run_id }}"
+            if grep -rl "^${RUN_ID}$" _gh_pages/nightly/ 2>/dev/null | grep -q "run_id.txt"; then
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+              echo "Run ${RUN_ID} already processed — skipping."
+            else
+              echo "skip=false" >> "$GITHUB_OUTPUT"
+            fi
           fi
 
       # ── Registry-only mode: locate latest existing report ────────────────
