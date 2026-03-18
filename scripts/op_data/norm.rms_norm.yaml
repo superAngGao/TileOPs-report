@@ -1,0 +1,40 @@
+id: norm.rms_norm
+name: rms_norm
+category: Norm
+category_id: 3
+sub: rms_norm
+issue: 399
+files:
+  kernel:
+  - tileops/kernels/norm/rms_norm.py
+  op:
+  - tileops/ops/norm/rms_norm.py
+  tests:
+  - tests/ops/test_rms_norm.py::test_rms_norm_3d
+  - tests/ops/test_rms_norm.py::test_rms_norm_op
+  bench:
+  - benchmarks/ops/bench_rms_norm.py::bench_rms_norm
+files_last_scanned: '2026-03-18T10:14:48Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
+perf_details:
+  baseline: null
+  last_run: null
+  summary: null
+  results: []
+perf_score_updated: null
+has_bugs: null
+bugs: []
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
+test_status:
+  last_run: null
+  passed: null
+  errors: []
+last_updated: '2026-03-18T10:14:48Z'
+updated_by: bootstrap
