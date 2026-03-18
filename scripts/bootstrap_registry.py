@@ -41,6 +41,11 @@ except ImportError:
 NOW_ISO = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 NOW_DATE = datetime.now(tz=timezone.utc).strftime("%Y-%m-%d")
 
+# ── 排除列表：不在 186 算子列表中的算子名，Claude 不应将其文件归属到任何算子 ──
+EXCLUDED_OPS = [
+    "engram",
+]
+
 # ── 扫描目录 ─────────────────────────────────────────────────────────────────
 KERNEL_DIRS = ["tilelang", "tileops/kernels", "tileops/kernel"]
 OP_DIRS     = ["tileops/ops", "tileops"]
@@ -156,6 +161,7 @@ def build_file_mapping_prompt(ops_batch: list[dict], file_tree: str, cat_name: s
             f", auto_bench={af.get('bench', [])}"
         )
     ops_text = "\n".join(ops_summary)
+    excluded_text = ", ".join(EXCLUDED_OPS) if EXCLUDED_OPS else "（暂无）"
 
     return f"""你在分析 TileOPs 项目（高性能 LLM 算子库，基于 TileLang）的代码结构。
 
@@ -182,6 +188,12 @@ def build_file_mapping_prompt(ops_batch: list[dict], file_tree: str, cat_name: s
 ## 算子列表（已知 op 封装文件及自动扫描结果）
 {ops_text}
 
+## 排除列表
+以下算子名不在我们的追踪范围内，它们的文件（kernel/test/bench）**绝对不能**归属到列表中的任何算子：
+{excluded_text}
+
+包含这些名称的文件路径（如 `tileops/kernels/engram/`、`test_engram_fwd.py`、`bench_engram_fwd.py`）必须忽略。
+
 ## 匹配指南
 - 算子名称和文件名可能不完全一致，请根据语义理解匹配
 - `auto_tests` 和 `auto_bench` 是自动 grep 的初步结果，可能遗漏或不精确。请在此基础上补充未被发现的测试函数和 benchmark 函数
@@ -190,8 +202,15 @@ def build_file_mapping_prompt(ops_batch: list[dict], file_tree: str, cat_name: s
 - 一个测试/bench 文件可能覆盖多个算子（如 bench_activation.py 覆盖 relu/gelu/silu 等）
 - 多个算子共享同一文件时均列出
 - 找不到对应文件时对应字段为空列表 []
-- **重要**：代码库中可能存在不在上述算子列表中的算子（如 engram 等）。这些算子的 kernel/test/bench 文件不应被归属到列表中的任何算子。如果一个文件明确属于列表外的算子，请忽略它，不要强行匹配到列表中的相似算子
-- **重要**：如果一个算子找不到 kernel 实现文件，那么它通常也不会有对应的 test 和 benchmark 文件。此时 kernel/tests/bench 三个字段都应为空列表 []
+
+## 输出前自检（逐条核实，每条都必须通过）
+生成结果后，请按以下 checklist 逐一检查并修正：
+
+- [ ] **排除列表过滤**：结果中是否有任何文件路径包含排除列表中的算子名（如 engram）？如有，删除该条目
+- [ ] **kernel-test-bench 一致性**：是否有算子的 kernel 为空，但 tests 或 bench 不为空？如有，重新审视：
+  - 是否遗漏了该算子的 kernel 文件？重新在文件列表中搜索
+  - 如果确实找不到 kernel，说明该 tests/bench 可能不属于这个算子，将 kernel/tests/bench 全部清空为 []
+- [ ] **映射归属准确性**：tests 和 bench 中的函数是否确实测试/评测的是该算子，而非另一个同名或相似的算子？
 
 ## 输出格式
 严格输出 JSON，不含其他文字：
