@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_binary_elementwise.py
 files_last_scanned: '2026-03-15T20:22:03Z'
 func_score: 3
-func_score_notes: PR 为重构性变更，提取 fp8 共享 helper，功能分数维持不变。无测试结果或 benchmark 数据支撑分数调整。
+func_score_notes: PR 为重构性变更，提取 fp8 共享 helper，功能分数维持不变。无测试结果或 benchmark 数据，无法评估边界情况覆盖。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -35,5 +35,5 @@ test_status:
   last_run: '2026-03-18'
   passed: true
   errors: []
-last_updated: '2026-03-18T04:12:24Z'
+last_updated: '2026-03-18T04:22:51Z'
 updated_by: claude-nightly

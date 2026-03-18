@@ -16,7 +16,7 @@ files:
   - benchmarks/ops/bench_activation.py
 files_last_scanned: '2026-03-15T20:22:03Z'
 func_score: 3
-func_score_notes: PR 为重构性变更，功能分数维持不变。无测试结果或 benchmark 数据。
+func_score_notes: 重构 PR，功能分数不变。极值输入（大正/负数）的数值稳定性覆盖未知。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -36,5 +36,5 @@ test_status:
   last_run: '2026-03-18'
   passed: true
   errors: []
-last_updated: '2026-03-18T04:12:24Z'
+last_updated: '2026-03-18T04:22:51Z'
 updated_by: claude-nightly
