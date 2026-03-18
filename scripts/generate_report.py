@@ -127,7 +127,7 @@ def _stacked_bar(segments: list[tuple[float, str]], total: int) -> str:
 def _count_status(registry_ops: dict, cat_name: str) -> dict:
     """Count test/bench status for ops in a given category from registry."""
     test_counts = {"passed": 0, "failed": 0, "missing": 0}
-    bench_counts = {"qualified": 0, "underperforming": 0, "failed": 0, "missing": 0}
+    bench_counts = {"qualified": 0, "passed": 0, "underperforming": 0, "failed": 0, "missing": 0}
     for op in registry_ops.values():
         if op.get("category") != cat_name:
             continue
@@ -180,7 +180,7 @@ def build_html(args, prog: dict | None, analysis: dict | None, registry_ops: dic
 
         # Aggregate test/bench status counts from registry
         all_test = {"passed": 0, "failed": 0, "missing": 0}
-        all_bench = {"qualified": 0, "underperforming": 0, "failed": 0, "missing": 0}
+        all_bench = {"qualified": 0, "passed": 0, "underperforming": 0, "failed": 0, "missing": 0}
         if registry_ops:
             for op in registry_ops.values():
                 ts = op.get("test_status", {}).get("status", "missing")
@@ -219,13 +219,14 @@ def build_html(args, prog: dict | None, analysis: dict | None, registry_ops: dic
                 f'<div class="bar-container">{test_bar}</div>'
                 f'<span class="bar-count">{test_label}</span></div>'
             )
-            # Bench stacked bar: qualified(purple) + underperforming(yellow), rest is gray
+            # Bench stacked bar: qualified+passed(purple) + underperforming(yellow) + failed(red)
+            bench_ok = all_bench["qualified"] + all_bench["passed"]
             bench_bar = _stacked_bar([
-                (all_bench["qualified"], "seg-qualified"),
+                (bench_ok, "seg-qualified"),
                 (all_bench["underperforming"], "seg-underperforming"),
                 (all_bench["failed"], "seg-failed"),
             ], total)
-            bench_label = f'{all_bench["qualified"]}✓ {all_bench["underperforming"]}△ {all_bench["failed"]}✗ {all_bench["missing"]}—'
+            bench_label = f'{bench_ok}✓ {all_bench["underperforming"]}△ {all_bench["failed"]}✗ {all_bench["missing"]}—'
             parts.append(
                 f'<div class="bar-row"><span class="bar-label">Bench</span>'
                 f'<div class="bar-container">{bench_bar}</div>'
@@ -288,15 +289,16 @@ def build_html(args, prog: dict | None, analysis: dict | None, registry_ops: dic
                 f'<span class="bar-count">{tc["passed"]}✓ {tc["failed"]}✗ {tc["missing"]}—</span></div>'
             )
             bc = cat_status["bench"]
+            bc_ok = bc["qualified"] + bc["passed"]
             bench_bar = _stacked_bar([
-                (bc["qualified"], "seg-qualified"),
+                (bc_ok, "seg-qualified"),
                 (bc["underperforming"], "seg-underperforming"),
                 (bc["failed"], "seg-failed"),
             ], t)
             parts.append(
                 f'<div class="bar-row"><span class="bar-label">Bench</span>'
                 f'<div class="bar-container">{bench_bar}</div>'
-                f'<span class="bar-count">{bc["qualified"]}✓ {bc["underperforming"]}△ {bc["failed"]}✗ {bc["missing"]}—</span></div>'
+                f'<span class="bar-count">{bc_ok}✓ {bc["underperforming"]}△ {bc["failed"]}✗ {bc["missing"]}—</span></div>'
             )
         else:
             te = cat.get("tested_ops", 0)
