@@ -1,0 +1,45 @@
+id: linattn.gated_deltanet.chunkwise
+name: gated_deltanet_chunkwise
+category: Linear Attention
+category_id: 10
+sub: gated_deltanet
+issue: 405
+files:
+  kernel:
+  - tileops/kernels/linear_attn/gated_delta_net/gated_deltanet_fwd.py
+  - tileops/kernels/linear_attn/gated_delta_net/gated_deltanet_bwd.py
+  - tileops/kernels/linear_attn/gated_delta_net/fused_prepare_compute_w_u.py
+  - tileops/kernels/linear_attn/gated_delta_net/compute_w_u_bwd.py
+  op:
+  - tileops/ops/gated_deltanet.py
+  tests:
+  - tests/ops/test_gated_deltanet_fwd.py::test_gated_deltanet_fwd
+  - tests/ops/test_gated_deltanet_bwd.py::test_gated_deltanet_bwd
+  - tests/ops/test_fused_gated.py::test_fused_gated
+  bench:
+  - benchmarks/ops/bench_gated_deltanet_vs_fla.py::bench_gated_deltanet_fwd
+  - benchmarks/ops/bench_gated_deltanet_vs_fla.py::bench_gated_deltanet_bwd
+files_last_scanned: '2026-03-18T10:07:42Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
+perf_details:
+  baseline: null
+  last_run: null
+  summary: null
+  results: []
+perf_score_updated: null
+has_bugs: null
+bugs: []
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
+test_status:
+  last_run: null
+  passed: null
+  errors: []
+last_updated: '2026-03-18T10:07:42Z'
+updated_by: bootstrap
