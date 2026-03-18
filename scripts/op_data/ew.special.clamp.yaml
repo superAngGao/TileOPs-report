@@ -13,7 +13,7 @@ files:
   bench: []
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 1
-func_score_notes: 测试和 benchmark 均为 missing，算子实现缺失或未注册。
+func_score_notes: 测试和 benchmark 均 missing，算子尚未实现或未注册。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -24,7 +24,8 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试与 benchmark 均缺失，算子可能未实现
+- 测试缺失
+- benchmark 缺失，算子可能未实现
 kernel_last_updated: '2026-03-18T09:48:47Z'
 kernel_last_pr_number: 549
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/549
@@ -35,7 +36,7 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

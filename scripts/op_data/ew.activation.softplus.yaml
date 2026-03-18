@@ -14,18 +14,24 @@ files:
   - benchmarks/ops/bench_activation.py::bench_softplus
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 2
-func_score_notes: 测试状态为 missing，功能验证缺失；benchmark 通过但无 ratio 数据，整体可信度低。
+func_score_notes: 测试状态 missing，功能验证缺失；benchmark ratio 0.96，性能略低于 baseline。
 func_score_updated: '2026-03-18'
-perf_score: null
+perf_score: 3
 perf_details:
   baseline: null
-  last_run: null
+  last_run: '2026-03-18'
   summary: null
-  results: []
+  results: &id001
+  - bench_fn: softplus
+    tileops: 0.0278 ms
+    baseline: 0.0267 ms
+    ratio: 0.96
+    summary: TileOps 0.0278ms vs Baseline 0.0267ms (ratio 0.96)
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
 - 测试用例缺失，功能正确性未经验证
+- benchmark 性能低于 baseline（ratio 0.96）
 kernel_last_updated: '2026-03-18T09:48:47Z'
 kernel_last_pr_number: 549
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/549
@@ -36,10 +42,10 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
-  ratio: null
-  details: []
+  status: qualified
+  ratio: 0.96
+  details: *id001

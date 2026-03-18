@@ -14,14 +14,19 @@ files:
   - benchmarks/ops/bench_gla_decode.py::bench_gla_decode
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 3
-func_score_notes: PR 表明 decode kernel 为新增功能，recurrence 路径刚完成基础实现，覆盖场景尚待验证。
+func_score_notes: PR 显示 decode kernel 为新增功能，当前 func_score 3 保持合理；decode ratio 3.79 超越 baseline。
 func_score_updated: '2026-03-18'
-perf_score: null
+perf_score: 5
 perf_details:
   baseline: null
-  last_run: null
+  last_run: '2026-03-18'
   summary: null
-  results: []
+  results: &id001
+  - bench_fn: gla_decode
+    tileops: 0.0456 ms
+    baseline: 0.1731 ms
+    ratio: 3.7945
+    summary: TileOps 0.0456ms vs Baseline 0.1731ms (ratio 3.79)
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
@@ -35,10 +40,10 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
-  ratio: null
-  details: []
+  status: qualified
+  ratio: 3.7945
+  details: *id001

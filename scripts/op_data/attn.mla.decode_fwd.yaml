@@ -15,14 +15,19 @@ files:
   - benchmarks/ops/bench_deepseek_mla_decode.py::bench_mla_decode
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 测试全部通过，MLA decode 前向实现完整；缺少 benchmark ratio，性能无法评估。
+func_score_notes: 测试全部通过，功能完整；benchmark ratio 4.33 远超 baseline。
 func_score_updated: '2026-03-18'
-perf_score: null
+perf_score: 5
 perf_details:
   baseline: null
-  last_run: null
+  last_run: '2026-03-18'
   summary: null
-  results: []
+  results: &id001
+  - bench_fn: mla_decode
+    tileops: 0.1050 ms
+    baseline: 0.4550 ms
+    ratio: 4.3333
+    summary: TileOps 0.1050ms vs Baseline 0.4550ms (ratio 4.33)
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
@@ -36,10 +41,10 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
-  ratio: null
-  details: []
+  status: qualified
+  ratio: 4.3333
+  details: *id001

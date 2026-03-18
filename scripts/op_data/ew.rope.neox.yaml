@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_rope.py::bench_rope_neox
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 2
-func_score_notes: 测试失败，功能存在缺陷。benchmark 通过说明基础路径可运行，但正确性未达标。
+func_score_notes: 测试失败，功能存在缺陷。benchmark 状态为 passed 但无 ratio 数据，性能无法评估。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -37,7 +37,7 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

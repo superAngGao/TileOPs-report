@@ -15,14 +15,19 @@ files:
   - benchmarks/ops/bench_binary_elementwise.py::bench_bitwise_xor
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 测试通过，位运算语义明确。benchmark ratio 缺失，性能评分暂无法确定。
+func_score_notes: 测试通过，功能基本完整。benchmark ratio 1.0，与 baseline 持平。
 func_score_updated: '2026-03-18'
-perf_score: null
+perf_score: 4
 perf_details:
   baseline: null
-  last_run: null
+  last_run: '2026-03-18'
   summary: null
-  results: []
+  results: &id001
+  - bench_fn: bitwise_xor
+    tileops: 0.0200 ms
+    baseline: 0.0200 ms
+    ratio: 1.0
+    summary: TileOps 0.0200ms vs Baseline 0.0200ms (ratio 1.00)
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
@@ -36,10 +41,10 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
-  ratio: null
-  details: []
+  status: qualified
+  ratio: 1.0
+  details: *id001

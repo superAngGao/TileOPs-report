@@ -18,14 +18,24 @@ files:
   - benchmarks/ops/bench_deepseek_nsa_cmp_fwd.py::bench_nsa_cmp_fwd
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 测试全部通过，NSA prefill 前向功能完整；无 benchmark ratio 数据。
+func_score_notes: 测试全部通过；两个 bench 场景均有数据，nsa_fwd ratio 2.43，nsa_cmp_fwd ratio 5.70，整体超越 baseline。
 func_score_updated: '2026-03-18'
-perf_score: null
+perf_score: 5
 perf_details:
   baseline: null
-  last_run: null
+  last_run: '2026-03-18'
   summary: null
-  results: []
+  results: &id001
+  - bench_fn: nsa_fwd
+    tileops: 145.5000 ms
+    baseline: 353.7567 ms
+    ratio: 2.4313
+    summary: TileOps 145.5000ms vs Baseline 353.7567ms (ratio 2.43)
+  - bench_fn: nsa_cmp_fwd
+    tileops: 79.0200 ms
+    baseline: 450.0900 ms
+    ratio: 5.6959
+    summary: TileOps 79.0200ms vs Baseline 450.0900ms (ratio 5.70)
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
@@ -39,10 +49,10 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
-  ratio: null
-  details: []
+  status: qualified
+  ratio: 2.4313
+  details: *id001

@@ -13,7 +13,7 @@ files:
   bench: []
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 1
-func_score_notes: 测试与 benchmark 均缺失，功能状态完全未知。
+func_score_notes: 测试缺失，无法验证功能。PR 仅涉及 fp8 扩展，核心实现状态不明。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -34,7 +34,7 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

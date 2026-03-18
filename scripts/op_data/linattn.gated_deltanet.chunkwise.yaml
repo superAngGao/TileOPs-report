@@ -21,17 +21,28 @@ files:
   - benchmarks/ops/bench_gated_deltanet_vs_fla.py::bench_gated_deltanet_bwd
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 测试全部通过，chunkwise 路径功能完整；无 benchmark ratio 数据。
+func_score_notes: 测试通过，功能完整；但 bwd 性能严重劣化（ratio 0.12），存在明显性能回归。
 func_score_updated: '2026-03-18'
-perf_score: null
+perf_score: 1
 perf_details:
   baseline: null
-  last_run: null
+  last_run: '2026-03-18'
   summary: null
-  results: []
+  results: &id001
+  - bench_fn: gated_deltanet_fwd
+    tileops: 339.0217 ms
+    baseline: 257.0792 ms
+    ratio: 0.7583
+    summary: TileOps 339.0217ms vs Baseline 257.0792ms (ratio 0.76)
+  - bench_fn: gated_deltanet_bwd
+    tileops: 608.4940 ms
+    baseline: 73.2020 ms
+    ratio: 0.1203
+    summary: TileOps 608.4940ms vs Baseline 73.2020ms (ratio 0.12)
 perf_score_updated: '2026-03-18'
-has_bugs: false
-bugs: []
+has_bugs: true
+bugs:
+- gated_deltanet_bwd 性能严重劣化：TileOps 608ms vs Baseline 73ms（ratio 0.12），疑似实现缺陷或 kernel 配置错误
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -42,10 +53,10 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
-  ratio: null
-  details: []
+  status: underperforming
+  ratio: 0.1203
+  details: *id001

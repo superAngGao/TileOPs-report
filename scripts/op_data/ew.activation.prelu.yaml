@@ -14,18 +14,23 @@ files:
   - benchmarks/ops/bench_activation.py::bench_prelu
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 2
-func_score_notes: 测试状态为 missing，无法验证功能正确性。PR 聚焦 fp8 扩展，基础功能可能存在但覆盖不完整。
+func_score_notes: 测试状态 missing，功能未经验证。benchmark 显示性能优异（ratio 2.2），但测试缺失意味着正确性存疑。
 func_score_updated: '2026-03-18'
-perf_score: null
+perf_score: 5
 perf_details:
   baseline: null
-  last_run: null
+  last_run: '2026-03-18'
   summary: null
-  results: []
+  results: &id001
+  - bench_fn: prelu
+    tileops: 0.0125 ms
+    baseline: 0.0275 ms
+    ratio: 2.2
+    summary: TileOps 0.0125ms vs Baseline 0.0275ms (ratio 2.20)
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试缺失，功能无法验证
+- 测试用例缺失，功能正确性未验证
 kernel_last_updated: '2026-03-18T09:48:47Z'
 kernel_last_pr_number: 549
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/549
@@ -36,10 +41,10 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
-  ratio: null
-  details: []
+  status: qualified
+  ratio: 2.2
+  details: *id001

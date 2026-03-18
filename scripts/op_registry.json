@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-03-18T10:19:32Z",
+  "generated_at": "2026-03-18T10:33:24Z",
   "total_ops": 186,
   "ops": {
     "ew.binary_arith.add": {
@@ -28,12 +28,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -42,9 +42,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "add",
+            "tileops": "0.0133 ms",
+            "baseline": "0.0133 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0133ms vs Baseline 0.0133ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -70,12 +78,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -84,9 +92,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "sub",
+            "tileops": "0.0200 ms",
+            "baseline": "0.0200 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0200ms vs Baseline 0.0200ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -112,12 +128,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -126,9 +142,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "mul",
+            "tileops": "0.0200 ms",
+            "baseline": "0.0200 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0200ms vs Baseline 0.0200ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -154,12 +178,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -168,9 +192,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "div",
+            "tileops": "0.0200 ms",
+            "baseline": "0.0200 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0200ms vs Baseline 0.0200ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -196,12 +228,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -210,9 +242,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "remainder",
+            "tileops": "0.0150 ms",
+            "baseline": "0.0150 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0150ms vs Baseline 0.0150ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -238,12 +278,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -252,9 +292,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "pow",
+            "tileops": "0.0300 ms",
+            "baseline": "0.0300 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0300ms vs Baseline 0.0300ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -280,12 +328,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 5,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -294,9 +342,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 2.3333,
+        "details": [
+          {
+            "bench_fn": "floor_divide",
+            "tileops": "0.0150 ms",
+            "baseline": "0.0350 ms",
+            "ratio": 2.3333,
+            "summary": "TileOps 0.0150ms vs Baseline 0.0350ms (ratio 2.33)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -322,12 +378,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -336,9 +392,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "lerp",
+            "tileops": "0.0150 ms",
+            "baseline": "0.0150 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0150ms vs Baseline 0.0150ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -365,12 +429,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -379,9 +443,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "maximum",
+            "tileops": "0.0200 ms",
+            "baseline": "0.0200 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0200ms vs Baseline 0.0200ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -408,12 +480,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -422,9 +494,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "minimum",
+            "tileops": "0.0200 ms",
+            "baseline": "0.0200 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0200ms vs Baseline 0.0200ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -451,12 +531,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -465,9 +545,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "exp",
+            "tileops": "0.0033 ms",
+            "baseline": "0.0033 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0033ms vs Baseline 0.0033ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -498,8 +586,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -541,8 +629,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -584,8 +672,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -626,8 +714,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -668,8 +756,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -711,8 +799,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -754,8 +842,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -796,8 +884,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -838,8 +926,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -880,8 +968,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -922,8 +1010,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -964,8 +1052,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1006,8 +1094,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1049,8 +1137,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1092,8 +1180,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1135,8 +1223,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1175,12 +1263,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1189,9 +1277,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "relu",
+            "tileops": "0.0100 ms",
+            "baseline": "0.0100 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0100ms vs Baseline 0.0100ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -1217,12 +1313,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1231,9 +1327,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "gelu",
+            "tileops": "0.0033 ms",
+            "baseline": "0.0033 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0033ms vs Baseline 0.0033ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -1263,8 +1367,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1306,8 +1410,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1349,8 +1453,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1385,12 +1489,12 @@
         ]
       },
       "func_score": 2,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": true,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -1399,9 +1503,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "leaky_relu",
+            "tileops": "0.0167 ms",
+            "baseline": "0.0167 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0167ms vs Baseline 0.0167ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -1425,12 +1537,12 @@
         ]
       },
       "func_score": 2,
-      "perf_score": null,
+      "perf_score": 3,
       "has_bugs": true,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -1439,9 +1551,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 0.913,
+        "details": [
+          {
+            "bench_fn": "elu",
+            "tileops": "0.0256 ms",
+            "baseline": "0.0233 ms",
+            "ratio": 0.913,
+            "summary": "TileOps 0.0256ms vs Baseline 0.0233ms (ratio 0.91)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -1471,8 +1591,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1513,8 +1633,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1555,8 +1675,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1591,12 +1711,12 @@
         ]
       },
       "func_score": 2,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": true,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -1605,9 +1725,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "hardtanh",
+            "tileops": "0.0167 ms",
+            "baseline": "0.0167 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0167ms vs Baseline 0.0167ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -1631,12 +1759,12 @@
         ]
       },
       "func_score": 2,
-      "perf_score": null,
+      "perf_score": 3,
       "has_bugs": true,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -1645,9 +1773,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 0.96,
+        "details": [
+          {
+            "bench_fn": "softplus",
+            "tileops": "0.0278 ms",
+            "baseline": "0.0267 ms",
+            "ratio": 0.96,
+            "summary": "TileOps 0.0278ms vs Baseline 0.0267ms (ratio 0.96)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -1677,8 +1813,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1713,12 +1849,12 @@
         ]
       },
       "func_score": 2,
-      "perf_score": null,
+      "perf_score": 5,
       "has_bugs": true,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -1727,9 +1863,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 2.2,
+        "details": [
+          {
+            "bench_fn": "prelu",
+            "tileops": "0.0125 ms",
+            "baseline": "0.0275 ms",
+            "ratio": 2.2,
+            "summary": "TileOps 0.0125ms vs Baseline 0.0275ms (ratio 2.20)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -1759,8 +1903,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1797,12 +1941,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 5,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1811,9 +1955,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 3.2857,
+        "details": [
+          {
+            "bench_fn": "gelu_and_mul",
+            "tileops": "0.0233 ms",
+            "baseline": "0.0767 ms",
+            "ratio": 3.2857,
+            "summary": "TileOps 0.0233ms vs Baseline 0.0767ms (ratio 3.29)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -1839,12 +1991,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 5,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1853,9 +2005,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 3.8333,
+        "details": [
+          {
+            "bench_fn": "gelu_tanh_and_mul",
+            "tileops": "0.0200 ms",
+            "baseline": "0.0767 ms",
+            "ratio": 3.8333,
+            "summary": "TileOps 0.0200ms vs Baseline 0.0767ms (ratio 3.83)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -1886,8 +2046,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1928,8 +2088,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -1970,8 +2130,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2012,8 +2172,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2054,8 +2214,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2096,8 +2256,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2134,12 +2294,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2148,9 +2308,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "bitwise_and",
+            "tileops": "0.0250 ms",
+            "baseline": "0.0250 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0250ms vs Baseline 0.0250ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -2176,12 +2344,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2190,9 +2358,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "bitwise_or",
+            "tileops": "0.0200 ms",
+            "baseline": "0.0200 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0200ms vs Baseline 0.0200ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -2218,12 +2394,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2232,9 +2408,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "bitwise_xor",
+            "tileops": "0.0200 ms",
+            "baseline": "0.0200 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0200ms vs Baseline 0.0200ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -2260,12 +2444,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 2,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2274,9 +2458,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "underperforming",
+        "ratio": 0.5,
+        "details": [
+          {
+            "bench_fn": "bitwise_not",
+            "tileops": "0.0067 ms",
+            "baseline": "0.0033 ms",
+            "ratio": 0.5,
+            "summary": "TileOps 0.0067ms vs Baseline 0.0033ms (ratio 0.50)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -2302,12 +2494,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 4,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2316,9 +2508,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.0,
+        "details": [
+          {
+            "bench_fn": "logical_not",
+            "tileops": "0.0033 ms",
+            "baseline": "0.0033 ms",
+            "ratio": 1.0,
+            "summary": "TileOps 0.0033ms vs Baseline 0.0033ms (ratio 1.00)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -2344,12 +2544,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 1,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2358,9 +2558,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "underperforming",
+        "ratio": 0.3333,
+        "details": [
+          {
+            "bench_fn": "logical_and",
+            "tileops": "0.0300 ms",
+            "baseline": "0.0100 ms",
+            "ratio": 0.3333,
+            "summary": "TileOps 0.0300ms vs Baseline 0.0100ms (ratio 0.33)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -2386,12 +2594,12 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 1,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2400,9 +2608,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "underperforming",
+        "ratio": 0.3333,
+        "details": [
+          {
+            "bench_fn": "logical_or",
+            "tileops": "0.0300 ms",
+            "baseline": "0.0100 ms",
+            "ratio": 0.3333,
+            "summary": "TileOps 0.0300ms vs Baseline 0.0100ms (ratio 0.33)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -2428,8 +2644,8 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -2466,8 +2682,8 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -2504,8 +2720,8 @@
       "has_bugs": true,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -2542,8 +2758,8 @@
       "has_bugs": null,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -2583,8 +2799,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2624,8 +2840,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2665,8 +2881,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -2703,11 +2919,11 @@
         ]
       },
       "func_score": 2,
-      "perf_score": null,
+      "perf_score": 5,
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -2716,9 +2932,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.6,
+        "details": [
+          {
+            "bench_fn": "dropout",
+            "tileops": "0.0167 ms",
+            "baseline": "0.0267 ms",
+            "ratio": 1.6,
+            "summary": "TileOps 0.0167ms vs Baseline 0.0267ms (ratio 1.60)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -2748,7 +2972,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -2789,7 +3013,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -2830,7 +3054,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -2863,7 +3087,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -2896,7 +3120,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -2933,8 +3157,8 @@
       "has_bugs": null,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -2971,8 +3195,8 @@
       "has_bugs": null,
       "kernel_last_updated": "2026-03-18T09:48:47Z",
       "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3007,7 +3231,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3042,7 +3266,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3077,7 +3301,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3112,7 +3336,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3147,7 +3371,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3182,7 +3406,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3217,7 +3441,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3252,7 +3476,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3287,7 +3511,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3322,7 +3546,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3357,7 +3581,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3392,7 +3616,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3427,7 +3651,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3462,7 +3686,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3497,7 +3721,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3532,7 +3756,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3567,7 +3791,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3606,10 +3830,10 @@
       "func_score": 2,
       "perf_score": null,
       "has_bugs": true,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "kernel_last_updated": "2026-03-17T11:19:03Z",
+      "kernel_last_pr_author": "zhen8838",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -3648,10 +3872,10 @@
       "func_score": 2,
       "perf_score": null,
       "has_bugs": true,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "kernel_last_updated": "2026-03-17T11:19:03Z",
+      "kernel_last_pr_author": "zhen8838",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -3690,10 +3914,10 @@
       "func_score": 2,
       "perf_score": null,
       "has_bugs": true,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "kernel_last_updated": "2026-03-17T11:19:03Z",
+      "kernel_last_pr_author": "zhen8838",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": false,
@@ -3735,7 +3959,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -3777,7 +4001,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -3819,7 +4043,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -3861,7 +4085,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -3903,7 +4127,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -3938,7 +4162,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -3976,11 +4200,11 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 5,
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -3989,9 +4213,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.3636,
+        "details": [
+          {
+            "bench_fn": "ada_layer_norm",
+            "tileops": "0.0275 ms",
+            "baseline": "0.0375 ms",
+            "ratio": 1.3636,
+            "summary": "TileOps 0.0275ms vs Baseline 0.0375ms (ratio 1.36)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -4018,11 +4250,11 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 5,
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4031,9 +4263,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 1.3333,
+        "details": [
+          {
+            "bench_fn": "ada_layer_norm_zero",
+            "tileops": "0.0375 ms",
+            "baseline": "0.0500 ms",
+            "ratio": 1.3333,
+            "summary": "TileOps 0.0375ms vs Baseline 0.0500ms (ratio 1.33)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -4064,7 +4304,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4106,7 +4346,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4139,7 +4379,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4172,7 +4412,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4205,7 +4445,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4238,7 +4478,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4271,7 +4511,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4304,7 +4544,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4337,7 +4577,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4370,7 +4610,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4403,7 +4643,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4436,7 +4676,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4469,7 +4709,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4502,7 +4742,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4535,7 +4775,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4568,7 +4808,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4601,7 +4841,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4634,7 +4874,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4675,7 +4915,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4714,7 +4954,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4753,7 +4993,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4795,7 +5035,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -4834,7 +5074,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4873,7 +5113,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4912,7 +5152,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4949,7 +5189,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -4986,7 +5226,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5027,7 +5267,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -5066,7 +5306,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5099,7 +5339,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5132,7 +5372,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5165,7 +5405,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5198,7 +5438,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5231,7 +5471,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5264,7 +5504,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5297,7 +5537,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5330,7 +5570,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5363,7 +5603,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5396,7 +5636,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5429,7 +5669,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5462,7 +5702,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5495,7 +5735,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5528,7 +5768,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5561,7 +5801,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5602,7 +5842,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -5639,7 +5879,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5672,7 +5912,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5705,7 +5945,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5738,7 +5978,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5771,7 +6011,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5804,7 +6044,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5837,7 +6077,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5870,7 +6110,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -5911,7 +6151,7 @@
       "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -5955,7 +6195,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -5999,7 +6239,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6040,7 +6280,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6073,7 +6313,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6118,7 +6358,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6163,7 +6403,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6196,7 +6436,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6229,7 +6469,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6262,7 +6502,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6295,7 +6535,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6332,11 +6572,11 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 5,
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6345,9 +6585,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 4.3333,
+        "details": [
+          {
+            "bench_fn": "mla_decode",
+            "tileops": "0.1050 ms",
+            "baseline": "0.4550 ms",
+            "ratio": 4.3333,
+            "summary": "TileOps 0.1050ms vs Baseline 0.4550ms (ratio 4.33)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -6369,7 +6617,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6409,11 +6657,11 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 5,
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6422,9 +6670,24 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 2.4313,
+        "details": [
+          {
+            "bench_fn": "nsa_fwd",
+            "tileops": "145.5000 ms",
+            "baseline": "353.7567 ms",
+            "ratio": 2.4313,
+            "summary": "TileOps 145.5000ms vs Baseline 353.7567ms (ratio 2.43)"
+          },
+          {
+            "bench_fn": "nsa_cmp_fwd",
+            "tileops": "79.0200 ms",
+            "baseline": "450.0900 ms",
+            "ratio": 5.6959,
+            "summary": "TileOps 79.0200ms vs Baseline 450.0900ms (ratio 5.70)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -6446,7 +6709,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6479,7 +6742,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6520,7 +6783,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6559,8 +6822,8 @@
       "has_bugs": false,
       "kernel_last_updated": "2026-03-18T05:36:31Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6593,7 +6856,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6626,7 +6889,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6659,7 +6922,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6692,7 +6955,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6725,7 +6988,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6768,11 +7031,11 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
-      "has_bugs": false,
+      "perf_score": 1,
+      "has_bugs": true,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6781,9 +7044,24 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "underperforming",
+        "ratio": 0.1203,
+        "details": [
+          {
+            "bench_fn": "gated_deltanet_fwd",
+            "tileops": "339.0217 ms",
+            "baseline": "257.0792 ms",
+            "ratio": 0.7583,
+            "summary": "TileOps 339.0217ms vs Baseline 257.0792ms (ratio 0.76)"
+          },
+          {
+            "bench_fn": "gated_deltanet_bwd",
+            "tileops": "608.4940 ms",
+            "baseline": "73.2020 ms",
+            "ratio": 0.1203,
+            "summary": "TileOps 608.4940ms vs Baseline 73.2020ms (ratio 0.12)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -6810,11 +7088,11 @@
         ]
       },
       "func_score": 4,
-      "perf_score": null,
+      "perf_score": 5,
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6823,9 +7101,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 4.4694,
+        "details": [
+          {
+            "bench_fn": "gated_deltanet_decode",
+            "tileops": "0.0377 ms",
+            "baseline": "0.1685 ms",
+            "ratio": 4.4694,
+            "summary": "TileOps 0.0377ms vs Baseline 0.1685ms (ratio 4.47)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -6849,7 +7135,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6884,7 +7170,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -6926,7 +7212,7 @@
       "has_bugs": false,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6961,12 +7247,12 @@
         ]
       },
       "func_score": 3,
-      "perf_score": null,
+      "perf_score": 5,
       "has_bugs": false,
       "kernel_last_updated": "2026-03-17T14:16:55Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-18T10:19:32Z",
-      "files_last_scanned": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
+      "files_last_scanned": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": true,
@@ -6975,9 +7261,17 @@
       },
       "bench_status": {
         "last_run": "2026-03-18",
-        "status": "passed",
-        "ratio": null,
-        "details": []
+        "status": "qualified",
+        "ratio": 3.7945,
+        "details": [
+          {
+            "bench_fn": "gla_decode",
+            "tileops": "0.0456 ms",
+            "baseline": "0.1731 ms",
+            "ratio": 3.7945,
+            "summary": "TileOps 0.0456ms vs Baseline 0.1731ms (ratio 3.79)"
+          }
+        ]
       },
       "implemented": true
     },
@@ -6999,7 +7293,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -7032,7 +7326,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -7065,7 +7359,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -7098,7 +7392,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T10:19:32Z",
+      "last_updated": "2026-03-18T10:33:24Z",
       "test_status": {
         "last_run": "2026-03-18",
         "passed": null,
@@ -7115,12 +7409,12 @@
     }
   },
   "summary": {
-    "generated_at": "2026-03-18T10:19:32Z",
+    "generated_at": "2026-03-18T10:33:24Z",
     "total_ops": 186,
     "impl_ops": 110,
     "tested_ops": 82,
-    "benched_ops": 97,
-    "done_ops": 77,
+    "benched_ops": 93,
+    "done_ops": 73,
     "categories": [
       {
         "id": 1,
@@ -7130,8 +7424,8 @@
         "total_ops": 72,
         "impl_ops": 70,
         "tested_ops": 55,
-        "benched_ops": 61,
-        "done_ops": 52,
+        "benched_ops": 58,
+        "done_ops": 49,
         "ops": [
           {
             "id": "ew.binary_arith.add",
@@ -7670,8 +7964,8 @@
             "implemented": true,
             "tested": true,
             "test_failed": false,
-            "bench_ok": true,
-            "status": "done"
+            "bench_ok": false,
+            "status": "tested"
           },
           {
             "id": "ew.logical.not",
@@ -7690,8 +7984,8 @@
             "implemented": true,
             "tested": true,
             "test_failed": false,
-            "bench_ok": true,
-            "status": "done"
+            "bench_ok": false,
+            "status": "tested"
           },
           {
             "id": "ew.logical.or",
@@ -7700,8 +7994,8 @@
             "implemented": true,
             "tested": true,
             "test_failed": false,
-            "bench_ok": true,
-            "status": "done"
+            "bench_ok": false,
+            "status": "tested"
           },
           {
             "id": "ew.special.where",
@@ -9007,8 +9301,8 @@
         "total_ops": 8,
         "impl_ops": 4,
         "tested_ops": 4,
-        "benched_ops": 4,
-        "done_ops": 4,
+        "benched_ops": 3,
+        "done_ops": 3,
         "ops": [
           {
             "id": "linattn.gated_deltanet.chunkwise",
@@ -9017,8 +9311,8 @@
             "implemented": true,
             "tested": true,
             "test_failed": false,
-            "bench_ok": true,
-            "status": "done"
+            "bench_ok": false,
+            "status": "tested"
           },
           {
             "id": "linattn.gated_deltanet.recurrence",

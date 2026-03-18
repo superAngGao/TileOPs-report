@@ -16,14 +16,19 @@ files:
   - benchmarks/ops/bench_gated_deltanet_decode.py::bench_gated_deltanet_decode
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 测试全部通过，recurrence 路径功能完整；无 benchmark ratio 数据。
+func_score_notes: 测试通过，decode 场景 ratio 4.47，性能优秀。
 func_score_updated: '2026-03-18'
-perf_score: null
+perf_score: 5
 perf_details:
   baseline: null
-  last_run: null
+  last_run: '2026-03-18'
   summary: null
-  results: []
+  results: &id001
+  - bench_fn: gated_deltanet_decode
+    tileops: 0.0377 ms
+    baseline: 0.1685 ms
+    ratio: 4.4694
+    summary: TileOps 0.0377ms vs Baseline 0.1685ms (ratio 4.47)
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
@@ -37,10 +42,10 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
-  ratio: null
-  details: []
+  status: qualified
+  ratio: 4.4694
+  details: *id001

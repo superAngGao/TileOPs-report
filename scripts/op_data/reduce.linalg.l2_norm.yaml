@@ -12,7 +12,7 @@ files:
   bench: []
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 2
-func_score_notes: 测试失败，功能正确性存在问题。benchmark 通过说明基础执行路径存在，但结果不可信。
+func_score_notes: 测试失败，功能存在缺陷。PR 为新实现，基础逻辑可能不完整。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -23,18 +23,18 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试失败，l2_norm 计算结果存在错误
-kernel_last_updated: null
-kernel_last_pr_number: null
-kernel_last_pr_url: null
-kernel_last_pr_author: null
-kernel_last_pr_title: null
+- 测试失败，功能正确性存在问题
+kernel_last_updated: '2026-03-17T11:19:03Z'
+kernel_last_pr_number: 547
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/547
+kernel_last_pr_author: zhen8838
+kernel_last_pr_title: '[Feat][Reduce] Implement vector_norm sub-category (l1/l2/inf norm)'
 test_status:
   last_run: '2026-03-18'
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

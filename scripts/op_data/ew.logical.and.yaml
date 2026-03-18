@@ -15,17 +15,23 @@ files:
   - benchmarks/ops/bench_binary_elementwise.py::bench_logical_and
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 测试通过，逻辑运算语义完整。benchmark ratio 缺失，性能评分暂无法确定。
+func_score_notes: 测试通过，功能基本完整。benchmark ratio 0.33，性能严重低于 baseline，需优化。
 func_score_updated: '2026-03-18'
-perf_score: null
+perf_score: 1
 perf_details:
   baseline: null
-  last_run: null
+  last_run: '2026-03-18'
   summary: null
-  results: []
+  results: &id001
+  - bench_fn: logical_and
+    tileops: 0.0300 ms
+    baseline: 0.0100 ms
+    ratio: 0.3333
+    summary: TileOps 0.0300ms vs Baseline 0.0100ms (ratio 0.33)
 perf_score_updated: '2026-03-18'
 has_bugs: false
-bugs: []
+bugs:
+- 性能仅达 baseline 的 33%，存在严重性能退化
 kernel_last_updated: '2026-03-18T09:48:47Z'
 kernel_last_pr_number: 549
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/549
@@ -36,10 +42,10 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
-  ratio: null
-  details: []
+  status: underperforming
+  ratio: 0.3333
+  details: *id001

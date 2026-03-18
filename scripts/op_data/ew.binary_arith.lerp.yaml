@@ -15,14 +15,19 @@ files:
   - benchmarks/ops/bench_binary_arith.py::bench_lerp
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 测试全部通过，fp8 支持已扩展；weight 为张量形式的路径覆盖情况未知。
+func_score_notes: 测试全部通过，fp8 支持已扩展。接近完整实现，可能缺少权重为张量时的完整覆盖。
 func_score_updated: '2026-03-18'
-perf_score: null
+perf_score: 4
 perf_details:
   baseline: null
-  last_run: null
+  last_run: '2026-03-18'
   summary: null
-  results: []
+  results: &id001
+  - bench_fn: lerp
+    tileops: 0.0150 ms
+    baseline: 0.0150 ms
+    ratio: 1.0
+    summary: TileOps 0.0150ms vs Baseline 0.0150ms (ratio 1.00)
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
@@ -36,10 +41,10 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T10:19:32Z'
+last_updated: '2026-03-18T10:33:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
-  status: passed
-  ratio: null
-  details: []
+  status: qualified
+  ratio: 1.0
+  details: *id001
