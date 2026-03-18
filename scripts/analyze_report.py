@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """analyze_report.py — Call Claude API to analyze nightly TileOPs report.
 
-Single-call analysis: reads progress.json, test_results.xml, and benchmark
-log; calls Claude once to produce structured analysis.json with per-category
-scores and evaluations.
+Single-call analysis: reads op_registry.json and calls Claude once to produce
+structured analysis.json with per-category scores and evaluations.
 
 Environment variables:
   ANTHROPIC_API_KEY or ANTHROPIC_AUTH_TOKEN  — required
@@ -13,7 +12,6 @@ Environment variables:
 import argparse
 import json
 import sys
-import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from claude_utils import (
@@ -34,142 +32,109 @@ _CATEGORIES = [
 # Data loaders
 # ─────────────────────────────────────────────────────────────────────────────
 
-def _load_registry(path: str | None) -> dict:
-    """Load op_registry.json, return {op_id: op_data} or empty dict."""
-    if not path or not Path(path).exists():
-        return {}
-    try:
-        reg = json.loads(Path(path).read_text())
-        return reg.get("ops", {})
-    except Exception:
-        return {}
-
-
-def _load_progress_detail(path: str | None, registry_ops: dict) -> str:
-    """Load progress.json and format per-category, per-op status for the prompt.
-
-    Uses registry data for test_status/bench_status when available.
-    """
-    if not path or not Path(path).exists():
+def _load_progress_detail(registry: dict) -> str:
+    """Format per-category, per-op status from registry for the prompt."""
+    summary = registry.get("summary")
+    ops = registry.get("ops", {})
+    if not summary:
         return "No progress data available.\n"
-    try:
-        prog = json.loads(Path(path).read_text())
-        lines = [
-            f"Total ops: {prog['total_ops']} | "
-            f"Implemented: {prog['impl_ops']} | "
-            f"Tested: {prog['tested_ops']} | "
-            f"Benched: {prog.get('benched_ops', 0)} | "
-            f"Done: {prog['done_ops']}",
-            "",
-        ]
-        for cat in prog.get("categories", []):
-            t  = cat["total_ops"]
-            im = cat["impl_ops"]
-            te = cat.get("tested_ops", 0)
-            be = cat.get("benched_ops", 0)
-            d  = cat["done_ops"]
-            lines.append(f"### {cat['name']} ({im}/{t} impl, {te}/{t} tested, {be}/{t} benched, {d}/{t} done)")
-            for op in cat.get("ops", []):
-                impl_s = "Y" if op.get("implemented") else "N"
 
-                # Use registry status if available, fallback to progress data
-                reg = registry_ops.get(op.get("id", ""), {})
-                ts = reg.get("test_status", {})
-                bs = reg.get("bench_status", {})
+    lines = [
+        f"Total ops: {summary['total_ops']} | "
+        f"Implemented: {summary['impl_ops']} | "
+        f"Tested: {summary['tested_ops']} | "
+        f"Benched: {summary.get('benched_ops', 0)} | "
+        f"Done: {summary['done_ops']}",
+        "",
+    ]
+    for cat in summary.get("categories", []):
+        t = cat["total_ops"]
+        im = cat["impl_ops"]
+        te = cat.get("tested_ops", 0)
+        be = cat.get("benched_ops", 0)
+        d = cat["done_ops"]
+        lines.append(f"### {cat['name']} ({im}/{t} impl, {te}/{t} tested, {be}/{t} benched, {d}/{t} done)")
+        for op in cat.get("ops", []):
+            impl_s = "Y" if op.get("implemented") else "N"
 
-                if ts.get("status"):
-                    test_s = ts["status"]  # passed / failed / missing
-                else:
-                    test_s = "passed" if op.get("tested") else ("failed" if op.get("test_failed") else "missing")
+            # Get detailed status from registry ops
+            reg = ops.get(op.get("id", ""), {})
+            ts = reg.get("test_status", {})
+            bs = reg.get("bench_status", {})
 
-                if bs.get("status"):
-                    bench_s = bs["status"]  # qualified / underperforming / failed / missing
-                    if bs.get("ratio") is not None:
-                        bench_s += f"({bs['ratio']:.2f})"
-                else:
-                    bench_s = "qualified" if op.get("bench_ok") is True else ("failed" if op.get("bench_ok") is False else "missing")
+            test_s = ts.get("status", "missing")
+            bench_s = bs.get("status", "missing")
+            if bs.get("ratio") is not None:
+                bench_s += f"({bs['ratio']:.2f})"
 
-                lines.append(f"  {op['name']} [{op.get('sub','')}]: impl={impl_s} test={test_s} bench={bench_s}")
-            lines.append("")
-        return "\n".join(lines)
-    except Exception:
-        return "Failed to load progress data.\n"
+            lines.append(f"  {op['name']} [{op.get('sub','')}]: impl={impl_s} test={test_s} bench={bench_s}")
+        lines.append("")
+    return "\n".join(lines)
 
 
-def _build_test_fn_to_cat(manifest_path: str | None) -> dict[str, str]:
-    """Build test_fn -> category_name map from op_manifest.json."""
-    if not manifest_path or not Path(manifest_path).exists():
-        return {}
-    try:
-        manifest = json.loads(Path(manifest_path).read_text())
-        fn_to_cat: dict[str, str] = {}
-        for cat in manifest.get("categories", []):
-            for op in cat.get("ops", []):
-                for fn in op.get("test_fns", []):
-                    fn_to_cat[fn] = cat["name"]
-        return fn_to_cat
-    except Exception:
-        return {}
-
-
-def _load_test_summary(xml_path: str | None, fn_to_cat: dict[str, str]) -> str:
-    """Load test_results.xml and return per-category test summary text."""
-    if not xml_path or not Path(xml_path).exists():
+def _load_test_summary(registry: dict) -> str:
+    """Derive test summary from registry per-op test_status."""
+    ops = registry.get("ops", {})
+    if not ops:
         return "No test data available.\n"
-    try:
-        root = ET.parse(xml_path).getroot()
-        suites = list(root) if root.tag == "testsuites" else [root]
-        total = errors = failures = skipped = 0
-        cat_data: dict[str, dict] = {}
 
-        for suite in suites:
-            total    += int(suite.get("tests",    0))
-            errors   += int(suite.get("errors",   0))
-            failures += int(suite.get("failures", 0))
-            skipped  += int(suite.get("skipped",  0))
-            for tc in suite.iter("testcase"):
-                name = tc.get("name", "")
-                bare_fn = name.split("[")[0]
-                fail_el = tc.find("failure")
-                err_el  = tc.find("error")
-                is_fail = fail_el is not None or err_el is not None
+    cat_data: dict[str, dict] = {}
+    total_passed = total_failed = 0
 
-                cat_name = fn_to_cat.get(bare_fn, "Other")
-                cd = cat_data.setdefault(cat_name, {"passed": 0, "failed": 0, "errors": []})
-                if is_fail:
-                    cd["failed"] += 1
-                    elem = fail_el if fail_el is not None else err_el
-                    msg = (elem.get("message") or "")[:200]
-                    if len(cd["errors"]) < 5:
-                        cd["errors"].append(f"{name}: {msg}")
-                else:
-                    cd["passed"] += 1
+    for op in ops.values():
+        cat_name = op.get("category", "Other")
+        ts = op.get("test_status", {})
+        status = ts.get("status", "missing")
 
-        passed = total - errors - failures - skipped
-        lines = [f"Total: {total} | Passed: {passed} | Failed: {failures + errors} | Skipped: {skipped}", ""]
-        for cn in sorted(cat_data.keys()):
-            cd = cat_data[cn]
-            lines.append(f"### {cn}: {cd['passed']} passed, {cd['failed']} failed")
-            for e in cd["errors"]:
-                lines.append(f"  - {e}")
-            lines.append("")
-        return "\n".join(lines)
-    except Exception:
-        return "Failed to parse test data.\n"
+        cd = cat_data.setdefault(cat_name, {"passed": 0, "failed": 0, "missing": 0, "errors": []})
+        if status == "passed":
+            cd["passed"] += 1
+            total_passed += 1
+        elif status == "failed":
+            cd["failed"] += 1
+            total_failed += 1
+            for e in ts.get("errors", [])[:3]:
+                cd["errors"].append(f"{op.get('name', '?')}: {e[:200]}")
+        else:
+            cd["missing"] += 1
+
+    lines = [f"Total ops: {total_passed} passed, {total_failed} failed", ""]
+    for cn in sorted(cat_data.keys()):
+        cd = cat_data[cn]
+        lines.append(f"### {cn}: {cd['passed']} passed, {cd['failed']} failed, {cd['missing']} missing")
+        for e in cd["errors"][:5]:
+            lines.append(f"  - {e}")
+        lines.append("")
+    return "\n".join(lines)
 
 
-def _load_bench_log(path: str | None) -> str:
-    """Load benchmark log (last 300 lines)."""
-    if not path or not Path(path).exists():
+def _load_bench_log(registry: dict) -> str:
+    """Derive bench summary from registry per-op bench_status."""
+    ops = registry.get("ops", {})
+    if not ops:
         return "No benchmark data available.\n"
-    try:
-        text = Path(path).read_text(encoding="utf-8", errors="ignore")
-        log_lines = text.splitlines()
-        if len(log_lines) > 300:
-            log_lines = log_lines[-300:]
-        return "\n".join(log_lines) + "\n"
-    except Exception:
-        return "Failed to load benchmark data.\n"
+
+    cat_data: dict[str, dict] = {}
+
+    for op in ops.values():
+        cat_name = op.get("category", "Other")
+        bs = op.get("bench_status", {})
+        status = bs.get("status", "missing")
+        ratio = bs.get("ratio")
+
+        cd = cat_data.setdefault(cat_name, {"qualified": 0, "underperforming": 0, "failed": 0, "missing": 0, "ratios": []})
+        cd[status] = cd.get(status, 0) + 1
+        if ratio is not None:
+            cd["ratios"].append((op.get("name", "?"), ratio))
+
+    lines = []
+    for cn in sorted(cat_data.keys()):
+        cd = cat_data[cn]
+        lines.append(f"### {cn}: {cd['qualified']} qualified, {cd['underperforming']} underperforming, {cd['failed']} failed, {cd['missing']} missing")
+        for name, r in cd["ratios"]:
+            lines.append(f"  {name}: ratio={r:.2f}")
+        lines.append("")
+    return "\n".join(lines) if lines else "No benchmark data available.\n"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -279,12 +244,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Call Claude API to analyze nightly TileOPs report, output analysis.json"
     )
-    parser.add_argument("--progress-json", default=None, help="Path to progress.json")
-    parser.add_argument("--test-xml",      default=None, help="Path to test_results.xml")
-    parser.add_argument("--bench-log",     default=None, help="Path to tileops_benchmarks.log")
-    parser.add_argument("--manifest",      default=None, help="Path to op_manifest.json")
-    parser.add_argument("--registry",      default=None, help="Path to op_registry.json")
-    parser.add_argument("--output",        required=True, help="Output path for analysis.json")
+    parser.add_argument("--registry", required=True, help="Path to op_registry.json")
+    parser.add_argument("--output",   required=True, help="Output path for analysis.json")
     parser.add_argument(
         "--model",
         default="claude-sonnet-4-6",
@@ -305,12 +266,13 @@ def main() -> None:
     if require_anthropic() is None:
         sys.exit(0)
 
-    # Load data
-    registry_ops = _load_registry(args.registry)
-    progress_text = _load_progress_detail(args.progress_json, registry_ops)
-    fn_to_cat = _build_test_fn_to_cat(args.manifest)
-    test_text = _load_test_summary(args.test_xml, fn_to_cat)
-    bench_text = _load_bench_log(args.bench_log)
+    # Load registry
+    registry = json.loads(Path(args.registry).read_text())
+
+    # Derive all text from registry
+    progress_text = _load_progress_detail(registry)
+    test_text = _load_test_summary(registry)
+    bench_text = _load_bench_log(registry)
 
     # Single Claude call → structured JSON
     prompt = build_prompt(progress_text, test_text, bench_text)

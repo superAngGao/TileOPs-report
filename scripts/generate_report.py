@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""generate_report.py — Generate self-contained HTML report from progress.json + analysis.json.
+"""generate_report.py — Generate self-contained HTML report from op_registry.json + analysis.json.
 
 Usage:
     python generate_report.py \
@@ -7,7 +7,7 @@ Usage:
         --commit        abc123 \
         --report-dir    _gh_pages/nightly/20260318_220000 \
         --html-output   report.html \
-        --progress-json progress.json \
+        --registry      op_registry.json \
         --analysis-json analysis.json
 """
 
@@ -380,18 +380,20 @@ def main() -> None:
     parser.add_argument("--commit",        required=True, help="Git commit hash")
     parser.add_argument("--report-dir",    required=True, help="Report directory")
     parser.add_argument("--html-output",   required=True, help="HTML output path")
-    parser.add_argument("--progress-json", default=None,  help="progress.json path")
     parser.add_argument("--analysis-json", default=None,  help="analysis.json path")
-    parser.add_argument("--registry",      default=None,  help="op_registry.json path")
+    parser.add_argument("--registry",      required=True, help="op_registry.json path")
     args = parser.parse_args()
 
-    # Load progress.json
+    # Load op_registry.json
+    reg = None
+    registry_ops = None
     prog = None
-    if args.progress_json and os.path.exists(args.progress_json):
-        try:
-            prog = json.loads(Path(args.progress_json).read_text())
-        except Exception:
-            pass
+    try:
+        reg = json.loads(Path(args.registry).read_text())
+        registry_ops = reg.get("ops")
+        prog = reg.get("summary")
+    except Exception:
+        pass
 
     # Load analysis.json
     analysis = None
@@ -401,16 +403,12 @@ def main() -> None:
         except Exception:
             pass
 
-    # Load op_registry.json
-    registry_ops = None
-    if args.registry and os.path.exists(args.registry):
-        try:
-            reg = json.loads(Path(args.registry).read_text())
-            registry_ops = reg.get("ops")
-        except Exception:
-            pass
-
     html = build_html(args, prog, analysis, registry_ops)
+
+    # Write summary.json for gen_index.py
+    if prog:
+        summary_path = Path(args.report_dir) / "summary.json"
+        summary_path.write_text(json.dumps(prog, ensure_ascii=False, indent=2))
     Path(args.html_output).parent.mkdir(parents=True, exist_ok=True)
     Path(args.html_output).write_text(html)
     print(f"HTML report: {args.html_output}")

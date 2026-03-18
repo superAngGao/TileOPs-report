@@ -4,10 +4,12 @@
 执行流程：
   1. 扫描 TileOPs 中当日（或指定日期后）merge 的 PR
   2. 将 PR 涉及的文件匹配到对应算子，更新 kernel 变更元数据
-  3. 解析 test_results.xml，更新各算子的测试状态
-  4. 解析 benchmark 日志，提取性能数据
-  5. 调用 Claude 对有变化的算子重新评估 func_score / perf_score / has_bugs
-  6. 将更新写回 op_registry.json 和 op_data/*.yaml
+  3. 扫描代码库（可选），判断各算子的 implemented 状态
+  4. 解析 test_results.xml，更新各算子的测试状态
+  5. 解析 benchmark 日志和 bench_results.xml，提取性能数据
+  6. 调用 Claude 对有变化的算子重新评估 func_score / perf_score / has_bugs
+  7. 加载 op_manifest.json（可选），计算汇总统计写入 registry["summary"]
+  8. 将更新写回 op_registry.json 和 op_data/*.yaml
 
 用法：
     python scripts/update_registry.py \\
@@ -15,7 +17,10 @@
         --op-data-dir scripts/op_data/ \\
         --test-xml    path/to/test_results.xml \\
         --bench-log   path/to/tileops_benchmarks.log \\
+        --bench-xml   path/to/bench_results.xml \\
         --tileops-repo tile-ai/TileOPs \\
+        --repo-dir    /path/to/TileOPs \\
+        --manifest    scripts/op_manifest.json \\
         [--since-date YYYY-MM-DD]   # 默认昨天
 
 环境变量：
@@ -49,6 +54,22 @@ except ImportError:
 NOW_ISO  = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 NOW_DATE = datetime.now(tz=timezone.utc).strftime("%Y-%m-%d")
 TODAY    = datetime.now(tz=timezone.utc).date()
+
+
+def scan_classes(repo_dir: str) -> set[str]:
+    """递归扫描 tileops/ 下所有 .py 文件，返回所有 class 名的集合。"""
+    classes: set[str] = set()
+    tileops_dir = Path(repo_dir) / "tileops"
+    if not tileops_dir.exists():
+        return classes
+    for py_file in tileops_dir.rglob("*.py"):
+        try:
+            text = py_file.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            continue
+        for m in re.finditer(r"^class\s+(\w+)", text, re.MULTILINE):
+            classes.add(m.group(1))
+    return classes
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -324,6 +345,29 @@ def parse_bench_log(bench_log: str | None) -> dict[str, dict]:
     return results
 
 
+def parse_bench_xml(bench_xml: str | None) -> tuple[set[str], set[str]]:
+    """解析 bench JUnit XML，返回 (passed_classnames, failed_classnames)。
+
+    Uses classname attribute (e.g. 'benchmarks.ops.bench_activation').
+    """
+    passed: set[str] = set()
+    failed: set[str] = set()
+    if not bench_xml or not Path(bench_xml).exists():
+        return passed, failed
+    try:
+        root = ET.parse(bench_xml).getroot()
+    except ET.ParseError:
+        return passed, failed
+    for tc in root.iter("testcase"):
+        classname = tc.get("classname", "")
+        has_failure = tc.find("failure") is not None or tc.find("error") is not None
+        if has_failure:
+            failed.add(classname)
+        else:
+            passed.add(classname)
+    return passed, failed
+
+
 def get_op_bench_data(op_data: dict, bench_results: dict) -> dict | None:
     """提取算子对应的 benchmark 数据。
 
@@ -354,7 +398,7 @@ def get_op_bench_data(op_data: dict, bench_results: dict) -> dict | None:
 BENCH_QUALIFIED_RATIO = 0.8   # ratio >= 0.8 即达标
 
 
-def get_op_bench_status(op_data: dict, bench_results: dict) -> dict:
+def get_op_bench_status(op_data: dict, bench_results: dict, bench_xml_passed: set[str] = None, bench_xml_failed: set[str] = None) -> dict:
     """
     计算算子的 benchmark 状态。
     返回 {last_run, status, ratio, details}。
@@ -362,6 +406,7 @@ def get_op_bench_status(op_data: dict, bench_results: dict) -> dict:
     status 取值：
       - "qualified"        : bench 存在 且 ratio >= 0.8
       - "underperforming"  : bench 存在 且 ratio < 0.8
+      - "passed"           : bench XML 显示通过，但无 ratio 数据
       - "failed"           : bench 映射存在，但 log 中无结果或运行失败
       - "missing"          : bench 映射为空（无 bench 文件）
     """
@@ -374,9 +419,53 @@ def get_op_bench_status(op_data: dict, bench_results: dict) -> dict:
             "details":  [],
         }
 
+    # ── Bench XML matching ────────────────────────────────────────────────
+    xml_any_passed = False
+    xml_any_failed = False
+    if bench_xml_passed is not None or bench_xml_failed is not None:
+        _xml_passed = bench_xml_passed or set()
+        _xml_failed = bench_xml_failed or set()
+        for entry in bench_entries:
+            # Convert entry to classname:
+            # benchmarks/ops/bench_activation.py::bench_relu → benchmarks.ops.bench_activation
+            file_part = entry.split("::")[0]  # take file path part before ::
+            # Remove .py suffix and replace / with .
+            classname = file_part.replace("/", ".").removesuffix(".py")
+            if classname in _xml_passed:
+                xml_any_passed = True
+            if classname in _xml_failed:
+                xml_any_failed = True
+
+    # ── Bench log data ────────────────────────────────────────────────────
     bench_data = get_op_bench_data(op_data, bench_results)
-    if not bench_data:
-        # 有映射但 log 中没找到结果
+    if bench_data:
+        # 汇总所有 bench 函数的 ratio，取最小值作为整体 ratio
+        details = [{"bench_fn": fn, **v} for fn, v in bench_data.items()]
+        ratios = [v["ratio"] for v in bench_data.values() if v.get("ratio") is not None]
+
+        if ratios:
+            min_ratio = min(ratios)
+            status = "qualified" if min_ratio >= BENCH_QUALIFIED_RATIO else "underperforming"
+            return {
+                "last_run": NOW_DATE,
+                "status":   status,
+                "ratio":    round(min_ratio, 4),
+                "details":  details,
+            }
+
+        # Has bench data but no ratio — fall through to XML check below
+        # (keep details for potential use)
+
+    # ── No ratio data from bench log, check XML results ───────────────────
+    if xml_any_passed:
+        return {
+            "last_run": NOW_DATE,
+            "status":   "passed",
+            "ratio":    None,
+            "details":  [],
+        }
+
+    if xml_any_failed:
         return {
             "last_run": NOW_DATE,
             "status":   "failed",
@@ -384,27 +473,12 @@ def get_op_bench_status(op_data: dict, bench_results: dict) -> dict:
             "details":  [],
         }
 
-    # 汇总所有 bench 函数的 ratio，取最小值作为整体 ratio
-    details = [{"bench_fn": fn, **v} for fn, v in bench_data.items()]
-    ratios = [v["ratio"] for v in bench_data.values() if v.get("ratio") is not None]
-
-    if not ratios:
-        # 有结果但无 ratio 数据
-        return {
-            "last_run": NOW_DATE,
-            "status":   "failed",
-            "ratio":    None,
-            "details":  details,
-        }
-
-    min_ratio = min(ratios)
-    status = "qualified" if min_ratio >= BENCH_QUALIFIED_RATIO else "underperforming"
-
+    # 有映射但 log 和 XML 中都没找到结果
     return {
         "last_run": NOW_DATE,
-        "status":   status,
-        "ratio":    round(min_ratio, 4),
-        "details":  details,
+        "status":   "failed",
+        "ratio":    None,
+        "details":  [],
     }
 
 
@@ -462,7 +536,111 @@ def build_score_prompt(ops_batch: list[dict]) -> str:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 6. 主逻辑
+# 6. 汇总统计
+# ─────────────────────────────────────────────────────────────────────────────
+
+def compute_summary(registry: dict, manifest: dict, all_classes: set[str] | None = None) -> dict:
+    """从 registry 计算汇总统计，替代 progress.json。"""
+    ops = registry.get("ops", {})
+
+    # Build op_id -> op_classes map from manifest
+    op_classes_map: dict[str, list[str]] = {}
+    for cat in manifest.get("categories", []):
+        for op in cat.get("ops", []):
+            op_classes_map[op["id"]] = op.get("op_classes", [])
+
+    categories_out = []
+    grand_impl = grand_tested = grand_benched = grand_done = 0
+
+    for cat in manifest.get("categories", []):
+        cat_impl = cat_tested = cat_benched = cat_done = 0
+        ops_out = []
+
+        for mop in cat.get("ops", []):
+            op_id = mop["id"]
+            op_data = ops.get(op_id, {})
+
+            # implemented: check op_classes against scanned classes
+            op_cls = op_classes_map.get(op_id, [])
+            if all_classes is not None:
+                implemented = bool(op_cls) and any(c in all_classes for c in op_cls)
+            else:
+                # If no repo scan, use existing value or check if kernel files exist
+                implemented = op_data.get("implemented", bool(op_data.get("files", {}).get("kernel")))
+
+            # test status
+            ts = op_data.get("test_status", {})
+            ts_status = ts.get("status", "missing")
+            tested = ts_status == "passed"
+            test_failed = ts_status == "failed"
+
+            # bench status
+            bs = op_data.get("bench_status", {})
+            bs_status = bs.get("status", "missing")
+            bench_ok = True if bs_status in ("qualified", "passed") else (False if bs_status in ("underperforming", "failed") else None)
+
+            # overall status
+            if implemented and tested and bench_ok is True:
+                status = "done"
+            elif implemented and tested:
+                status = "tested"
+            elif implemented and not tested and ts_status == "missing":
+                status = "impl_only"
+            elif implemented:
+                status = "partial"
+            else:
+                status = "missing"
+
+            if implemented: cat_impl += 1
+            if tested: cat_tested += 1
+            if bench_ok is True: cat_benched += 1
+            if status == "done": cat_done += 1
+
+            # Store implemented in registry for downstream use
+            op_data["implemented"] = implemented
+
+            ops_out.append({
+                "id": op_id,
+                "name": mop["name"],
+                "sub": mop.get("sub", ""),
+                "implemented": implemented,
+                "tested": tested,
+                "test_failed": test_failed,
+                "bench_ok": bench_ok,
+                "status": status,
+            })
+
+        grand_impl += cat_impl
+        grand_tested += cat_tested
+        grand_benched += cat_benched
+        grand_done += cat_done
+
+        categories_out.append({
+            "id": cat["id"],
+            "name": cat["name"],
+            "issue": cat.get("issue"),
+            "difficulty": cat.get("difficulty"),
+            "total_ops": len(cat["ops"]),
+            "impl_ops": cat_impl,
+            "tested_ops": cat_tested,
+            "benched_ops": cat_benched,
+            "done_ops": cat_done,
+            "ops": ops_out,
+        })
+
+    return {
+        "generated_at": NOW_ISO,
+        "total_ops": manifest.get("total_ops", 0),
+        "impl_ops": grand_impl,
+        "tested_ops": grand_tested,
+        "benched_ops": grand_benched,
+        "done_ops": grand_done,
+        "categories": categories_out,
+    }
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 7. 主逻辑
 # ─────────────────────────────────────────────────────────────────────────────
 
 def main() -> None:
@@ -471,6 +649,7 @@ def main() -> None:
     parser.add_argument("--op-data-dir",  required=True, help="op_data/ 目录路径")
     parser.add_argument("--test-xml",     default=None,  help="test_results.xml 路径")
     parser.add_argument("--bench-log",    default=None,  help="tileops_benchmarks.log 路径")
+    parser.add_argument("--bench-xml",    default=None,  help="bench_results.xml 路径")
     parser.add_argument("--tileops-repo", default="tile-ai/TileOPs",
                         help="TileOPs GitHub 仓库（owner/name）")
     parser.add_argument("--since-date",   default=None,
@@ -478,6 +657,8 @@ def main() -> None:
     parser.add_argument("--model",        default="claude-sonnet-4-6")
     parser.add_argument("--skip-claude",  action="store_true",
                         help="跳过 Claude 评估步骤")
+    parser.add_argument("--repo-dir",     default=None,  help="TileOPs 仓库根目录（用于判断 implemented）")
+    parser.add_argument("--manifest",     default=None,  help="op_manifest.json 路径（用于类别结构和 op_classes）")
     args = parser.parse_args()
 
     api_key, base_url = get_api_config()
@@ -540,6 +721,13 @@ def main() -> None:
     print(f"  {len(pr_any_updates)} 个算子受 PR 影响, "
           f"其中 {len(pr_kernel_updates)} 个有 kernel 变更")
 
+    # ── 代码库扫描（判断 implemented）────────────────────────────────────────
+    all_classes = None
+    if args.repo_dir:
+        print(f"\n扫描代码库: {args.repo_dir}")
+        all_classes = scan_classes(args.repo_dir)
+        print(f"  找到 {len(all_classes)} 个 class 定义")
+
     # ── 测试结果 ─────────────────────────────────────────────────────────────
     print(f"\n解析测试结果: {args.test_xml or '(未提供)'}")
     test_results = parse_test_xml(args.test_xml)
@@ -549,6 +737,11 @@ def main() -> None:
     print(f"解析 benchmark 日志: {args.bench_log or '(未提供)'}")
     bench_results = parse_bench_log(args.bench_log)
     print(f"  {len(bench_results)} 个 benchmark 有数据")
+
+    # ── Benchmark XML ─────────────────────────────────────────────────────
+    print(f"解析 benchmark XML: {args.bench_xml or '(未提供)'}")
+    bench_xml_passed, bench_xml_failed = parse_bench_xml(args.bench_xml)
+    print(f"  {len(bench_xml_passed)} passed, {len(bench_xml_failed)} failed")
 
     # ── 更新每个算子 ─────────────────────────────────────────────────────────
     print("\n更新算子记录 ...")
@@ -585,7 +778,7 @@ def main() -> None:
             needs_score = True
 
         # Benchmark 状态
-        bench_status = get_op_bench_status(op_data, bench_results)
+        bench_status = get_op_bench_status(op_data, bench_results, bench_xml_passed, bench_xml_failed)
         yaml_updates["bench_status"] = bench_status
         registry_updates["bench_status"] = bench_status
         if bench_status["details"]:
@@ -681,6 +874,20 @@ def main() -> None:
         print(f"  Claude 共更新 {total_updated} 个算子")
     elif ops_to_score and not api_key:
         print("  ⚠ 未设置 ANTHROPIC_API_KEY，跳过 Claude 评分", file=sys.stderr)
+
+    # ── 计算汇总统计 ──────────────────────────────────────────────────────
+    manifest = None
+    if args.manifest:
+        manifest_path = Path(args.manifest)
+        if manifest_path.exists():
+            manifest = json.loads(manifest_path.read_text())
+
+    if manifest:
+        print("\n计算汇总统计 ...")
+        summary = compute_summary(registry, manifest, all_classes)
+        registry["summary"] = summary
+        print(f"  impl={summary['impl_ops']} tested={summary['tested_ops']} "
+              f"benched={summary['benched_ops']} done={summary['done_ops']}/{summary['total_ops']}")
 
     # ── 保存注册表 ───────────────────────────────────────────────────────────
     save_registry(registry, args.registry)

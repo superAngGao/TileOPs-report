@@ -269,19 +269,6 @@ jobs:
             echo "proceed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      # ── Full mode only: fetch progress + analyze ────────────────────────
-
-      - name: Run fetch_progress.py
-        if: steps.go.outputs.proceed == 'true' && steps.mode.outputs.registry_only != 'true'
-        continue-on-error: true
-        run: |
-          python scripts/fetch_progress.py \
-            --repo-dir   TileOPs/ \
-            --manifest   scripts/op_manifest.json \
-            --test-xml   "${{ steps.report.outputs.report_dir }}/test_results.xml" \
-            --bench-xml  "${{ steps.report.outputs.report_dir }}/bench_results.xml" \
-            --output     "${{ steps.report.outputs.report_dir }}/progress.json"
-
       # ── Registry update (both modes) ─────────────────────────────────────
 
       - name: Initialize registry if missing
@@ -298,7 +285,7 @@ jobs:
               --skip-claude
           fi
 
-      - name: Update op registry from PRs
+      - name: Update op registry
         if: steps.go.outputs.proceed == 'true'
         continue-on-error: true
         run: |
@@ -306,10 +293,14 @@ jobs:
           if [ "${{ steps.mode.outputs.registry_only }}" != "true" ]; then
             EXTRA_ARGS="--test-xml ${{ steps.report.outputs.report_dir }}/test_results.xml"
             EXTRA_ARGS="${EXTRA_ARGS} --bench-log ${{ steps.report.outputs.report_dir }}/tileops_benchmarks.log"
+            EXTRA_ARGS="${EXTRA_ARGS} --bench-xml ${{ steps.report.outputs.report_dir }}/bench_results.xml"
+            EXTRA_ARGS="${EXTRA_ARGS} --repo-dir TileOPs/"
+            EXTRA_ARGS="${EXTRA_ARGS} --manifest scripts/op_manifest.json"
           fi
           python scripts/update_registry.py \
             --registry     scripts/op_registry.json \
             --op-data-dir  scripts/op_data/ \
+            --manifest     scripts/op_manifest.json \
             ${EXTRA_ARGS} \
             --tileops-repo tile-ai/TileOPs
         env:
@@ -340,12 +331,8 @@ jobs:
         continue-on-error: true
         run: |
           python scripts/analyze_report.py \
-            --progress-json "${{ steps.report.outputs.report_dir }}/progress.json" \
-            --test-xml      "${{ steps.report.outputs.report_dir }}/test_results.xml" \
-            --bench-log     "${{ steps.report.outputs.report_dir }}/tileops_benchmarks.log" \
-            --manifest      scripts/op_manifest.json \
-            --registry      scripts/op_registry.json \
-            --output        "${{ steps.report.outputs.report_dir }}/analysis.json"
+            --registry scripts/op_registry.json \
+            --output   "${{ steps.report.outputs.report_dir }}/analysis.json"
         env:
           ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
@@ -359,7 +346,6 @@ jobs:
             --commit        "${{ steps.report.outputs.sha }}" \
             --report-dir    "${{ steps.report.outputs.report_dir }}" \
             --html-output   "${{ steps.report.outputs.report_dir }}/report.html" \
-            --progress-json "${{ steps.report.outputs.report_dir }}/progress.json" \
             --analysis-json "${{ steps.report.outputs.report_dir }}/analysis.json" \
             --registry      scripts/op_registry.json
 
