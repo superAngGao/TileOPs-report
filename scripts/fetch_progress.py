@@ -113,8 +113,10 @@ def check_op(
     else:
         bench_ok = None
 
-    if implemented and tested:
-        status = "done"
+    if implemented and tested and bench_ok is True:
+        status = "done"        # 三项全部通过
+    elif implemented and tested:
+        status = "tested"      # 实现+测试通过，但 benchmark 未通过或无数据
     elif implemented and not tested and not test_fns:
         status = "impl_only"   # 有实现，但 manifest 未映射测试函数
     elif implemented:
@@ -149,10 +151,13 @@ def compute_progress(
     grand_impl = 0
     grand_tested = 0
 
+    grand_benched = 0
+
     for cat in manifest["categories"]:
         cat_done = 0
         cat_impl = 0
         cat_tested = 0
+        cat_benched = 0
         ops_out = []
 
         for op in cat["ops"]:
@@ -165,6 +170,8 @@ def compute_progress(
                 cat_impl += 1
             if st["tested"]:
                 cat_tested += 1
+            if st["bench_ok"] is True:
+                cat_benched += 1
             if st["status"] == "done":
                 cat_done += 1
 
@@ -179,6 +186,7 @@ def compute_progress(
         grand_done += cat_done
         grand_impl += cat_impl
         grand_tested += cat_tested
+        grand_benched += cat_benched
 
         categories_out.append({
             "id": cat["id"],
@@ -189,6 +197,7 @@ def compute_progress(
             "done_ops": cat_done,
             "impl_ops": cat_impl,
             "tested_ops": cat_tested,
+            "benched_ops": cat_benched,
             "ops": ops_out,
         })
 
@@ -198,6 +207,7 @@ def compute_progress(
         "done_ops": grand_done,
         "impl_ops": grand_impl,
         "tested_ops": grand_tested,
+        "benched_ops": grand_benched,
         "categories": categories_out,
     }
 

@@ -90,10 +90,12 @@ def build_progress_section(progress_json_path: str | None) -> list[str]:
         ]
 
     prog = json.loads(Path(progress_json_path).read_text())
-    done  = prog["done_ops"]
-    total = prog["total_ops"]
-    impl  = prog["impl_ops"]
-    pct   = done / total * 100 if total else 0
+    done    = prog["done_ops"]
+    total   = prog["total_ops"]
+    impl    = prog["impl_ops"]
+    tested  = prog["tested_ops"]
+    benched = prog.get("benched_ops", 0)
+    pct     = done / total * 100 if total else 0
 
     lines: list[str] = [
         "## 开发进度",
@@ -102,7 +104,9 @@ def build_progress_section(progress_json_path: str | None) -> list[str]:
         f"> 更新时间：{prog['generated_at']}",
         "",
         f"**总进度：{done} / {total} ops 已完成（{pct:.1f}%）**  "
-        f"（已实现: {impl}，已通过测试: {prog['tested_ops']}）",
+        f"（已实现: {impl}，已通过测试: {tested}，Benchmark 通过: {benched}）",
+        "",
+        "> 算子需同时通过实现、测试和 Benchmark 三项才算「已完成」。",
         "",
         "| # | Category | Ops | Difficulty | Issue | 状态 |",
         "|---|---|---|---|---|---|",
@@ -295,13 +299,19 @@ def _inline_md_to_html(s: str) -> str:
 
 
 def _md_to_html(text: str) -> str:
-    """Minimal Markdown → HTML converter for Claude analysis output."""
+    """Minimal Markdown → HTML converter for Claude analysis output.
+
+    Supports: headings, bold, inline-code, bullet/numbered lists, fenced code
+    blocks, Markdown tables, horizontal rules, and HTML pass-through
+    (<details>, <summary>, etc.).
+    """
     import re
     lines = text.splitlines()
     out: list[str] = []
     in_ul = False
     in_ol = False
     in_pre = False
+    in_table = False
 
     def close_lists() -> None:
         nonlocal in_ul, in_ol
@@ -312,13 +322,35 @@ def _md_to_html(text: str) -> str:
             out.append("</ol>")
             in_ol = False
 
+    def close_table() -> None:
+        nonlocal in_table
+        if in_table:
+            out.append("</tbody></table>")
+            in_table = False
+
     def inline(raw: str) -> str:
         return _inline_md_to_html(_esc(raw))
 
+    def _is_table_sep(line: str) -> bool:
+        """Check if line is a Markdown table separator like |---|---|, |:---:|, |-----:|."""
+        return bool(re.match(r"^\|[\s:\-]+(\|[\s:\-]*)+\|?\s*$", line.strip()))
+
+    def _render_table_row(line: str, tag: str = "td") -> str:
+        """Render a Markdown table row to HTML."""
+        cells = line.strip().strip("|").split("|")
+        cells_html = "".join(
+            f"<{tag}>{_inline_md_to_html(_esc(c.strip()))}</{tag}>"
+            for c in cells
+        )
+        return f"<tr>{cells_html}</tr>"
+
     for line in lines:
+        stripped = line.strip()
+
         # fenced code block toggle
-        if line.startswith("```"):
+        if stripped.startswith("```"):
             close_lists()
+            close_table()
             if in_pre:
                 out.append("</pre>")
                 in_pre = False
@@ -330,34 +362,75 @@ def _md_to_html(text: str) -> str:
             out.append(_esc(line))
             continue
 
-        if line.startswith("#### "):
-            close_lists(); out.append(f"<h5>{inline(line[5:])}</h5>")
-        elif line.startswith("### "):
-            close_lists(); out.append(f"<h4>{inline(line[4:])}</h4>")
-        elif line.startswith("## "):
-            close_lists(); out.append(f"<h3>{inline(line[3:])}</h3>")
-        elif line.startswith("# "):
-            close_lists(); out.append(f"<h3>{inline(line[2:])}</h3>")
-        elif re.match(r"^[-*]\s+", line):
+        # HTML pass-through: <details>, <summary>, </details>, </summary>
+        if re.match(r"^</?(?:details|summary)\b", stripped):
+            close_lists()
+            close_table()
+            out.append(line)
+            continue
+
+        # Horizontal rule
+        if re.match(r"^-{3,}$", stripped) or re.match(r"^\*{3,}$", stripped):
+            close_lists()
+            close_table()
+            out.append("<hr>")
+            continue
+
+        # Markdown table
+        if stripped.startswith("|") and stripped.endswith("|"):
+            close_lists()
+            if _is_table_sep(stripped):
+                # separator row — skip (already handled when opening table)
+                continue
+            if not in_table:
+                # First row is the header
+                in_table = True
+                out.append("<table>")
+                out.append(f"<thead>{_render_table_row(line, 'th')}</thead>")
+                out.append("<tbody>")
+            else:
+                out.append(_render_table_row(line, "td"))
+            continue
+
+        # If we were in a table but this line isn't a table row, close it
+        if in_table:
+            close_table()
+
+        # Blockquote
+        if stripped.startswith("> "):
+            close_lists()
+            out.append(f"<blockquote>{inline(stripped[2:])}</blockquote>")
+            continue
+
+        if stripped.startswith("#### "):
+            close_lists(); out.append(f"<h5>{inline(stripped[5:])}</h5>")
+        elif stripped.startswith("### "):
+            close_lists(); out.append(f"<h4>{inline(stripped[4:])}</h4>")
+        elif stripped.startswith("## "):
+            close_lists(); out.append(f"<h3>{inline(stripped[3:])}</h3>")
+        elif stripped.startswith("# "):
+            close_lists(); out.append(f"<h3>{inline(stripped[2:])}</h3>")
+        elif re.match(r"^[-*]\s+", stripped):
             if in_ol:
                 close_lists()
             if not in_ul:
                 out.append("<ul>"); in_ul = True
-            out.append(f"<li>{inline(re.sub(r'^[-*]\\s+', '', line))}</li>")
-        elif re.match(r"^\d+\.\s+", line):
+            out.append(f"<li>{inline(re.sub(r'^[-*]\s+', '', stripped))}</li>")
+        elif re.match(r"^\d+\.\s+", stripped):
             if in_ul:
                 close_lists()
             if not in_ol:
                 out.append("<ol>"); in_ol = True
-            out.append(f"<li>{inline(re.sub(r'^\\d+\\.\\s+', '', line))}</li>")
-        elif line.strip() == "":
+            out.append(f"<li>{inline(re.sub(r'^\d+[.]\s+', '', stripped))}</li>")
+        elif stripped == "":
             close_lists()
         else:
             close_lists()
-            out.append(f"<p>{inline(line)}</p>")
+            out.append(f"<p>{inline(stripped)}</p>")
 
     if in_pre:
         out.append("</pre>")
+    close_table()
     close_lists()
     return "\n".join(out)
 

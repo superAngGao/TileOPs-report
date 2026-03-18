@@ -57,25 +57,31 @@ def _load_progress_detailed(path: str | None) -> tuple[dict | None, dict[str, st
 
 def _progress_summary_text(prog: dict) -> str:
     """Format progress.json into a Markdown summary string."""
-    done  = prog["done_ops"]
-    total = prog["total_ops"]
-    impl  = prog["impl_ops"]
-    tested = prog["tested_ops"]
-    pct   = done / total * 100 if total else 0
+    done    = prog["done_ops"]
+    total   = prog["total_ops"]
+    impl    = prog["impl_ops"]
+    tested  = prog["tested_ops"]
+    benched = prog.get("benched_ops", 0)
+    pct     = done / total * 100 if total else 0
 
     lines = [
         "## Op Progress",
         f"- Total target ops: {total}",
-        f"- Fully done (tested + bench): {done} ({pct:.1f}%)",
+        f"- Fully done (impl + test + bench): {done} ({pct:.1f}%)",
         f"- Implemented: {impl}",
         f"- Passing tests: {tested}",
+        f"- Passing benchmarks: {benched}",
         "",
         "### Category breakdown",
     ]
     for cat in prog.get("categories", []):
-        d, t, im, te = cat["done_ops"], cat["total_ops"], cat["impl_ops"], cat.get("tested_ops", 0)
+        d  = cat["done_ops"]
+        t  = cat["total_ops"]
+        im = cat["impl_ops"]
+        te = cat.get("tested_ops", 0)
+        be = cat.get("benched_ops", 0)
         lines.append(
-            f"- **{cat['name']}**: {d}/{t} done, {im} implemented, {te} tested "
+            f"- **{cat['name']}**: {d}/{t} done, {im} impl, {te} tested, {be} benched "
             f"({'✓' if d == t else '…'})"
         )
     return "\n".join(lines) + "\n"
@@ -258,20 +264,24 @@ def build_progress_report(prog: dict | None) -> str:
             "> No progress data available (progress.json missing or failed to generate).\n"
         )
 
-    done  = prog["done_ops"]
-    total = prog["total_ops"]
-    impl  = prog["impl_ops"]
-    tested = prog["tested_ops"]
-    pct   = done / total * 100 if total else 0
+    done    = prog["done_ops"]
+    total   = prog["total_ops"]
+    impl    = prog["impl_ops"]
+    tested  = prog["tested_ops"]
+    benched = prog.get("benched_ops", 0)
+    pct     = done / total * 100 if total else 0
 
     lines = [
         "## Op Completion Progress",
         "",
-        f"**Overall: {done} / {total} ops completed ({pct:.1f}%)**  ",
-        f"Implemented: {impl} | Tests passing: {tested}",
+        f"**Overall: {done} / {total} ops fully completed ({pct:.1f}%)**  ",
+        f"Implemented: {impl} | Tests passing: {tested} | Bench passing: {benched}",
         "",
-        "| # | Category | Total | Impl | Tested | Done | Completion | Status |",
-        "|---|----------|------:|-----:|-------:|-----:|-----------:|--------|",
+        "> An op is \"Done\" only when all three pass: implementation exists, "
+        "tests pass, and benchmark passes.",
+        "",
+        "| # | Category | Total | Impl | Tested | Bench | Done | Completion | Status |",
+        "|---|----------|------:|-----:|-------:|------:|-----:|-----------:|--------|",
     ]
 
     for cat in prog.get("categories", []):
@@ -280,6 +290,7 @@ def build_progress_report(prog: dict | None) -> str:
         t     = cat["total_ops"]
         im    = cat["impl_ops"]
         te    = cat.get("tested_ops", 0)
+        be    = cat.get("benched_ops", 0)
         d     = cat["done_ops"]
         cp    = d / t * 100 if t else 0
 
@@ -292,7 +303,7 @@ def build_progress_report(prog: dict | None) -> str:
 
         bar = _progress_bar_text(cp)
         lines.append(
-            f"| {cid} | **{name}** | {t} | {im} | {te} | {d} "
+            f"| {cid} | **{name}** | {t} | {im} | {te} | {be} | {d} "
             f"| {bar} {cp:.0f}% | {status} |"
         )
 
