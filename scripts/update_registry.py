@@ -256,10 +256,21 @@ def remap_affected_ops(
                 max_tokens=8192,
             )
             for item in data.get("mappings", []):
+                # 硬过滤：排除列表中的文件路径
+                from bootstrap_registry import EXCLUDED_OPS
+                def _filter_excluded(paths: list[str]) -> list[str]:
+                    return [p for p in paths
+                            if not any(ex in p.lower() for ex in EXCLUDED_OPS)]
+                kernel = _filter_excluded(item.get("kernel", []))
+                tests  = _filter_excluded(item.get("tests", []))
+                bench  = _filter_excluded(item.get("bench", []))
+                if not kernel:
+                    tests = []
+                    bench = []
                 result[item["id"]] = {
-                    "kernel": item.get("kernel", []),
-                    "tests":  item.get("tests", []),
-                    "bench":  item.get("bench", []),
+                    "kernel": kernel,
+                    "tests":  tests,
+                    "bench":  bench,
                 }
             print(f"  Claude 映射重建 [{cat_name}]: {len(ops_batch)} 个算子")
         except Exception as exc:

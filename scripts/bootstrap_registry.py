@@ -427,10 +427,21 @@ def main() -> None:
                     max_tokens=8192,
                 )
                 for item in data.get("mappings", []):
+                    # 硬过滤：排除列表中的文件路径
+                    def _filter_excluded(paths: list[str]) -> list[str]:
+                        return [p for p in paths
+                                if not any(ex in p.lower() for ex in EXCLUDED_OPS)]
+                    kernel = _filter_excluded(item.get("kernel", []))
+                    tests  = _filter_excluded(item.get("tests", []))
+                    bench  = _filter_excluded(item.get("bench", []))
+                    # 一致性：无 kernel 则清空 tests/bench
+                    if not kernel:
+                        tests = []
+                        bench = []
                     claude_map[item["id"]] = {
-                        "kernel": item.get("kernel", []),
-                        "tests":  item.get("tests", []),
-                        "bench":  item.get("bench", []),
+                        "kernel": kernel,
+                        "tests":  tests,
+                        "bench":  bench,
                     }
                 n_kernel = sum(1 for v in claude_map.values() if v["kernel"])
                 n_tests  = sum(1 for v in claude_map.values() if v["tests"])
