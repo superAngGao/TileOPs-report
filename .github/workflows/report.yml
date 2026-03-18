@@ -204,6 +204,7 @@ jobs:
           cp dl/op_test/tileops_op_test.log      "${REPORT_DIR}/test_output.log"     2>/dev/null || true
           cp dl/benchmark/tileops_benchmarks.log "${REPORT_DIR}/tileops_benchmarks.log" 2>/dev/null || true
           cp dl/benchmark/tileops_benchmarks.log "${REPORT_DIR}/benchmark_report.md" 2>/dev/null || true
+          cp dl/benchmark/bench_results.xml      "${REPORT_DIR}/bench_results.xml"   2>/dev/null || true
 
           TEST_EXIT=$(python3 -c "
           import xml.etree.ElementTree as ET
@@ -219,7 +220,7 @@ jobs:
           BENCH_EXIT=$(python3 -c "
           import xml.etree.ElementTree as ET
           try:
-            root = ET.parse('dl/benchmark/bench_results.xml').getroot()
+            root = ET.parse('${REPORT_DIR}/bench_results.xml').getroot()
             suites = list(root) if root.tag == 'testsuites' else [root]
             fails = sum(int(s.get('failures',0))+int(s.get('errors',0)) for s in suites)
             print(1 if fails > 0 else 0)
@@ -269,7 +270,7 @@ jobs:
             --repo-dir   TileOPs/ \
             --manifest   scripts/op_manifest.json \
             --test-xml   "${{ steps.report.outputs.report_dir }}/test_results.xml" \
-            --bench-xml  dl/benchmark/bench_results.xml \
+            --bench-xml  "${{ steps.report.outputs.report_dir }}/bench_results.xml" \
             --output     "${{ steps.report.outputs.report_dir }}/progress.json"
 
       # ── Registry update (both modes) ─────────────────────────────────────
