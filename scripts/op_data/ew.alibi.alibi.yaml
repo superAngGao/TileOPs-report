@@ -13,7 +13,7 @@ files:
   bench: []
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 1
-func_score_notes: 测试和 benchmark 均缺失，实现状态不明，属于骨架或占位符级别。
+func_score_notes: 测试和 benchmark 均缺失，实现为骨架或占位符状态。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -34,7 +34,7 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T10:54:49Z'
+last_updated: '2026-03-18T11:08:28Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

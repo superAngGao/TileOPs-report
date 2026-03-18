@@ -12,7 +12,7 @@ files:
   bench: []
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 2
-func_score_notes: 测试失败，功能存在缺陷。PR 声称实现 vector_norm 子类别，但正确性未通过验证。
+func_score_notes: 测试失败，功能存在缺陷。benchmark 通过但无 ratio，性能数据不完整。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -23,7 +23,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试用例失败，l2_norm 计算结果不正确
+- 测试用例失败，l2_norm 实现存在正确性问题
 kernel_last_updated: '2026-03-17T11:19:03Z'
 kernel_last_pr_number: 547
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/547
@@ -34,7 +34,7 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T10:54:49Z'
+last_updated: '2026-03-18T11:08:28Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

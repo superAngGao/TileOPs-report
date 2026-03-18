@@ -14,7 +14,7 @@ files:
   - benchmarks/ops/bench_activation.py::bench_hardtanh
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 2
-func_score_notes: 测试状态 missing，功能验证缺失。benchmark 达标（ratio 1.0），但无测试覆盖无法确认正确性。
+func_score_notes: 测试状态 missing，功能验证缺失。benchmark 性能达标（ratio 1.0），但无测试覆盖无法确认正确性。
 func_score_updated: '2026-03-18'
 perf_score: 4
 perf_details:
@@ -41,7 +41,7 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T10:54:49Z'
+last_updated: '2026-03-18T11:08:28Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
