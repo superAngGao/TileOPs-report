@@ -14,7 +14,7 @@ files:
   - benchmarks/ops/bench_moe_permute_align.py::bench_permute_align
 files_last_scanned: '2026-03-18T05:54:04Z'
 func_score: 2
-func_score_notes: 测试与 benchmark 均失败；PR 标题显示存在小批量场景下 JIT hang 问题，说明基础功能部分实现但边界情况有严重缺陷。
+func_score_notes: PR 针对小 batch expert 阈值做修复以防止 JIT hang，说明核心逻辑存在但存在已知稳定性问题。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -25,9 +25,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 小批量 expert 场景触发 JIT hang
-- 测试失败
-- benchmark 无法运行
+- 小 batch 场景下 JIT hang，测试失败
 kernel_last_updated: '2026-03-18T05:36:31Z'
 kernel_last_pr_number: 564
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/564
@@ -38,7 +36,7 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T06:35:03Z'
+last_updated: '2026-03-18T07:08:05Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

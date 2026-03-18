@@ -14,7 +14,7 @@ files:
   - benchmarks/ops/bench_activation.py::bench_softplus
 files_last_scanned: '2026-03-18T05:54:04Z'
 func_score: 1
-func_score_notes: '测试用例缺失（status: missing），benchmark 失败，无法评估功能完整性。'
+func_score_notes: 测试用例缺失（missing），benchmark 无法运行，功能完整性无法验证。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -26,7 +26,7 @@ perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
 - 测试用例缺失
-- benchmark 运行失败，无性能数据
+- benchmark 无法运行
 kernel_last_updated: '2026-03-17T07:47:09Z'
 kernel_last_pr_number: 535
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/535
@@ -37,7 +37,7 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T06:35:03Z'
+last_updated: '2026-03-18T07:08:05Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

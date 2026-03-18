@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_gemm.py::bench_gemm
 files_last_scanned: '2026-03-18T05:54:04Z'
 func_score: 1
-func_score_notes: 测试与 benchmark 均失败，无法评估功能完整性，视为不可用状态。
+func_score_notes: 测试失败，功能未实现或存在严重缺陷。无 PR 关联，无法判断实现进度。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -26,7 +26,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试失败，benchmark 未能运行
+- 测试未通过，benchmark 无法运行
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -37,7 +37,7 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T06:35:03Z'
+last_updated: '2026-03-18T07:08:05Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

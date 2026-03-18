@@ -16,7 +16,7 @@ files:
   - benchmarks/ops/bench_binary_elementwise.py::bench_eq
 files_last_scanned: '2026-03-18T05:54:04Z'
 func_score: 1
-func_score_notes: 测试失败且 benchmark 失败，无法确认基本比较功能是否正常。
+func_score_notes: 测试失败，benchmark 失败，功能不可用。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -39,7 +39,7 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T06:35:03Z'
+last_updated: '2026-03-18T07:08:05Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

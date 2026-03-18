@@ -13,7 +13,7 @@ files:
   bench: []
 files_last_scanned: '2026-03-18T05:54:04Z'
 func_score: 1
-func_score_notes: 测试和 benchmark 均 missing，算子尚未实现或未注册。
+func_score_notes: 测试和 benchmark 均缺失，实现不可用。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -24,7 +24,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试文件缺失
+- 测试缺失
 - benchmark 缺失
 kernel_last_updated: '2026-03-17T07:47:09Z'
 kernel_last_pr_number: 535
@@ -36,7 +36,7 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T06:35:03Z'
+last_updated: '2026-03-18T07:08:05Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
