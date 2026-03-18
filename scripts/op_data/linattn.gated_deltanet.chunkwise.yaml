@@ -7,36 +7,39 @@ issue: 405
 files:
   kernel:
   - tileops/kernels/linear_attn/gated_delta_net/gated_deltanet_fwd.py
+  - tileops/kernels/linear_attn/gated_delta_net/gated_deltanet_bwd.py
   - tileops/kernels/linear_attn/gated_delta_net/fused_prepare_compute_w_u.py
+  - tileops/kernels/linear_attn/gated_delta_net/compute_w_u_bwd.py
   op:
   - tileops/ops/gated_deltanet.py
   tests:
-  - tests/ops/test_gated_deltanet_bwd.py::test_gated_deltanet_bwd
   - tests/ops/test_gated_deltanet_fwd.py::test_gated_deltanet_fwd
+  - tests/ops/test_gated_deltanet_bwd.py::test_gated_deltanet_bwd
+  - tests/ops/test_fused_gated.py::test_fused_gated
   bench:
-  - benchmarks/ops/bench_gated_deltanet_fwd.py
-files_last_scanned: '2026-03-15T20:22:03Z'
+  - benchmarks/ops/bench_gated_deltanet_vs_fla.py::bench_gated_deltanet_fwd
+  - benchmarks/ops/bench_gated_deltanet_vs_fla.py::bench_gated_deltanet_bwd
+files_last_scanned: '2026-03-18T05:54:04Z'
 func_score: null
-func_score_notes: 测试当前通过，但历史记录标记存在 bug，缺乏 bench 数据无法进一步评估。
-func_score_updated: '2026-03-18'
+func_score_notes: ''
+func_score_updated: null
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: '2026-03-18'
-has_bugs: true
-bugs:
-- 历史记录中存在已知 bug，具体内容未提供
-kernel_last_updated: '2026-03-15T11:12:33Z'
-kernel_last_pr_number: 476
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/476
-kernel_last_pr_author: superAngGao
-kernel_last_pr_title: '[BugFix][Linear-Attn] Cleanup dead kernels and add custom_op wrappers'
+perf_score_updated: null
+has_bugs: null
+bugs: []
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-18'
-  passed: true
+  last_run: null
+  passed: null
   errors: []
-last_updated: '2026-03-18T03:59:34Z'
-updated_by: claude-nightly
+last_updated: '2026-03-18T05:54:04Z'
+updated_by: bootstrap

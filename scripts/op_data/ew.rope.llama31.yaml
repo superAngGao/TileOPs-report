@@ -5,11 +5,15 @@ category_id: 1
 sub: rope
 issue: 397
 files:
-  kernel: []
-  op: []
-  tests: []
-  bench: []
-files_last_scanned: '2026-03-15T20:22:03Z'
+  kernel:
+  - tileops/kernels/rope.py
+  op:
+  - tileops/ops/rope.py
+  tests:
+  - tests/ops/test_rope.py::test_rope_llama31
+  bench:
+  - benchmarks/ops/bench_rope.py::bench_rope_llama31
+files_last_scanned: '2026-03-18T05:54:04Z'
 func_score: null
 func_score_notes: ''
 func_score_updated: null
@@ -31,5 +35,5 @@ test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-15T20:22:03Z'
+last_updated: '2026-03-18T05:54:04Z'
 updated_by: bootstrap

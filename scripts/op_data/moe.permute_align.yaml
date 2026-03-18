@@ -5,11 +5,14 @@ category_id: 9
 sub: permute_align
 issue: 404
 files:
-  kernel: []
+  kernel:
+  - tileops/kernels/moe/permute_align.py
   op: []
-  tests: []
-  bench: []
-files_last_scanned: '2026-03-15T20:22:03Z'
+  tests:
+  - tests/ops/test_moe_permute_align.py::test_permute_align_op
+  bench:
+  - benchmarks/ops/bench_moe_permute_align.py::bench_permute_align
+files_last_scanned: '2026-03-18T05:54:04Z'
 func_score: null
 func_score_notes: ''
 func_score_updated: null
@@ -31,5 +34,5 @@ test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-03-15T20:22:03Z'
+last_updated: '2026-03-18T05:54:04Z'
 updated_by: bootstrap

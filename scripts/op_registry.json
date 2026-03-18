@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-03-18T04:22:51Z",
+  "generated_at": "2026-03-18T05:54:04Z",
   "total_ops": 186,
   "ops": {
     "ew.binary_arith.add": {
@@ -23,15 +23,18 @@
           "tests/ops/test_binary_arith.py::test_add_strategies"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_arith.py"
+          "benchmarks/ops/bench_binary_arith.py::bench_add",
+          "benchmarks/ops/bench_binary_strategy.py::bench_add_strategies",
+          "benchmarks/ops/bench_independent_elementwise.py::bench_add",
+          "benchmarks/ops/bench_unary_strategy.py::bench_add"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.binary_arith.sub": {
       "id": "ew.binary_arith.sub",
@@ -51,15 +54,15 @@
           "tests/ops/test_binary_arith.py::test_sub_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_arith.py"
+          "benchmarks/ops/bench_binary_arith.py::bench_sub"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.binary_arith.mul": {
       "id": "ew.binary_arith.mul",
@@ -79,15 +82,15 @@
           "tests/ops/test_binary_arith.py::test_mul_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_arith.py"
+          "benchmarks/ops/bench_binary_arith.py::bench_mul"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.binary_arith.div": {
       "id": "ew.binary_arith.div",
@@ -107,15 +110,15 @@
           "tests/ops/test_binary_arith.py::test_div_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_arith.py"
+          "benchmarks/ops/bench_binary_arith.py::bench_div"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.binary_arith.remainder": {
       "id": "ew.binary_arith.remainder",
@@ -135,15 +138,15 @@
           "tests/ops/test_binary_arith.py::test_remainder_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_arith.py"
+          "benchmarks/ops/bench_binary_arith.py::bench_remainder"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.binary_arith.pow": {
       "id": "ew.binary_arith.pow",
@@ -163,15 +166,15 @@
           "tests/ops/test_binary_arith.py::test_pow_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_arith.py"
+          "benchmarks/ops/bench_binary_arith.py::bench_pow"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.binary_arith.floor_divide": {
       "id": "ew.binary_arith.floor_divide",
@@ -191,15 +194,15 @@
           "tests/ops/test_binary_arith.py::test_floor_divide_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_arith.py"
+          "benchmarks/ops/bench_binary_arith.py::bench_floor_divide"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.binary_arith.lerp": {
       "id": "ew.binary_arith.lerp",
@@ -219,15 +222,15 @@
           "tests/ops/test_binary_arith.py::test_lerp_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_arith.py"
+          "benchmarks/ops/bench_binary_arith.py::bench_lerp"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.binary_arith.maximum": {
       "id": "ew.binary_arith.maximum",
@@ -248,15 +251,15 @@
           "tests/ops/test_binary_arith.py::test_maximum_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_arith.py"
+          "benchmarks/ops/bench_binary_arith.py::bench_maximum"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.binary_arith.minimum": {
       "id": "ew.binary_arith.minimum",
@@ -277,15 +280,15 @@
           "tests/ops/test_binary_arith.py::test_minimum_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_arith.py"
+          "benchmarks/ops/bench_binary_arith.py::bench_minimum"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.exp": {
       "id": "ew.unary_math.exp",
@@ -306,15 +309,15 @@
           "tests/ops/test_unary_math.py::test_exp_edge"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_exp"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.log": {
       "id": "ew.unary_math.log",
@@ -335,15 +338,15 @@
           "tests/ops/test_unary_math.py::test_log_edge"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_log"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.sqrt": {
       "id": "ew.unary_math.sqrt",
@@ -364,15 +367,15 @@
           "tests/ops/test_unary_math.py::test_sqrt_edge"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_sqrt"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.rsqrt": {
       "id": "ew.unary_math.rsqrt",
@@ -393,15 +396,15 @@
           "tests/ops/test_unary_math.py::test_rsqrt_edge"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_rsqrt"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.abs": {
       "id": "ew.unary_math.abs",
@@ -421,15 +424,15 @@
           "tests/ops/test_unary_math.py::test_abs"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_abs"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.neg": {
       "id": "ew.unary_math.neg",
@@ -449,15 +452,15 @@
           "tests/ops/test_unary_math.py::test_neg"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_neg"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.reciprocal": {
       "id": "ew.unary_math.reciprocal",
@@ -478,15 +481,15 @@
           "tests/ops/test_unary_math.py::test_reciprocal_edge"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_reciprocal"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.sign": {
       "id": "ew.unary_math.sign",
@@ -507,15 +510,15 @@
           "tests/ops/test_unary_math.py::test_sign_edge"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_sign"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.sin": {
       "id": "ew.unary_math.sin",
@@ -535,15 +538,15 @@
           "tests/ops/test_unary_math.py::test_sin"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_sin"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.cos": {
       "id": "ew.unary_math.cos",
@@ -563,15 +566,15 @@
           "tests/ops/test_unary_math.py::test_cos"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_cos"
         ]
       },
-      "func_score": 4,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.floor": {
       "id": "ew.unary_math.floor",
@@ -591,15 +594,15 @@
           "tests/ops/test_unary_math.py::test_floor"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_floor"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.ceil": {
       "id": "ew.unary_math.ceil",
@@ -619,15 +622,15 @@
           "tests/ops/test_unary_math.py::test_ceil"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_ceil"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.round": {
       "id": "ew.unary_math.round",
@@ -647,15 +650,15 @@
           "tests/ops/test_unary_math.py::test_round"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_round"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.trunc": {
       "id": "ew.unary_math.trunc",
@@ -675,15 +678,15 @@
           "tests/ops/test_unary_math.py::test_trunc"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_trunc"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.erf": {
       "id": "ew.unary_math.erf",
@@ -704,15 +707,15 @@
           "tests/ops/test_unary_math.py::test_erf_edge"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_erf"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.log1p": {
       "id": "ew.unary_math.log1p",
@@ -733,15 +736,15 @@
           "tests/ops/test_unary_math.py::test_log1p_edge"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_log1p"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.unary_math.expm1": {
       "id": "ew.unary_math.expm1",
@@ -762,15 +765,15 @@
           "tests/ops/test_unary_math.py::test_expm1_edge"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_unary_elementwise.py::bench_expm1"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.relu": {
       "id": "ew.activation.relu",
@@ -791,15 +794,16 @@
           "tests/ops/test_activation.py::test_relu_strategies"
         ],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_relu",
+          "benchmarks/ops/bench_activation.py::bench_relu_strategies"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.gelu": {
       "id": "ew.activation.gelu",
@@ -819,15 +823,15 @@
           "tests/ops/test_activation.py::test_gelu"
         ],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_gelu"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.silu": {
       "id": "ew.activation.silu",
@@ -847,15 +851,15 @@
           "tests/ops/test_activation.py::test_silu"
         ],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_silu"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.sigmoid": {
       "id": "ew.activation.sigmoid",
@@ -876,15 +880,15 @@
           "tests/ops/test_activation.py::test_sigmoid_edge"
         ],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_sigmoid"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.tanh": {
       "id": "ew.activation.tanh",
@@ -905,15 +909,15 @@
           "tests/ops/test_activation.py::test_tanh_edge"
         ],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_tanh"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.leaky_relu": {
       "id": "ew.activation.leaky_relu",
@@ -931,15 +935,15 @@
         ],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_leaky_relu"
         ]
       },
-      "func_score": 2,
+      "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.elu": {
       "id": "ew.activation.elu",
@@ -957,15 +961,15 @@
         ],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_elu"
         ]
       },
-      "func_score": 2,
+      "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.selu": {
       "id": "ew.activation.selu",
@@ -985,15 +989,15 @@
           "tests/ops/test_activation.py::test_selu"
         ],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_selu"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.hardswish": {
       "id": "ew.activation.hardswish",
@@ -1013,15 +1017,15 @@
           "tests/ops/test_activation.py::test_hardswish"
         ],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_hardswish"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.hardsigmoid": {
       "id": "ew.activation.hardsigmoid",
@@ -1041,15 +1045,15 @@
           "tests/ops/test_activation.py::test_hardsigmoid"
         ],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_hardsigmoid"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.hardtanh": {
       "id": "ew.activation.hardtanh",
@@ -1067,15 +1071,15 @@
         ],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_hardtanh"
         ]
       },
-      "func_score": 2,
+      "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.softplus": {
       "id": "ew.activation.softplus",
@@ -1093,15 +1097,15 @@
         ],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_softplus"
         ]
       },
-      "func_score": 2,
+      "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.mish": {
       "id": "ew.activation.mish",
@@ -1121,15 +1125,15 @@
           "tests/ops/test_activation.py::test_mish"
         ],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_mish"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.activation.prelu": {
       "id": "ew.activation.prelu",
@@ -1147,15 +1151,15 @@
         ],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_prelu"
         ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.fused_gated.silu_and_mul": {
       "id": "ew.fused_gated.silu_and_mul",
@@ -1175,15 +1179,15 @@
           "tests/ops/test_fused_gated.py::test_silu_and_mul_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_silu_and_mul"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.fused_gated.gelu_and_mul": {
       "id": "ew.fused_gated.gelu_and_mul",
@@ -1203,15 +1207,15 @@
           "tests/ops/test_fused_gated.py::test_gelu_and_mul_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_gelu_and_mul"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.fused_gated.gelu_tanh_and_mul": {
       "id": "ew.fused_gated.gelu_tanh_and_mul",
@@ -1231,15 +1235,15 @@
           "tests/ops/test_fused_gated.py::test_gelu_tanh_and_mul_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_activation.py"
+          "benchmarks/ops/bench_activation.py::bench_gelu_tanh_and_mul"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.comparison.eq": {
       "id": "ew.comparison.eq",
@@ -1260,15 +1264,15 @@
           "tests/ops/test_comparison.py::test_eq_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_eq"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.comparison.ne": {
       "id": "ew.comparison.ne",
@@ -1288,15 +1292,15 @@
           "tests/ops/test_comparison.py::test_ne_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_ne"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.comparison.gt": {
       "id": "ew.comparison.gt",
@@ -1316,15 +1320,15 @@
           "tests/ops/test_comparison.py::test_gt_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_gt"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.comparison.lt": {
       "id": "ew.comparison.lt",
@@ -1344,15 +1348,15 @@
           "tests/ops/test_comparison.py::test_lt_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_lt"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.comparison.ge": {
       "id": "ew.comparison.ge",
@@ -1372,15 +1376,15 @@
           "tests/ops/test_comparison.py::test_ge_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_ge"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.comparison.le": {
       "id": "ew.comparison.le",
@@ -1400,15 +1404,15 @@
           "tests/ops/test_comparison.py::test_le_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_le"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.bitwise.and": {
       "id": "ew.bitwise.and",
@@ -1428,15 +1432,15 @@
           "tests/ops/test_bitwise.py::test_bitwise_and_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_bitwise_and"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.bitwise.or": {
       "id": "ew.bitwise.or",
@@ -1456,15 +1460,15 @@
           "tests/ops/test_bitwise.py::test_bitwise_or_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_bitwise_or"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.bitwise.xor": {
       "id": "ew.bitwise.xor",
@@ -1484,15 +1488,15 @@
           "tests/ops/test_bitwise.py::test_bitwise_xor_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_bitwise_xor"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.bitwise.not": {
       "id": "ew.bitwise.not",
@@ -1512,15 +1516,15 @@
           "tests/ops/test_bitwise.py::test_bitwise_not"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_bitwise_not"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.logical.not": {
       "id": "ew.logical.not",
@@ -1540,15 +1544,15 @@
           "tests/ops/test_logical.py::test_logical_not"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_logical_not"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.logical.and": {
       "id": "ew.logical.and",
@@ -1568,15 +1572,15 @@
           "tests/ops/test_logical.py::test_logical_and_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_logical_and"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.logical.or": {
       "id": "ew.logical.or",
@@ -1596,15 +1600,15 @@
           "tests/ops/test_logical.py::test_logical_or_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_binary_elementwise.py"
+          "benchmarks/ops/bench_binary_elementwise.py::bench_logical_or"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.special.where": {
       "id": "ew.special.where",
@@ -1626,9 +1630,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.special.clamp": {
       "id": "ew.special.clamp",
@@ -1650,9 +1654,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.special.masked_fill": {
       "id": "ew.special.masked_fill",
@@ -1674,9 +1678,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.special.nan_to_num": {
       "id": "ew.special.nan_to_num",
@@ -1698,9 +1702,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.special.isnan": {
       "id": "ew.special.isnan",
@@ -1722,12 +1726,12 @@
         ],
         "bench": []
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.special.isinf": {
       "id": "ew.special.isinf",
@@ -1749,12 +1753,12 @@
         ],
         "bench": []
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.special.isfinite": {
       "id": "ew.special.isfinite",
@@ -1776,12 +1780,12 @@
         ],
         "bench": []
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.dropout.dropout": {
       "id": "ew.dropout.dropout",
@@ -1791,17 +1795,25 @@
       "sub": "dropout",
       "issue": 397,
       "files": {
-        "kernel": [],
-        "op": [],
-        "tests": [],
-        "bench": []
+        "kernel": [
+          "tileops/kernels/dropout.py"
+        ],
+        "op": [
+          "tileops/ops/dropout.py"
+        ],
+        "tests": [
+          "tests/ops/test_dropout.py::test_dropout"
+        ],
+        "bench": [
+          "benchmarks/ops/bench_dropout.py::bench_dropout"
+        ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.rope.neox": {
       "id": "ew.rope.neox",
@@ -1811,17 +1823,25 @@
       "sub": "rope",
       "issue": 397,
       "files": {
-        "kernel": [],
-        "op": [],
-        "tests": [],
-        "bench": []
+        "kernel": [
+          "tileops/kernels/rope.py"
+        ],
+        "op": [
+          "tileops/ops/rope.py"
+        ],
+        "tests": [
+          "tests/ops/test_rope.py::test_rope_neox"
+        ],
+        "bench": [
+          "benchmarks/ops/bench_rope.py::bench_rope_neox"
+        ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.rope.non_neox": {
       "id": "ew.rope.non_neox",
@@ -1831,17 +1851,25 @@
       "sub": "rope",
       "issue": 397,
       "files": {
-        "kernel": [],
-        "op": [],
-        "tests": [],
-        "bench": []
+        "kernel": [
+          "tileops/kernels/rope.py"
+        ],
+        "op": [
+          "tileops/ops/rope.py"
+        ],
+        "tests": [
+          "tests/ops/test_rope.py::test_rope_non_neox"
+        ],
+        "bench": [
+          "benchmarks/ops/bench_rope.py::bench_rope_non_neox"
+        ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.rope.llama31": {
       "id": "ew.rope.llama31",
@@ -1851,17 +1879,25 @@
       "sub": "rope",
       "issue": 397,
       "files": {
-        "kernel": [],
-        "op": [],
-        "tests": [],
-        "bench": []
+        "kernel": [
+          "tileops/kernels/rope.py"
+        ],
+        "op": [
+          "tileops/ops/rope.py"
+        ],
+        "tests": [
+          "tests/ops/test_rope.py::test_rope_llama31"
+        ],
+        "bench": [
+          "benchmarks/ops/bench_rope.py::bench_rope_llama31"
+        ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.rope.yarn": {
       "id": "ew.rope.yarn",
@@ -1881,7 +1917,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.rope.longrope": {
       "id": "ew.rope.longrope",
@@ -1901,7 +1937,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.alibi.alibi": {
       "id": "ew.alibi.alibi",
@@ -1923,9 +1959,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ew.sinusoidal.sinusoidal": {
       "id": "ew.sinusoidal.sinusoidal",
@@ -1947,9 +1983,9 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-17T07:47:09Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T04:22:51Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.reduce.sum": {
       "id": "reduce.reduce.sum",
@@ -1972,15 +2008,15 @@
           "tests/ops/test_reduce.py::test_sum_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_reduce.py"
+          "benchmarks/ops/bench_reduce.py::bench_sum"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.reduce.mean": {
       "id": "reduce.reduce.mean",
@@ -2000,15 +2036,15 @@
           "tests/ops/test_reduce.py::test_mean_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_reduce.py"
+          "benchmarks/ops/bench_reduce.py::bench_mean"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.reduce.amin": {
       "id": "reduce.reduce.amin",
@@ -2028,15 +2064,15 @@
           "tests/ops/test_reduce.py::test_amin_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_reduce.py"
+          "benchmarks/ops/bench_reduce.py::bench_amin"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.reduce.amax": {
       "id": "reduce.reduce.amax",
@@ -2056,15 +2092,15 @@
           "tests/ops/test_reduce.py::test_amax_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_reduce.py"
+          "benchmarks/ops/bench_reduce.py::bench_amax"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.reduce.prod": {
       "id": "reduce.reduce.prod",
@@ -2084,15 +2120,15 @@
           "tests/ops/test_reduce.py::test_prod_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_reduce.py"
+          "benchmarks/ops/bench_reduce.py::bench_prod"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.reduce.std": {
       "id": "reduce.reduce.std",
@@ -2114,15 +2150,15 @@
           "tests/ops/test_reduce.py::test_std_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_reduce.py"
+          "benchmarks/ops/bench_reduce.py::bench_std"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.reduce.var": {
       "id": "reduce.reduce.var",
@@ -2145,15 +2181,15 @@
           "tests/ops/test_reduce.py::test_var_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_reduce.py"
+          "benchmarks/ops/bench_reduce.py::bench_var"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.reduce.var_mean": {
       "id": "reduce.reduce.var_mean",
@@ -2174,15 +2210,15 @@
           "tests/ops/test_reduce.py::test_var_mean_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_reduce.py"
+          "benchmarks/ops/bench_reduce.py::bench_var_mean"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.softmax.softmax": {
       "id": "reduce.softmax.softmax",
@@ -2204,15 +2240,15 @@
           "tests/ops/test_softmax.py::test_softmax_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_reduce.py"
+          "benchmarks/ops/bench_softmax.py::bench_softmax"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.softmax.log_softmax": {
       "id": "reduce.softmax.log_softmax",
@@ -2233,15 +2269,15 @@
           "tests/ops/test_softmax.py::test_log_softmax_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_reduce.py"
+          "benchmarks/ops/bench_softmax.py::bench_log_softmax"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.softmax.logsumexp": {
       "id": "reduce.softmax.logsumexp",
@@ -2262,15 +2298,15 @@
           "tests/ops/test_softmax.py::test_logsumexp_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_reduce.py"
+          "benchmarks/ops/bench_softmax.py::bench_logsumexp"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.argreduce.argmax": {
       "id": "reduce.argreduce.argmax",
@@ -2292,15 +2328,15 @@
           "tests/ops/test_argreduce.py::test_argmax_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_argreduce.py"
+          "benchmarks/ops/bench_argreduce.py::bench_argmax"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.argreduce.argmin": {
       "id": "reduce.argreduce.argmin",
@@ -2322,15 +2358,15 @@
           "tests/ops/test_argreduce.py::test_argmin_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_argreduce.py"
+          "benchmarks/ops/bench_argreduce.py::bench_argmin"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.cumulative.cumsum": {
       "id": "reduce.cumulative.cumsum",
@@ -2352,15 +2388,15 @@
           "tests/ops/test_cumulative.py::test_cumsum_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_cumulative.py"
+          "benchmarks/ops/bench_cumulative.py::bench_cumsum"
         ]
       },
-      "func_score": 3,
+      "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.cumulative.cumprod": {
       "id": "reduce.cumulative.cumprod",
@@ -2382,15 +2418,15 @@
           "tests/ops/test_cumulative.py::test_cumprod_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_cumulative.py"
+          "benchmarks/ops/bench_cumulative.py::bench_cumprod"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.logical_reduce.any": {
       "id": "reduce.logical_reduce.any",
@@ -2400,17 +2436,25 @@
       "sub": "logical_reduce",
       "issue": 398,
       "files": {
-        "kernel": [],
-        "op": [],
-        "tests": [],
-        "bench": []
+        "kernel": [
+          "tileops/kernels/reduction/logical_reduce/fwd.py"
+        ],
+        "op": [
+          "tileops/ops/reduction/any_op.py"
+        ],
+        "tests": [
+          "tests/ops/test_logical_reduce.py::test_any_op"
+        ],
+        "bench": [
+          "benchmarks/ops/bench_logical_reduce.py::bench_any"
+        ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.logical_reduce.all": {
       "id": "reduce.logical_reduce.all",
@@ -2420,17 +2464,25 @@
       "sub": "logical_reduce",
       "issue": 398,
       "files": {
-        "kernel": [],
-        "op": [],
-        "tests": [],
-        "bench": []
+        "kernel": [
+          "tileops/kernels/reduction/logical_reduce/fwd.py"
+        ],
+        "op": [
+          "tileops/ops/reduction/all_op.py"
+        ],
+        "tests": [
+          "tests/ops/test_logical_reduce.py::test_all_op"
+        ],
+        "bench": [
+          "benchmarks/ops/bench_logical_reduce.py::bench_all"
+        ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.linalg.l1_norm": {
       "id": "reduce.linalg.l1_norm",
@@ -2440,17 +2492,25 @@
       "sub": "linalg_vector_norm",
       "issue": 398,
       "files": {
-        "kernel": [],
-        "op": [],
-        "tests": [],
-        "bench": []
+        "kernel": [
+          "tileops/kernels/reduction/vector_norm/fwd.py"
+        ],
+        "op": [
+          "tileops/ops/reduction/l1_norm.py"
+        ],
+        "tests": [
+          "tests/ops/test_vector_norm.py::test_l1_norm_op"
+        ],
+        "bench": [
+          "benchmarks/ops/bench_vector_norm.py::bench_l1_norm"
+        ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.linalg.l2_norm": {
       "id": "reduce.linalg.l2_norm",
@@ -2460,17 +2520,25 @@
       "sub": "linalg_vector_norm",
       "issue": 398,
       "files": {
-        "kernel": [],
-        "op": [],
-        "tests": [],
-        "bench": []
+        "kernel": [
+          "tileops/kernels/reduction/vector_norm/fwd.py"
+        ],
+        "op": [
+          "tileops/ops/reduction/l2_norm.py"
+        ],
+        "tests": [
+          "tests/ops/test_vector_norm.py::test_l2_norm_op"
+        ],
+        "bench": [
+          "benchmarks/ops/bench_vector_norm.py::bench_l2_norm"
+        ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "reduce.linalg.inf_norm": {
       "id": "reduce.linalg.inf_norm",
@@ -2480,17 +2548,25 @@
       "sub": "linalg_vector_norm",
       "issue": 398,
       "files": {
-        "kernel": [],
-        "op": [],
-        "tests": [],
-        "bench": []
+        "kernel": [
+          "tileops/kernels/reduction/vector_norm/fwd.py"
+        ],
+        "op": [
+          "tileops/ops/reduction/inf_norm.py"
+        ],
+        "tests": [
+          "tests/ops/test_vector_norm.py::test_inf_norm_op"
+        ],
+        "bench": [
+          "benchmarks/ops/bench_vector_norm.py::bench_inf_norm"
+        ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "norm.layer_norm": {
       "id": "norm.layer_norm",
@@ -2511,15 +2587,15 @@
           "tests/ops/test_layer_norm.py::test_layer_norm_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_layer_norm.py"
+          "benchmarks/ops/bench_layer_norm.py::bench_layer_norm"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "norm.batch_norm": {
       "id": "norm.batch_norm",
@@ -2540,15 +2616,15 @@
           "tests/ops/test_batch_norm.py::test_batch_norm_fwd"
         ],
         "bench": [
-          "benchmarks/ops/bench_batch_norm.py"
+          "benchmarks/ops/bench_batch_norm.py::bench_batch_norm"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "norm.group_norm": {
       "id": "norm.group_norm",
@@ -2569,15 +2645,15 @@
           "tests/ops/test_group_norm.py::test_group_norm_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_group_norm.py"
+          "benchmarks/ops/bench_group_norm.py::bench_group_norm"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "norm.instance_norm": {
       "id": "norm.instance_norm",
@@ -2598,15 +2674,15 @@
           "tests/ops/test_instance_norm.py::test_instance_norm_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_instance_norm.py"
+          "benchmarks/ops/bench_instance_norm.py::bench_instance_norm"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "norm.rms_norm": {
       "id": "norm.rms_norm",
@@ -2627,15 +2703,15 @@
           "tests/ops/test_rms_norm.py::test_rms_norm_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_rms_norm.py"
+          "benchmarks/ops/bench_rms_norm.py::bench_rms_norm"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "norm.qk_norm": {
       "id": "norm.qk_norm",
@@ -2657,7 +2733,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "norm.ada_layer_norm": {
       "id": "norm.ada_layer_norm",
@@ -2678,15 +2754,15 @@
           "tests/ops/test_ada_layer_norm.py::test_ada_layer_norm_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_ada_layer_norm.py"
+          "benchmarks/ops/bench_ada_layer_norm.py::bench_ada_layer_norm"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "norm.ada_layer_norm_zero": {
       "id": "norm.ada_layer_norm_zero",
@@ -2707,15 +2783,15 @@
           "tests/ops/test_ada_layer_norm_zero.py::test_ada_layer_norm_zero_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_ada_layer_norm.py"
+          "benchmarks/ops/bench_ada_layer_norm.py::bench_ada_layer_norm_zero"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "norm.fused_add_layer_norm": {
       "id": "norm.fused_add_layer_norm",
@@ -2736,15 +2812,15 @@
           "tests/ops/test_fused_add_layer_norm.py::test_fused_add_layer_norm_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_fused_add_layer_norm.py"
+          "benchmarks/ops/bench_fused_add_layer_norm.py::bench_fused_add_layer_norm"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "norm.fused_add_rmsnorm": {
       "id": "norm.fused_add_rmsnorm",
@@ -2765,15 +2841,15 @@
           "tests/ops/test_fused_add_rmsnorm.py::test_fused_add_rmsnorm_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_fused_add_layer_norm.py"
+          "benchmarks/ops/bench_fused_add_layer_norm.py::bench_fused_add_rmsnorm"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.conv.conv1d": {
       "id": "conv.conv.conv1d",
@@ -2793,7 +2869,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.conv.conv2d": {
       "id": "conv.conv.conv2d",
@@ -2813,7 +2889,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.conv.conv3d": {
       "id": "conv.conv.conv3d",
@@ -2833,7 +2909,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.conv_transpose.conv_t1d": {
       "id": "conv.conv_transpose.conv_t1d",
@@ -2853,7 +2929,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.conv_transpose.conv_t2d": {
       "id": "conv.conv_transpose.conv_t2d",
@@ -2873,7 +2949,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.depthwise.depthwise_conv2d": {
       "id": "conv.depthwise.depthwise_conv2d",
@@ -2893,7 +2969,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.grouped.grouped_conv2d": {
       "id": "conv.grouped.grouped_conv2d",
@@ -2913,7 +2989,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.dilated.dilated_conv2d": {
       "id": "conv.dilated.dilated_conv2d",
@@ -2933,7 +3009,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.max_pool.max_pool1d": {
       "id": "conv.max_pool.max_pool1d",
@@ -2953,7 +3029,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.max_pool.max_pool2d": {
       "id": "conv.max_pool.max_pool2d",
@@ -2973,7 +3049,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.max_pool.max_pool3d": {
       "id": "conv.max_pool.max_pool3d",
@@ -2993,7 +3069,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.avg_pool.avg_pool1d": {
       "id": "conv.avg_pool.avg_pool1d",
@@ -3013,7 +3089,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.avg_pool.avg_pool2d": {
       "id": "conv.avg_pool.avg_pool2d",
@@ -3033,7 +3109,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.avg_pool.avg_pool3d": {
       "id": "conv.avg_pool.avg_pool3d",
@@ -3053,7 +3129,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.adaptive.adaptive_avg_pool2d": {
       "id": "conv.adaptive.adaptive_avg_pool2d",
@@ -3073,7 +3149,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "conv.adaptive.adaptive_max_pool2d": {
       "id": "conv.adaptive.adaptive_max_pool2d",
@@ -3093,7 +3169,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.gemm.fp16": {
       "id": "gemm.gemm.fp16",
@@ -3113,15 +3189,15 @@
           "tests/ops/test_gemm.py::test_gemm"
         ],
         "bench": [
-          "benchmarks/ops/bench_gemm.py"
+          "benchmarks/ops/bench_gemm.py::bench_gemm"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.gemm.fp8": {
       "id": "gemm.gemm.fp8",
@@ -3139,7 +3215,7 @@
         ],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_gemm.py"
+          "benchmarks/ops/bench_gemm.py::bench_gemm_fp8"
         ]
       },
       "func_score": null,
@@ -3147,7 +3223,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T22:26:29Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.gemm.fp8_block_scaled": {
       "id": "gemm.gemm.fp8_block_scaled",
@@ -3165,7 +3241,7 @@
         ],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_gemm.py"
+          "benchmarks/ops/bench_gemm.py::bench_gemm_fp8_block_scaled"
         ]
       },
       "func_score": null,
@@ -3173,7 +3249,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T22:26:29Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.gemm.gemv_fp16": {
       "id": "gemm.gemm.gemv_fp16",
@@ -3194,15 +3270,15 @@
           "tests/ops/test_gemm.py::test_gemv_boundary_rhs_col"
         ],
         "bench": [
-          "benchmarks/ops/bench_gemm.py"
+          "benchmarks/ops/bench_gemm.py::bench_gemv"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-15T14:07:28Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T03:59:34Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.gemm.gemv_fp8": {
       "id": "gemm.gemm.gemv_fp8",
@@ -3220,15 +3296,15 @@
         ],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_gemm.py"
+          "benchmarks/ops/bench_gemm.py::bench_gemv_fp8"
         ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-15T14:07:28Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-16T22:31:37Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.gemm.small_batch_fp16": {
       "id": "gemm.gemm.small_batch_fp16",
@@ -3246,7 +3322,7 @@
         ],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_gemm.py"
+          "benchmarks/ops/bench_gemm.py::bench_small_batch_gemm"
         ]
       },
       "func_score": null,
@@ -3254,7 +3330,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T22:26:29Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.gemm.small_batch_fp8": {
       "id": "gemm.gemm.small_batch_fp8",
@@ -3272,7 +3348,7 @@
         ],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_gemm.py"
+          "benchmarks/ops/bench_gemm.py::bench_small_batch_gemm_fp8"
         ]
       },
       "func_score": null,
@@ -3280,7 +3356,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T22:26:29Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.bmm.fp16": {
       "id": "gemm.bmm.fp16",
@@ -3290,11 +3366,13 @@
       "sub": "bmm",
       "issue": 400,
       "files": {
-        "kernel": [],
+        "kernel": [
+          "tileops/kernels/gemm/gemm.py"
+        ],
         "op": [],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_gemm.py"
+          "benchmarks/ops/bench_gemm.py::bench_bmm"
         ]
       },
       "func_score": null,
@@ -3302,7 +3380,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T22:26:29Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.bmm.fp8": {
       "id": "gemm.bmm.fp8",
@@ -3312,11 +3390,13 @@
       "sub": "bmm",
       "issue": 400,
       "files": {
-        "kernel": [],
+        "kernel": [
+          "tileops/kernels/gemm/gemm.py"
+        ],
         "op": [],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_gemm.py"
+          "benchmarks/ops/bench_gemm.py::bench_bmm_fp8"
         ]
       },
       "func_score": null,
@@ -3324,7 +3404,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T22:26:29Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.groupgemm.fp16": {
       "id": "gemm.groupgemm.fp16",
@@ -3344,15 +3424,15 @@
           "tests/ops/test_grouped_gemm.py::test_grouped_gemm"
         ],
         "bench": [
-          "benchmarks/ops/bench_grouped_gemm.py"
+          "benchmarks/ops/bench_grouped_gemm.py::bench_grouped_gemm"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.groupgemm.fp8": {
       "id": "gemm.groupgemm.fp8",
@@ -3370,7 +3450,7 @@
         ],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_grouped_gemm.py"
+          "benchmarks/ops/bench_grouped_gemm.py::bench_grouped_gemm_fp8"
         ]
       },
       "func_score": null,
@@ -3378,7 +3458,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T22:26:29Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.outer.outer": {
       "id": "gemm.outer.outer",
@@ -3398,7 +3478,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.lowbit.w4a16": {
       "id": "gemm.lowbit.w4a16",
@@ -3418,7 +3498,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.lowbit.w8a8": {
       "id": "gemm.lowbit.w8a8",
@@ -3438,7 +3518,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.lowbit.w8a8_int8": {
       "id": "gemm.lowbit.w8a8_int8",
@@ -3458,7 +3538,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.lowbit.weight_only_int4": {
       "id": "gemm.lowbit.weight_only_int4",
@@ -3478,7 +3558,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.lowbit.fp4": {
       "id": "gemm.lowbit.fp4",
@@ -3498,7 +3578,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.sparse.fp16": {
       "id": "gemm.sparse.fp16",
@@ -3518,7 +3598,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "gemm.sparse.fp8": {
       "id": "gemm.sparse.fp8",
@@ -3538,7 +3618,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "quant.int8.per_tensor": {
       "id": "quant.int8.per_tensor",
@@ -3558,7 +3638,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "quant.int8.per_channel": {
       "id": "quant.int8.per_channel",
@@ -3578,7 +3658,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "quant.int8.per_block": {
       "id": "quant.int8.per_block",
@@ -3598,7 +3678,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "quant.int8.smooth_quant": {
       "id": "quant.int8.smooth_quant",
@@ -3618,7 +3698,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "quant.int4.per_channel": {
       "id": "quant.int4.per_channel",
@@ -3638,7 +3718,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "quant.int4.per_block": {
       "id": "quant.int4.per_block",
@@ -3658,7 +3738,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "quant.int4.nf4": {
       "id": "quant.int4.nf4",
@@ -3678,7 +3758,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "quant.fp8.per_tensor": {
       "id": "quant.fp8.per_tensor",
@@ -3698,15 +3778,15 @@
           "tests/ops/test_fp8_quant.py::test_fp8_quant_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_fp8_quant.py"
+          "benchmarks/ops/bench_fp8_quant.py::bench_fp8_quant"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "quant.fp8.per_block": {
       "id": "quant.fp8.per_block",
@@ -3716,11 +3796,13 @@
       "sub": "fp8_quantize",
       "issue": 401,
       "files": {
-        "kernel": [],
+        "kernel": [
+          "tileops/kernels/deepseek_mla/fp8_quant.py"
+        ],
         "op": [],
         "tests": [],
         "bench": [
-          "benchmarks/ops/bench_fp8_quant.py"
+          "benchmarks/ops/bench_fp8_quant.py::bench_fp8_block_quant"
         ]
       },
       "func_score": null,
@@ -3728,7 +3810,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T22:26:29Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "quant.fp8.cast_transpose": {
       "id": "quant.fp8.cast_transpose",
@@ -3748,7 +3830,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "sampling.top_k": {
       "id": "sampling.top_k",
@@ -3768,7 +3850,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "sampling.top_p": {
       "id": "sampling.top_p",
@@ -3788,7 +3870,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "sampling.min_p": {
       "id": "sampling.min_p",
@@ -3808,7 +3890,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "sampling.top_k_top_p": {
       "id": "sampling.top_k_top_p",
@@ -3828,7 +3910,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "sampling.temperature_scale": {
       "id": "sampling.temperature_scale",
@@ -3848,7 +3930,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "sampling.from_probs": {
       "id": "sampling.from_probs",
@@ -3868,7 +3950,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "sampling.chain_spec": {
       "id": "sampling.chain_spec",
@@ -3887,14 +3969,16 @@
         "tests": [
           "tests/ops/test_topk_selector.py::test_topk_selector_op"
         ],
-        "bench": []
+        "bench": [
+          "benchmarks/ops/bench_topk_selector.py::bench_topk_selector"
+        ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-15T14:07:28Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T03:59:34Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.flash.prefill_fwd": {
       "id": "attn.flash.prefill_fwd",
@@ -3905,8 +3989,7 @@
       "issue": 403,
       "files": {
         "kernel": [
-          "tileops/kernels/flash_attn/fwd.py",
-          "tileops/kernels/deepseek_nsa/gqa_sliding_window_fwd.py"
+          "tileops/kernels/flash_attn/fwd.py"
         ],
         "op": [
           "tileops/ops/gqa.py",
@@ -3917,15 +4000,16 @@
           "tests/ops/test_mha.py::test_mha_fwd"
         ],
         "bench": [
-          "benchmarks/ops/bench_gqa.py"
+          "benchmarks/ops/bench_gqa.py::bench_gqa_fwd",
+          "benchmarks/ops/bench_mha.py::bench_mha_fwd"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-15T10:59:24Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T03:59:34Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.flash.prefill_bwd": {
       "id": "attn.flash.prefill_bwd",
@@ -3947,15 +4031,16 @@
           "tests/ops/test_mha.py::test_mha_bwd"
         ],
         "bench": [
-          "benchmarks/ops/bench_gqa.py"
+          "benchmarks/ops/bench_gqa.py::bench_gqa_bwd",
+          "benchmarks/ops/bench_mha.py::bench_mha_bwd"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-15T10:59:24Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T03:59:34Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.flash.prefill_varlen_fwd": {
       "id": "attn.flash.prefill_varlen_fwd",
@@ -3974,14 +4059,16 @@
         "tests": [
           "tests/ops/test_gqa_sliding_window_varlen_fwd.py::test_gqa_sliding_window_varlen_fwd_op"
         ],
-        "bench": []
+        "bench": [
+          "benchmarks/ops/bench_gqa_sliding_window_varlen_fwd.py::bench_gqa_sliding_window_varlen_fwd"
+        ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-15T10:59:24Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T03:59:34Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.flash.prefill_varlen_bwd": {
       "id": "attn.flash.prefill_varlen_bwd",
@@ -4001,7 +4088,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.flash.decode_fwd": {
       "id": "attn.flash.decode_fwd",
@@ -4024,15 +4111,16 @@
           "tests/ops/test_mha_decode.py::test_mha_decode"
         ],
         "bench": [
-          "benchmarks/ops/bench_gqa.py"
+          "benchmarks/ops/bench_gqa_decode.py::bench_gqa_decode",
+          "benchmarks/ops/bench_mha_decode.py::bench_mha_decode"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": true,
-      "kernel_last_updated": "2026-03-15T11:06:14Z",
-      "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-18T03:59:34Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.flash.decode_paged_fwd": {
       "id": "attn.flash.decode_paged_fwd",
@@ -4055,15 +4143,16 @@
           "tests/ops/test_mha_decode_paged.py::test_mha_decode_paged_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_gqa.py"
+          "benchmarks/ops/bench_gqa_decode_paged.py::bench_gqa_decode_paged",
+          "benchmarks/ops/bench_mha_decode_paged.py::bench_mha_decode_paged"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-15T10:59:24Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T03:59:34Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.flash.decode_varlen_fwd": {
       "id": "attn.flash.decode_varlen_fwd",
@@ -4083,7 +4172,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.flash.chunked_prefill": {
       "id": "attn.flash.chunked_prefill",
@@ -4103,7 +4192,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.mla.prefill_fwd": {
       "id": "attn.mla.prefill_fwd",
@@ -4123,7 +4212,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.mla.prefill_bwd": {
       "id": "attn.mla.prefill_bwd",
@@ -4143,7 +4232,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.mla.decode_fwd": {
       "id": "attn.mla.decode_fwd",
@@ -4160,19 +4249,19 @@
           "tileops/ops/deepseek_mla_decode.py"
         ],
         "tests": [
-          "tests/ops/test_deepseek_dsa_decode.py::test_sparse_mla_decode",
-          "tests/ops/test_deepseek_mla_decode.py::test_mla_decode"
+          "tests/ops/test_deepseek_mla_decode.py::test_mla_decode",
+          "tests/ops/test_deepseek_dsa_decode.py::test_sparse_mla_decode"
         ],
         "bench": [
-          "benchmarks/ops/bench_deepseek_mla_decode.py"
+          "benchmarks/ops/bench_deepseek_mla_decode.py::bench_mla_decode"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-15T10:59:24Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T03:59:34Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.mla.decode_paged_fwd": {
       "id": "attn.mla.decode_paged_fwd",
@@ -4192,7 +4281,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.nsa.prefill_fwd": {
       "id": "attn.nsa.prefill_fwd",
@@ -4210,19 +4299,20 @@
           "tileops/ops/deepseek_nsa.py"
         ],
         "tests": [
-          "tests/ops/test_deepseek_nsa_cmp_fwd.py::test_nsa_cmp_fwd_varlen_op",
-          "tests/ops/test_deepseek_nsa_fwd.py::test_nsa_varlen_op"
+          "tests/ops/test_deepseek_nsa_fwd.py::test_nsa_varlen_op",
+          "tests/ops/test_deepseek_nsa_cmp_fwd.py::test_nsa_cmp_fwd_varlen_op"
         ],
         "bench": [
-          "benchmarks/ops/bench_deepseek_nsa_fwd.py"
+          "benchmarks/ops/bench_deepseek_nsa_fwd.py::bench_nsa_fwd",
+          "benchmarks/ops/bench_deepseek_nsa_cmp_fwd.py::bench_nsa_cmp_fwd"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-15T10:59:24Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T03:59:34Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.nsa.decode_fwd": {
       "id": "attn.nsa.decode_fwd",
@@ -4242,7 +4332,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.dsa.prefill_fwd": {
       "id": "attn.dsa.prefill_fwd",
@@ -4262,7 +4352,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "attn.dsa.decode_fwd": {
       "id": "attn.dsa.decode_fwd",
@@ -4278,17 +4368,19 @@
         "op": [
           "tileops/ops/deepseek_dsa_decode.py"
         ],
-        "tests": [],
+        "tests": [
+          "tests/ops/test_deepseek_dsa_decode.py::test_sparse_mla_decode"
+        ],
         "bench": [
-          "benchmarks/ops/bench_deepseek_dsa_decode.py"
+          "benchmarks/ops/bench_deepseek_dsa_decode.py::bench_dsa_decode"
         ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": "2026-03-15T10:59:24Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-16T22:31:37Z"
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "moe.permute_align": {
       "id": "moe.permute_align",
@@ -4298,17 +4390,23 @@
       "sub": "permute_align",
       "issue": 404,
       "files": {
-        "kernel": [],
+        "kernel": [
+          "tileops/kernels/moe/permute_align.py"
+        ],
         "op": [],
-        "tests": [],
-        "bench": []
+        "tests": [
+          "tests/ops/test_moe_permute_align.py::test_permute_align_op"
+        ],
+        "bench": [
+          "benchmarks/ops/bench_moe_permute_align.py::bench_permute_align"
+        ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "moe.unpermute_depad": {
       "id": "moe.unpermute_depad",
@@ -4328,7 +4426,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "moe.fused_moe.deepseek": {
       "id": "moe.fused_moe.deepseek",
@@ -4348,7 +4446,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "moe.fused_moe.glm": {
       "id": "moe.fused_moe.glm",
@@ -4368,7 +4466,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "moe.fused_moe.kimi": {
       "id": "moe.fused_moe.kimi",
@@ -4388,7 +4486,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "moe.fused_moe.qwen": {
       "id": "moe.fused_moe.qwen",
@@ -4408,7 +4506,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "linattn.gated_deltanet.chunkwise": {
       "id": "linattn.gated_deltanet.chunkwise",
@@ -4420,25 +4518,29 @@
       "files": {
         "kernel": [
           "tileops/kernels/linear_attn/gated_delta_net/gated_deltanet_fwd.py",
-          "tileops/kernels/linear_attn/gated_delta_net/fused_prepare_compute_w_u.py"
+          "tileops/kernels/linear_attn/gated_delta_net/gated_deltanet_bwd.py",
+          "tileops/kernels/linear_attn/gated_delta_net/fused_prepare_compute_w_u.py",
+          "tileops/kernels/linear_attn/gated_delta_net/compute_w_u_bwd.py"
         ],
         "op": [
           "tileops/ops/gated_deltanet.py"
         ],
         "tests": [
+          "tests/ops/test_gated_deltanet_fwd.py::test_gated_deltanet_fwd",
           "tests/ops/test_gated_deltanet_bwd.py::test_gated_deltanet_bwd",
-          "tests/ops/test_gated_deltanet_fwd.py::test_gated_deltanet_fwd"
+          "tests/ops/test_fused_gated.py::test_fused_gated"
         ],
         "bench": [
-          "benchmarks/ops/bench_gated_deltanet_fwd.py"
+          "benchmarks/ops/bench_gated_deltanet_vs_fla.py::bench_gated_deltanet_fwd",
+          "benchmarks/ops/bench_gated_deltanet_vs_fla.py::bench_gated_deltanet_bwd"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": true,
-      "kernel_last_updated": "2026-03-15T11:12:33Z",
-      "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-18T03:59:34Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "linattn.gated_deltanet.recurrence": {
       "id": "linattn.gated_deltanet.recurrence",
@@ -4459,15 +4561,15 @@
           "tests/ops/test_gated_deltanet_decode.py::test_gated_deltanet_decode_multi_step"
         ],
         "bench": [
-          "benchmarks/ops/bench_gated_deltanet_fwd.py"
+          "benchmarks/ops/bench_gated_deltanet_decode.py::bench_gated_deltanet_decode"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
-      "kernel_last_updated": "2026-03-15T10:59:24Z",
-      "kernel_last_pr_author": "lcy-seso",
-      "last_updated": "2026-03-18T03:59:34Z"
+      "has_bugs": null,
+      "kernel_last_updated": null,
+      "kernel_last_pr_author": null,
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "linattn.deltanet.chunkwise": {
       "id": "linattn.deltanet.chunkwise",
@@ -4478,24 +4580,26 @@
       "issue": 405,
       "files": {
         "kernel": [
-          "tileops/kernels/engram/engram_fwd.py"
+          "tileops/kernels/engram/engram_fwd.py",
+          "tileops/kernels/engram/engram_bwd.py"
         ],
         "op": [
           "tileops/ops/engram_fwd.py"
         ],
         "tests": [
-          "tests/ops/test_engram_fwd.py::test_engram_gate_conv_fwd"
+          "tests/ops/test_engram_fwd.py::test_engram_gate_conv_fwd",
+          "tests/ops/test_engram_bwd.py::test_engram_bwd"
         ],
         "bench": [
-          "benchmarks/ops/bench_engram_fwd.py"
+          "benchmarks/ops/bench_engram_fwd.py::bench_engram_fwd"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "linattn.deltanet.recurrence": {
       "id": "linattn.deltanet.recurrence",
@@ -4515,15 +4619,15 @@
           "tests/ops/test_engram_decode.py::test_engram_decode"
         ],
         "bench": [
-          "benchmarks/ops/bench_engram_decode.py"
+          "benchmarks/ops/bench_engram_decode.py::bench_engram_decode"
         ]
       },
       "func_score": null,
       "perf_score": null,
-      "has_bugs": false,
+      "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-18T03:59:34Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "linattn.gla.chunkwise": {
       "id": "linattn.gla.chunkwise",
@@ -4533,17 +4637,26 @@
       "sub": "gla",
       "issue": 405,
       "files": {
-        "kernel": [],
+        "kernel": [
+          "tileops/kernels/linear_attn/gla/gla_fwd.py",
+          "tileops/kernels/linear_attn/gla/gla_bwd.py"
+        ],
         "op": [],
-        "tests": [],
-        "bench": []
+        "tests": [
+          "tests/ops/test_gla_fwd.py::test_gla_fwd",
+          "tests/ops/test_gla_bwd.py::test_gla_bwd"
+        ],
+        "bench": [
+          "benchmarks/ops/bench_gla.py::bench_gla_fwd",
+          "benchmarks/ops/bench_gla.py::bench_gla_bwd"
+        ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "linattn.gla.recurrence": {
       "id": "linattn.gla.recurrence",
@@ -4553,17 +4666,23 @@
       "sub": "gla",
       "issue": 405,
       "files": {
-        "kernel": [],
+        "kernel": [
+          "tileops/kernels/linear_attn/gla/gla_decode.py"
+        ],
         "op": [],
-        "tests": [],
-        "bench": []
+        "tests": [
+          "tests/ops/test_gla_decode.py::test_gla_decode"
+        ],
+        "bench": [
+          "benchmarks/ops/bench_gla_decode.py::bench_gla_decode"
+        ]
       },
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "linattn.retnet.chunkwise": {
       "id": "linattn.retnet.chunkwise",
@@ -4583,7 +4702,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "linattn.retnet.recurrence": {
       "id": "linattn.retnet.recurrence",
@@ -4603,7 +4722,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ssm.mamba1": {
       "id": "ssm.mamba1",
@@ -4623,7 +4742,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     },
     "ssm.mamba2": {
       "id": "ssm.mamba2",
@@ -4643,7 +4762,7 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-15T20:22:03Z"
+      "last_updated": "2026-03-18T05:54:04Z"
     }
   }
 }
