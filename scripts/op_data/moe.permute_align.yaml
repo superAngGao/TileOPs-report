@@ -14,7 +14,7 @@ files:
   - benchmarks/ops/bench_moe_permute_align.py::bench_permute_align
 files_last_scanned: '2026-03-18T05:54:04Z'
 func_score: 2
-func_score_notes: PR 针对小 batch expert 阈值做修复以防止 JIT hang，说明核心逻辑存在但存在已知稳定性问题。
+func_score_notes: PR 针对小 batch expert 阈值做修复以防止 JIT hang，说明存在已知运行时问题，功能覆盖有限。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -36,7 +36,7 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T07:15:05Z'
+last_updated: '2026-03-18T07:30:01Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

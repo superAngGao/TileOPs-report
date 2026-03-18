@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_rope.py::bench_rope_llama31
 files_last_scanned: '2026-03-18T05:54:04Z'
 func_score: 1
-func_score_notes: 测试与 benchmark 均失败，算子不可用。
+func_score_notes: 测试与 benchmark 均失败，算子处于不可用状态。
 func_score_updated: '2026-03-18'
 perf_score: 1
 perf_details:
@@ -27,7 +27,7 @@ perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
 - 测试失败
-- benchmark 运行失败，性能数据无效
+- benchmark 运行失败，无法获取性能数据
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -38,8 +38,8 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T07:15:05Z'
-updated_by: nightly-auto
+last_updated: '2026-03-18T07:30:01Z'
+updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
   status: failed

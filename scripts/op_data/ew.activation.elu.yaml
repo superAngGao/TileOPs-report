@@ -14,7 +14,7 @@ files:
   - benchmarks/ops/bench_activation.py::bench_elu
 files_last_scanned: '2026-03-18T05:54:04Z'
 func_score: 1
-func_score_notes: 测试用例缺失（missing），benchmark 无法运行，功能完整性无法验证。
+func_score_notes: 测试用例缺失（missing），benchmark 无法运行，功能状态未知。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -37,8 +37,8 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T07:15:05Z'
-updated_by: nightly-auto
+last_updated: '2026-03-18T07:30:01Z'
+updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
   status: failed
