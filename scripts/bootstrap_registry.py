@@ -458,11 +458,18 @@ def main() -> None:
             op_id  = op["id"]
             auto   = op["_auto_files"]
             cm     = claude_map.get(op_id, {})
+            kernel = cm.get("kernel", [])
+            tests  = cm.get("tests", []) or auto["tests"]
+            bench  = cm.get("bench", []) or auto["bench"]
+            # 一致性：无 kernel 则清空 tests/bench
+            if not kernel:
+                tests = []
+                bench = []
             files  = {
-                "kernel": cm.get("kernel", []),
+                "kernel": kernel,
                 "op":     auto["op"],
-                "tests":  cm.get("tests", []) or auto["tests"],
-                "bench":  cm.get("bench", []) or auto["bench"],
+                "tests":  tests,
+                "bench":  bench,
             }
             all_files[op_id] = files
 
