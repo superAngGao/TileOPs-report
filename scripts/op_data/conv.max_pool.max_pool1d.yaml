@@ -1,0 +1,35 @@
+id: conv.max_pool.max_pool1d
+name: max_pool1d
+category: Conv & Pooling
+category_id: 4
+sub: max_pool
+issue: 402
+files:
+  kernel: []
+  op: []
+  tests: []
+  bench: []
+files_last_scanned: '2026-03-18T08:15:19Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
+perf_details:
+  baseline: null
+  last_run: null
+  summary: null
+  results: []
+perf_score_updated: null
+has_bugs: null
+bugs: []
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
+test_status:
+  last_run: null
+  passed: null
+  errors: []
+last_updated: '2026-03-18T08:15:19Z'
+updated_by: bootstrap
