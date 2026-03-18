@@ -398,14 +398,37 @@ def get_op_test_status(op_data: dict, test_results: dict) -> dict:
 # 4. Benchmark 日志解析
 # ─────────────────────────────────────────────────────────────────────────────
 
+def _parse_md_table(lines: list[str]) -> list[dict[str, str]]:
+    """解析 Markdown 表格行，返回 [{col_name: value, ...}, ...]。"""
+    if len(lines) < 3:
+        return []
+    # 第 1 行: | col1 | col2 | ...
+    headers = [h.strip() for h in lines[0].strip().strip("|").split("|")]
+    # 第 2 行: | --- | --- | ... (分隔符，跳过)
+    rows = []
+    for line in lines[2:]:
+        line = line.strip()
+        if not line or not line.startswith("|"):
+            break
+        vals = [v.strip() for v in line.strip("|").split("|")]
+        if len(vals) == len(headers):
+            rows.append(dict(zip(headers, vals)))
+    return rows
+
+
 def parse_bench_log(bench_log: str | None) -> dict[str, dict]:
     """
     从 benchmark 日志中提取性能数据。
-    支持两种常见格式：
-      A) "bench_xxx | ... | TileOps: 1.23 ms | Baseline: 1.45 ms | Ratio: 0.85"
-      B) Markdown 表格行（从 gen_index.py 生成的报告）
 
-    返回 {bench_fn_stem: {summary, ratio, raw_line}}。
+    解析 Markdown 格式的 benchmark 报告：
+      ## <bench_name>
+      ### tileops
+      | ... | latency_ms | ... |
+      ### baseline
+      | ... | latency_ms | ... |
+
+    对每个 bench，计算 ratio = baseline_avg_latency / tileops_avg_latency。
+    返回 {bench_name: {tileops, baseline, ratio, summary}}。
     """
     results: dict[str, dict] = {}
     if not bench_log or not Path(bench_log).exists():
@@ -415,23 +438,95 @@ def parse_bench_log(bench_log: str | None) -> dict[str, dict]:
     except OSError:
         return results
 
-    # 格式 A
-    pat_a = re.compile(
-        r"(bench_\w+).*?TileOps\s*[:|]\s*([\d.]+\s*\w+).*?Baseline\s*[:|]\s*([\d.]+\s*\w+)"
-        r"(?:.*?Ratio\s*[:|]\s*([\d.]+))?",
-        re.IGNORECASE,
-    )
-    for m in pat_a.finditer(text):
-        fn    = m.group(1).lower()
-        tileops  = m.group(2).strip()
-        baseline = m.group(3).strip()
-        ratio    = float(m.group(4)) if m.group(4) else None
-        results[fn] = {
-            "tileops":  tileops,
-            "baseline": baseline,
+    lines = text.splitlines()
+    n = len(lines)
+    i = 0
+
+    # 查找 "===== profile_run.log summary =====" 之后的内容
+    while i < n and "profile_run.log summary" not in lines[i]:
+        i += 1
+
+    current_bench = None
+    current_section = None  # "tileops" or "baseline"
+    bench_data: dict[str, dict[str, list[dict]]] = {}  # {bench_name: {tileops: [...], baseline: [...]}}
+
+    while i < n:
+        line = lines[i].strip()
+
+        # ## bench_name（顶级 section，排除 Environment 等非 bench 段）
+        if line.startswith("## ") and not line.startswith("## Environment"):
+            current_bench = line[3:].strip().lower()
+            current_section = None
+            bench_data.setdefault(current_bench, {"tileops": [], "baseline": []})
+
+        # ### tileops 或 ### baseline
+        elif line.startswith("### "):
+            section_name = line[4:].strip().lower()
+            if section_name in ("tileops", "baseline") and current_bench:
+                current_section = section_name
+                # 解析紧跟的 Markdown 表格
+                table_lines = []
+                j = i + 1
+                # 跳过空行
+                while j < n and not lines[j].strip():
+                    j += 1
+                # 收集表格行
+                while j < n and lines[j].strip().startswith("|"):
+                    table_lines.append(lines[j])
+                    j += 1
+                rows = _parse_md_table(table_lines)
+                bench_data[current_bench][current_section] = rows
+                i = j
+                continue
+            else:
+                # 非 tileops/baseline 的子段（如 ### relu_direct），作为独立 bench
+                current_bench = section_name
+                current_section = None
+                bench_data.setdefault(current_bench, {"tileops": [], "baseline": []})
+
+        i += 1
+
+    # 计算每个 bench 的 ratio
+    for bench_name, data in bench_data.items():
+        tileops_rows = data.get("tileops", [])
+        baseline_rows = data.get("baseline", [])
+
+        if not tileops_rows:
+            continue
+
+        # 提取 latency_ms 列的平均值
+        def _avg_latency(rows: list[dict]) -> float | None:
+            vals = []
+            for r in rows:
+                try:
+                    vals.append(float(r.get("latency_ms", "")))
+                except (ValueError, TypeError):
+                    pass
+            return sum(vals) / len(vals) if vals else None
+
+        tileops_lat = _avg_latency(tileops_rows)
+        baseline_lat = _avg_latency(baseline_rows)
+
+        if tileops_lat is None or tileops_lat == 0:
+            continue
+
+        # 异常检测：tileops 与 baseline 差距超过 10 倍 → ratio 视为无效
+        if baseline_lat and baseline_lat > 0:
+            raw_ratio = baseline_lat / tileops_lat
+            if raw_ratio > 10 or raw_ratio < 0.1:
+                ratio = None  # 数据异常，不计入
+            else:
+                ratio = round(raw_ratio, 4)
+        else:
+            ratio = None
+
+        results[bench_name] = {
+            "tileops":  f"{tileops_lat:.4f} ms",
+            "baseline": f"{baseline_lat:.4f} ms" if baseline_lat else "N/A",
             "ratio":    ratio,
-            "summary":  f"TileOps {tileops} vs Baseline {baseline}"
-                        + (f" (ratio {ratio:.2f})" if ratio else ""),
+            "summary":  f"TileOps {tileops_lat:.4f}ms vs Baseline {baseline_lat:.4f}ms"
+                        + (f" (ratio {ratio:.2f})" if ratio else "")
+                        if baseline_lat else f"TileOps {tileops_lat:.4f}ms (no baseline)",
         }
 
     return results
@@ -477,6 +572,11 @@ def get_op_bench_data(op_data: dict, bench_results: dict) -> dict | None:
             fn = entry.split("::")[-1].lower()
             if fn in bench_results:
                 found[fn] = bench_results[fn]
+            # bench log 中的 key 可能没有 bench_ 前缀（如 "relu" vs "bench_relu"）
+            elif fn.startswith("bench_"):
+                short = fn[len("bench_"):]
+                if short in bench_results:
+                    found[short] = bench_results[short]
         else:
             # 降级：文件级匹配（兼容旧格式）
             stem = Path(entry).stem.lower()
