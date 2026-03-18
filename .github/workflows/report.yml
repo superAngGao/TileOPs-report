@@ -333,6 +333,7 @@ jobs:
             --progress-json "${{ steps.report.outputs.report_dir }}/progress.json" \
             --test-xml      "${{ steps.report.outputs.report_dir }}/test_results.xml" \
             --bench-log     "${{ steps.report.outputs.report_dir }}/tileops_benchmarks.log" \
+            --manifest      scripts/op_manifest.json \
             --output        "${{ steps.report.outputs.report_dir }}/analysis.md"
         env:
           ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
