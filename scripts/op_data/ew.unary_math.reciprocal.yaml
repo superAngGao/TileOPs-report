@@ -15,8 +15,8 @@ files:
   bench:
   - benchmarks/ops/bench_unary_elementwise.py::bench_reciprocal
 files_last_scanned: '2026-03-18T08:15:19Z'
-func_score: null
-func_score_notes: 测试失败且无错误详情，无法评估功能完整性；PR 为重构性变更，可能引入回归。
+func_score: 2
+func_score_notes: 测试失败，fp8 重构 PR 引入回归，当前实现存在正确性问题。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -27,7 +27,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试状态为 failed，具体错误信息缺失
+- 测试状态 failed，疑似 fp8 accumulation 重构引入回归
 kernel_last_updated: '2026-03-17T07:47:09Z'
 kernel_last_pr_number: 535
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/535
@@ -38,7 +38,7 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T08:19:40Z'
+last_updated: '2026-03-18T08:34:47Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

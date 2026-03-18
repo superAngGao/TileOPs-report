@@ -16,7 +16,7 @@ files:
   - benchmarks/ops/bench_reduce.py::bench_var_mean
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 2
-func_score_notes: 测试失败但 benchmark 已通过，基础执行路径存在但正确性有问题。
+func_score_notes: benchmark 可运行，但测试失败，联合方差均值计算存在正确性问题。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -27,7 +27,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试未通过，正确性存疑
+- 测试失败，var_mean 结果不正确
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -38,7 +38,7 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T08:19:40Z'
+last_updated: '2026-03-18T08:34:47Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

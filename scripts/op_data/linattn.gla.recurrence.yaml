@@ -13,8 +13,8 @@ files:
   bench:
   - benchmarks/ops/bench_gla_decode.py::bench_gla_decode
 files_last_scanned: '2026-03-18T08:15:19Z'
-func_score: null
-func_score_notes: 测试失败；PR 表明正在新增 decode kernel，功能尚未稳定；benchmark ratio 缺失。
+func_score: 4
+func_score_notes: 测试通过，PR 新增了 GLA decode kernel，功能扩展积极，接近完整实现，但 bench ratio 为 null，性能尚未量化。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -23,10 +23,8 @@ perf_details:
   summary: null
   results: []
 perf_score_updated: '2026-03-18'
-has_bugs: true
-bugs:
-- 测试未通过
-- decode kernel 为新增功能，尚未通过验证
+has_bugs: false
+bugs: []
 kernel_last_updated: '2026-03-17T14:16:55Z'
 kernel_last_pr_number: 554
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/554
@@ -34,10 +32,10 @@ kernel_last_pr_author: superAngGao
 kernel_last_pr_title: '[Feat][GLA] Add GLA decode kernel'
 test_status:
   last_run: '2026-03-18'
-  passed: false
+  passed: true
   errors: []
-  status: failed
-last_updated: '2026-03-18T08:19:40Z'
+  status: passed
+last_updated: '2026-03-18T08:34:47Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

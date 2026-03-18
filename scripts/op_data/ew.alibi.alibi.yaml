@@ -13,7 +13,7 @@ files:
   bench: []
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 1
-func_score_notes: 测试状态 missing，benchmark 缺失，功能实现状态未知。
+func_score_notes: 测试与 benchmark 均缺失，无法评估功能；PR 仅为重构。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -34,7 +34,7 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T08:19:40Z'
+last_updated: '2026-03-18T08:34:47Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

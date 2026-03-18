@@ -16,7 +16,7 @@ files:
   - benchmarks/ops/bench_softmax.py::bench_logsumexp
 files_last_scanned: '2026-03-18T08:15:19Z'
 func_score: 1
-func_score_notes: 测试失败且无 benchmark ratio 数据，功能未验证通过。无 PR 信息，实现状态不明。
+func_score_notes: 测试失败，功能不可用。无 benchmark ratio 数据，无法评估性能。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -27,7 +27,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 测试未通过，功能正确性存疑
+- 测试未通过
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -38,7 +38,7 @@ test_status:
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-18T08:19:40Z'
+last_updated: '2026-03-18T08:34:47Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
