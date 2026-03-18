@@ -15,8 +15,8 @@ files:
   bench:
   - benchmarks/ops/bench_binary_arith.py
 files_last_scanned: '2026-03-15T20:22:03Z'
-func_score: null
-func_score_notes: 无测试结果或 benchmark 数据，PR 为重构性变更，无法评估功能完整性。
+func_score: 4
+func_score_notes: 测试全部通过，PR 为 fp8 重构，功能基本完整。无 bench 数据，性能无法评估。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -25,7 +25,7 @@ perf_details:
   summary: null
   results: []
 perf_score_updated: '2026-03-18'
-has_bugs: null
+has_bugs: false
 bugs: []
 kernel_last_updated: '2026-03-17T07:47:09Z'
 kernel_last_pr_number: 535
@@ -33,8 +33,8 @@ kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/535
 kernel_last_pr_author: lcy-seso
 kernel_last_pr_title: '[Refactor][Elementwise] Extract shared _wrap_fp8_accumulation helper for fp8 kernels'
 test_status:
-  last_run: null
-  passed: null
+  last_run: '2026-03-18'
+  passed: true
   errors: []
-last_updated: '2026-03-18T03:44:31Z'
+last_updated: '2026-03-18T03:59:34Z'
 updated_by: claude-nightly

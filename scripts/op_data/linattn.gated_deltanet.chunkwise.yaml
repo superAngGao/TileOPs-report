@@ -17,26 +17,26 @@ files:
   - benchmarks/ops/bench_gated_deltanet_fwd.py
 files_last_scanned: '2026-03-15T20:22:03Z'
 func_score: null
-func_score_notes: PR 为 BugFix（清理 dead kernels 并添加 custom_op wrappers），表明存在已知问题正在整改，缺乏测试/bench 数据无法评分。
-func_score_updated: '2026-03-16'
+func_score_notes: 测试当前通过，但历史记录标记存在 bug，缺乏 bench 数据无法进一步评估。
+func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: '2026-03-16'
+perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- 存在 dead kernels 被清理，说明之前代码存在无效路径或 bug；custom_op wrapper 为新增，兼容性待验证
+- 历史记录中存在已知 bug，具体内容未提供
 kernel_last_updated: '2026-03-15T11:12:33Z'
 kernel_last_pr_number: 476
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/476
 kernel_last_pr_author: superAngGao
 kernel_last_pr_title: '[BugFix][Linear-Attn] Cleanup dead kernels and add custom_op wrappers'
 test_status:
-  last_run: null
-  passed: null
+  last_run: '2026-03-18'
+  passed: true
   errors: []
-last_updated: '2026-03-16T22:31:37Z'
+last_updated: '2026-03-18T03:59:34Z'
 updated_by: claude-nightly
