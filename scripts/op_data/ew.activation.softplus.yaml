@@ -31,7 +31,7 @@ perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
 - 测试用例缺失，功能正确性未经验证
-- 性能低于 baseline（ratio 0.96，TileOps 0.0278ms vs Baseline 0.0267ms）
+- 性能低于 baseline（ratio 0.96）
 kernel_last_updated: '2026-03-18T09:48:47Z'
 kernel_last_pr_number: 549
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/549
@@ -42,7 +42,7 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T11:08:28Z'
+last_updated: '2026-03-18T11:15:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

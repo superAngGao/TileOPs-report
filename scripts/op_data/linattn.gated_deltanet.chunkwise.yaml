@@ -21,7 +21,7 @@ files:
   - benchmarks/ops/bench_gated_deltanet_vs_fla.py::bench_gated_deltanet_bwd
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 前向测试通过，但反向传播存在严重性能问题，疑似实现缺陷而非调优问题。
+func_score_notes: 前向测试通过，但反向传播存在严重性能退化，疑似实现缺陷导致 bwd 路径异常。
 func_score_updated: '2026-03-18'
 perf_score: 1
 perf_details:
@@ -42,7 +42,7 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: true
 bugs:
-- gated_deltanet_bwd 耗时 608ms vs baseline 73ms，ratio 仅 0.12，反向传播实现异常
+- gated_deltanet_bwd 耗时 608ms vs baseline 73ms，ratio 仅 0.12，反向传播性能严重低于 baseline
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
@@ -53,7 +53,7 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T11:08:28Z'
+last_updated: '2026-03-18T11:15:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'

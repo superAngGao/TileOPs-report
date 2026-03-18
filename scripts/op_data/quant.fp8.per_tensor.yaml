@@ -15,7 +15,7 @@ files:
   - benchmarks/ops/bench_fp8_quant.py::bench_fp8_quant
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 3
-func_score_notes: 测试通过但 benchmark 失败，功能基本可用，性能验证存在问题。
+func_score_notes: 测试通过但 benchmark 失败，功能基本可用，性能测试存在问题。
 func_score_updated: '2026-03-18'
 perf_score: null
 perf_details:
@@ -37,7 +37,7 @@ test_status:
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T11:08:28Z'
+last_updated: '2026-03-18T11:15:24Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-18'
