@@ -21,7 +21,7 @@ func_score_updated: '2026-03-18'
 perf_score: 4
 perf_details:
   baseline: null
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   summary: null
   results: &id001
   - bench_fn: exp
@@ -32,20 +32,20 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
-kernel_last_updated: '2026-03-18T12:11:41Z'
-kernel_last_pr_number: 560
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/560
-kernel_last_pr_author: lcy-seso
-kernel_last_pr_title: '[Perf][Elementwise] Generalize kernel caching and autotune to all kernel families'
+kernel_last_updated: '2026-03-19T12:32:24Z'
+kernel_last_pr_number: 600
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
+kernel_last_pr_author: superAngGao
+kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
 test_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T22:30:25Z'
+last_updated: '2026-03-19T22:26:39Z'
 updated_by: nightly-auto
 bench_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   status: qualified
   ratio: 1.0
   details: *id001

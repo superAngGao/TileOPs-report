@@ -13,31 +13,31 @@ files:
   bench: []
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 1
-func_score_notes: 测试缺失，无法验证功能。PR 仅涉及性能优化，未见功能实现。
-func_score_updated: '2026-03-18'
+func_score_notes: 测试和 benchmark 均缺失，实现状态未知，视为骨架/占位符。
+func_score_updated: '2026-03-19'
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: '2026-03-18'
+perf_score_updated: '2026-03-19'
 has_bugs: null
 bugs: []
-kernel_last_updated: '2026-03-18T12:11:41Z'
-kernel_last_pr_number: 560
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/560
-kernel_last_pr_author: lcy-seso
-kernel_last_pr_title: '[Perf][Elementwise] Generalize kernel caching and autotune to all kernel families'
+kernel_last_updated: '2026-03-19T12:32:24Z'
+kernel_last_pr_number: 600
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
+kernel_last_pr_author: superAngGao
+kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
 test_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-18T22:30:25Z'
+last_updated: '2026-03-19T22:26:39Z'
 updated_by: claude-nightly
 bench_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   status: missing
   ratio: null
   details: []

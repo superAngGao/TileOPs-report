@@ -23,36 +23,56 @@ func_score_updated: '2026-03-18'
 perf_score: 5
 perf_details:
   baseline: null
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   summary: null
   results: &id001
   - bench_fn: nsa_fwd
-    tileops: 145.3700 ms
-    baseline: 353.8367 ms
-    ratio: 2.434
-    summary: TileOps 145.3700ms vs Baseline 353.8367ms (ratio 2.43)
+    tileops: 0.0333 ms
+    baseline: 353.9500 ms
+    ratio: null
+    summary: TileOps 0.0333ms vs Baseline 353.9500ms
   - bench_fn: nsa_cmp_fwd
-    tileops: 79.2450 ms
-    baseline: 450.3200 ms
-    ratio: 5.6826
-    summary: TileOps 79.2450ms vs Baseline 450.3200ms (ratio 5.68)
+    tileops: 0.3250 ms
+    baseline: 448.2250 ms
+    ratio: null
+    summary: TileOps 0.3250ms vs Baseline 448.2250ms
+  - bench_fn: nsa_topk
+    tileops: 0.1467 ms
+    baseline: 950.9200 ms
+    ratio: null
+    summary: TileOps 0.1467ms vs Baseline 950.9200ms
+  - bench_fn: gqa_sliding_window_fwd
+    tileops: 0.0100 ms
+    baseline: N/A
+    ratio: null
+    summary: TileOps 0.0100ms (no baseline)
+  - bench_fn: gqa_sliding_window_varlen_fwd
+    tileops: 0.7400 ms
+    baseline: N/A
+    ratio: null
+    summary: TileOps 0.7400ms (no baseline)
+  - bench_fn: mean_pooling
+    tileops: 0.1025 ms
+    baseline: 0.5275 ms
+    ratio: 5.1463
+    summary: TileOps 0.1025ms vs Baseline 0.5275ms (ratio 5.15)
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
-kernel_last_updated: null
-kernel_last_pr_number: null
-kernel_last_pr_url: null
-kernel_last_pr_author: null
-kernel_last_pr_title: null
+kernel_last_updated: '2026-03-19T12:32:24Z'
+kernel_last_pr_number: 600
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
+kernel_last_pr_author: superAngGao
+kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
 test_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T22:30:25Z'
+last_updated: '2026-03-19T22:26:39Z'
 updated_by: nightly-auto
 bench_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   status: qualified
-  ratio: 2.434
+  ratio: 5.1463
   details: *id001

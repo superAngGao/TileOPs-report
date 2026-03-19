@@ -19,14 +19,14 @@ func_score_updated: '2026-03-18'
 perf_score: 5
 perf_details:
   baseline: null
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   summary: null
   results: &id001
   - bench_fn: gla_decode
     tileops: 0.0462 ms
-    baseline: 0.1731 ms
-    ratio: 3.7432
-    summary: TileOps 0.0462ms vs Baseline 0.1731ms (ratio 3.74)
+    baseline: 0.1738 ms
+    ratio: 3.7568
+    summary: TileOps 0.0462ms vs Baseline 0.1738ms (ratio 3.76)
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
@@ -36,14 +36,14 @@ kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/554
 kernel_last_pr_author: superAngGao
 kernel_last_pr_title: '[Feat][GLA] Add GLA decode kernel'
 test_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T22:30:25Z'
+last_updated: '2026-03-19T22:26:39Z'
 updated_by: nightly-auto
 bench_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   status: qualified
-  ratio: 3.7432
+  ratio: 3.7568
   details: *id001

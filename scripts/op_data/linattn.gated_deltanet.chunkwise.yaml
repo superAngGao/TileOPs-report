@@ -21,14 +21,14 @@ files:
   - benchmarks/ops/bench_gated_deltanet_vs_fla.py::bench_gated_deltanet_bwd
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 前向测试通过，但反向传播存在严重性能退化，疑似实现缺陷导致 bwd 路径异常。
-func_score_updated: '2026-03-18'
-perf_score: 1
+func_score_notes: 测试通过但 benchmark 失败，功能层面可用，性能数据缺失无法评估。
+func_score_updated: '2026-03-19'
+perf_score: null
 perf_details:
   baseline: null
   last_run: '2026-03-18'
   summary: null
-  results: &id001
+  results:
   - bench_fn: gated_deltanet_fwd
     tileops: 269.3175 ms
     baseline: 257.6183 ms
@@ -39,24 +39,24 @@ perf_details:
     baseline: 73.3190 ms
     ratio: 0.1165
     summary: TileOps 629.4950ms vs Baseline 73.3190ms (ratio 0.12)
-perf_score_updated: '2026-03-18'
+perf_score_updated: '2026-03-19'
 has_bugs: true
 bugs:
-- gated_deltanet_bwd 耗时 629ms vs baseline 73ms，ratio 仅 0.12，反向传播性能严重低于 baseline
+- benchmark 运行失败，无法获取性能数据
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T22:30:25Z'
+last_updated: '2026-03-19T22:26:39Z'
 updated_by: claude-nightly
 bench_status:
-  last_run: '2026-03-18'
-  status: underperforming
-  ratio: 0.1165
-  details: *id001
+  last_run: '2026-03-19'
+  status: failed
+  ratio: null
+  details: []

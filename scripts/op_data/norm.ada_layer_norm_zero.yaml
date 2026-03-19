@@ -16,12 +16,12 @@ files:
   - benchmarks/ops/bench_ada_layer_norm.py::bench_ada_layer_norm_zero
 files_last_scanned: '2026-03-18T10:14:48Z'
 func_score: 4
-func_score_notes: 测试通过，benchmark ratio 1.33 超越 baseline，功能与性能均表现良好。
-func_score_updated: '2026-03-18'
+func_score_notes: 测试通过，功能接近完整；benchmark ratio 1.33，超越 baseline，与已有 perf_score 5 一致。
+func_score_updated: '2026-03-19'
 perf_score: 5
 perf_details:
   baseline: null
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   summary: null
   results: &id001
   - bench_fn: ada_layer_norm_zero
@@ -29,7 +29,7 @@ perf_details:
     baseline: 0.0500 ms
     ratio: 1.3333
     summary: TileOps 0.0375ms vs Baseline 0.0500ms (ratio 1.33)
-perf_score_updated: '2026-03-18'
+perf_score_updated: '2026-03-19'
 has_bugs: false
 bugs: []
 kernel_last_updated: null
@@ -38,14 +38,14 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T22:30:25Z'
+last_updated: '2026-03-19T22:26:39Z'
 updated_by: claude-nightly
 bench_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   status: qualified
   ratio: 1.3333
   details: *id001

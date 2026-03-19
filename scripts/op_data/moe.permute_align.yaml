@@ -25,20 +25,20 @@ perf_details:
 perf_score_updated: '2026-03-18'
 has_bugs: false
 bugs: []
-kernel_last_updated: '2026-03-18T05:36:31Z'
-kernel_last_pr_number: 564
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/564
+kernel_last_updated: '2026-03-19T12:32:24Z'
+kernel_last_pr_number: 600
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
 kernel_last_pr_author: superAngGao
-kernel_last_pr_title: '[Fix][MoE] Lower small-batch expert threshold to prevent JIT hang'
+kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
 test_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-18T22:30:25Z'
+last_updated: '2026-03-19T22:26:39Z'
 updated_by: nightly-auto
 bench_status:
-  last_run: '2026-03-18'
+  last_run: '2026-03-19'
   status: passed
   ratio: null
   details: []
