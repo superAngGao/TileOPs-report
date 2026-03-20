@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-03-20T01:58:13Z",
+  "generated_at": "2026-03-20T22:26:17Z",
   "total_ops": 186,
   "ops": {
     "ew.binary_arith.add": {
@@ -23,7 +23,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.binary_arith.sub": {
       "id": "ew.binary_arith.sub",
@@ -45,7 +58,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.binary_arith.mul": {
       "id": "ew.binary_arith.mul",
@@ -67,7 +93,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.binary_arith.div": {
       "id": "ew.binary_arith.div",
@@ -89,7 +128,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.binary_arith.remainder": {
       "id": "ew.binary_arith.remainder",
@@ -111,7 +163,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.binary_arith.pow": {
       "id": "ew.binary_arith.pow",
@@ -133,7 +198,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.binary_arith.floor_divide": {
       "id": "ew.binary_arith.floor_divide",
@@ -155,7 +233,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.binary_arith.lerp": {
       "id": "ew.binary_arith.lerp",
@@ -177,7 +268,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.binary_arith.maximum": {
       "id": "ew.binary_arith.maximum",
@@ -199,7 +303,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.binary_arith.minimum": {
       "id": "ew.binary_arith.minimum",
@@ -221,7 +338,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.exp": {
       "id": "ew.unary_math.exp",
@@ -243,7 +373,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.log": {
       "id": "ew.unary_math.log",
@@ -265,7 +408,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.sqrt": {
       "id": "ew.unary_math.sqrt",
@@ -287,7 +443,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.rsqrt": {
       "id": "ew.unary_math.rsqrt",
@@ -309,7 +478,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.abs": {
       "id": "ew.unary_math.abs",
@@ -331,7 +513,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.neg": {
       "id": "ew.unary_math.neg",
@@ -353,7 +548,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.reciprocal": {
       "id": "ew.unary_math.reciprocal",
@@ -375,7 +583,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.sign": {
       "id": "ew.unary_math.sign",
@@ -397,7 +618,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.sin": {
       "id": "ew.unary_math.sin",
@@ -419,7 +653,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.cos": {
       "id": "ew.unary_math.cos",
@@ -441,7 +688,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.floor": {
       "id": "ew.unary_math.floor",
@@ -463,7 +723,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.ceil": {
       "id": "ew.unary_math.ceil",
@@ -485,7 +758,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.round": {
       "id": "ew.unary_math.round",
@@ -507,7 +793,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.trunc": {
       "id": "ew.unary_math.trunc",
@@ -529,7 +828,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.erf": {
       "id": "ew.unary_math.erf",
@@ -551,7 +863,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.log1p": {
       "id": "ew.unary_math.log1p",
@@ -573,7 +898,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.unary_math.expm1": {
       "id": "ew.unary_math.expm1",
@@ -595,7 +933,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.relu": {
       "id": "ew.activation.relu",
@@ -617,7 +968,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.gelu": {
       "id": "ew.activation.gelu",
@@ -639,7 +1003,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.silu": {
       "id": "ew.activation.silu",
@@ -661,7 +1038,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.sigmoid": {
       "id": "ew.activation.sigmoid",
@@ -683,7 +1073,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.tanh": {
       "id": "ew.activation.tanh",
@@ -705,7 +1108,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.leaky_relu": {
       "id": "ew.activation.leaky_relu",
@@ -727,7 +1143,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.elu": {
       "id": "ew.activation.elu",
@@ -749,7 +1178,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.selu": {
       "id": "ew.activation.selu",
@@ -771,7 +1213,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.hardswish": {
       "id": "ew.activation.hardswish",
@@ -793,7 +1248,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.hardsigmoid": {
       "id": "ew.activation.hardsigmoid",
@@ -815,7 +1283,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.hardtanh": {
       "id": "ew.activation.hardtanh",
@@ -837,7 +1318,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.softplus": {
       "id": "ew.activation.softplus",
@@ -859,7 +1353,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.mish": {
       "id": "ew.activation.mish",
@@ -881,7 +1388,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.activation.prelu": {
       "id": "ew.activation.prelu",
@@ -903,7 +1423,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.fused_gated.silu_and_mul": {
       "id": "ew.fused_gated.silu_and_mul",
@@ -925,7 +1458,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.fused_gated.gelu_and_mul": {
       "id": "ew.fused_gated.gelu_and_mul",
@@ -947,7 +1493,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.fused_gated.gelu_tanh_and_mul": {
       "id": "ew.fused_gated.gelu_tanh_and_mul",
@@ -969,7 +1528,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.comparison.eq": {
       "id": "ew.comparison.eq",
@@ -991,7 +1563,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.comparison.ne": {
       "id": "ew.comparison.ne",
@@ -1013,7 +1598,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.comparison.gt": {
       "id": "ew.comparison.gt",
@@ -1035,7 +1633,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.comparison.lt": {
       "id": "ew.comparison.lt",
@@ -1057,7 +1668,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.comparison.ge": {
       "id": "ew.comparison.ge",
@@ -1079,7 +1703,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.comparison.le": {
       "id": "ew.comparison.le",
@@ -1101,7 +1738,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.bitwise.and": {
       "id": "ew.bitwise.and",
@@ -1123,7 +1773,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.bitwise.or": {
       "id": "ew.bitwise.or",
@@ -1145,7 +1808,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.bitwise.xor": {
       "id": "ew.bitwise.xor",
@@ -1167,7 +1843,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.bitwise.not": {
       "id": "ew.bitwise.not",
@@ -1189,7 +1878,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.logical.not": {
       "id": "ew.logical.not",
@@ -1211,7 +1913,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.logical.and": {
       "id": "ew.logical.and",
@@ -1233,7 +1948,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.logical.or": {
       "id": "ew.logical.or",
@@ -1255,7 +1983,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.special.where": {
       "id": "ew.special.where",
@@ -1277,7 +2018,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.special.clamp": {
       "id": "ew.special.clamp",
@@ -1299,7 +2053,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.special.masked_fill": {
       "id": "ew.special.masked_fill",
@@ -1321,7 +2088,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.special.nan_to_num": {
       "id": "ew.special.nan_to_num",
@@ -1343,7 +2123,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.special.isnan": {
       "id": "ew.special.isnan",
@@ -1365,7 +2158,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.special.isinf": {
       "id": "ew.special.isinf",
@@ -1387,7 +2193,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.special.isfinite": {
       "id": "ew.special.isfinite",
@@ -1409,7 +2228,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.dropout.dropout": {
       "id": "ew.dropout.dropout",
@@ -1431,7 +2263,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.rope.neox": {
       "id": "ew.rope.neox",
@@ -1453,7 +2298,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.rope.non_neox": {
       "id": "ew.rope.non_neox",
@@ -1475,7 +2333,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.rope.llama31": {
       "id": "ew.rope.llama31",
@@ -1497,7 +2368,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.rope.yarn": {
       "id": "ew.rope.yarn",
@@ -1517,7 +2401,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.rope.longrope": {
       "id": "ew.rope.longrope",
@@ -1537,7 +2434,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.alibi.alibi": {
       "id": "ew.alibi.alibi",
@@ -1559,7 +2469,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ew.sinusoidal.sinusoidal": {
       "id": "ew.sinusoidal.sinusoidal",
@@ -1581,7 +2504,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "reduce.reduce.sum": {
       "id": "reduce.reduce.sum",
@@ -1610,9 +2546,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.mean": {
       "id": "reduce.reduce.mean",
@@ -1638,9 +2587,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.amin": {
       "id": "reduce.reduce.amin",
@@ -1666,9 +2628,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.amax": {
       "id": "reduce.reduce.amax",
@@ -1694,9 +2669,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.prod": {
       "id": "reduce.reduce.prod",
@@ -1722,9 +2710,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.std": {
       "id": "reduce.reduce.std",
@@ -1752,9 +2753,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.var": {
       "id": "reduce.reduce.var",
@@ -1783,9 +2797,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.reduce.var_mean": {
       "id": "reduce.reduce.var_mean",
@@ -1812,9 +2839,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.softmax.softmax": {
       "id": "reduce.softmax.softmax",
@@ -1842,9 +2882,30 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "qualified",
+        "ratio": 0.9167,
+        "details": [
+          {
+            "bench_fn": "softmax",
+            "tileops": "0.0300 ms",
+            "baseline": "0.0275 ms",
+            "ratio": 0.9167,
+            "summary": "TileOps 0.0300ms vs Baseline 0.0275ms (ratio 0.92)"
+          }
+        ]
+      },
+      "implemented": true
     },
     "reduce.softmax.log_softmax": {
       "id": "reduce.softmax.log_softmax",
@@ -1871,9 +2932,30 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "underperforming",
+        "ratio": 0.6667,
+        "details": [
+          {
+            "bench_fn": "log_softmax",
+            "tileops": "0.0375 ms",
+            "baseline": "0.0250 ms",
+            "ratio": 0.6667,
+            "summary": "TileOps 0.0375ms vs Baseline 0.0250ms (ratio 0.67)"
+          }
+        ]
+      },
+      "implemented": true
     },
     "reduce.softmax.logsumexp": {
       "id": "reduce.softmax.logsumexp",
@@ -1900,9 +2982,30 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "qualified",
+        "ratio": 3.4286,
+        "details": [
+          {
+            "bench_fn": "logsumexp",
+            "tileops": "0.0175 ms",
+            "baseline": "0.0600 ms",
+            "ratio": 3.4286,
+            "summary": "TileOps 0.0175ms vs Baseline 0.0600ms (ratio 3.43)"
+          }
+        ]
+      },
+      "implemented": true
     },
     "reduce.argreduce.argmax": {
       "id": "reduce.argreduce.argmax",
@@ -1930,9 +3033,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.argreduce.argmin": {
       "id": "reduce.argreduce.argmin",
@@ -1960,9 +3076,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.cumulative.cumsum": {
       "id": "reduce.cumulative.cumsum",
@@ -1990,9 +3119,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.cumulative.cumprod": {
       "id": "reduce.cumulative.cumprod",
@@ -2020,9 +3162,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.logical_reduce.any": {
       "id": "reduce.logical_reduce.any",
@@ -2048,9 +3203,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.logical_reduce.all": {
       "id": "reduce.logical_reduce.all",
@@ -2076,9 +3244,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.linalg.l1_norm": {
       "id": "reduce.linalg.l1_norm",
@@ -2104,9 +3285,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.linalg.l2_norm": {
       "id": "reduce.linalg.l2_norm",
@@ -2132,9 +3326,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "reduce.linalg.inf_norm": {
       "id": "reduce.linalg.inf_norm",
@@ -2160,9 +3367,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "norm.layer_norm": {
       "id": "norm.layer_norm",
@@ -2184,7 +3404,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "norm.batch_norm": {
       "id": "norm.batch_norm",
@@ -2206,7 +3439,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "norm.group_norm": {
       "id": "norm.group_norm",
@@ -2228,7 +3474,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "norm.instance_norm": {
       "id": "norm.instance_norm",
@@ -2250,7 +3509,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "norm.rms_norm": {
       "id": "norm.rms_norm",
@@ -2272,7 +3544,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "norm.qk_norm": {
       "id": "norm.qk_norm",
@@ -2292,7 +3577,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "norm.ada_layer_norm": {
       "id": "norm.ada_layer_norm",
@@ -2314,7 +3612,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "norm.ada_layer_norm_zero": {
       "id": "norm.ada_layer_norm_zero",
@@ -2336,7 +3647,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "norm.fused_add_layer_norm": {
       "id": "norm.fused_add_layer_norm",
@@ -2358,7 +3682,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "norm.fused_add_rmsnorm": {
       "id": "norm.fused_add_rmsnorm",
@@ -2380,7 +3717,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.conv.conv1d": {
       "id": "conv.conv.conv1d",
@@ -2400,7 +3750,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.conv.conv2d": {
       "id": "conv.conv.conv2d",
@@ -2420,7 +3783,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.conv.conv3d": {
       "id": "conv.conv.conv3d",
@@ -2440,7 +3816,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.conv_transpose.conv_t1d": {
       "id": "conv.conv_transpose.conv_t1d",
@@ -2460,7 +3849,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.conv_transpose.conv_t2d": {
       "id": "conv.conv_transpose.conv_t2d",
@@ -2480,7 +3882,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.depthwise.depthwise_conv2d": {
       "id": "conv.depthwise.depthwise_conv2d",
@@ -2500,7 +3915,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.grouped.grouped_conv2d": {
       "id": "conv.grouped.grouped_conv2d",
@@ -2520,7 +3948,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.dilated.dilated_conv2d": {
       "id": "conv.dilated.dilated_conv2d",
@@ -2540,7 +3981,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.max_pool.max_pool1d": {
       "id": "conv.max_pool.max_pool1d",
@@ -2560,7 +4014,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.max_pool.max_pool2d": {
       "id": "conv.max_pool.max_pool2d",
@@ -2580,7 +4047,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.max_pool.max_pool3d": {
       "id": "conv.max_pool.max_pool3d",
@@ -2600,7 +4080,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.avg_pool.avg_pool1d": {
       "id": "conv.avg_pool.avg_pool1d",
@@ -2620,7 +4113,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.avg_pool.avg_pool2d": {
       "id": "conv.avg_pool.avg_pool2d",
@@ -2640,7 +4146,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.avg_pool.avg_pool3d": {
       "id": "conv.avg_pool.avg_pool3d",
@@ -2660,7 +4179,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.adaptive.adaptive_avg_pool2d": {
       "id": "conv.adaptive.adaptive_avg_pool2d",
@@ -2680,7 +4212,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "conv.adaptive.adaptive_max_pool2d": {
       "id": "conv.adaptive.adaptive_max_pool2d",
@@ -2700,7 +4245,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.gemm.fp16": {
       "id": "gemm.gemm.fp16",
@@ -2726,9 +4284,30 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "qualified",
+        "ratio": 1.0741,
+        "details": [
+          {
+            "bench_fn": "gemm",
+            "tileops": "0.0540 ms",
+            "baseline": "0.0580 ms",
+            "ratio": 1.0741,
+            "summary": "TileOps 0.0540ms vs Baseline 0.0580ms (ratio 1.07)"
+          }
+        ]
+      },
+      "implemented": true
     },
     "gemm.gemm.fp8": {
       "id": "gemm.gemm.fp8",
@@ -2752,9 +4331,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.gemm.fp8_block_scaled": {
       "id": "gemm.gemm.fp8_block_scaled",
@@ -2778,9 +4370,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.gemm.gemv_fp16": {
       "id": "gemm.gemm.gemv_fp16",
@@ -2807,9 +4412,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.gemm.gemv_fp8": {
       "id": "gemm.gemm.gemv_fp8",
@@ -2833,9 +4451,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.gemm.small_batch_fp16": {
       "id": "gemm.gemm.small_batch_fp16",
@@ -2859,9 +4490,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.gemm.small_batch_fp8": {
       "id": "gemm.gemm.small_batch_fp8",
@@ -2885,9 +4529,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.bmm.fp16": {
       "id": "gemm.bmm.fp16",
@@ -2909,9 +4566,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.bmm.fp8": {
       "id": "gemm.bmm.fp8",
@@ -2933,9 +4603,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.groupgemm.fp16": {
       "id": "gemm.groupgemm.fp16",
@@ -2961,9 +4644,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": true,
+        "errors": [],
+        "status": "passed"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.groupgemm.fp8": {
       "id": "gemm.groupgemm.fp8",
@@ -2987,9 +4683,22 @@
       "func_score": null,
       "perf_score": null,
       "has_bugs": null,
-      "kernel_last_updated": null,
-      "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "kernel_last_updated": "2026-03-19T12:32:24Z",
+      "kernel_last_pr_author": "superAngGao",
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "passed",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": true
     },
     "gemm.outer.outer": {
       "id": "gemm.outer.outer",
@@ -3009,7 +4718,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.lowbit.w4a16": {
       "id": "gemm.lowbit.w4a16",
@@ -3029,7 +4751,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.lowbit.w8a8": {
       "id": "gemm.lowbit.w8a8",
@@ -3049,7 +4784,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.lowbit.w8a8_int8": {
       "id": "gemm.lowbit.w8a8_int8",
@@ -3069,7 +4817,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.lowbit.weight_only_int4": {
       "id": "gemm.lowbit.weight_only_int4",
@@ -3089,7 +4850,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.lowbit.fp4": {
       "id": "gemm.lowbit.fp4",
@@ -3109,7 +4883,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.sparse.fp16": {
       "id": "gemm.sparse.fp16",
@@ -3129,7 +4916,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "gemm.sparse.fp8": {
       "id": "gemm.sparse.fp8",
@@ -3149,7 +4949,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int8.per_tensor": {
       "id": "quant.int8.per_tensor",
@@ -3169,7 +4982,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int8.per_channel": {
       "id": "quant.int8.per_channel",
@@ -3189,7 +5015,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int8.per_block": {
       "id": "quant.int8.per_block",
@@ -3209,7 +5048,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int8.smooth_quant": {
       "id": "quant.int8.smooth_quant",
@@ -3229,7 +5081,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int4.per_channel": {
       "id": "quant.int4.per_channel",
@@ -3249,7 +5114,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int4.per_block": {
       "id": "quant.int4.per_block",
@@ -3269,7 +5147,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.int4.nf4": {
       "id": "quant.int4.nf4",
@@ -3289,7 +5180,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.fp8.per_tensor": {
       "id": "quant.fp8.per_tensor",
@@ -3311,7 +5215,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.fp8.per_block": {
       "id": "quant.fp8.per_block",
@@ -3331,7 +5248,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "quant.fp8.cast_transpose": {
       "id": "quant.fp8.cast_transpose",
@@ -3351,7 +5281,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.top_k": {
       "id": "sampling.top_k",
@@ -3371,7 +5314,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.top_p": {
       "id": "sampling.top_p",
@@ -3391,7 +5347,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.min_p": {
       "id": "sampling.min_p",
@@ -3411,7 +5380,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.top_k_top_p": {
       "id": "sampling.top_k_top_p",
@@ -3431,7 +5413,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.temperature_scale": {
       "id": "sampling.temperature_scale",
@@ -3451,7 +5446,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.from_probs": {
       "id": "sampling.from_probs",
@@ -3471,7 +5479,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "sampling.chain_spec": {
       "id": "sampling.chain_spec",
@@ -3493,7 +5514,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.flash.prefill_fwd": {
       "id": "attn.flash.prefill_fwd",
@@ -3516,7 +5550,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.flash.prefill_bwd": {
       "id": "attn.flash.prefill_bwd",
@@ -3539,7 +5586,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.flash.prefill_varlen_fwd": {
       "id": "attn.flash.prefill_varlen_fwd",
@@ -3561,7 +5621,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.flash.prefill_varlen_bwd": {
       "id": "attn.flash.prefill_varlen_bwd",
@@ -3581,7 +5654,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.flash.decode_fwd": {
       "id": "attn.flash.decode_fwd",
@@ -3604,7 +5690,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.flash.decode_paged_fwd": {
       "id": "attn.flash.decode_paged_fwd",
@@ -3627,7 +5726,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.flash.decode_varlen_fwd": {
       "id": "attn.flash.decode_varlen_fwd",
@@ -3647,7 +5759,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.flash.chunked_prefill": {
       "id": "attn.flash.chunked_prefill",
@@ -3667,7 +5792,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.mla.prefill_fwd": {
       "id": "attn.mla.prefill_fwd",
@@ -3687,7 +5825,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.mla.prefill_bwd": {
       "id": "attn.mla.prefill_bwd",
@@ -3707,7 +5858,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.mla.decode_fwd": {
       "id": "attn.mla.decode_fwd",
@@ -3729,7 +5893,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.mla.decode_paged_fwd": {
       "id": "attn.mla.decode_paged_fwd",
@@ -3749,7 +5926,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.nsa.prefill_fwd": {
       "id": "attn.nsa.prefill_fwd",
@@ -3771,7 +5961,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.nsa.decode_fwd": {
       "id": "attn.nsa.decode_fwd",
@@ -3791,7 +5994,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.dsa.prefill_fwd": {
       "id": "attn.dsa.prefill_fwd",
@@ -3811,7 +6027,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "attn.dsa.decode_fwd": {
       "id": "attn.dsa.decode_fwd",
@@ -3833,7 +6062,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "moe.permute_align": {
       "id": "moe.permute_align",
@@ -3853,7 +6095,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "moe.unpermute_depad": {
       "id": "moe.unpermute_depad",
@@ -3873,7 +6128,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "moe.fused_moe.deepseek": {
       "id": "moe.fused_moe.deepseek",
@@ -3893,7 +6161,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "moe.fused_moe.glm": {
       "id": "moe.fused_moe.glm",
@@ -3913,7 +6194,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "moe.fused_moe.kimi": {
       "id": "moe.fused_moe.kimi",
@@ -3933,7 +6227,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "moe.fused_moe.qwen": {
       "id": "moe.fused_moe.qwen",
@@ -3953,7 +6260,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "linattn.gated_deltanet.chunkwise": {
       "id": "linattn.gated_deltanet.chunkwise",
@@ -3975,7 +6295,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "linattn.gated_deltanet.recurrence": {
       "id": "linattn.gated_deltanet.recurrence",
@@ -3997,7 +6330,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "linattn.deltanet.chunkwise": {
       "id": "linattn.deltanet.chunkwise",
@@ -4019,7 +6365,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "linattn.deltanet.recurrence": {
       "id": "linattn.deltanet.recurrence",
@@ -4041,7 +6400,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "linattn.gla.chunkwise": {
       "id": "linattn.gla.chunkwise",
@@ -4061,7 +6433,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "linattn.gla.recurrence": {
       "id": "linattn.gla.recurrence",
@@ -4081,7 +6466,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "linattn.retnet.chunkwise": {
       "id": "linattn.retnet.chunkwise",
@@ -4101,7 +6499,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "linattn.retnet.recurrence": {
       "id": "linattn.retnet.recurrence",
@@ -4121,7 +6532,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ssm.mamba1": {
       "id": "ssm.mamba1",
@@ -4141,7 +6565,20 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     },
     "ssm.mamba2": {
       "id": "ssm.mamba2",
@@ -4161,7 +6598,2033 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T01:58:13Z"
+      "last_updated": "2026-03-20T22:26:17Z",
+      "test_status": {
+        "last_run": "2026-03-20",
+        "passed": null,
+        "errors": [],
+        "status": "missing"
+      },
+      "bench_status": {
+        "last_run": "2026-03-20",
+        "status": "missing",
+        "ratio": null,
+        "details": []
+      },
+      "implemented": false
     }
+  },
+  "summary": {
+    "generated_at": "2026-03-20T22:26:17Z",
+    "total_ops": 186,
+    "impl_ops": 31,
+    "tested_ops": 23,
+    "benched_ops": 30,
+    "done_ops": 22,
+    "categories": [
+      {
+        "id": 1,
+        "name": "Elementwise",
+        "issue": 397,
+        "difficulty": 1,
+        "total_ops": 72,
+        "impl_ops": 0,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "ew.binary_arith.add",
+            "name": "add",
+            "sub": "binary_arith",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.binary_arith.sub",
+            "name": "sub",
+            "sub": "binary_arith",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.binary_arith.mul",
+            "name": "mul",
+            "sub": "binary_arith",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.binary_arith.div",
+            "name": "div",
+            "sub": "binary_arith",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.binary_arith.remainder",
+            "name": "remainder",
+            "sub": "binary_arith",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.binary_arith.pow",
+            "name": "pow",
+            "sub": "binary_arith",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.binary_arith.floor_divide",
+            "name": "floor_divide",
+            "sub": "binary_arith",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.binary_arith.lerp",
+            "name": "lerp",
+            "sub": "binary_arith",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.binary_arith.maximum",
+            "name": "maximum",
+            "sub": "binary_arith",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.binary_arith.minimum",
+            "name": "minimum",
+            "sub": "binary_arith",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.exp",
+            "name": "exp",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.log",
+            "name": "log",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.sqrt",
+            "name": "sqrt",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.rsqrt",
+            "name": "rsqrt",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.abs",
+            "name": "abs",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.neg",
+            "name": "neg",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.reciprocal",
+            "name": "reciprocal",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.sign",
+            "name": "sign",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.sin",
+            "name": "sin",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.cos",
+            "name": "cos",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.floor",
+            "name": "floor",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.ceil",
+            "name": "ceil",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.round",
+            "name": "round",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.trunc",
+            "name": "trunc",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.erf",
+            "name": "erf",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.log1p",
+            "name": "log1p",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.unary_math.expm1",
+            "name": "expm1",
+            "sub": "unary_math",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.relu",
+            "name": "relu",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.gelu",
+            "name": "gelu",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.silu",
+            "name": "silu",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.sigmoid",
+            "name": "sigmoid",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.tanh",
+            "name": "tanh",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.leaky_relu",
+            "name": "leaky_relu",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.elu",
+            "name": "elu",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.selu",
+            "name": "selu",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.hardswish",
+            "name": "hardswish",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.hardsigmoid",
+            "name": "hardsigmoid",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.hardtanh",
+            "name": "hardtanh",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.softplus",
+            "name": "softplus",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.mish",
+            "name": "mish",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.activation.prelu",
+            "name": "prelu",
+            "sub": "activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.fused_gated.silu_and_mul",
+            "name": "silu_and_mul",
+            "sub": "fused_gated_activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.fused_gated.gelu_and_mul",
+            "name": "gelu_and_mul",
+            "sub": "fused_gated_activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.fused_gated.gelu_tanh_and_mul",
+            "name": "gelu_tanh_and_mul",
+            "sub": "fused_gated_activation",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.comparison.eq",
+            "name": "eq",
+            "sub": "comparison",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.comparison.ne",
+            "name": "ne",
+            "sub": "comparison",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.comparison.gt",
+            "name": "gt",
+            "sub": "comparison",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.comparison.lt",
+            "name": "lt",
+            "sub": "comparison",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.comparison.ge",
+            "name": "ge",
+            "sub": "comparison",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.comparison.le",
+            "name": "le",
+            "sub": "comparison",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.bitwise.and",
+            "name": "bitwise_and",
+            "sub": "bitwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.bitwise.or",
+            "name": "bitwise_or",
+            "sub": "bitwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.bitwise.xor",
+            "name": "bitwise_xor",
+            "sub": "bitwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.bitwise.not",
+            "name": "bitwise_not",
+            "sub": "bitwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.logical.not",
+            "name": "logical_not",
+            "sub": "logical",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.logical.and",
+            "name": "logical_and",
+            "sub": "logical",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.logical.or",
+            "name": "logical_or",
+            "sub": "logical",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.special.where",
+            "name": "where",
+            "sub": "special_elementwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.special.clamp",
+            "name": "clamp",
+            "sub": "special_elementwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.special.masked_fill",
+            "name": "masked_fill",
+            "sub": "special_elementwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.special.nan_to_num",
+            "name": "nan_to_num",
+            "sub": "special_elementwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.special.isnan",
+            "name": "isnan",
+            "sub": "special_elementwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.special.isinf",
+            "name": "isinf",
+            "sub": "special_elementwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.special.isfinite",
+            "name": "isfinite",
+            "sub": "special_elementwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.dropout.dropout",
+            "name": "dropout",
+            "sub": "dropout",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.rope.neox",
+            "name": "rope_neox",
+            "sub": "rope",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.rope.non_neox",
+            "name": "rope_non_neox",
+            "sub": "rope",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.rope.llama31",
+            "name": "rope_llama31",
+            "sub": "rope",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.rope.yarn",
+            "name": "yarn_rope",
+            "sub": "rope",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.rope.longrope",
+            "name": "longrope",
+            "sub": "rope",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.alibi.alibi",
+            "name": "alibi",
+            "sub": "alibi",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ew.sinusoidal.sinusoidal",
+            "name": "sinusoidal",
+            "sub": "sinusoidal",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Reduce",
+        "issue": 398,
+        "difficulty": 1,
+        "total_ops": 20,
+        "impl_ops": 20,
+        "tested_ops": 20,
+        "benched_ops": 19,
+        "done_ops": 19,
+        "ops": [
+          {
+            "id": "reduce.reduce.sum",
+            "name": "sum",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.reduce.mean",
+            "name": "mean",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.reduce.amin",
+            "name": "amin",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.reduce.amax",
+            "name": "amax",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.reduce.prod",
+            "name": "prod",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.reduce.std",
+            "name": "std",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.reduce.var",
+            "name": "var",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.reduce.var_mean",
+            "name": "var_mean",
+            "sub": "reduce",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.softmax.softmax",
+            "name": "softmax",
+            "sub": "softmax",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.softmax.log_softmax",
+            "name": "log_softmax",
+            "sub": "softmax",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": false,
+            "status": "tested"
+          },
+          {
+            "id": "reduce.softmax.logsumexp",
+            "name": "logsumexp",
+            "sub": "softmax",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.argreduce.argmax",
+            "name": "argmax",
+            "sub": "argreduce",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.argreduce.argmin",
+            "name": "argmin",
+            "sub": "argreduce",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.cumulative.cumsum",
+            "name": "cumsum",
+            "sub": "cumulative",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.cumulative.cumprod",
+            "name": "cumprod",
+            "sub": "cumulative",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.logical_reduce.any",
+            "name": "any",
+            "sub": "logical_reduce",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.logical_reduce.all",
+            "name": "all",
+            "sub": "logical_reduce",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.linalg.l1_norm",
+            "name": "l1_norm",
+            "sub": "linalg_vector_norm",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.linalg.l2_norm",
+            "name": "l2_norm",
+            "sub": "linalg_vector_norm",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "reduce.linalg.inf_norm",
+            "name": "inf_norm",
+            "sub": "linalg_vector_norm",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Norm",
+        "issue": 399,
+        "difficulty": 1,
+        "total_ops": 10,
+        "impl_ops": 0,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "norm.layer_norm",
+            "name": "layer_norm",
+            "sub": "layer_norm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "norm.batch_norm",
+            "name": "batch_norm",
+            "sub": "batch_norm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "norm.group_norm",
+            "name": "group_norm",
+            "sub": "group_norm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "norm.instance_norm",
+            "name": "instance_norm",
+            "sub": "instance_norm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "norm.rms_norm",
+            "name": "rms_norm",
+            "sub": "rms_norm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "norm.qk_norm",
+            "name": "qk_norm",
+            "sub": "qk_norm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "norm.ada_layer_norm",
+            "name": "ada_layer_norm",
+            "sub": "ada_layer_norm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "norm.ada_layer_norm_zero",
+            "name": "ada_layer_norm_zero",
+            "sub": "ada_layer_norm_zero",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "norm.fused_add_layer_norm",
+            "name": "fused_add_layer_norm",
+            "sub": "fused_add_norm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "norm.fused_add_rmsnorm",
+            "name": "fused_add_rmsnorm",
+            "sub": "fused_add_norm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Conv & Pooling",
+        "issue": 402,
+        "difficulty": 1,
+        "total_ops": 16,
+        "impl_ops": 0,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "conv.conv.conv1d",
+            "name": "conv1d",
+            "sub": "conv",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.conv.conv2d",
+            "name": "conv2d",
+            "sub": "conv",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.conv.conv3d",
+            "name": "conv3d",
+            "sub": "conv",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.conv_transpose.conv_t1d",
+            "name": "conv_transpose1d",
+            "sub": "conv_transpose",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.conv_transpose.conv_t2d",
+            "name": "conv_transpose2d",
+            "sub": "conv_transpose",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.depthwise.depthwise_conv2d",
+            "name": "depthwise_conv2d",
+            "sub": "depthwise",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.grouped.grouped_conv2d",
+            "name": "grouped_conv2d",
+            "sub": "grouped",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.dilated.dilated_conv2d",
+            "name": "dilated_conv2d",
+            "sub": "dilated",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.max_pool.max_pool1d",
+            "name": "max_pool1d",
+            "sub": "max_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.max_pool.max_pool2d",
+            "name": "max_pool2d",
+            "sub": "max_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.max_pool.max_pool3d",
+            "name": "max_pool3d",
+            "sub": "max_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.avg_pool.avg_pool1d",
+            "name": "avg_pool1d",
+            "sub": "avg_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.avg_pool.avg_pool2d",
+            "name": "avg_pool2d",
+            "sub": "avg_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.avg_pool.avg_pool3d",
+            "name": "avg_pool3d",
+            "sub": "avg_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.adaptive.adaptive_avg_pool2d",
+            "name": "adaptive_avg_pool2d",
+            "sub": "adaptive_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "conv.adaptive.adaptive_max_pool2d",
+            "name": "adaptive_max_pool2d",
+            "sub": "adaptive_pool",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "GEMM",
+        "issue": 400,
+        "difficulty": 2,
+        "total_ops": 19,
+        "impl_ops": 11,
+        "tested_ops": 3,
+        "benched_ops": 11,
+        "done_ops": 3,
+        "ops": [
+          {
+            "id": "gemm.gemm.fp16",
+            "name": "gemm_fp16",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "gemm.gemm.fp8",
+            "name": "gemm_fp8",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.gemm.fp8_block_scaled",
+            "name": "gemm_fp8_block_scaled",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.gemm.gemv_fp16",
+            "name": "gemv_fp16",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "gemm.gemm.gemv_fp8",
+            "name": "gemv_fp8",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.gemm.small_batch_fp16",
+            "name": "small_batch_gemm_fp16",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.gemm.small_batch_fp8",
+            "name": "small_batch_gemm_fp8",
+            "sub": "gemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.bmm.fp16",
+            "name": "bmm_fp16",
+            "sub": "bmm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.bmm.fp8",
+            "name": "bmm_fp8",
+            "sub": "bmm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.groupgemm.fp16",
+            "name": "groupgemm_fp16",
+            "sub": "groupgemm",
+            "implemented": true,
+            "tested": true,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "done"
+          },
+          {
+            "id": "gemm.groupgemm.fp8",
+            "name": "groupgemm_fp8",
+            "sub": "groupgemm",
+            "implemented": true,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": true,
+            "status": "impl_only"
+          },
+          {
+            "id": "gemm.outer.outer",
+            "name": "outer",
+            "sub": "outer",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.lowbit.w4a16",
+            "name": "w4a16",
+            "sub": "lowbit_gemm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.lowbit.w8a8",
+            "name": "w8a8",
+            "sub": "lowbit_gemm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.lowbit.w8a8_int8",
+            "name": "w8a8_int8",
+            "sub": "lowbit_gemm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.lowbit.weight_only_int4",
+            "name": "weight_only_int4",
+            "sub": "lowbit_gemm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.lowbit.fp4",
+            "name": "fp4",
+            "sub": "lowbit_gemm",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.sparse.fp16",
+            "name": "sparse_gemm_fp16",
+            "sub": "sparse_gemm_2_4",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "gemm.sparse.fp8",
+            "name": "sparse_gemm_fp8",
+            "sub": "sparse_gemm_2_4",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Quantize",
+        "issue": 401,
+        "difficulty": 2,
+        "total_ops": 10,
+        "impl_ops": 0,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "quant.int8.per_tensor",
+            "name": "int8_per_tensor",
+            "sub": "int8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.int8.per_channel",
+            "name": "int8_per_channel",
+            "sub": "int8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.int8.per_block",
+            "name": "int8_per_block",
+            "sub": "int8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.int8.smooth_quant",
+            "name": "smooth_quant",
+            "sub": "int8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.int4.per_channel",
+            "name": "int4_per_channel",
+            "sub": "int4_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.int4.per_block",
+            "name": "int4_per_block",
+            "sub": "int4_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.int4.nf4",
+            "name": "nf4",
+            "sub": "int4_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.fp8.per_tensor",
+            "name": "fp8_per_tensor",
+            "sub": "fp8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.fp8.per_block",
+            "name": "fp8_per_block",
+            "sub": "fp8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "quant.fp8.cast_transpose",
+            "name": "fp8_cast_transpose",
+            "sub": "fp8_quantize",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Sampling",
+        "issue": 426,
+        "difficulty": 2,
+        "total_ops": 7,
+        "impl_ops": 0,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "sampling.top_k",
+            "name": "top_k",
+            "sub": "top_k",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "sampling.top_p",
+            "name": "top_p",
+            "sub": "top_p",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "sampling.min_p",
+            "name": "min_p",
+            "sub": "min_p",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "sampling.top_k_top_p",
+            "name": "top_k_top_p",
+            "sub": "top_k_top_p",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "sampling.temperature_scale",
+            "name": "temperature_scale",
+            "sub": "temperature_scale",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "sampling.from_probs",
+            "name": "sampling_from_probs",
+            "sub": "sampling_from_probs",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "sampling.chain_spec",
+            "name": "chain_speculative_sampling",
+            "sub": "chain_speculative_sampling",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Flash Attention",
+        "issue": 403,
+        "difficulty": 3,
+        "total_ops": 16,
+        "impl_ops": 0,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "attn.flash.prefill_fwd",
+            "name": "flash_prefill_fwd",
+            "sub": "flash_attention",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.flash.prefill_bwd",
+            "name": "flash_prefill_bwd",
+            "sub": "flash_attention",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.flash.prefill_varlen_fwd",
+            "name": "flash_prefill_varlen_fwd",
+            "sub": "flash_attention",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.flash.prefill_varlen_bwd",
+            "name": "flash_prefill_varlen_bwd",
+            "sub": "flash_attention",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.flash.decode_fwd",
+            "name": "flash_decode_fwd",
+            "sub": "flash_attention",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.flash.decode_paged_fwd",
+            "name": "flash_decode_paged_fwd",
+            "sub": "flash_attention",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.flash.decode_varlen_fwd",
+            "name": "flash_decode_varlen_fwd",
+            "sub": "flash_attention",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.flash.chunked_prefill",
+            "name": "flash_chunked_prefill_fwd",
+            "sub": "flash_attention",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.mla.prefill_fwd",
+            "name": "mla_prefill_fwd",
+            "sub": "mla",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.mla.prefill_bwd",
+            "name": "mla_prefill_bwd",
+            "sub": "mla",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.mla.decode_fwd",
+            "name": "mla_decode_fwd",
+            "sub": "mla",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.mla.decode_paged_fwd",
+            "name": "mla_decode_paged_fwd",
+            "sub": "mla",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.nsa.prefill_fwd",
+            "name": "nsa_prefill_fwd",
+            "sub": "nsa",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.nsa.decode_fwd",
+            "name": "nsa_decode_fwd",
+            "sub": "nsa",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.dsa.prefill_fwd",
+            "name": "dsa_prefill_fwd",
+            "sub": "dsa",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "attn.dsa.decode_fwd",
+            "name": "dsa_decode_fwd",
+            "sub": "dsa",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "MoE",
+        "issue": 404,
+        "difficulty": 3,
+        "total_ops": 6,
+        "impl_ops": 0,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "moe.permute_align",
+            "name": "permute_align",
+            "sub": "permute_align",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "moe.unpermute_depad",
+            "name": "unpermute_depad",
+            "sub": "unpermute_depad",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "moe.fused_moe.deepseek",
+            "name": "fused_moe_deepseek",
+            "sub": "fused_moe",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "moe.fused_moe.glm",
+            "name": "fused_moe_glm",
+            "sub": "fused_moe",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "moe.fused_moe.kimi",
+            "name": "fused_moe_kimi",
+            "sub": "fused_moe",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "moe.fused_moe.qwen",
+            "name": "fused_moe_qwen",
+            "sub": "fused_moe",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Linear Attention",
+        "issue": 405,
+        "difficulty": 3,
+        "total_ops": 8,
+        "impl_ops": 0,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "linattn.gated_deltanet.chunkwise",
+            "name": "gated_deltanet_chunkwise",
+            "sub": "gated_deltanet",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "linattn.gated_deltanet.recurrence",
+            "name": "gated_deltanet_recurrence",
+            "sub": "gated_deltanet",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "linattn.deltanet.chunkwise",
+            "name": "deltanet_chunkwise",
+            "sub": "deltanet",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "linattn.deltanet.recurrence",
+            "name": "deltanet_recurrence",
+            "sub": "deltanet",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "linattn.gla.chunkwise",
+            "name": "gla_chunkwise",
+            "sub": "gla",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "linattn.gla.recurrence",
+            "name": "gla_recurrence",
+            "sub": "gla",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "linattn.retnet.chunkwise",
+            "name": "retnet_chunkwise",
+            "sub": "retnet",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "linattn.retnet.recurrence",
+            "name": "retnet_recurrence",
+            "sub": "retnet",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "SSM",
+        "issue": 406,
+        "difficulty": 3,
+        "total_ops": 2,
+        "impl_ops": 0,
+        "tested_ops": 0,
+        "benched_ops": 0,
+        "done_ops": 0,
+        "ops": [
+          {
+            "id": "ssm.mamba1",
+            "name": "mamba1",
+            "sub": "mamba1",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          },
+          {
+            "id": "ssm.mamba2",
+            "name": "mamba2",
+            "sub": "mamba2",
+            "implemented": false,
+            "tested": false,
+            "test_failed": false,
+            "bench_ok": null,
+            "status": "missing"
+          }
+        ]
+      }
+    ]
   }
 }

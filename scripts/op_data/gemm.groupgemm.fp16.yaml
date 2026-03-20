@@ -26,14 +26,20 @@ perf_details:
 perf_score_updated: null
 has_bugs: null
 bugs: []
-kernel_last_updated: null
-kernel_last_pr_number: null
-kernel_last_pr_url: null
-kernel_last_pr_author: null
-kernel_last_pr_title: null
+kernel_last_updated: '2026-03-19T12:32:24Z'
+kernel_last_pr_number: 600
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
+kernel_last_pr_author: superAngGao
+kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
 test_status:
-  last_run: null
-  passed: null
+  last_run: '2026-03-20'
+  passed: true
   errors: []
-last_updated: '2026-03-20T01:58:13Z'
-updated_by: bootstrap
+  status: passed
+last_updated: '2026-03-20T22:26:17Z'
+updated_by: nightly-auto
+bench_status:
+  last_run: '2026-03-20'
+  status: passed
+  ratio: null
+  details: []

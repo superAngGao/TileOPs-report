@@ -21,20 +21,31 @@ func_score_updated: null
 perf_score: null
 perf_details:
   baseline: null
-  last_run: null
+  last_run: '2026-03-20'
   summary: null
-  results: []
+  results: &id001
+  - bench_fn: logsumexp
+    tileops: 0.0175 ms
+    baseline: 0.0600 ms
+    ratio: 3.4286
+    summary: TileOps 0.0175ms vs Baseline 0.0600ms (ratio 3.43)
 perf_score_updated: null
 has_bugs: null
 bugs: []
-kernel_last_updated: null
-kernel_last_pr_number: null
-kernel_last_pr_url: null
-kernel_last_pr_author: null
-kernel_last_pr_title: null
+kernel_last_updated: '2026-03-19T12:32:24Z'
+kernel_last_pr_number: 600
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
+kernel_last_pr_author: superAngGao
+kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
 test_status:
-  last_run: null
-  passed: null
+  last_run: '2026-03-20'
+  passed: true
   errors: []
-last_updated: '2026-03-20T01:58:13Z'
-updated_by: bootstrap
+  status: passed
+last_updated: '2026-03-20T22:26:17Z'
+updated_by: nightly-auto
+bench_status:
+  last_run: '2026-03-20'
+  status: qualified
+  ratio: 3.4286
+  details: *id001
