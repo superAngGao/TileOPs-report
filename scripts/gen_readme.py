@@ -10,11 +10,17 @@ TEMPLATE_PATH = Path(__file__).parent / "readme_template.md"
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
+_BLOCK_FULL = "\u2588"
+_BLOCK_LIGHT = "\u2591"
+_STAR_FULL = "\u2b50"
+_STAR_EMPTY = "\u2606"
+
+
 def _bar(count: int, total: int, width: int = 15) -> str:
     if total == 0:
-        return "`" + "\u2591" * width + "` 0%"
+        return "`" + _BLOCK_LIGHT * width + "` 0%"
     filled = round(count / total * width)
-    return f"`{'\u2588' * filled}{'\u2591' * (width - filled)}` {count}/{total}"
+    return f"`{_BLOCK_FULL * filled}{_BLOCK_LIGHT * (width - filled)}` {count}/{total}"
 
 
 def _status_icon(impl: bool, tested: bool, test_failed: bool, bench_ok) -> str:
@@ -32,7 +38,7 @@ def _status_icon(impl: bool, tested: bool, test_failed: bool, bench_ok) -> str:
 def _score_display(score) -> str:
     if score is None:
         return "\u2014"
-    return f"{'\u2b50' * score}{'\u2606' * (5 - score)} ({score}/5)"
+    return f"{_STAR_FULL * score}{_STAR_EMPTY * (5 - score)} ({score}/5)"
 
 
 # ── Section builders ─────────────────────────────────────────────────────────
