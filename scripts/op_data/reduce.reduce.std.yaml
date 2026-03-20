@@ -5,12 +5,17 @@ category_id: 2
 sub: reduce
 issue: 398
 files:
-  kernel: []
+  kernel:
+  - tileops/kernels/reduction/reduce/fwd.py
   op:
   - tileops/ops/reduction/reduce.py
-  tests: []
-  bench: []
-files_last_scanned: '2026-03-18T10:14:48Z'
+  tests:
+  - tests/ops/test_reduce.py::test_std_3d
+  - tests/ops/test_reduce.py::test_std_bessel
+  - tests/ops/test_reduce.py::test_std_op
+  bench:
+  - benchmarks/ops/bench_reduce.py::bench_std
+files_last_scanned: '2026-03-20T01:58:13Z'
 func_score: null
 func_score_notes: ''
 func_score_updated: null
@@ -29,14 +34,8 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-19'
+  last_run: null
   passed: null
   errors: []
-  status: missing
-last_updated: '2026-03-19T22:26:39Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-03-19'
-  status: missing
-  ratio: null
-  details: []
+last_updated: '2026-03-20T01:58:13Z'
+updated_by: bootstrap

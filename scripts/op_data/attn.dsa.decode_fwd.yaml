@@ -5,56 +5,32 @@ category_id: 8
 sub: dsa
 issue: 403
 files:
-  kernel:
-  - tileops/kernels/deepseek_mla/deepseek_dsa_decode.py
+  kernel: []
   op:
   - tileops/ops/deepseek_dsa_decode.py
-  tests:
-  - tests/ops/test_deepseek_dsa_decode.py::test_sparse_mla_decode
-  bench:
-  - benchmarks/ops/bench_deepseek_dsa_decode.py::bench_dsa_decode
-files_last_scanned: '2026-03-18T10:14:48Z'
-func_score: 4
-func_score_notes: 测试通过，三项 benchmark 均大幅超越 baseline，功能完整性与当前评分一致。
-func_score_updated: '2026-03-19'
-perf_score: 5
+  tests: []
+  bench: []
+files_last_scanned: '2026-03-20T01:58:13Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
 perf_details:
   baseline: null
-  last_run: '2026-03-19'
+  last_run: null
   summary: null
-  results: &id001
-  - bench_fn: dsa_decode
-    tileops: 0.6900 ms
-    baseline: 15.1500 ms
-    ratio: null
-    summary: TileOps 0.6900ms vs Baseline 15.1500ms
-  - bench_fn: fp8_lighting_indexer
-    tileops: 0.1550 ms
-    baseline: 5.2150 ms
-    ratio: null
-    summary: TileOps 0.1550ms vs Baseline 5.2150ms
-  - bench_fn: topk_selector
-    tileops: 29.2650 ms
-    baseline: 63.0350 ms
-    ratio: 2.1539
-    summary: TileOps 29.2650ms vs Baseline 63.0350ms (ratio 2.15)
-perf_score_updated: '2026-03-19'
-has_bugs: false
+  results: []
+perf_score_updated: null
+has_bugs: null
 bugs: []
-kernel_last_updated: '2026-03-19T12:32:24Z'
-kernel_last_pr_number: 600
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
-kernel_last_pr_author: superAngGao
-kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-19'
-  passed: true
+  last_run: null
+  passed: null
   errors: []
-  status: passed
-last_updated: '2026-03-19T22:26:39Z'
-updated_by: claude-nightly
-bench_status:
-  last_run: '2026-03-19'
-  status: qualified
-  ratio: 2.1539
-  details: *id001
+last_updated: '2026-03-20T01:58:13Z'
+updated_by: bootstrap

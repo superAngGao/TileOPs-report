@@ -5,32 +5,23 @@ category_id: 3
 sub: instance_norm
 issue: 399
 files:
-  kernel:
-  - tileops/kernels/norm/instance_norm/__init__.py
+  kernel: []
   op:
   - tileops/ops/norm/instance_norm.py
-  tests:
-  - tests/ops/test_instance_norm.py::test_instance_norm_non_contiguous
-  - tests/ops/test_instance_norm.py::test_instance_norm_op
-  bench:
-  - benchmarks/ops/bench_instance_norm.py::bench_instance_norm
-files_last_scanned: '2026-03-18T10:14:48Z'
-func_score: 4
-func_score_notes: 测试通过，功能接近完整；benchmark ratio 1.17，略超 baseline。
-func_score_updated: '2026-03-19'
-perf_score: 5
+  tests: []
+  bench: []
+files_last_scanned: '2026-03-20T01:58:13Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
 perf_details:
   baseline: null
-  last_run: '2026-03-19'
+  last_run: null
   summary: null
-  results: &id001
-  - bench_fn: instance_norm
-    tileops: 0.0150 ms
-    baseline: 0.0175 ms
-    ratio: 1.1667
-    summary: TileOps 0.0150ms vs Baseline 0.0175ms (ratio 1.17)
-perf_score_updated: '2026-03-19'
-has_bugs: false
+  results: []
+perf_score_updated: null
+has_bugs: null
 bugs: []
 kernel_last_updated: null
 kernel_last_pr_number: null
@@ -38,14 +29,8 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-19'
-  passed: true
+  last_run: null
+  passed: null
   errors: []
-  status: passed
-last_updated: '2026-03-19T22:26:39Z'
-updated_by: claude-nightly
-bench_status:
-  last_run: '2026-03-19'
-  status: qualified
-  ratio: 1.1667
-  details: *id001
+last_updated: '2026-03-20T01:58:13Z'
+updated_by: bootstrap

@@ -5,47 +5,32 @@ category_id: 7
 sub: chain_speculative_sampling
 issue: 426
 files:
-  kernel:
-  - tileops/kernels/deepseek_mla/topk_selector.py
+  kernel: []
   op:
   - tileops/ops/topk_selector.py
-  tests:
-  - tests/ops/test_topk_selector.py::test_topk_selector_op
-  bench:
-  - benchmarks/ops/bench_topk_selector.py::bench_topk_selector
-files_last_scanned: '2026-03-18T10:14:48Z'
-func_score: 3
-func_score_notes: 测试通过，benchmark 性能优秀（ratio 2.15），但历史标记存在 bug，功能完整性待确认。
-func_score_updated: '2026-03-19'
-perf_score: 5
+  tests: []
+  bench: []
+files_last_scanned: '2026-03-20T01:58:13Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
 perf_details:
   baseline: null
-  last_run: '2026-03-19'
+  last_run: null
   summary: null
-  results: &id001
-  - bench_fn: topk_selector
-    tileops: 29.2650 ms
-    baseline: 63.0350 ms
-    ratio: 2.1539
-    summary: TileOps 29.2650ms vs Baseline 63.0350ms (ratio 2.15)
-perf_score_updated: '2026-03-19'
-has_bugs: true
-bugs:
-- 历史记录标记存在 bug，测试虽通过但具体问题需进一步排查
-kernel_last_updated: '2026-03-19T12:32:24Z'
-kernel_last_pr_number: 600
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
-kernel_last_pr_author: superAngGao
-kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
+  results: []
+perf_score_updated: null
+has_bugs: null
+bugs: []
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-19'
-  passed: true
+  last_run: null
+  passed: null
   errors: []
-  status: passed
-last_updated: '2026-03-19T22:26:39Z'
-updated_by: claude-nightly
-bench_status:
-  last_run: '2026-03-19'
-  status: qualified
-  ratio: 2.1539
-  details: *id001
+last_updated: '2026-03-20T01:58:13Z'
+updated_by: bootstrap

@@ -14,33 +14,27 @@ files:
   - tests/ops/test_gemm.py::test_gemv_boundary_rhs_col
   bench:
   - benchmarks/ops/bench_gemm.py::bench_gemv
-files_last_scanned: '2026-03-18T10:14:48Z'
-func_score: 3
-func_score_notes: 测试通过，主要功能实现，但无 benchmark 数据无法评估性能。
-func_score_updated: '2026-03-19'
+files_last_scanned: '2026-03-20T01:58:13Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: '2026-03-19'
-has_bugs: false
+perf_score_updated: null
+has_bugs: null
 bugs: []
-kernel_last_updated: '2026-03-19T12:32:24Z'
-kernel_last_pr_number: 600
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
-kernel_last_pr_author: superAngGao
-kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-19'
-  passed: true
+  last_run: null
+  passed: null
   errors: []
-  status: passed
-last_updated: '2026-03-19T22:26:39Z'
-updated_by: claude-nightly
-bench_status:
-  last_run: '2026-03-19'
-  status: passed
-  ratio: null
-  details: []
+last_updated: '2026-03-20T01:58:13Z'
+updated_by: bootstrap

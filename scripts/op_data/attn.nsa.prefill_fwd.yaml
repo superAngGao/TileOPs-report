@@ -5,74 +5,32 @@ category_id: 8
 sub: nsa
 issue: 403
 files:
-  kernel:
-  - tileops/kernels/deepseek_nsa/nsa_fwd.py
-  - tileops/kernels/deepseek_nsa/nsa_cmp_fwd.py
+  kernel: []
   op:
   - tileops/ops/deepseek_nsa.py
-  tests:
-  - tests/ops/test_deepseek_nsa_fwd.py::test_nsa_varlen_op
-  - tests/ops/test_deepseek_nsa_cmp_fwd.py::test_nsa_cmp_fwd_varlen_op
-  bench:
-  - benchmarks/ops/bench_deepseek_nsa_fwd.py::bench_nsa_fwd
-  - benchmarks/ops/bench_deepseek_nsa_cmp_fwd.py::bench_nsa_cmp_fwd
-files_last_scanned: '2026-03-18T10:14:48Z'
-func_score: 4
-func_score_notes: 测试全部通过；两个 bench 场景均有数据，nsa_fwd ratio 2.43，nsa_cmp_fwd ratio 5.70，整体超越 baseline。
-func_score_updated: '2026-03-18'
-perf_score: 5
+  tests: []
+  bench: []
+files_last_scanned: '2026-03-20T01:58:13Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
 perf_details:
   baseline: null
-  last_run: '2026-03-19'
+  last_run: null
   summary: null
-  results: &id001
-  - bench_fn: nsa_fwd
-    tileops: 0.0333 ms
-    baseline: 353.9500 ms
-    ratio: null
-    summary: TileOps 0.0333ms vs Baseline 353.9500ms
-  - bench_fn: nsa_cmp_fwd
-    tileops: 0.3250 ms
-    baseline: 448.2250 ms
-    ratio: null
-    summary: TileOps 0.3250ms vs Baseline 448.2250ms
-  - bench_fn: nsa_topk
-    tileops: 0.1467 ms
-    baseline: 950.9200 ms
-    ratio: null
-    summary: TileOps 0.1467ms vs Baseline 950.9200ms
-  - bench_fn: gqa_sliding_window_fwd
-    tileops: 0.0100 ms
-    baseline: N/A
-    ratio: null
-    summary: TileOps 0.0100ms (no baseline)
-  - bench_fn: gqa_sliding_window_varlen_fwd
-    tileops: 0.7400 ms
-    baseline: N/A
-    ratio: null
-    summary: TileOps 0.7400ms (no baseline)
-  - bench_fn: mean_pooling
-    tileops: 0.1025 ms
-    baseline: 0.5275 ms
-    ratio: 5.1463
-    summary: TileOps 0.1025ms vs Baseline 0.5275ms (ratio 5.15)
-perf_score_updated: '2026-03-18'
-has_bugs: false
+  results: []
+perf_score_updated: null
+has_bugs: null
 bugs: []
-kernel_last_updated: '2026-03-19T12:32:24Z'
-kernel_last_pr_number: 600
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
-kernel_last_pr_author: superAngGao
-kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-19'
-  passed: true
+  last_run: null
+  passed: null
   errors: []
-  status: passed
-last_updated: '2026-03-19T22:26:39Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-03-19'
-  status: qualified
-  ratio: 5.1463
-  details: *id001
+last_updated: '2026-03-20T01:58:13Z'
+updated_by: bootstrap

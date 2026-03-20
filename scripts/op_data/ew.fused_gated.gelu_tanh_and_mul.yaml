@@ -5,46 +5,32 @@ category_id: 1
 sub: fused_gated_activation
 issue: 397
 files:
-  kernel:
-  - tileops/kernels/elementwise.py
+  kernel: []
   op:
   - tileops/ops/elementwise.py
-  tests:
-  - tests/ops/test_fused_gated.py::test_gelu_tanh_and_mul_op
-  bench:
-  - benchmarks/ops/bench_activation.py::bench_gelu_tanh_and_mul
-files_last_scanned: '2026-03-18T10:14:48Z'
-func_score: 4
-func_score_notes: 测试通过，功能基本完整。benchmark ratio 3.83，性能显著超越 baseline。
-func_score_updated: '2026-03-18'
-perf_score: 5
+  tests: []
+  bench: []
+files_last_scanned: '2026-03-20T01:58:13Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
 perf_details:
   baseline: null
-  last_run: '2026-03-19'
+  last_run: null
   summary: null
-  results: &id001
-  - bench_fn: gelu_tanh_and_mul
-    tileops: 0.0233 ms
-    baseline: 0.0733 ms
-    ratio: 3.1429
-    summary: TileOps 0.0233ms vs Baseline 0.0733ms (ratio 3.14)
-perf_score_updated: '2026-03-18'
-has_bugs: false
+  results: []
+perf_score_updated: null
+has_bugs: null
 bugs: []
-kernel_last_updated: '2026-03-19T12:32:24Z'
-kernel_last_pr_number: 600
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
-kernel_last_pr_author: superAngGao
-kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-19'
-  passed: true
+  last_run: null
+  passed: null
   errors: []
-  status: passed
-last_updated: '2026-03-19T22:26:39Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-03-19'
-  status: qualified
-  ratio: 3.1429
-  details: *id001
+last_updated: '2026-03-20T01:58:13Z'
+updated_by: bootstrap
