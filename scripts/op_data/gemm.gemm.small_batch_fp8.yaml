@@ -13,32 +13,33 @@ files:
   bench:
   - benchmarks/ops/bench_gemm.py::bench_small_batch_gemm_fp8
 files_last_scanned: '2026-03-20T01:58:13Z'
-func_score: null
-func_score_notes: ''
-func_score_updated: null
+func_score: 1
+func_score_notes: 测试状态为 missing，无测试结果，功能实现情况未知，视为骨架/占位符。
+func_score_updated: '2026-03-21'
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: null
-has_bugs: null
-bugs: []
+perf_score_updated: '2026-03-21'
+has_bugs: true
+bugs:
+- 测试缺失，无法验证功能正确性
 kernel_last_updated: '2026-03-19T12:32:24Z'
 kernel_last_pr_number: 600
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
 kernel_last_pr_author: superAngGao
 kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
 test_status:
-  last_run: '2026-03-20'
+  last_run: '2026-03-21'
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-20T22:26:17Z'
-updated_by: nightly-auto
+last_updated: '2026-03-21T22:21:59Z'
+updated_by: claude-nightly
 bench_status:
-  last_run: '2026-03-20'
+  last_run: '2026-03-21'
   status: passed
   ratio: null
   details: []

@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-03-20T22:26:17Z",
+  "generated_at": "2026-03-21T22:21:59Z",
   "total_ops": 186,
   "ops": {
     "ew.binary_arith.add": {
@@ -23,15 +23,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -58,15 +58,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -93,15 +93,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -128,15 +128,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -163,15 +163,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -198,15 +198,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -233,15 +233,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -268,15 +268,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -303,15 +303,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -338,15 +338,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -373,15 +373,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -408,15 +408,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -443,15 +443,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -478,15 +478,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -513,15 +513,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -548,15 +548,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -583,15 +583,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -618,15 +618,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -653,15 +653,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -688,15 +688,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -723,15 +723,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -758,15 +758,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -793,15 +793,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -828,15 +828,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -863,15 +863,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -898,15 +898,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -933,15 +933,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -968,15 +968,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1003,15 +1003,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1038,15 +1038,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1073,15 +1073,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1108,15 +1108,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1143,15 +1143,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1178,15 +1178,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1213,15 +1213,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1248,15 +1248,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1283,15 +1283,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1318,15 +1318,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1353,15 +1353,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1388,15 +1388,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1423,15 +1423,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1458,15 +1458,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1493,15 +1493,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1528,15 +1528,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1563,15 +1563,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1598,15 +1598,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1633,15 +1633,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1668,15 +1668,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1703,15 +1703,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1738,15 +1738,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1773,15 +1773,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1808,15 +1808,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1843,15 +1843,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1878,15 +1878,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1913,15 +1913,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1948,15 +1948,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -1983,15 +1983,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2018,15 +2018,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2053,15 +2053,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2088,15 +2088,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2123,15 +2123,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2158,15 +2158,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2193,15 +2193,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2228,15 +2228,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2263,15 +2263,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2298,15 +2298,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2333,15 +2333,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2368,15 +2368,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2401,15 +2401,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2434,15 +2434,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2469,15 +2469,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2504,15 +2504,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -2543,20 +2543,20 @@
           "benchmarks/ops/bench_reduce.py::bench_sum"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -2584,20 +2584,20 @@
           "benchmarks/ops/bench_reduce.py::bench_mean"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -2625,20 +2625,20 @@
           "benchmarks/ops/bench_reduce.py::bench_amin"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -2666,20 +2666,20 @@
           "benchmarks/ops/bench_reduce.py::bench_amax"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -2707,20 +2707,20 @@
           "benchmarks/ops/bench_reduce.py::bench_prod"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -2750,20 +2750,20 @@
           "benchmarks/ops/bench_reduce.py::bench_std"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -2794,20 +2794,20 @@
           "benchmarks/ops/bench_reduce.py::bench_var"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -2836,20 +2836,20 @@
           "benchmarks/ops/bench_reduce.py::bench_var_mean"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -2879,20 +2879,20 @@
           "benchmarks/ops/bench_softmax.py::bench_softmax"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 3,
+      "perf_score": 4,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "qualified",
         "ratio": 0.9167,
         "details": [
@@ -2929,20 +2929,20 @@
           "benchmarks/ops/bench_softmax.py::bench_log_softmax"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 3,
+      "perf_score": 2,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "underperforming",
         "ratio": 0.6667,
         "details": [
@@ -2979,20 +2979,20 @@
           "benchmarks/ops/bench_softmax.py::bench_logsumexp"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 3,
+      "perf_score": 5,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "qualified",
         "ratio": 3.4286,
         "details": [
@@ -3030,20 +3030,20 @@
           "benchmarks/ops/bench_argreduce.py::bench_argmax"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -3073,20 +3073,20 @@
           "benchmarks/ops/bench_argreduce.py::bench_argmin"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -3116,20 +3116,20 @@
           "benchmarks/ops/bench_cumulative.py::bench_cumsum"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -3159,20 +3159,20 @@
           "benchmarks/ops/bench_cumulative.py::bench_cumprod"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -3200,20 +3200,20 @@
           "benchmarks/ops/bench_logical_reduce.py::bench_any"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -3241,20 +3241,20 @@
           "benchmarks/ops/bench_logical_reduce.py::bench_all"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -3282,20 +3282,20 @@
           "benchmarks/ops/bench_vector_norm.py::bench_l1_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -3323,20 +3323,20 @@
           "benchmarks/ops/bench_vector_norm.py::bench_l2_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -3364,20 +3364,20 @@
           "benchmarks/ops/bench_vector_norm.py::bench_inf_norm"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -3404,15 +3404,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3439,15 +3439,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3474,15 +3474,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3509,15 +3509,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3544,15 +3544,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3577,15 +3577,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3612,15 +3612,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3647,15 +3647,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3682,15 +3682,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3717,15 +3717,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3750,15 +3750,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3783,15 +3783,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3816,15 +3816,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3849,15 +3849,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3882,15 +3882,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3915,15 +3915,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3948,15 +3948,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -3981,15 +3981,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4014,15 +4014,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4047,15 +4047,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4080,15 +4080,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4113,15 +4113,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4146,15 +4146,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4179,15 +4179,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4212,15 +4212,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4245,15 +4245,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4281,20 +4281,20 @@
           "benchmarks/ops/bench_gemm.py::bench_gemm"
         ]
       },
-      "func_score": null,
-      "perf_score": null,
-      "has_bugs": null,
+      "func_score": 4,
+      "perf_score": 5,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "qualified",
         "ratio": 1.0741,
         "details": [
@@ -4328,20 +4328,20 @@
           "benchmarks/ops/bench_gemm.py::bench_gemm_fp8"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -4367,20 +4367,20 @@
           "benchmarks/ops/bench_gemm.py::bench_gemm_fp8_block_scaled"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -4409,20 +4409,20 @@
           "benchmarks/ops/bench_gemm.py::bench_gemv"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -4448,20 +4448,20 @@
           "benchmarks/ops/bench_gemm.py::bench_gemv_fp8"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -4487,20 +4487,20 @@
           "benchmarks/ops/bench_gemm.py::bench_small_batch_gemm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -4526,20 +4526,20 @@
           "benchmarks/ops/bench_gemm.py::bench_small_batch_gemm_fp8"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -4563,20 +4563,20 @@
           "benchmarks/ops/bench_gemm.py::bench_bmm"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -4600,20 +4600,20 @@
           "benchmarks/ops/bench_gemm.py::bench_bmm_fp8"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -4641,20 +4641,20 @@
           "benchmarks/ops/bench_grouped_gemm.py::bench_grouped_gemm"
         ]
       },
-      "func_score": null,
+      "func_score": 3,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": false,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": true,
         "errors": [],
         "status": "passed"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -4680,20 +4680,20 @@
           "benchmarks/ops/bench_grouped_gemm.py::bench_grouped_gemm_fp8"
         ]
       },
-      "func_score": null,
+      "func_score": 1,
       "perf_score": null,
-      "has_bugs": null,
+      "has_bugs": true,
       "kernel_last_updated": "2026-03-19T12:32:24Z",
       "kernel_last_pr_author": "superAngGao",
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "passed",
         "ratio": null,
         "details": []
@@ -4718,15 +4718,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4751,15 +4751,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4784,15 +4784,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4817,15 +4817,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4850,15 +4850,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4883,15 +4883,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4916,15 +4916,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4949,15 +4949,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -4982,15 +4982,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5015,15 +5015,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5048,15 +5048,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5081,15 +5081,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5114,15 +5114,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5147,15 +5147,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5180,15 +5180,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5215,15 +5215,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5248,15 +5248,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5281,15 +5281,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5314,15 +5314,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5347,15 +5347,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5380,15 +5380,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5413,15 +5413,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5446,15 +5446,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5479,15 +5479,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5514,15 +5514,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5550,15 +5550,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5586,15 +5586,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5621,15 +5621,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5654,15 +5654,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5690,15 +5690,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5726,15 +5726,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5759,15 +5759,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5792,15 +5792,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5825,15 +5825,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5858,15 +5858,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5893,15 +5893,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5926,15 +5926,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5961,15 +5961,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -5994,15 +5994,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6027,15 +6027,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6062,15 +6062,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6095,15 +6095,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6128,15 +6128,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6161,15 +6161,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6194,15 +6194,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6227,15 +6227,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6260,15 +6260,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6295,15 +6295,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6330,15 +6330,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6365,15 +6365,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6400,15 +6400,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6433,15 +6433,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6466,15 +6466,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6499,15 +6499,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6532,15 +6532,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6565,15 +6565,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6598,15 +6598,15 @@
       "has_bugs": null,
       "kernel_last_updated": null,
       "kernel_last_pr_author": null,
-      "last_updated": "2026-03-20T22:26:17Z",
+      "last_updated": "2026-03-21T22:21:59Z",
       "test_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "passed": null,
         "errors": [],
         "status": "missing"
       },
       "bench_status": {
-        "last_run": "2026-03-20",
+        "last_run": "2026-03-21",
         "status": "missing",
         "ratio": null,
         "details": []
@@ -6615,7 +6615,7 @@
     }
   },
   "summary": {
-    "generated_at": "2026-03-20T22:26:17Z",
+    "generated_at": "2026-03-21T22:21:59Z",
     "total_ops": 186,
     "impl_ops": 31,
     "tested_ops": 23,
