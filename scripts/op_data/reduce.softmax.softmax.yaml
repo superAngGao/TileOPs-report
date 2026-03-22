@@ -15,38 +15,28 @@ files:
   - tests/ops/test_softmax.py::test_softmax_op
   bench:
   - benchmarks/ops/bench_softmax.py::bench_softmax
-files_last_scanned: '2026-03-20T01:58:13Z'
-func_score: 3
-func_score_notes: 测试通过，benchmark ratio 0.92 接近 baseline，功能基本完整，边界情况覆盖情况未知。
-func_score_updated: '2026-03-21'
-perf_score: 4
+  - benchmarks/ops/bench_reduce.py::bench_softmax
+files_last_scanned: '2026-03-22T20:20:49Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
 perf_details:
   baseline: null
-  last_run: '2026-03-21'
+  last_run: null
   summary: null
-  results: &id001
-  - bench_fn: softmax
-    tileops: 0.0300 ms
-    baseline: 0.0275 ms
-    ratio: 0.9167
-    summary: TileOps 0.0300ms vs Baseline 0.0275ms (ratio 0.92)
-perf_score_updated: '2026-03-21'
-has_bugs: false
+  results: []
+perf_score_updated: null
+has_bugs: null
 bugs: []
-kernel_last_updated: '2026-03-19T12:32:24Z'
-kernel_last_pr_number: 600
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/600
-kernel_last_pr_author: superAngGao
-kernel_last_pr_title: '[Perf] Add lru_cache to remaining 40 builder functions'
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-21'
-  passed: true
+  last_run: null
+  passed: null
   errors: []
-  status: passed
-last_updated: '2026-03-21T22:21:59Z'
-updated_by: claude-nightly
-bench_status:
-  last_run: '2026-03-21'
-  status: qualified
-  ratio: 0.9167
-  details: *id001
+last_updated: '2026-03-22T20:20:49Z'
+updated_by: bootstrap

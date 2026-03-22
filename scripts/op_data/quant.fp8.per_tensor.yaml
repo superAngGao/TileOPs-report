@@ -5,12 +5,15 @@ category_id: 6
 sub: fp8_quantize
 issue: 401
 files:
-  kernel: []
+  kernel:
+  - tileops/kernels/deepseek_mla/fp8_quant.py
   op:
   - tileops/ops/fp8_quant.py
-  tests: []
-  bench: []
-files_last_scanned: '2026-03-20T01:58:13Z'
+  tests:
+  - tests/ops/test_fp8_quant.py::test_fp8_quant_op
+  bench:
+  - benchmarks/ops/bench_fp8_quant.py::bench_fp8_per_tensor
+files_last_scanned: '2026-03-22T20:20:49Z'
 func_score: null
 func_score_notes: ''
 func_score_updated: null
@@ -29,14 +32,8 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-21'
+  last_run: null
   passed: null
   errors: []
-  status: missing
-last_updated: '2026-03-21T22:21:59Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-03-21'
-  status: missing
-  ratio: null
-  details: []
+last_updated: '2026-03-22T20:20:49Z'
+updated_by: bootstrap
