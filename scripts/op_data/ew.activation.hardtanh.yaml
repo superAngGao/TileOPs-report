@@ -13,26 +13,38 @@ files:
   bench:
   - benchmarks/ops/bench_activation.py::bench_hardtanh
 files_last_scanned: '2026-03-22T20:20:49Z'
-func_score: null
-func_score_notes: ''
-func_score_updated: null
-perf_score: null
+func_score: 2
+func_score_notes: 测试状态为 missing，功能测试缺失；benchmark ratio 为 1.0，性能达标但功能正确性未经验证。
+func_score_updated: '2026-03-22'
+perf_score: 4
 perf_details:
   baseline: null
-  last_run: null
+  last_run: '2026-03-22'
   summary: null
-  results: []
-perf_score_updated: null
-has_bugs: null
-bugs: []
+  results: &id001
+  - bench_fn: hardtanh
+    tileops: 0.0167 ms
+    baseline: 0.0167 ms
+    ratio: 1.0
+    summary: TileOps 0.0167ms vs Baseline 0.0167ms (ratio 1.00)
+perf_score_updated: '2026-03-22'
+has_bugs: true
+bugs:
+- '测试用例缺失（status: missing），功能正确性未经验证'
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: null
+  last_run: '2026-03-22'
   passed: null
   errors: []
-last_updated: '2026-03-22T20:20:49Z'
-updated_by: bootstrap
+  status: missing
+last_updated: '2026-03-22T22:23:01Z'
+updated_by: claude-nightly
+bench_status:
+  last_run: '2026-03-22'
+  status: qualified
+  ratio: 1.0
+  details: *id001

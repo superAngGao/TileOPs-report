@@ -15,17 +15,17 @@ files:
   bench:
   - benchmarks/ops/bench_unary_elementwise.py::bench_erf
 files_last_scanned: '2026-03-22T20:20:49Z'
-func_score: null
-func_score_notes: ''
-func_score_updated: null
+func_score: 4
+func_score_notes: 测试全部通过，功能基本完整；无 benchmark ratio 数据，性能情况未知。
+func_score_updated: '2026-03-22'
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: null
-has_bugs: null
+perf_score_updated: '2026-03-22'
+has_bugs: false
 bugs: []
 kernel_last_updated: null
 kernel_last_pr_number: null
@@ -33,8 +33,14 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: null
-  passed: null
+  last_run: '2026-03-22'
+  passed: true
   errors: []
-last_updated: '2026-03-22T20:20:49Z'
-updated_by: bootstrap
+  status: passed
+last_updated: '2026-03-22T22:23:01Z'
+updated_by: claude-nightly
+bench_status:
+  last_run: '2026-03-22'
+  status: passed
+  ratio: null
+  details: []
