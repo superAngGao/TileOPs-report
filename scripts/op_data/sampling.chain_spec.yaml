@@ -22,7 +22,7 @@ perf_details:
   baseline: null
   last_run: '2026-03-22'
   summary: null
-  results: &id001
+  results:
   - bench_fn: topk_selector
     tileops: 29.2675 ms
     baseline: 63.1775 ms
@@ -37,14 +37,14 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-22'
+  last_run: '2026-03-23'
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-22T22:23:01Z'
-updated_by: claude-nightly
+last_updated: '2026-03-23T22:30:11Z'
+updated_by: nightly-auto
 bench_status:
-  last_run: '2026-03-22'
-  status: qualified
-  ratio: 2.1586
-  details: *id001
+  last_run: '2026-03-23'
+  status: passed
+  ratio: null
+  details: []

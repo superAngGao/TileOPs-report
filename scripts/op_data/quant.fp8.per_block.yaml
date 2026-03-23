@@ -13,32 +13,32 @@ files:
   - benchmarks/ops/bench_fp8_quant.py::bench_fp8_per_block
 files_last_scanned: '2026-03-22T20:20:49Z'
 func_score: 1
-func_score_notes: 测试状态为 missing，per-block 量化功能缺失或未注册测试，基本不可用。
-func_score_updated: '2026-03-22'
+func_score_notes: 测试状态为 missing，无法验证功能正确性，属于骨架或占位符实现。
+func_score_updated: '2026-03-23'
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: '2026-03-22'
+perf_score_updated: '2026-03-23'
 has_bugs: true
 bugs:
-- '测试缺失（status: missing），功能未经验证'
+- 测试文件缺失，功能未经验证
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-22'
+  last_run: '2026-03-23'
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-22T22:23:01Z'
+last_updated: '2026-03-23T22:30:11Z'
 updated_by: claude-nightly
 bench_status:
-  last_run: '2026-03-22'
+  last_run: '2026-03-23'
   status: passed
   ratio: null
   details: []

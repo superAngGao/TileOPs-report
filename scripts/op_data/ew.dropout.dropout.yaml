@@ -15,37 +15,37 @@ files:
   - benchmarks/ops/bench_dropout.py::bench_dropout
 files_last_scanned: '2026-03-22T20:20:49Z'
 func_score: 2
-func_score_notes: 测试失败，功能存在缺陷，仅基础路径可能可用；benchmark 显示性能超越 baseline（ratio 1.60），但正确性未通过。
-func_score_updated: '2026-03-22'
-perf_score: 5
+func_score_notes: 测试失败，存在正确性问题，功能仅覆盖基础场景。
+func_score_updated: '2026-03-23'
+perf_score: null
 perf_details:
   baseline: null
   last_run: '2026-03-22'
   summary: null
-  results: &id001
+  results:
   - bench_fn: dropout
     tileops: 0.0167 ms
     baseline: 0.0267 ms
     ratio: 1.6
     summary: TileOps 0.0167ms vs Baseline 0.0267ms (ratio 1.60)
-perf_score_updated: '2026-03-22'
+perf_score_updated: '2026-03-23'
 has_bugs: true
 bugs:
-- 测试用例失败，功能正确性存在问题
+- 测试未通过，存在正确性错误
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-22'
+  last_run: '2026-03-23'
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-22T22:23:01Z'
+last_updated: '2026-03-23T22:30:11Z'
 updated_by: claude-nightly
 bench_status:
-  last_run: '2026-03-22'
-  status: qualified
-  ratio: 1.6
-  details: *id001
+  last_run: '2026-03-23'
+  status: passed
+  ratio: null
+  details: []

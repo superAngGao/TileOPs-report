@@ -21,7 +21,7 @@ func_score_updated: '2026-03-22'
 perf_score: 4
 perf_details:
   baseline: null
-  last_run: '2026-03-22'
+  last_run: '2026-03-23'
   summary: null
   results: &id001
   - bench_fn: maximum
@@ -32,20 +32,20 @@ perf_details:
 perf_score_updated: '2026-03-22'
 has_bugs: false
 bugs: []
-kernel_last_updated: null
-kernel_last_pr_number: null
-kernel_last_pr_url: null
-kernel_last_pr_author: null
-kernel_last_pr_title: null
+kernel_last_updated: '2026-03-23T08:53:19Z'
+kernel_last_pr_number: 611
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/611
+kernel_last_pr_author: lcy-seso
+kernel_last_pr_title: '[Refactor][Elementwise] Extract shared base for parametric kernels'
 test_status:
-  last_run: '2026-03-22'
+  last_run: '2026-03-23'
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-22T22:23:01Z'
-updated_by: claude-nightly
+last_updated: '2026-03-23T22:30:11Z'
+updated_by: nightly-auto
 bench_status:
-  last_run: '2026-03-22'
+  last_run: '2026-03-23'
   status: qualified
   ratio: 1.0
   details: *id001

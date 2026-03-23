@@ -15,31 +15,31 @@ files:
   bench: []
 files_last_scanned: '2026-03-22T20:20:49Z'
 func_score: 4
-func_score_notes: 测试全部通过，功能基本完整；benchmark 数据缺失，无法评估性能覆盖范围。
-func_score_updated: '2026-03-22'
+func_score_notes: 测试通过，功能基本完整；benchmark 缺失，无法评估性能。
+func_score_updated: '2026-03-23'
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: '2026-03-22'
+perf_score_updated: '2026-03-23'
 has_bugs: false
 bugs: []
-kernel_last_updated: null
-kernel_last_pr_number: null
-kernel_last_pr_url: null
-kernel_last_pr_author: null
-kernel_last_pr_title: null
+kernel_last_updated: '2026-03-23T08:53:19Z'
+kernel_last_pr_number: 611
+kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/611
+kernel_last_pr_author: lcy-seso
+kernel_last_pr_title: '[Refactor][Elementwise] Extract shared base for parametric kernels'
 test_status:
-  last_run: '2026-03-22'
+  last_run: '2026-03-23'
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-22T22:23:01Z'
+last_updated: '2026-03-23T22:30:11Z'
 updated_by: claude-nightly
 bench_status:
-  last_run: '2026-03-22'
+  last_run: '2026-03-23'
   status: missing
   ratio: null
   details: []
