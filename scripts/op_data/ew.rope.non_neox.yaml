@@ -15,32 +15,32 @@ files:
   - benchmarks/ops/bench_rope.py::bench_rope_non_neox
 files_last_scanned: '2026-03-22T20:20:49Z'
 func_score: 2
-func_score_notes: 测试失败，存在正确性问题，功能实现不完整。
-func_score_updated: '2026-03-23'
+func_score_notes: 测试失败，功能存在缺陷；benchmark 状态为 passed 但 ratio 缺失，性能无法量化评估。
+func_score_updated: '2026-03-24'
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: '2026-03-23'
+perf_score_updated: '2026-03-24'
 has_bugs: true
 bugs:
-- 测试未通过，存在正确性错误
+- 测试未通过，存在正确性问题
 kernel_last_updated: null
 kernel_last_pr_number: null
 kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-23'
+  last_run: '2026-03-24'
   passed: false
   errors: []
   status: failed
-last_updated: '2026-03-23T22:30:11Z'
+last_updated: '2026-03-24T22:28:59Z'
 updated_by: claude-nightly
 bench_status:
-  last_run: '2026-03-23'
+  last_run: '2026-03-24'
   status: passed
   ratio: null
   details: []

@@ -15,12 +15,12 @@ files:
   - benchmarks/ops/bench_binary_elementwise.py::bench_logical_or
 files_last_scanned: '2026-03-22T20:20:49Z'
 func_score: 4
-func_score_notes: 测试全部通过，功能完整；性能仅为 baseline 的 33%，存在明显性能回退。
-func_score_updated: '2026-03-23'
+func_score_notes: 测试全部通过，功能完整；但性能仅为 baseline 的 33%，存在严重性能退化。
+func_score_updated: '2026-03-24'
 perf_score: 1
 perf_details:
   baseline: null
-  last_run: '2026-03-23'
+  last_run: '2026-03-24'
   summary: null
   results: &id001
   - bench_fn: logical_or
@@ -28,23 +28,24 @@ perf_details:
     baseline: 0.0100 ms
     ratio: 0.3333
     summary: TileOps 0.0300ms vs Baseline 0.0100ms (ratio 0.33)
-perf_score_updated: '2026-03-23'
+perf_score_updated: '2026-03-24'
 has_bugs: false
-bugs: []
+bugs:
+- 性能严重低于 baseline（ratio 0.33），TileOps 0.0300ms vs Baseline 0.0100ms
 kernel_last_updated: '2026-03-23T08:53:19Z'
 kernel_last_pr_number: 611
 kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/611
 kernel_last_pr_author: lcy-seso
 kernel_last_pr_title: '[Refactor][Elementwise] Extract shared base for parametric kernels'
 test_status:
-  last_run: '2026-03-23'
+  last_run: '2026-03-24'
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-23T22:30:11Z'
+last_updated: '2026-03-24T22:28:59Z'
 updated_by: claude-nightly
 bench_status:
-  last_run: '2026-03-23'
+  last_run: '2026-03-24'
   status: underperforming
   ratio: 0.3333
   details: *id001
