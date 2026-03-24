@@ -6,7 +6,7 @@
 
 [View full HTML report](https://superanggao.github.io/TileOPs-report/nightly/)
 
-Last updated: `2026-03-23T22:30:11Z`
+Last updated: `2026-03-24T22:28:59Z`
 
 </div>
 
@@ -33,18 +33,18 @@ Last updated: `2026-03-23T22:30:11Z`
 
 ## Assessment
 
-> TileOPs shows strong progress in core categories — Reduce (100% complete), Norm (90%), Flash Attention (50% with all passing), and Linear Attention (50% with all passing) — but has significant gaps in Conv & Pooling (0% implemented), Sampling (14%), Quantize (20%), and MoE (17%). Of 186 total ops, 125 are implemented, 106 tested, and 96 fully done, with only 4 test failures concentrated in RoPE and dropout. The main concerns are the 3 severely underperforming elementwise ops (bitwise_not, logical_and, logical_or at 0.33x baseline) and the complete absence of Conv & Pooling and SSM implementations.
+> TileOPs shows strong maturity in foundational categories — Elementwise, Reduce, Norm, Flash Attention, and Linear Attention all demonstrate high functional correctness — but the project has significant coverage gaps in Conv & Pooling (0% implemented), Sampling (14% implemented), MoE (17% implemented), and Quantize (20% implemented) that limit its utility for production LLM deployment. Performance data quality is inconsistent: many categories report benchmark 'passed' without ratio values, making it impossible to detect regressions, while the Elementwise category reveals concerning underperformance (ratio=0.33) in boolean/bitwise ops that warrants investigation.
 
 **Recommendations:**
 
-1. Fix the 4 failing tests (dropout, rope_neox, rope_non_neox, rope_llama31) and investigate the 3 underperforming bitwise/logical ops (ratio=0.33) as these represent correctness and performance regressions in production-critical ops.
-2. Prioritize implementing top_k, top_p, and temperature_scale in Sampling, and at least 2 fused_moe variants (deepseek, qwen) in MoE, as these are essential for end-to-end LLM inference pipelines.
-3. Add tests for the 6 implemented-but-untested GEMM ops (gemm_fp8, gemv_fp8, small_batch_gemm variants, groupgemm_fp8) and fix benchmark ratio reporting for Reduce, Norm, Flash Attention, GEMM, and Linear Attention categories where ratios are not being captured in the structured log.
+1. Fix the 4 failing Elementwise tests (dropout, rope_neox, rope_non_neox, rope_llama31) and investigate the 0.33 performance ratio for bitwise_not, logical_and, and logical_or, as these suggest systematic correctness and performance issues in a high-usage operator group.
+2. Standardize benchmark reporting to always emit ratio values instead of bare 'passed' status — Reduce, Norm, Flash Attention, Linear Attention, GEMM, Quantize, Sampling, and MoE categories currently have no quantitative performance data, making regression detection impossible.
+3. Prioritize implementation of high-impact missing operator groups: (1) top_k/top_p/temperature_scale in Sampling for LLM text generation, (2) fused_moe_deepseek + unpermute_depad in MoE for MoE model inference, and (3) int8_per_tensor/int8_per_channel in Quantize for deployment-critical quantization support.
 
 
 ## Categories
 
-### Elementwise | Func: ⭐⭐⭐⭐☆ (4/5) | Perf: ⭐⭐⭐⭐☆ (4/5)
+### Elementwise | Func: ⭐⭐⭐⭐☆ (4/5) | Perf: ⭐⭐⭐⭐⭐ (5/5)
 
 | | Progress | |
 |:--|:---------|:--|
@@ -52,9 +52,9 @@ Last updated: `2026-03-23T22:30:11Z`
 | Test | `████████████░░░` 59/72 | |
 | Bench | `████████████░░░` 58/72 | |
 
-> **Issues:** dropout, rope_neox, rope_non_neox, rope_llama31 tests failing. bitwise_not, logical_and, logical_or severely underperforming (ratio=0.33). 11 ops missing benchmarks (where, clamp, masked_fill, nan_to_num, isnan, isinf, isfinite, alibi, sinusoidal, yarn_rope, longrope). 5 ops missing tests (leaky_relu, elu, hardtanh, softplus, prelu).
+> **Issues:** dropout, rope_neox, rope_non_neox, rope_llama31 tests failing. bitwise_not, logical_and, logical_or underperforming at ratio=0.33. 9 ops missing tests (leaky_relu, elu, hardtanh, softplus, prelu, alibi, sinusoidal, yarn_rope, longrope). 11 ops missing benchmarks including where, clamp, masked_fill, nan_to_num, isnan, isinf, isfinite, alibi, sinusoidal, yarn_rope, longrope.
 
-> **Evaluation:** The category is largely functional with strong benchmark results for most ops, but RoPE variants and dropout have test failures that need immediate investigation. Fix the 3 underperforming logical/bitwise ops and add missing benchmarks for special_elementwise ops. Prioritize resolving RoPE test failures as they impact LLM inference correctness.
+> **Evaluation:** Elementwise is the most mature category with strong coverage and mostly excellent performance. Fix the 4 failing RoPE/dropout tests as a priority, then investigate the 0.33 ratio underperformers (bitwise_not, logical_and, logical_or) which suggest a systematic issue with boolean/bitwise ops. Add benchmark coverage for the 7 special_elementwise ops (where, clamp, masked_fill, etc.).
 
 <details>
 <summary>49/72 done - click to expand</summary>
@@ -144,9 +144,9 @@ Last updated: `2026-03-23T22:30:11Z`
 | Test | `███████████████` 20/20 | |
 | Bench | `███████████████` 20/20 | |
 
-> **Issues:** All 20 ops pass tests, but benchmark log shows 0 qualified and 0 missing — bench statuses are listed as 'passed' in the operator list without ratio data, suggesting benchmarks ran but ratios were not captured in the structured log.
+> **Issues:** All 20 benchmarks report 'passed' status without ratio data, so quantitative performance scoring is unavailable.
 
-> **Evaluation:** Reduce is the most complete category with 100% test pass rate and full implementation. Benchmark data appears present but ratios are not surfaced in the structured log. Ensure benchmark ratio extraction is working for this category to enable performance tracking.
+> **Evaluation:** Reduce is functionally complete with 100% test pass rate. However, all benchmark entries show 'passed' without ratio values, meaning performance cannot be quantitatively assessed. Add ratio-based benchmark reporting for all reduce ops to enable proper performance tracking.
 
 <details>
 <summary>20/20 done - click to expand</summary>
@@ -184,9 +184,9 @@ Last updated: `2026-03-23T22:30:11Z`
 | Test | `██████████████░` 9/10 | |
 | Bench | `██████████████░` 9/10 | |
 
-> **Issues:** qk_norm has no test or benchmark mapping. Benchmark ratios not captured in structured log (all show 'passed' without ratio).
+> **Issues:** qk_norm is missing both test and benchmark. All other benchmarks report 'passed' without ratio data.
 
-> **Evaluation:** Norm is nearly complete with 9/10 ops fully passing. Add test and benchmark coverage for qk_norm to complete the category. Ensure benchmark ratio reporting is consistent with other categories.
+> **Evaluation:** Norm is nearly complete with 9/10 ops fully passing. Implement and test qk_norm to close the gap. As with Reduce, benchmark ratio data is absent — add quantitative ratio reporting to enable performance regression detection.
 
 <details>
 <summary>9/10 done - click to expand</summary>
@@ -216,7 +216,7 @@ Last updated: `2026-03-23T22:30:11Z`
 
 > **Issues:** Entire category unimplemented — 0/16 ops have any implementation, tests, or benchmarks.
 
-> **Evaluation:** Conv & Pooling is a complete gap in the library. This is a significant missing feature area. Prioritize at minimum conv2d and max_pool2d/avg_pool2d as the most commonly used ops, then expand to other variants.
+> **Evaluation:** Conv & Pooling is a complete gap in the library. Prioritize implementing the most commonly used ops first: conv2d, depthwise_conv2d, max_pool2d, and avg_pool2d. These are foundational for CNN-based model support and should be scheduled for the next development sprint.
 
 <details>
 <summary>0/16 done - click to expand</summary>
@@ -250,9 +250,9 @@ Last updated: `2026-03-23T22:30:11Z`
 | Test | `██░░░░░░░░░░░░░` 3/19 | |
 | Bench | `███████░░░░░░░░` 9/19 | |
 
-> **Issues:** Only 9/19 ops implemented. 6 implemented ops (gemm_fp8, gemm_fp8_block_scaled, gemv_fp8, small_batch_gemm_fp16, small_batch_gemm_fp8, groupgemm_fp8) have benchmarks but no tests. All lowbit_gemm, bmm, outer, and sparse_gemm variants unimplemented. Benchmark ratios not captured in structured log.
+> **Issues:** Only 9/19 ops implemented. 16 ops missing tests including gemm_fp8, gemm_fp8_block_scaled, gemv_fp8, small_batch_gemm variants, and all lowbit/sparse/bmm ops. All benchmarks report 'passed' without ratio data.
 
-> **Evaluation:** GEMM has a solid foundation with passing tests for core ops, but test coverage for implemented ops is critically low. Add tests for the 6 implemented-but-untested ops immediately. Plan implementation of bmm and lowbit_gemm variants as they are essential for LLM workloads.
+> **Evaluation:** GEMM has a solid foundation with passing tests for gemm_fp16, gemv_fp16, and groupgemm_fp16, but coverage is critically low. Prioritize adding tests for the 6 already-implemented but untested ops (gemm_fp8, gemm_fp8_block_scaled, gemv_fp8, small_batch variants, groupgemm_fp8), then plan implementation of bmm and lowbit GEMM variants which are essential for LLM inference.
 
 <details>
 <summary>3/19 done - click to expand</summary>
@@ -289,9 +289,9 @@ Last updated: `2026-03-23T22:30:11Z`
 | Test | `██░░░░░░░░░░░░░` 1/10 | |
 | Bench | `███░░░░░░░░░░░░` 2/10 | |
 
-> **Issues:** Only 2/10 ops implemented (fp8_per_tensor, fp8_per_block). All int8 and int4 quantization variants unimplemented. fp8_per_block has benchmark but no test. fp8_cast_transpose unimplemented.
+> **Issues:** Only 2/10 ops implemented (fp8_per_tensor, fp8_per_block). All int8, int4, nf4, and fp8_cast_transpose ops are unimplemented. fp8_per_block is implemented but missing tests.
 
-> **Evaluation:** Quantize coverage is minimal, limited to FP8 only. Given the importance of quantization for LLM deployment, int8_per_tensor and int8_per_channel should be prioritized next. Add a test for fp8_per_block to complete coverage of implemented ops.
+> **Evaluation:** Quantize coverage is very limited, with only FP8 ops partially implemented. Add a test for fp8_per_block immediately since it is implemented but untested. Then prioritize int8_per_tensor and int8_per_channel as they are the most widely used quantization schemes for LLM deployment.
 
 <details>
 <summary>1/10 done - click to expand</summary>
@@ -319,9 +319,9 @@ Last updated: `2026-03-23T22:30:11Z`
 | Test | `██░░░░░░░░░░░░░` 1/7 | |
 | Bench | `██░░░░░░░░░░░░░` 1/7 | |
 
-> **Issues:** Only chain_speculative_sampling implemented. top_k, top_p, min_p, top_k_top_p, temperature_scale, sampling_from_probs all unimplemented.
+> **Issues:** Only chain_speculative_sampling implemented. top_k, top_p, min_p, top_k_top_p, temperature_scale, and sampling_from_probs are all unimplemented.
 
-> **Evaluation:** Sampling is severely underdeveloped with only 1/7 ops implemented. top_k and top_p are fundamental sampling ops used in virtually all LLM inference pipelines and should be implemented immediately. temperature_scale is also a quick win.
+> **Evaluation:** Sampling is critically underdeveloped with only 1/7 ops implemented. top_k and top_p are essential for LLM text generation and should be the immediate implementation priority. temperature_scale is also straightforward and high-value.
 
 <details>
 <summary>1/7 done - click to expand</summary>
@@ -346,9 +346,9 @@ Last updated: `2026-03-23T22:30:11Z`
 | Test | `████████░░░░░░░` 8/16 | |
 | Bench | `████████░░░░░░░` 8/16 | |
 
-> **Issues:** 8/16 ops unimplemented: flash_prefill_varlen_bwd, flash_decode_varlen_fwd, flash_chunked_prefill_fwd, mla_prefill_fwd/bwd, mla_decode_paged_fwd, nsa_decode_fwd, dsa_prefill_fwd. Benchmark ratios not captured in structured log for implemented ops.
+> **Issues:** 8/16 ops unimplemented: flash_prefill_varlen_bwd, flash_decode_varlen_fwd, flash_chunked_prefill_fwd, mla_prefill_fwd/bwd, mla_decode_paged_fwd, nsa_decode_fwd, dsa_prefill_fwd. All benchmarks report 'passed' without ratio data.
 
-> **Evaluation:** All implemented Flash Attention ops pass tests, which is a strong result. The missing ops are important for production use (varlen backward, chunked prefill, MLA variants). Prioritize flash_prefill_varlen_bwd and flash_chunked_prefill_fwd as they complete the core attention suite.
+> **Evaluation:** Flash Attention has excellent functional quality with 8/8 implemented ops passing all tests. The missing ops represent advanced features (varlen backward, chunked prefill, MLA variants). Add ratio-based benchmark reporting to detect performance regressions. Next implementation priority should be flash_chunked_prefill_fwd and flash_decode_varlen_fwd for broader model compatibility.
 
 <details>
 <summary>8/16 done - click to expand</summary>
@@ -382,9 +382,9 @@ Last updated: `2026-03-23T22:30:11Z`
 | Test | `██░░░░░░░░░░░░░` 1/6 | |
 | Bench | `██░░░░░░░░░░░░░` 1/6 | |
 
-> **Issues:** Only permute_align implemented. unpermute_depad and all 4 fused_moe variants (deepseek, glm, kimi, qwen) unimplemented.
+> **Issues:** Only permute_align implemented. unpermute_depad and all 4 fused_moe variants (deepseek, glm, kimi, qwen) are unimplemented.
 
-> **Evaluation:** MoE support is minimal with only the permute utility op implemented. fused_moe_deepseek and fused_moe_qwen are high-priority targets given their prevalence in production MoE models. Implement unpermute_depad alongside fused_moe to complete the MoE pipeline.
+> **Evaluation:** MoE support is minimal with only the permute utility implemented. The fused_moe variants are critical for MoE model inference performance. Prioritize implementing fused_moe_deepseek and unpermute_depad as they form the core MoE dispatch pipeline, then add the other model-specific variants.
 
 <details>
 <summary>1/6 done - click to expand</summary>
@@ -408,9 +408,9 @@ Last updated: `2026-03-23T22:30:11Z`
 | Test | `████████░░░░░░░` 4/8 | |
 | Bench | `████████░░░░░░░` 4/8 | |
 
-> **Issues:** deltanet_chunkwise, deltanet_recurrence, retnet_chunkwise, retnet_recurrence unimplemented. Benchmark ratios not captured in structured log.
+> **Issues:** deltanet_chunkwise, deltanet_recurrence, retnet_chunkwise, retnet_recurrence are unimplemented. All benchmarks report 'passed' without ratio data.
 
-> **Evaluation:** Implemented Linear Attention ops (gated_deltanet and GLA variants) all pass tests. Complete the category by implementing deltanet and retnet variants. Ensure benchmark ratio reporting is enabled for this category.
+> **Evaluation:** Linear Attention has solid coverage for gated_deltanet and GLA variants with 100% pass rate. Implement the base deltanet and retnet variants to complete the category. Add ratio-based benchmark reporting to enable performance tracking across all implemented ops.
 
 <details>
 <summary>4/8 done - click to expand</summary>
@@ -436,9 +436,9 @@ Last updated: `2026-03-23T22:30:11Z`
 | Test | `░░░░░░░░░░░░░░░` 0/2 | |
 | Bench | `░░░░░░░░░░░░░░░` 0/2 | |
 
-> **Issues:** Both mamba1 and mamba2 unimplemented.
+> **Issues:** Both mamba1 and mamba2 are unimplemented with no tests or benchmarks.
 
-> **Evaluation:** SSM category is entirely unimplemented. Mamba2 is more relevant for current state-space model research and should be prioritized. Consider implementing alongside SSM-adjacent linear attention ops to share infrastructure.
+> **Evaluation:** SSM is entirely unimplemented. Given the growing importance of Mamba-based architectures, schedule mamba2 implementation first as it is the more modern and widely adopted variant, followed by mamba1 for backward compatibility.
 
 <details>
 <summary>0/2 done - click to expand</summary>
