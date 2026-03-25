@@ -14,8 +14,8 @@ files:
   - benchmarks/ops/bench_activation.py::bench_prelu
 files_last_scanned: '2026-03-22T20:20:49Z'
 func_score: 2
-func_score_notes: 测试状态为 missing，功能无法验证；当前评分维持 2 分，基础实现存疑。
-func_score_updated: '2026-03-24'
+func_score_notes: 测试状态为 missing，无法验证功能完整性，当前评分维持基础功能级别。
+func_score_updated: '2026-03-25'
 perf_score: null
 perf_details:
   baseline: null
@@ -27,10 +27,10 @@ perf_details:
     baseline: 0.0275 ms
     ratio: 2.2
     summary: TileOps 0.0125ms vs Baseline 0.0275ms (ratio 2.20)
-perf_score_updated: '2026-03-24'
+perf_score_updated: '2026-03-25'
 has_bugs: true
 bugs:
-- '测试缺失（status: missing），无法确认功能正确性'
+- '测试缺失（status: missing），功能正确性未经验证'
 - benchmark ratio 为 null，性能数据不可信
 kernel_last_updated: '2026-03-23T08:53:19Z'
 kernel_last_pr_number: 611
@@ -38,11 +38,11 @@ kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/611
 kernel_last_pr_author: lcy-seso
 kernel_last_pr_title: '[Refactor][Elementwise] Extract shared base for parametric kernels'
 test_status:
-  last_run: '2026-03-24'
+  last_run: '2026-03-25'
   passed: null
   errors: []
   status: missing
-last_updated: '2026-03-24T22:28:59Z'
+last_updated: '2026-03-25T22:33:35Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-24'
