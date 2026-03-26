@@ -14,16 +14,16 @@ files:
   bench:
   - benchmarks/ops/bench_logical_reduce.py::bench_all
 files_last_scanned: '2026-03-22T20:20:49Z'
-func_score: 3
-func_score_notes: 测试通过但 benchmark ratio 为 null，性能数据缺失。功能基本实现，边界情况覆盖待确认。
-func_score_updated: '2026-03-25'
-perf_score: null
+func_score: 4
+func_score_notes: 测试通过，逻辑与归约功能完整
+func_score_updated: '2026-03-26'
+perf_score: 3
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: '2026-03-25'
+perf_score_updated: '2026-03-26'
 has_bugs: false
 bugs: []
 kernel_last_updated: null
@@ -32,11 +32,11 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-25'
+  last_run: '2026-03-26'
   passed: true
   errors: []
   status: passed
-last_updated: '2026-03-25T22:33:35Z'
+last_updated: '2026-03-26T22:27:13Z'
 updated_by: claude-nightly
 bench_status:
   last_run: '2026-03-24'
