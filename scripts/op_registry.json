@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-03-26T22:27:13Z",
+  "generated_at": "2026-03-27T22:29:44Z",
   "total_ops": 186,
   "ops": {
     "ew.binary_arith.add": {
@@ -7500,7 +7500,7 @@
     }
   },
   "summary": {
-    "generated_at": "2026-03-26T22:27:13Z",
+    "generated_at": "2026-03-27T22:29:44Z",
     "total_ops": 186,
     "impl_ops": 125,
     "tested_ops": 106,
