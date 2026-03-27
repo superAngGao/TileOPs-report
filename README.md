@@ -6,7 +6,7 @@
 
 [View full HTML report](https://superanggao.github.io/TileOPs-report/nightly/)
 
-Last updated: `2026-03-26T22:27:13Z`
+Last updated: `2026-03-27T22:29:44Z`
 
 </div>
 
@@ -33,28 +33,18 @@ Last updated: `2026-03-26T22:27:13Z`
 
 ## Assessment
 
-> TileOPs shows strong functional correctness in implemented categories (106/110 tests passing, 96% pass rate) but has significant coverage gaps. Three categories (Conv & Pooling, SSM, Sampling) are critically underdeveloped. Performance validation is incomplete with most benchmarks showing 'passed' status but lacking ratio data for analysis.
-
-**Recommendations:**
-
-1. Fix 4 failing tests in Elementwise (dropout, rope variants) and investigate 3 underperforming logical/bitwise ops
-2. Implement missing core operators: conv2d/pooling (0/16), int8/int4 quantization (2/10), top_k/top_p sampling (1/7), and mamba SSM (0/2)
-3. Add comprehensive benchmark mappings for Reduce, Norm, Flash Attention, and GEMM categories to validate performance claims and identify optimization opportunities
+> Analysis unavailable.
 
 
 ## Categories
 
-### Elementwise | Func: ⭐⭐⭐⭐☆ (4/5) | Perf: ⭐⭐⭐⭐☆ (4/5)
+### Elementwise
 
 | | Progress | |
 |:--|:---------|:--|
 | Impl | `███████████████` 70/72 | |
 | Test | `████████████░░░` 59/72 | |
 | Bench | `████████████░░░` 58/72 | |
-
-> **Issues:** 4 test failures (dropout, rope variants), 3 underperforming ops (bitwise_not, logical_and, logical_or at 0.33 ratio), 11 ops missing benchmarks
-
-> **Evaluation:** Strong category with 82% test pass rate and most benchmarks qualified. Fix rope and dropout test failures, investigate logical/bitwise underperformance, add missing benchmarks for special_elementwise ops.
 
 <details>
 <summary>49/72 done - click to expand</summary>
@@ -136,15 +126,13 @@ Last updated: `2026-03-26T22:27:13Z`
 
 </details>
 
-### Reduce | Func: ⭐⭐⭐⭐⭐ (5/5)
+### Reduce
 
 | | Progress | |
 |:--|:---------|:--|
 | Impl | `███████████████` 20/20 | |
 | Test | `███████████████` 20/20 | |
 | Bench | `███████████████` 20/20 | |
-
-> **Evaluation:** Perfect functional correctness with all 20 ops passing tests. No benchmark data available despite implementations existing. Add benchmark mappings to validate performance.
 
 <details>
 <summary>20/20 done - click to expand</summary>
@@ -174,17 +162,13 @@ Last updated: `2026-03-26T22:27:13Z`
 
 </details>
 
-### Norm | Func: ⭐⭐⭐⭐⭐ (5/5)
+### Norm
 
 | | Progress | |
 |:--|:---------|:--|
 | Impl | `███████████████` 10/10 | |
 | Test | `██████████████░` 9/10 | |
 | Bench | `██████████████░` 9/10 | |
-
-> **Issues:** qk_norm missing test and benchmark mapping
-
-> **Evaluation:** Excellent functional status with 90% coverage. Add test and benchmark mapping for qk_norm to complete the category.
 
 <details>
 <summary>9/10 done - click to expand</summary>
@@ -212,10 +196,6 @@ Last updated: `2026-03-26T22:27:13Z`
 | Test | `░░░░░░░░░░░░░░░` 0/16 | |
 | Bench | `░░░░░░░░░░░░░░░` 0/16 | |
 
-> **Issues:** Entire category unimplemented (0/16 ops)
-
-> **Evaluation:** Critical gap with zero implementation. Prioritize conv2d, max_pool2d, and avg_pool2d as foundational ops for CNN workloads.
-
 <details>
 <summary>0/16 done - click to expand</summary>
 
@@ -240,17 +220,13 @@ Last updated: `2026-03-26T22:27:13Z`
 
 </details>
 
-### GEMM | Func: ⭐⭐⭐☆☆ (3/5)
+### GEMM
 
 | | Progress | |
 |:--|:---------|:--|
 | Impl | `███████░░░░░░░░` 9/19 | |
 | Test | `██░░░░░░░░░░░░░` 3/19 | |
 | Bench | `███████░░░░░░░░` 9/19 | |
-
-> **Issues:** Only 3/19 ops tested, 10/19 missing implementations, 6 implemented ops lack test mappings
-
-> **Evaluation:** Mixed progress with core GEMM ops implemented but undertested. Add test mappings for fp8 variants and small_batch ops, implement lowbit quantized GEMM for inference optimization.
 
 <details>
 <summary>3/19 done - click to expand</summary>
@@ -279,17 +255,13 @@ Last updated: `2026-03-26T22:27:13Z`
 
 </details>
 
-### Quantize | Func: ⭐⭐☆☆☆ (2/5)
+### Quantize
 
 | | Progress | |
 |:--|:---------|:--|
 | Impl | `███░░░░░░░░░░░░` 2/10 | |
 | Test | `██░░░░░░░░░░░░░` 1/10 | |
 | Bench | `███░░░░░░░░░░░░` 2/10 | |
-
-> **Issues:** Only 2/10 ops implemented, 9/10 missing tests, critical int8/int4 quantization absent
-
-> **Evaluation:** Severely underdeveloped category. Implement int8_per_tensor and int4_per_block as priorities for model compression and inference acceleration.
 
 <details>
 <summary>1/10 done - click to expand</summary>
@@ -309,17 +281,13 @@ Last updated: `2026-03-26T22:27:13Z`
 
 </details>
 
-### Sampling | Func: ⭐⭐☆☆☆ (2/5)
+### Sampling
 
 | | Progress | |
 |:--|:---------|:--|
 | Impl | `██░░░░░░░░░░░░░` 1/7 | |
 | Test | `██░░░░░░░░░░░░░` 1/7 | |
 | Bench | `██░░░░░░░░░░░░░` 1/7 | |
-
-> **Issues:** Only 1/7 ops implemented (chain_speculative_sampling), core sampling ops missing
-
-> **Evaluation:** Critical gap for LLM inference. Implement top_k, top_p, and temperature_scale as essential decoding primitives.
 
 <details>
 <summary>1/7 done - click to expand</summary>
@@ -336,17 +304,13 @@ Last updated: `2026-03-26T22:27:13Z`
 
 </details>
 
-### Flash Attention | Func: ⭐⭐⭐⭐☆ (4/5)
+### Flash Attention
 
 | | Progress | |
 |:--|:---------|:--|
 | Impl | `████████░░░░░░░` 8/16 | |
 | Test | `████████░░░░░░░` 8/16 | |
 | Bench | `████████░░░░░░░` 8/16 | |
-
-> **Issues:** 8/16 ops missing (varlen_bwd, chunked_prefill, MLA/NSA/DSA decode variants)
-
-> **Evaluation:** Solid foundation with core prefill/decode ops working. Complete varlen and paged variants for production serving, add benchmark mappings to validate performance claims.
 
 <details>
 <summary>8/16 done - click to expand</summary>
@@ -372,17 +336,13 @@ Last updated: `2026-03-26T22:27:13Z`
 
 </details>
 
-### MoE | Func: ⭐⭐☆☆☆ (2/5)
+### MoE
 
 | | Progress | |
 |:--|:---------|:--|
 | Impl | `██░░░░░░░░░░░░░` 1/6 | |
 | Test | `██░░░░░░░░░░░░░` 1/6 | |
 | Bench | `██░░░░░░░░░░░░░` 1/6 | |
-
-> **Issues:** Only permute_align implemented, all fused_moe variants missing
-
-> **Evaluation:** Minimal coverage for critical MoE workloads. Implement fused_moe_deepseek and fused_moe_qwen to support popular MoE architectures.
 
 <details>
 <summary>1/6 done - click to expand</summary>
@@ -398,17 +358,13 @@ Last updated: `2026-03-26T22:27:13Z`
 
 </details>
 
-### Linear Attention | Func: ⭐⭐⭐⭐☆ (4/5)
+### Linear Attention
 
 | | Progress | |
 |:--|:---------|:--|
 | Impl | `████████░░░░░░░` 4/8 | |
 | Test | `████████░░░░░░░` 4/8 | |
 | Bench | `████████░░░░░░░` 4/8 | |
-
-> **Issues:** 4/8 ops missing (deltanet and retnet variants)
-
-> **Evaluation:** Good progress on gated_deltanet and GLA. Complete deltanet and retnet implementations for broader linear attention architecture support.
 
 <details>
 <summary>4/8 done - click to expand</summary>
@@ -433,10 +389,6 @@ Last updated: `2026-03-26T22:27:13Z`
 | Impl | `░░░░░░░░░░░░░░░` 0/2 | |
 | Test | `░░░░░░░░░░░░░░░` 0/2 | |
 | Bench | `░░░░░░░░░░░░░░░` 0/2 | |
-
-> **Issues:** Entire category unimplemented (0/2 ops)
-
-> **Evaluation:** Complete gap for state space models. Implement mamba1 and mamba2 to support efficient sequence modeling architectures.
 
 <details>
 <summary>0/2 done - click to expand</summary>
