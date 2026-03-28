@@ -1,0 +1,199 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": 4,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 72
+      },
+      "bench_summary": {
+        "qualified": 57,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 15
+      },
+      "issues": "rope_neox benchmarks show tileops dramatically outperforming baseline (e.g. 0.68 vs 0.13 TFLOPS at 4096x128 fp16), which is suspicious and may indicate a measurement artifact. logical_not and bitwise_not show tileops underperforming baseline by ~40-60% at larger sizes. isnan similarly underperforms at scale. 15 ops have no bench coverage (special_elementwise, dropout, rope variants, alibi, sinusoidal). yarn_rope and longrope not yet implemented.",
+      "evaluation": "Most elementwise ops are benchmarked and nominally qualified, but several unary/logical ops degrade relative to baseline at larger tensor sizes. Investigate the rope_neox anomaly — the 5-6x speedup over baseline is likely a timing artifact. Priority actions: (1) add test coverage for all 72 ops, (2) audit logical_not, bitwise_not, and isnan performance regression at large N."
+    },
+    "Reduce": {
+      "perf_score": 1,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 20
+      },
+      "bench_summary": {
+        "qualified": 15,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 5
+      },
+      "issues": "softmax, log_softmax, logsumexp, and vector_norm (l1/l2/inf) all show catastrophic latency regressions — tileops latencies are ~65-80ms vs baseline ~0.01-0.10ms, with tflops reporting 0.00. This is a critical failure despite being marked 'qualified' in the status mapping. The reduce ops (sum, mean, amax, etc.) only have partial benchmark data visible in the log. l1_norm, l2_norm, inf_norm are marked bench=missing but vector_norm data exists in the log.",
+      "evaluation": "The softmax family and vector norm ops are effectively broken at runtime — 3-4 orders of magnitude slower than baseline. These must be treated as failed despite the 'qualified' label in the mapping. Immediate actions: (1) fix the softmax/logsumexp/vector_norm kernel hang or initialization bug causing ~70ms latency, (2) reconcile bench mapping for l1_norm/l2_norm/inf_norm with the vector_norm log data."
+    },
+    "Norm": {
+      "perf_score": 1,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 10
+      },
+      "bench_summary": {
+        "qualified": 9,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 1
+      },
+      "issues": "rms_norm shows the same catastrophic latency pattern as softmax — tileops ~55-58ms vs baseline ~0.07-0.25ms, with 0.00 tflops/bandwidth reported. All 9 benchmarked norms are marked 'qualified' in the mapping but rms_norm data in the log clearly shows a critical regression. qk_norm not yet implemented.",
+      "evaluation": "rms_norm is functionally broken in benchmarks despite its 'qualified' status label. The ~55ms latency strongly suggests a kernel launch or synchronization bug shared with the softmax/reduce family. Actions: (1) investigate the common root cause across rms_norm, softmax, logsumexp, and vector_norm — likely a shared kernel infrastructure issue, (2) add test coverage to catch correctness issues independently of benchmark timing."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "issues": "No implementation, no tests, no benchmarks. Entire category is unstarted.",
+      "evaluation": "Conv & Pooling is a blank slate with 0/16 ops implemented. This is expected for an early-stage library focused on LLM operators. Actions: (1) prioritize conv2d and depthwise_conv2d as the highest-value starting points, (2) defer pooling ops until core conv is stable."
+    },
+    "GEMM": {
+      "perf_score": 5,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 19
+      },
+      "bench_summary": {
+        "qualified": 11,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "bmm_fp16 and bmm_fp8 are benchmarked and qualified despite impl=N, which is inconsistent. 8 ops have no bench coverage, including all lowbit_gemm and sparse_gemm variants. No test coverage for any GEMM op.",
+      "evaluation": "GEMM core (fp16/fp8, gemv, groupgemm) appears healthy from a benchmark perspective. The impl=N but bench=qualified discrepancy for bmm variants needs clarification. Actions: (1) resolve the bmm impl status inconsistency, (2) prioritize w4a16 and w8a8 implementation as they are critical for quantized inference workloads."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 10
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 2,
+        "missing": 8
+      },
+      "issues": "fp8_per_tensor is implemented but its benchmark mapping exists with no results (bench=failed). fp8_per_block has bench=failed despite impl=N, suggesting a stale or incorrect bench mapping. 9/10 ops not implemented.",
+      "evaluation": "Quantize is nearly unimplemented and the one implemented op (fp8_per_tensor) has a broken benchmark. Actions: (1) fix the fp8_per_tensor benchmark to produce results, (2) clean up the fp8_per_block bench mapping since the op isn't implemented yet."
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 7
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 7
+      },
+      "issues": "Only chain_speculative_sampling is implemented (1/7), with no tests or benchmarks for any op in the category.",
+      "evaluation": "Sampling is largely unimplemented. For an LLM operator library, top_k, top_p, and temperature_scale are high-priority. Actions: (1) implement and benchmark top_k and top_p as the most commonly used sampling ops, (2) add a benchmark for chain_speculative_sampling since it is already implemented."
+    },
+    "Flash Attention": {
+      "perf_score": 5,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 7,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 9
+      },
+      "issues": "8/16 ops not yet implemented, including flash_prefill_varlen_bwd, flash_decode_varlen_fwd, flash_chunked_prefill_fwd, all MLA paged/bwd variants, nsa_decode, and both DSA variants. flash_prefill_varlen_fwd is implemented but has no benchmark. No test coverage.",
+      "evaluation": "The implemented and benchmarked Flash Attention ops (prefill fwd/bwd, decode, paged decode, MLA decode, NSA prefill, DSA decode) are all qualified. The coverage gap is significant for production use — varlen and chunked prefill are critical for real inference. Actions: (1) add benchmark for flash_prefill_varlen_fwd, (2) prioritize flash_decode_varlen_fwd and flash_chunked_prefill_fwd implementation."
+    },
+    "MoE": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 6
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 6
+      },
+      "issues": "No implementation, no tests, no benchmarks. Entire category is unstarted.",
+      "evaluation": "MoE is unstarted. Given its importance for DeepSeek, Qwen, and other MoE-based LLMs, this is a notable gap. Actions: (1) begin with fused_moe_deepseek as the highest-demand variant, (2) implement permute_align and unpermute_depad first as they are shared infrastructure for all fused_moe ops."
+    },
+    "Linear Attention": {
+      "perf_score": 5,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "bench_summary": {
+        "qualified": 2,
+        "underperforming": 0,
+        "failed": 2,
+        "missing": 4
+      },
+      "issues": "gated_deltanet_chunkwise and gated_deltanet_recurrence both have bench=failed — mapping exists but no results in log. deltanet variants are qualified. GLA, RetNet variants not yet implemented.",
+      "evaluation": "The deltanet ops are performing well, but gated_deltanet benchmarks are broken. Actions: (1) fix the gated_deltanet benchmark runner to produce results, (2) implement gla_chunkwise and gla_recurrence as the next priority given GLA's relevance to modern linear attention architectures."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "No implementation, no tests, no benchmarks. Both mamba1 and mamba2 are unstarted.",
+      "evaluation": "SSM is unstarted. Mamba2 is the higher-priority target given its adoption in recent hybrid architectures. Actions: (1) implement mamba2 first, (2) reuse any chunked state-passing infrastructure from Linear Attention chunkwise ops."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs has solid implementation breadth in Elementwise, Reduce, Norm, GEMM, and Flash Attention, but is blocked by a critical systemic performance regression affecting softmax, logsumexp, rms_norm, and vector_norm — all reporting ~55-80ms latency versus sub-millisecond baselines, which inflates the 'qualified' bench count and masks real failures. Test coverage is at 0% across all 186 operators, meaning functional correctness is entirely unvalidated. Entire categories (Conv & Pooling, MoE, SSM) remain unstarted, and the Quantize and Sampling categories are nearly empty.",
+    "recommendations": [
+      "Immediately investigate and fix the shared kernel bug causing ~55-80ms latency regressions in softmax, log_softmax, logsumexp, rms_norm, and vector_norm — this is likely a single root cause (e.g. missing async launch, incorrect grid config, or device sync issue) and fixing it will unblock a large portion of the benchmark suite.",
+      "Establish a test harness and add functional test coverage starting with the highest-risk ops: the broken-benchmark ops (softmax family, rms_norm, gated_deltanet) and the implemented-but-untested ops in GEMM and Flash Attention, targeting at least 50% test coverage within the next sprint.",
+      "Prioritize MoE implementation (starting with permute_align + fused_moe_deepseek) and Quantize completion (fp8_per_tensor benchmark fix + int8_per_tensor/int8_per_channel implementation) as these are the highest-value gaps for production LLM inference workloads."
+    ]
+  }
+}

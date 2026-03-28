@@ -1,0 +1,199 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 55,
+        "failed": 4,
+        "missing": 13
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 11
+      },
+      "issues": "dropout and all 3 rope variants (rope_neox, rope_non_neox, rope_llama31) are failing tests. 13 ops lack test coverage including where, clamp, masked_fill, nan_to_num, alibi, sinusoidal, and several activations. Benchmark data is entirely absent — the log shows 0 qualified/underperforming/failed across 61 benched ops, which suggests a reporting pipeline issue rather than actual missing benchmarks.",
+      "evaluation": "Core elementwise and activation ops are in good shape functionally. Fix the 4 failing rope/dropout tests as a priority since these are critical for LLM inference. Investigate why benchmark results are not surfacing in the log despite 61 ops being marked as benched."
+    },
+    "Reduce": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 20,
+        "failed": 0,
+        "missing": 0
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 0
+      },
+      "issues": "All 20 ops pass tests and all 20 are marked benched, but the benchmark log reports 0 in every bucket. This is a benchmark reporting pipeline anomaly — results exist but are not being captured.",
+      "evaluation": "Functionally complete and fully tested. The only action needed is diagnosing why benchmark results are not flowing into the log; this is likely a systemic reporting issue affecting multiple categories."
+    },
+    "Norm": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 9,
+        "failed": 0,
+        "missing": 1
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 1
+      },
+      "issues": "qk_norm is not implemented (impl=N), leaving 1 op missing from both test and bench coverage. Benchmark log shows 0 results despite 9 ops being marked benched — same reporting anomaly as other categories.",
+      "evaluation": "Near-complete category with strong test results. Implement qk_norm to close the gap. Resolve the benchmark reporting pipeline to confirm performance baselines are being met."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "issues": "Zero implementation across all 16 operators. This entire category is unstarted.",
+      "evaluation": "Conv & Pooling is a blank slate. Given TileOPs is LLM-focused, convolutions are lower priority, but pooling ops may be needed for vision-language models. Recommend deferring this category and creating a formal backlog item with priority relative to roadmap needs."
+    },
+    "GEMM": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 3,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "Only 3 of 19 ops have tests (gemm_fp16, gemv_fp16, groupgemm_fp16) despite 9 being implemented. fp8 variants, small_batch, and bmm variants all lack test coverage. The entire lowbit_gemm and sparse_gemm subcategories are unimplemented. Benchmark log shows 0 results despite 11 ops marked benched.",
+      "evaluation": "GEMM is a critical category for LLM performance and has significant test coverage gaps. Add tests for all implemented fp8 and small_batch variants immediately. Prioritize w4a16 and w8a8 implementation as these are essential for quantized inference workloads."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 2,
+        "missing": 8
+      },
+      "issues": "Only fp8_per_tensor is implemented and tested. fp8_per_block and chain_speculative_sampling benchmarks are explicitly failing (results expected but not found in log). 9 of 10 ops are unimplemented including all int8 and int4 variants.",
+      "evaluation": "Quantization coverage is critically low for a production LLM library. The 2 bench failures (fp8_per_block, fp8_per_block) need immediate investigation as they indicate a regression or environment issue. Prioritize implementing int8_per_tensor and int8_per_channel as foundational quantization ops."
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 6
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 1,
+        "missing": 6
+      },
+      "issues": "Only chain_speculative_sampling is implemented and tested, but its benchmark is explicitly failing. 6 of 7 ops are unimplemented including top_k, top_p, and temperature_scale which are essential for inference.",
+      "evaluation": "Sampling is severely underdeveloped. Fix the chain_speculative_sampling benchmark failure first. Then prioritize top_k, top_p, and temperature_scale as these are required for any practical LLM inference pipeline."
+    },
+    "Flash Attention": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 8,
+        "failed": 0,
+        "missing": 8
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "All 8 implemented ops pass tests cleanly. Missing ops include flash_prefill_varlen_bwd, flash_decode_varlen_fwd, flash_chunked_prefill_fwd, all MLA paged/prefill variants, nsa_decode_fwd, and both DSA variants. Benchmark log shows 0 results despite 8 ops marked benched.",
+      "evaluation": "Implemented Flash Attention ops are functionally solid. Next implementation priorities should be flash_chunked_prefill_fwd and mla_prefill_fwd given their importance for long-context and MLA-based models. Resolve benchmark reporting to validate performance against baselines."
+    },
+    "MoE": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 5
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 5
+      },
+      "issues": "permute_align passes tests and benchmarks despite impl=N, which is a data inconsistency — either the impl flag is wrong or the test/bench mappings are pointing to an external implementation. All fused_moe variants (deepseek, glm, kimi, qwen) are unimplemented.",
+      "evaluation": "MoE is largely unimplemented, which is a significant gap for modern MoE-based LLMs. Clarify the impl=N discrepancy for permute_align. Prioritize fused_moe_deepseek as the most widely deployed MoE architecture in the target use case."
+    },
+    "Linear Attention": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 6,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "gla_chunkwise and gla_recurrence pass tests and benchmarks despite impl=N — same inconsistency as permute_align in MoE. retnet_chunkwise and retnet_recurrence are fully missing. Benchmark log shows 0 results despite 6 ops marked benched.",
+      "evaluation": "Strong functional results across tested ops. Resolve the impl=N inconsistency for GLA variants. Implement retnet variants to complete the category, and fix benchmark reporting to surface the 6 existing benchmark results."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "Both mamba1 and mamba2 are unimplemented with no test or benchmark coverage.",
+      "evaluation": "SSM is unstarted. Given Mamba's growing relevance in hybrid architectures, this should be scheduled. Mamba2 is the more architecturally current target and may be worth prioritizing over mamba1."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs has solid functional coverage in its mature categories — Reduce is fully complete, Norm and Flash Attention are near-complete, and Elementwise is mostly healthy with a few rope/dropout regressions to fix. However, a systemic benchmark reporting pipeline failure is masking all performance data across every category, making it impossible to validate perf baselines tonight. Critical LLM inference categories — Quantize, Sampling, MoE, and GEMM lowbit variants — remain severely underdeveloped and represent the largest gaps relative to production readiness.",
+    "recommendations": [
+      "Investigate and fix the benchmark reporting pipeline immediately — all categories show 0 qualified/underperforming results despite 116 ops being marked benched, which means nightly perf regression detection is completely blind.",
+      "Prioritize implementing core inference primitives: top_k/top_p sampling, int8 quantization variants, and fused_moe_deepseek, as these are blockers for end-to-end LLM inference support.",
+      "Fix the 4 failing Elementwise tests (dropout, rope_neox, rope_non_neox, rope_llama31) and resolve the impl=N data inconsistencies for gla_chunkwise, gla_recurrence, and permute_align to keep metadata trustworthy for tracking."
+    ]
+  }
+}

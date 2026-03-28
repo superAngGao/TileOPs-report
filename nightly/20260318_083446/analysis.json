@@ -1,0 +1,199 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 59,
+        "missing": 13
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 61,
+        "missing": 11
+      },
+      "issues": "All 59 mapped tests failing. All 61 mapped benchmarks failed to produce results. 13 ops have no test coverage and 11 have no bench mapping. Implementation is nominally complete (70/72) but nothing is verified.",
+      "evaluation": "Largest category with zero passing tests or benchmarks despite near-complete implementation — likely a systemic test harness or import failure rather than individual op bugs. Run a single isolated op (e.g. add) manually to confirm the root cause, then fix the shared test infrastructure before re-running the full suite."
+    },
+    "Reduce": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 20,
+        "missing": 0
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 20,
+        "missing": 0
+      },
+      "issues": "All 20 ops implemented, all 20 tests failing, all 20 benchmarks failed. Full coverage in mappings but zero results — consistent with a systemic infrastructure failure.",
+      "evaluation": "Reduce is fully mapped for both tests and benchmarks yet produces no results at all, making it a good diagnostic category. Prioritize getting at least one reduce op (e.g. sum) passing end-to-end to validate the pipeline before addressing individual failures."
+    },
+    "Norm": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 9,
+        "missing": 1
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 9,
+        "missing": 1
+      },
+      "issues": "9/10 ops implemented, all 9 mapped tests failing, all 9 mapped benchmarks failed. qk_norm is unimplemented and missing from both test and bench mappings.",
+      "evaluation": "Same systemic failure pattern as other categories. Once the infrastructure issue is resolved, implement qk_norm to complete the category. rms_norm and layer_norm should be validated first given their critical role in LLM inference."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "issues": "0/16 ops implemented. No tests or benchmarks exist. Entire category is unstarted.",
+      "evaluation": "Conv & Pooling is a blank slate — no implementation, no tests, no benchmarks. Given LLM focus of TileOPs, deprioritize this category and allocate effort to completing GEMM, Flash Attention, and MoE first."
+    },
+    "GEMM": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 3,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 11,
+        "missing": 8
+      },
+      "issues": "Only 9/19 ops implemented. 3 mapped tests all failing. 11 mapped benchmarks failed with no results. 10 unimplemented ops (bmm variants, lowbit_gemm, sparse_gemm) have no test or bench mappings. gemm_fp8 and several variants have bench mappings but no test mappings.",
+      "evaluation": "GEMM is a critical category with significant implementation gaps — lowbit and sparse variants are entirely missing. Fix the test infrastructure to unblock the 3 failing tests, then prioritize bmm_fp16/fp8 and w4a16/w8a8 implementations as they are high-value for LLM inference workloads."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 1,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 2,
+        "missing": 8
+      },
+      "issues": "Only 1/10 ops implemented (fp8_per_tensor). Its test is failing and its benchmark failed. fp8_per_block has a bench mapping but no implementation or test. All int8 and int4 variants are unimplemented.",
+      "evaluation": "Quantize is nearly empty — only fp8_per_tensor exists and it is broken. Given the dependency of lowbit GEMM ops on quantization primitives, int8_per_tensor and fp8_per_block should be implemented and validated next."
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 1,
+        "missing": 6
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 1,
+        "missing": 6
+      },
+      "issues": "Only chain_speculative_sampling is implemented (1/7); its test and benchmark both failed. All other sampling ops are unimplemented with no mappings.",
+      "evaluation": "Sampling coverage is minimal. After fixing the infrastructure, implement top_k and top_p as foundational primitives before tackling the more complex chain_speculative_sampling failure."
+    },
+    "Flash Attention": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 8,
+        "missing": 8
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 8,
+        "missing": 8
+      },
+      "issues": "8/16 ops implemented, all 8 mapped tests failing, all 8 mapped benchmarks failed. MLA prefill, paged decode, chunked prefill, varlen decode, and both DSA/NSA decode variants are unimplemented.",
+      "evaluation": "Flash Attention is a high-priority category for LLM performance — half implemented but fully broken in CI. After resolving the systemic test failure, prioritize flash_prefill_fwd correctness as the baseline, then mla_prefill_fwd given its relevance to DeepSeek-style architectures."
+    },
+    "MoE": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 1,
+        "missing": 5
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 1,
+        "missing": 5
+      },
+      "issues": "0/6 ops implemented. permute_align has a test mapping (failing) and bench mapping (failed) despite impl=N — likely a stale or incorrect mapping. All fused_moe variants are unimplemented with no mappings.",
+      "evaluation": "MoE is unimplemented. The permute_align test/bench mappings pointing to an unimplemented op should be audited and corrected. fused_moe_deepseek should be the first implementation target given its production relevance."
+    },
+    "Linear Attention": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 6,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 6,
+        "missing": 2
+      },
+      "issues": "4/8 ops implemented. All 6 mapped tests failing, all 6 mapped benchmarks failed. gla_chunkwise and gla_recurrence have test and bench mappings despite impl=N — stale mappings. retnet variants are unimplemented with no mappings.",
+      "evaluation": "Same stale mapping issue as MoE — gla ops have CI mappings but no implementation, which will cause persistent false failures. Remove or gate those mappings, fix the deltanet implementations, and validate chunkwise variants before recurrence."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "0/2 ops implemented. No test or bench mappings exist. Entire category is unstarted.",
+      "evaluation": "SSM is unstarted with no mappings. mamba2 should be prioritized over mamba1 given its broader adoption in recent architectures. No action needed until higher-priority categories are stabilized."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs is in a pre-functional state: 122/186 ops are implemented but zero pass tests or benchmarks across all categories, strongly indicating a systemic CI infrastructure failure rather than widespread individual op bugs. Stale test/bench mappings for unimplemented ops (permute_align, gla variants) are adding noise to failure counts. Large implementation gaps remain in Conv & Pooling, Quantize, Sampling, GEMM lowbit/sparse, and MoE.",
+    "recommendations": [
+      "Diagnose and fix the systemic test and benchmark infrastructure failure first — run a single trivial op (e.g. add or sum) in isolation to identify whether the issue is in environment setup, import paths, or the test runner itself, then apply the fix globally before re-running the nightly suite.",
+      "Audit and correct stale CI mappings: remove or gate test/bench entries for ops with impl=N (permute_align, gla_chunkwise, gla_recurrence, fp8_per_block) to eliminate false failures and get an accurate picture of real breakage.",
+      "After CI is unblocked, prioritize implementation of high-value missing ops in dependency order: int8/fp8 quantization primitives first, then lowbit GEMM (w4a16, w8a8), bmm variants, and fused_moe_deepseek, as these form the critical path for production LLM inference workloads."
+    ]
+  }
+}

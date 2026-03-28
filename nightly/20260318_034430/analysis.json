@@ -1,0 +1,78 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": 3,
+      "func_score": null,
+      "issues": "Benchmark infrastructure failing for most ops (57/72 show bench=FAIL). logical_not, bitwise_not, and isnan show ~50-60% of baseline bandwidth at larger sizes. gelu underperforms baseline at 4M elements (~89% of baseline tflops). rope_neox significantly outperforms baseline (~5-6x). register_copy strategy for relu shows strong results (0.96 tflops vs direct 0.33). No test data available.",
+      "evaluation": "Mixed perf picture: memory-bound unary ops lag baseline at scale, but rope_neox is a clear win. Fix the bench=FAIL infrastructure issue blocking 57 ops first. Then prioritize adopting register_copy strategy broadly for unary/binary elementwise ops where it shows 2-3x gains over direct strategy."
+    },
+    "Reduce": {
+      "perf_score": 1,
+      "func_score": null,
+      "issues": "softmax, log_softmax, logsumexp all show ~80ms latency vs baseline <0.1ms — roughly 1000-4000x slower. vector_norm (l1/l2/inf) shows ~66ms vs baseline ~0.02ms. sum/mean/amax/amin/prod/std/var/var_mean appear in benchmark log with reasonable numbers but no tileops vs baseline comparison table provided. No test data available.",
+      "evaluation": "Critical performance regression in softmax, logsumexp, and vector_norm — latencies in the 65-80ms range suggest kernel launch failures or fallback to a blocking/synchronous path rather than actual compute. These are likely hanging or timing out rather than running correctly. Immediately investigate whether these kernels are actually executing on GPU or falling back to CPU. Block any release of these ops until root cause is identified."
+    },
+    "Norm": {
+      "perf_score": 1,
+      "func_score": null,
+      "issues": "rms_norm shows ~55-58ms latency vs baseline 0.07-0.25ms — approximately 200-800x slower. tflops and bandwidth both report 0.00, indicating the kernel is not performing useful work. qk_norm not yet implemented. No test data available.",
+      "evaluation": "rms_norm kernel is effectively broken — 0.00 tflops at 55ms strongly suggests a synchronization or kernel dispatch issue rather than a compute bottleneck. Given layer_norm, batch_norm, group_norm, and fused variants all show bench=FAIL, this is likely a systemic norm kernel infrastructure problem. Isolate and fix the rms_norm dispatch path as a representative case, then apply the fix across all norm variants."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "0 of 16 ops implemented. Entire category is unstarted.",
+      "evaluation": "No implementation exists for any conv or pooling op. This is the largest unimplemented category by gap. Prioritize conv2d and max_pool2d as the highest-utility starting points given their prevalence in vision and hybrid LLM architectures."
+    },
+    "GEMM": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "9 of 19 ops implemented. bmm_fp16, bmm_fp8 show bench=FAIL despite impl=N — inconsistent metadata. All 9 implemented ops show bench=FAIL. No benchmark data produced. lowbit_gemm (w4a16, w8a8, fp4), sparse_gemm, and outer not yet implemented. No test data available.",
+      "evaluation": "GEMM is a critical path category with zero benchmark signal despite 9 implementations. The bench=FAIL on bmm variants with impl=N suggests a metadata/tracking inconsistency that should be audited. Fix the benchmark harness for gemm_fp16 first as the foundational case, then cascade to fp8 and group variants. lowbit_gemm should be prioritized for implementation given its importance to quantized inference."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "Only 1 of 10 ops implemented (fp8_per_tensor). fp8_per_block shows bench=FAIL with impl=N — metadata inconsistency. All int8 and int4 quantization ops unimplemented. No benchmark data produced. No test data available.",
+      "evaluation": "Quantize is critically underimplemented at 10% coverage. fp8_per_tensor is the only implemented op but produces no benchmark data. Fix the bench=FAIL on fp8_per_tensor, then prioritize int8_per_tensor and int8_per_channel as they unblock w8a8 GEMM paths. The impl=N/bench=FAIL inconsistency on fp8_per_block needs metadata correction."
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "Only 1 of 7 ops implemented (chain_speculative_sampling). Core sampling primitives (top_k, top_p, min_p, temperature_scale) all unimplemented. No benchmark data for any op. No test data available.",
+      "evaluation": "Sampling is nearly unimplemented and blocks end-to-end LLM inference pipelines. chain_speculative_sampling being implemented before top_k/top_p is an unusual prioritization. Implement temperature_scale and top_k first as they are dependencies for most sampling strategies, then top_p and top_k_top_p."
+    },
+    "Flash Attention": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "8 of 16 ops implemented. flash_prefill_fwd, flash_prefill_bwd, flash_decode_fwd, flash_decode_paged_fwd, mla_decode_fwd, nsa_prefill_fwd, dsa_decode_fwd all show bench=FAIL. flash_prefill_varlen_bwd, flash_chunked_prefill_fwd, mla variants (except decode), nsa_decode, dsa_prefill not yet implemented. No benchmark data produced. No test data available.",
+      "evaluation": "Flash Attention has solid implementation breadth at 50% but zero benchmark signal. This is a high-priority category for LLM performance. Fix the benchmark harness for flash_prefill_fwd as the canonical case — it likely shares the same infrastructure failure seen in softmax/norm. MLA and NSA partial implementations suggest active development; ensure flash_decode_paged_fwd is prioritized as it is critical for production inference serving."
+    },
+    "MoE": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "0 of 6 ops implemented. All fused_moe variants (deepseek, glm, kimi, qwen) and routing primitives unimplemented.",
+      "evaluation": "MoE is entirely unimplemented. Given the prevalence of MoE architectures (DeepSeek, Qwen, GLM), this is a significant gap. Start with permute_align and unpermute_depad as they are shared infrastructure for all fused_moe variants, then implement fused_moe_deepseek as the highest-demand target."
+    },
+    "Linear Attention": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "4 of 8 ops implemented (deltanet and gated_deltanet variants). All 4 implemented ops show bench=FAIL. GLA, RetNet variants unimplemented. No benchmark data produced. No test data available.",
+      "evaluation": "Linear Attention has 50% implementation coverage focused on DeltaNet variants but no benchmark signal. Fix bench=FAIL for gated_deltanet_chunkwise as the representative case. GLA and RetNet should be next implementation targets given their use in production linear attention models."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "0 of 2 ops implemented. Both mamba1 and mamba2 unimplemented.",
+      "evaluation": "SSM category is entirely unimplemented. Mamba2 should be prioritized over Mamba1 given its wider adoption in recent architectures. Consider implementing mamba2 selective scan kernel first as it covers the core compute primitive."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs has reasonable implementation breadth at 66% (122/186 ops) but zero functional test coverage and a systemic benchmark infrastructure failure that is masking true performance across nearly all categories. The most critical finding is that several implemented kernels (softmax, rms_norm, logsumexp, vector_norm) show catastrophically degraded latencies (65-80ms vs sub-millisecond baselines), indicating a fundamental kernel dispatch or synchronization bug rather than algorithmic issues. Until the benchmark harness and these kernel regressions are resolved, the project cannot reliably assess production readiness of any operator.",
+    "recommendations": [
+      "Immediately investigate and fix the systemic bench=FAIL infrastructure issue and the ~65-80ms latency anomaly in softmax, rms_norm, and vector_norm kernels — these point to a shared kernel dispatch or GPU synchronization bug that is likely affecting all reduce and norm ops silently.",
+      "Establish a baseline test suite with at least smoke-test coverage for all 122 implemented ops before adding new implementations — zero test coverage means correctness of existing work is entirely unvalidated and regressions cannot be detected.",
+      "Prioritize implementation of Conv & Pooling (0/16) and Quantize int8 variants (0/4 int8 ops) as they are hard blockers for broad model compatibility, and fix the GEMM benchmark harness since GEMM performance is the most critical metric for LLM throughput."
+    ]
+  }
+}

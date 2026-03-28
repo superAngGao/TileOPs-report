@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="3" failures="0" skipped="0" tests="3" time="3.095" timestamp="2026-03-15T18:40:50.388936+00:00" hostname="f148f8b15808"><testcase classname="" name="benchmarks.ops.bench_gated_deltanet" time="0.000"><error message="collection failure">ImportError while importing test module '/home/ci-runner/workdir/TileOPs/TileOPs/benchmarks/ops/bench_gated_deltanet.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../_tool/Python/3.11.15/x64/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmarks/ops/bench_gated_deltanet.py:7: in &lt;module&gt;
+    from tests.ops.test_gated_deltanet_bwd import GatedDeltaNetBwdTest
+E   ImportError: cannot import name 'GatedDeltaNetBwdTest' from 'tests.ops.test_gated_deltanet_bwd' (/home/ci-runner/workdir/TileOPs/TileOPs/tests/ops/test_gated_deltanet_bwd.py)</error></testcase><testcase classname="" name="benchmarks.ops.bench_gated_deltanet_fla_validation" time="0.000"><error message="collection failure">ImportError while importing test module '/home/ci-runner/workdir/TileOPs/TileOPs/benchmarks/ops/bench_gated_deltanet_fla_validation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../_tool/Python/3.11.15/x64/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmarks/ops/bench_gated_deltanet_fla_validation.py:19: in &lt;module&gt;
+    from fla.ops.gated_delta_rule import chunk_gated_delta_rule
+E   ModuleNotFoundError: No module named 'fla'</error></testcase><testcase classname="" name="benchmarks.ops.bench_gated_deltanet_vs_fla" time="0.000"><error message="collection failure">ImportError while importing test module '/home/ci-runner/workdir/TileOPs/TileOPs/benchmarks/ops/bench_gated_deltanet_vs_fla.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../_tool/Python/3.11.15/x64/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmarks/ops/bench_gated_deltanet_vs_fla.py:16: in &lt;module&gt;
+    from fla.ops.gated_delta_rule import chunk_gated_delta_rule
+E   ModuleNotFoundError: No module named 'fla'</error></testcase></testsuite></testsuites>

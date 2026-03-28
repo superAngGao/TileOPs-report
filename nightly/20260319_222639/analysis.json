@@ -1,0 +1,199 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": 4,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 55,
+        "failed": 4,
+        "missing": 13
+      },
+      "bench_summary": {
+        "qualified": 25,
+        "underperforming": 3,
+        "failed": 0,
+        "missing": 11
+      },
+      "issues": "dropout, rope_neox, rope_non_neox, rope_llama31 tests failing. bitwise_not, logical_and, logical_or severely underperforming (ratio=0.33). where, clamp, masked_fill, nan_to_num, alibi, sinusoidal have no tests or benchmarks.",
+      "evaluation": "Largest and most mature category with strong overall coverage, but rope ops are consistently failing tests and logical/bitwise unary ops have a performance regression worth investigating. Fix rope test failures first as they affect LLM positional encoding correctness, then investigate the 0.33 ratio on bitwise_not and logical ops — likely a kernel configuration issue."
+    },
+    "Reduce": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 3,
+        "missing": 17
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 17
+      },
+      "issues": "Only 3 of 20 ops implemented (l1_norm, l2_norm, inf_norm), all 3 fail tests. No benchmark data for any op. Core reduce ops (sum, mean, softmax, argmax, etc.) are entirely unimplemented.",
+      "evaluation": "Reduce is the weakest category in the project — effectively non-functional. The 3 implemented norm ops fail tests, and the entire standard reduce suite is missing. Prioritize implementing and stabilizing sum, mean, and softmax as foundational ops that unblock other categories, then fix the failing linalg_vector_norm tests."
+    },
+    "Norm": {
+      "perf_score": 5,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 9,
+        "failed": 0,
+        "missing": 1
+      },
+      "bench_summary": {
+        "qualified": 7,
+        "underperforming": 1,
+        "failed": 0,
+        "missing": 1
+      },
+      "issues": "layer_norm slightly underperforming at ratio=0.78, just below the 0.80 threshold. qk_norm has no test or benchmark coverage.",
+      "evaluation": "One of the healthiest categories — near-complete implementation with strong test and bench coverage. layer_norm is the only concern, sitting just under the qualification threshold. Tune the layer_norm kernel to close the 2% gap, and add test and benchmark coverage for qk_norm."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "issues": "Zero implementation across all 16 operators. No tests, no benchmarks.",
+      "evaluation": "Entirely unstarted. This category is a known gap and likely deprioritized given the LLM focus of TileOPs. If conv/pooling support is on the roadmap, begin with conv2d and max_pool2d as the highest-utility entry points."
+    },
+    "GEMM": {
+      "perf_score": 5,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 3,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 1,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "Only gemm_fp16 has a qualified benchmark result; remaining 10 implemented ops show bench=passed (no ratio data). 8 ops have no benchmark mapping at all. Test coverage is very thin — only 3 of 11 implemented ops are tested. All lowbit_gemm and sparse_gemm ops are unimplemented.",
+      "evaluation": "The implemented GEMM ops appear functionally correct and gemm_fp16 exceeds baseline, but test and benchmark coverage is critically thin for a core category. Add test mappings for all implemented GEMM variants (fp8, bmm, groupgemm), and ensure benchmark ratios are captured rather than just pass/fail."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "Only 2 of 10 ops implemented (fp8_per_tensor, fp8_per_block). fp8_per_tensor passes tests but fp8_per_block has no test. All int8 and int4 quantization ops are unimplemented. No benchmark ratios available.",
+      "evaluation": "Very early stage — only FP8 quantization has any implementation. Given the importance of quantization for LLM inference, int8_per_tensor and int8_per_channel should be prioritized next. Also add a benchmark ratio for fp8_per_tensor to establish a performance baseline."
+    },
+    "Sampling": {
+      "perf_score": 5,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 6
+      },
+      "bench_summary": {
+        "qualified": 1,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 6
+      },
+      "issues": "Only chain_speculative_sampling is implemented. top_k, top_p, min_p, top_k_top_p, temperature_scale, and sampling_from_probs are all unimplemented.",
+      "evaluation": "The single implemented op is healthy (test passed, ratio=2.15), but coverage is minimal. top_k and top_p are high-priority missing ops used in virtually every LLM sampling pipeline — implement those next."
+    },
+    "Flash Attention": {
+      "perf_score": 5,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 8,
+        "failed": 0,
+        "missing": 8
+      },
+      "bench_summary": {
+        "qualified": 5,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "flash_prefill_fwd, flash_prefill_bwd, flash_prefill_varlen_fwd show bench=passed without ratio data. 8 ops remain unimplemented including flash_prefill_varlen_bwd, flash_chunked_prefill, all MLA prefill, NSA decode, and DSA prefill.",
+      "evaluation": "Implemented ops are all passing tests and meeting or exceeding performance targets — a strong foundation. The missing half of the category covers important production variants. Prioritize flash_prefill_varlen_bwd and flash_chunked_prefill_fwd next, and ensure benchmark ratios are recorded for the three ops currently showing only pass/fail."
+    },
+    "MoE": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 5
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 5
+      },
+      "issues": "Only permute_align implemented and tested. All fused_moe variants (deepseek, glm, kimi, qwen) and unpermute_depad are unimplemented. permute_align bench=passed with no ratio.",
+      "evaluation": "MoE is in early stages with only the utility op done. The fused_moe variants are high-value targets for LLM inference workloads. Implement fused_moe_deepseek as the first fused MoE op given its broad deployment, and capture a benchmark ratio for permute_align."
+    },
+    "Linear Attention": {
+      "perf_score": 5,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 4,
+        "failed": 0,
+        "missing": 4
+      },
+      "bench_summary": {
+        "qualified": 2,
+        "underperforming": 0,
+        "failed": 2,
+        "missing": 4
+      },
+      "issues": "gated_deltanet_chunkwise and gla_chunkwise have bench=failed — benchmark mappings exist but no results found in log. deltanet and retnet variants are entirely unimplemented.",
+      "evaluation": "All implemented ops pass tests and recurrence variants show strong performance (ratios 3.76–4.64). The two chunkwise benchmark failures need investigation — likely a benchmark runner issue rather than a performance problem. Fix the benchmark pipeline for chunkwise ops and then implement deltanet_chunkwise and deltanet_recurrence to expand coverage."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "Both mamba1 and mamba2 are unimplemented with no tests or benchmarks.",
+      "evaluation": "Entirely unstarted. Mamba2 is the higher-priority target given its adoption in recent state-space models. Begin with a reference implementation of mamba2 to establish correctness before optimizing."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs shows strong maturity in its core LLM inference categories — Elementwise, Norm, and Flash Attention are largely healthy with good test and benchmark coverage. However, overall project completion sits at 59% implementation, 44% tested, and 39% done, with entire categories like Conv & Pooling, SSM, and Reduce effectively absent. The most critical gaps are in foundational ops (reduce/softmax) and production inference primitives (fused MoE, quantization variants, sampling) that block real-world deployment.",
+    "recommendations": [
+      "Fix the 7 failing tests immediately — rope ops (rope_neox, rope_non_neox, rope_llama31) and reduce norm ops (l1_norm, l2_norm, inf_norm) are implemented but broken, and dropout failures should be triaged before they mask regressions.",
+      "Prioritize implementing sum, mean, and softmax in the Reduce category, as these are foundational dependencies for many other ops and the category is currently at 0% functional coverage.",
+      "Resolve the two Linear Attention benchmark failures (gated_deltanet_chunkwise, gla_chunkwise) and audit all bench=passed results lacking ratio data across GEMM, Flash Attention, and MoE to ensure the benchmark pipeline is capturing actionable performance metrics."
+    ]
+  }
+}

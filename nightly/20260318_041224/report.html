@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang='zh-CN'><head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>TileOPs Report · 20260318_041224</title>
+<style>
+:root{--green:#22c55e;--yellow:#f59e0b;--red:#ef4444;--blue:#3b82f6;--purple:#8b5cf6;
+      --bg:#f9fafb;--card:#fff;--border:#e5e7eb;--text:#111827;--muted:#6b7280}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);padding:1.5rem;max-width:1100px;margin:0 auto}
+h1{font-size:1.5rem;font-weight:700;margin-bottom:.25rem}
+h2{font-size:1.15rem;font-weight:600;margin:1.5rem 0 .75rem;border-bottom:2px solid var(--border);padding-bottom:.25rem}
+h3{font-size:.95rem;font-weight:600;margin:.75rem 0 .25rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.5rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:.5rem;padding:1rem 1.25rem;margin-bottom:1rem}
+/* Overall progress */
+.overall-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:.5rem;margin:.75rem 0}
+.stat-box{background:var(--card);border:1px solid var(--border);border-radius:.375rem;padding:.6rem;text-align:center}
+.stat-box .num{font-size:1.4rem;font-weight:700;line-height:1}
+.stat-box .lbl{font-size:.72rem;color:var(--muted);margin-top:.15rem}
+/* Progress bars */
+.bar-wrap{background:#e5e7eb;border-radius:9999px;height:.75rem;overflow:hidden;margin:.25rem 0;box-shadow:inset 0 1px 2px rgba(0,0,0,.08)}
+.bar-fill{height:100%;border-radius:9999px;transition:width .6s ease;min-width:2px}
+.bar-impl{background:linear-gradient(90deg,#60a5fa,#3b82f6)}
+.bar-test{background:linear-gradient(90deg,#4ade80,#22c55e)}
+.bar-bench{background:linear-gradient(90deg,#a78bfa,#8b5cf6)}
+.bar-row{display:flex;align-items:center;gap:.5rem;font-size:.82rem;margin:.2rem 0}
+.bar-label{width:50px;color:var(--muted);flex-shrink:0;font-weight:500}
+.bar-container{flex:1;min-width:60px}
+.bar-count{width:55px;text-align:right;color:var(--muted);flex-shrink:0}
+/* Category card */
+.cat-card{display:grid;grid-template-columns:1fr auto;gap:.75rem;padding:.75rem 0;border-bottom:1px solid var(--border)}
+.cat-card:last-child{border-bottom:none}
+.cat-bars{min-width:0}
+.cat-scores{display:flex;gap:.4rem;align-items:flex-start;flex-shrink:0}
+.score-badge{display:inline-flex;flex-direction:column;align-items:center;padding:.3rem .5rem;
+             border-radius:.375rem;font-size:.72rem;font-weight:600;min-width:44px}
+.score-badge .val{font-size:1.1rem;line-height:1}
+.score-perf{background:#ede9fe;color:#5b21b6}.score-func{background:#dcfce7;color:#166534}
+.score-null{background:#f3f4f6;color:#9ca3af}
+/* Detail section */
+.detail-item{margin:.75rem 0;padding:.75rem;background:#fafafa;border-radius:.375rem;border:1px solid var(--border)}
+.detail-item h3{margin:0 0 .35rem;font-size:.88rem}
+.detail-issues{color:var(--red);font-size:.85rem;margin:.25rem 0}
+.detail-eval{font-size:.85rem;color:var(--text);margin:.25rem 0}
+/* Overall assessment */
+.rec-list{margin:.5rem 0;padding-left:1.25rem}
+.rec-list li{margin:.25rem 0;font-size:.88rem}
+/* Mobile */
+@media(max-width:600px){
+  body{padding:.75rem}
+  .card{padding:.75rem}
+  h1{font-size:1.25rem}
+  .overall-grid{grid-template-columns:repeat(3,1fr);gap:.4rem}
+  .stat-box .num{font-size:1.1rem}
+  .bar-wrap{height:1rem}
+  .bar-row{gap:.35rem;font-size:.8rem;margin:.3rem 0}
+  .bar-label{width:42px;font-size:.75rem}
+  .bar-count{width:50px;font-size:.75rem}
+  .cat-card{grid-template-columns:1fr;gap:.5rem}
+  .cat-scores{justify-content:flex-start}
+  .score-badge{padding:.2rem .4rem}
+  .score-badge .val{font-size:1rem}
+  .detail-issues,.detail-eval{font-size:.82rem}
+}
+</style>
+</head><body>
+<h1>TileOPs Nightly Report</h1>
+<p class='meta'>Date: 20260318_041224 &nbsp;|&nbsp; Commit: <code>5cd659987a75ef63eb53e2f0edc5a02590ac7677</code> &nbsp;|&nbsp; Generated: 2026-03-18 04:14:07</p>
+<div class='card'>
+<h2 style='margin-top:0'>Overall Progress</h2>
+<div class='overall-grid'>
+<div class='stat-box'><div class='num'>186</div><div class='lbl'>Total Ops</div></div>
+<div class='stat-box'><div class='num' style='color:var(--blue)'>122</div><div class='lbl'>Implemented</div></div>
+<div class='stat-box'><div class='num' style='color:var(--green)'>0</div><div class='lbl'>Tests Pass</div></div>
+<div class='stat-box'><div class='num' style='color:var(--purple)'>0</div><div class='lbl'>Bench Pass</div></div>
+<div class='stat-box'><div class='num' style='font-size:1.1rem'>0/186</div><div class='lbl'>Done (0%)</div></div>
+</div>
+<div style='margin-top:.5rem'>
+<div class="bar-row"><span class="bar-label">Impl</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-impl" style="width:65.6%"></div></div></div><span class="bar-count">122/186</span></div>
+<div class="bar-row"><span class="bar-label">Test</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-test" style="width:0.0%"></div></div></div><span class="bar-count">0/186</span></div>
+<div class="bar-row"><span class="bar-label">Bench</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-bench" style="width:0.0%"></div></div></div><span class="bar-count">0/186</span></div>
+</div>
+</div>
+<div class='card'>
+<h2 style='margin-top:0'>Category Progress</h2>
+<div class="cat-card">
+<div class="cat-bars">
+<h3 style="margin-bottom:.35rem">Elementwise</h3>
+<div class="bar-row"><span class="bar-label">Impl</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-impl" style="width:97.2%"></div></div></div><span class="bar-count">70/72</span></div>
+<div class="bar-row"><span class="bar-label">Test</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-test" style="width:0.0%"></div></div></div><span class="bar-count">0/72</span></div>
+<div class="bar-row"><span class="bar-label">Bench</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-bench" style="width:0.0%"></div></div></div><span class="bar-count">0/72</span></div>
+</div>
+<div class="cat-scores">
+<div class="score-badge score-perf"><span class="val">3</span>Perf</div>
+<div class="score-badge score-null"><span class="val">—</span>Func</div>
+</div>
+</div>
+<div class="cat-card">
+<div class="cat-bars">
+<h3 style="margin-bottom:.35rem">Reduce</h3>
+<div class="bar-row"><span class="bar-label">Impl</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-impl" style="width:100.0%"></div></div></div><span class="bar-count">20/20</span></div>
+<div class="bar-row"><span class="bar-label">Test</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-test" style="width:0.0%"></div></div></div><span class="bar-count">0/20</span></div>
+<div class="bar-row"><span class="bar-label">Bench</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-bench" style="width:0.0%"></div></div></div><span class="bar-count">0/20</span></div>
+</div>
+<div class="cat-scores">
+<div class="score-badge score-perf"><span class="val">1</span>Perf</div>
+<div class="score-badge score-null"><span class="val">—</span>Func</div>
+</div>
+</div>
+<div class="cat-card">
+<div class="cat-bars">
+<h3 style="margin-bottom:.35rem">Norm</h3>
+<div class="bar-row"><span class="bar-label">Impl</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-impl" style="width:90.0%"></div></div></div><span class="bar-count">9/10</span></div>
+<div class="bar-row"><span class="bar-label">Test</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-test" style="width:0.0%"></div></div></div><span class="bar-count">0/10</span></div>
+<div class="bar-row"><span class="bar-label">Bench</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-bench" style="width:0.0%"></div></div></div><span class="bar-count">0/10</span></div>
+</div>
+<div class="cat-scores">
+<div class="score-badge score-perf"><span class="val">1</span>Perf</div>
+<div class="score-badge score-null"><span class="val">—</span>Func</div>
+</div>
+</div>
+<div class="cat-card">
+<div class="cat-bars">
+<h3 style="margin-bottom:.35rem">Conv &amp; Pooling</h3>
+<div class="bar-row"><span class="bar-label">Impl</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-impl" style="width:0.0%"></div></div></div><span class="bar-count">0/16</span></div>
+<div class="bar-row"><span class="bar-label">Test</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-test" style="width:0.0%"></div></div></div><span class="bar-count">0/16</span></div>
+<div class="bar-row"><span class="bar-label">Bench</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-bench" style="width:0.0%"></div></div></div><span class="bar-count">0/16</span></div>
+</div>
+<div class="cat-scores">
+<div class="score-badge score-null"><span class="val">—</span>Perf</div>
+<div class="score-badge score-null"><span class="val">—</span>Func</div>
+</div>
+</div>
+<div class="cat-card">
+<div class="cat-bars">
+<h3 style="margin-bottom:.35rem">GEMM</h3>
+<div class="bar-row"><span class="bar-label">Impl</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-impl" style="width:47.4%"></div></div></div><span class="bar-count">9/19</span></div>
+<div class="bar-row"><span class="bar-label">Test</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-test" style="width:0.0%"></div></div></div><span class="bar-count">0/19</span></div>
+<div class="bar-row"><span class="bar-label">Bench</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-bench" style="width:0.0%"></div></div></div><span class="bar-count">0/19</span></div>
+</div>
+<div class="cat-scores">
+<div class="score-badge score-null"><span class="val">—</span>Perf</div>
+<div class="score-badge score-null"><span class="val">—</span>Func</div>
+</div>
+</div>
+<div class="cat-card">
+<div class="cat-bars">
+<h3 style="margin-bottom:.35rem">Quantize</h3>
+<div class="bar-row"><span class="bar-label">Impl</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-impl" style="width:10.0%"></div></div></div><span class="bar-count">1/10</span></div>
+<div class="bar-row"><span class="bar-label">Test</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-test" style="width:0.0%"></div></div></div><span class="bar-count">0/10</span></div>
+<div class="bar-row"><span class="bar-label">Bench</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-bench" style="width:0.0%"></div></div></div><span class="bar-count">0/10</span></div>
+</div>
+<div class="cat-scores">
+<div class="score-badge score-perf"><span class="val">1</span>Perf</div>
+<div class="score-badge score-null"><span class="val">—</span>Func</div>
+</div>
+</div>
+<div class="cat-card">
+<div class="cat-bars">
+<h3 style="margin-bottom:.35rem">Sampling</h3>
+<div class="bar-row"><span class="bar-label">Impl</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-impl" style="width:14.3%"></div></div></div><span class="bar-count">1/7</span></div>
+<div class="bar-row"><span class="bar-label">Test</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-test" style="width:0.0%"></div></div></div><span class="bar-count">0/7</span></div>
+<div class="bar-row"><span class="bar-label">Bench</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-bench" style="width:0.0%"></div></div></div><span class="bar-count">0/7</span></div>
+</div>
+<div class="cat-scores">
+<div class="score-badge score-null"><span class="val">—</span>Perf</div>
+<div class="score-badge score-null"><span class="val">—</span>Func</div>
+</div>
+</div>
+<div class="cat-card">
+<div class="cat-bars">
+<h3 style="margin-bottom:.35rem">Flash Attention</h3>
+<div class="bar-row"><span class="bar-label">Impl</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-impl" style="width:50.0%"></div></div></div><span class="bar-count">8/16</span></div>
+<div class="bar-row"><span class="bar-label">Test</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-test" style="width:0.0%"></div></div></div><span class="bar-count">0/16</span></div>
+<div class="bar-row"><span class="bar-label">Bench</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-bench" style="width:0.0%"></div></div></div><span class="bar-count">0/16</span></div>
+</div>
+<div class="cat-scores">
+<div class="score-badge score-null"><span class="val">—</span>Perf</div>
+<div class="score-badge score-null"><span class="val">—</span>Func</div>
+</div>
+</div>
+<div class="cat-card">
+<div class="cat-bars">
+<h3 style="margin-bottom:.35rem">MoE</h3>
+<div class="bar-row"><span class="bar-label">Impl</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-impl" style="width:0.0%"></div></div></div><span class="bar-count">0/6</span></div>
+<div class="bar-row"><span class="bar-label">Test</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-test" style="width:0.0%"></div></div></div><span class="bar-count">0/6</span></div>
+<div class="bar-row"><span class="bar-label">Bench</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-bench" style="width:0.0%"></div></div></div><span class="bar-count">0/6</span></div>
+</div>
+<div class="cat-scores">
+<div class="score-badge score-null"><span class="val">—</span>Perf</div>
+<div class="score-badge score-null"><span class="val">—</span>Func</div>
+</div>
+</div>
+<div class="cat-card">
+<div class="cat-bars">
+<h3 style="margin-bottom:.35rem">Linear Attention</h3>
+<div class="bar-row"><span class="bar-label">Impl</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-impl" style="width:50.0%"></div></div></div><span class="bar-count">4/8</span></div>
+<div class="bar-row"><span class="bar-label">Test</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-test" style="width:0.0%"></div></div></div><span class="bar-count">0/8</span></div>
+<div class="bar-row"><span class="bar-label">Bench</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-bench" style="width:0.0%"></div></div></div><span class="bar-count">0/8</span></div>
+</div>
+<div class="cat-scores">
+<div class="score-badge score-null"><span class="val">—</span>Perf</div>
+<div class="score-badge score-null"><span class="val">—</span>Func</div>
+</div>
+</div>
+<div class="cat-card">
+<div class="cat-bars">
+<h3 style="margin-bottom:.35rem">SSM</h3>
+<div class="bar-row"><span class="bar-label">Impl</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-impl" style="width:0.0%"></div></div></div><span class="bar-count">0/2</span></div>
+<div class="bar-row"><span class="bar-label">Test</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-test" style="width:0.0%"></div></div></div><span class="bar-count">0/2</span></div>
+<div class="bar-row"><span class="bar-label">Bench</span><div class="bar-container"><div class="bar-wrap"><div class="bar-fill bar-bench" style="width:0.0%"></div></div></div><span class="bar-count">0/2</span></div>
+</div>
+<div class="cat-scores">
+<div class="score-badge score-null"><span class="val">—</span>Perf</div>
+<div class="score-badge score-null"><span class="val">—</span>Func</div>
+</div>
+</div>
+</div>
+<div class='card'>
+<h2 style='margin-top:0'>Category Analysis</h2>
+<div class="detail-item">
+<h3>Elementwise</h3>
+<div class="detail-issues"><strong>Issues:</strong> Benchmark infrastructure failing for most ops (57/72 show bench=FAIL). logical_not, bitwise_not, and isnan show ~50-60% of baseline bandwidth at larger sizes. gelu underperforms baseline at 4M elements (~89% of baseline). rope_neox significantly outperforms baseline (~5-6x). register_copy strategy for relu substantially outperforms direct/explicit_parallel strategies. 2 ops not yet implemented (yarn_rope, longrope).</div>
+<div class="detail-eval"><strong>Evaluation:</strong> Mixed perf picture: memory-bound unary ops lag baseline at scale, but rope_neox is a clear win. No test data available yet. Prioritize: (1) investigate why logical_not/bitwise_not/isnan bandwidth degrades at larger sizes, and (2) set register_copy as the default strategy for unary elementwise ops given its 3x+ bandwidth advantage over direct.</div>
+</div>
+<div class="detail-item">
+<h3>Reduce</h3>
+<div class="detail-issues"><strong>Issues:</strong> Critical regression: softmax, log_softmax, logsumexp, and vector_norm all show ~65-80ms latency vs &lt;0.1ms baseline — roughly 1000-4000x slower. These ops are effectively non-functional for performance. Basic reduce ops (sum, mean, amax, etc.) show partial benchmark data with reasonable numbers but incomplete coverage. vector_norm (l1/l2/inf) all report 0.00 tflops/bandwidth.</div>
+<div class="detail-eval"><strong>Evaluation:</strong> Softmax family and vector norm ops have a severe performance bug — likely a kernel launch or synchronization issue causing near-infinite latency. This is the highest priority fix in the entire project. Recommend: (1) immediately investigate the ~80ms latency floor in softmax/log_softmax/logsumexp as it suggests a blocking wait or incorrect kernel dispatch, and (2) add correctness tests before any further perf work since the ops may be silently wrong.</div>
+</div>
+<div class="detail-item">
+<h3>Norm</h3>
+<div class="detail-issues"><strong>Issues:</strong> rms_norm shows catastrophic regression: 55-58ms latency vs 0.07-0.25ms baseline (~800x slower), reporting 0.00 tflops and 0.00 bandwidth. Same pathological latency pattern as softmax. 1 op not implemented (qk_norm). Other norm ops (layer_norm, batch_norm, etc.) have bench=FAIL with no data.</div>
+<div class="detail-eval"><strong>Evaluation:</strong> rms_norm has the same ~55ms latency floor as the softmax family, pointing to a systemic issue in how reduction-heavy kernels are dispatched or synchronized in TileLang. Recommend: (1) audit the TileLang reduction primitive or thread synchronization path shared by rms_norm and softmax — this is almost certainly a common root cause, and (2) unblock bench=FAIL ops to get coverage on the remaining 8 norm variants.</div>
+</div>
+<div class="detail-item">
+<h3>Conv &amp; Pooling</h3>
+<div class="detail-issues"><strong>Issues:</strong> Zero implementation progress. All 16 ops unimplemented with no test or benchmark data.</div>
+<div class="detail-eval"><strong>Evaluation:</strong> Category is entirely greenfield. Given the complexity of conv/pooling and the existing issues in simpler categories, this should remain low priority. Recommend: (1) defer until Elementwise, Reduce, and Norm regressions are resolved, and (2) when starting, prioritize conv2d and max_pool2d as the highest-value ops for LLM-adjacent workloads.</div>
+</div>
+<div class="detail-item">
+<h3>GEMM</h3>
+<div class="detail-issues"><strong>Issues:</strong> 9/19 ops implemented. All benchmarks failing (bench=FAIL) with no data collected. bmm_fp16, bmm_fp8 marked bench=FAIL despite impl=N, suggesting benchmark harness issues independent of implementation. 10 ops unimplemented including all lowbit_gemm and sparse variants.</div>
+<div class="detail-eval"><strong>Evaluation:</strong> GEMM is critical for LLM performance but has zero benchmark data due to systemic bench=FAIL. The impl=N + bench=FAIL combination on bmm variants suggests the benchmark runner may be erroneously attempting to bench unimplemented ops. Recommend: (1) fix the benchmark runner to skip impl=N ops cleanly, and (2) prioritize getting gemm_fp16 and gemm_fp8 benchmarks running as these are the core throughput ops.</div>
+</div>
+<div class="detail-item">
+<h3>Quantize</h3>
+<div class="detail-issues"><strong>Issues:</strong> Only 1/10 ops implemented (fp8_per_tensor). fp8_per_block shows bench=FAIL despite impl=N — same harness bug as GEMM. No benchmark data collected for any op. 9 ops unimplemented including all int8 and int4 variants.</div>
+<div class="detail-eval"><strong>Evaluation:</strong> Quantization is severely underdeveloped. Only fp8_per_tensor exists and even that has no benchmark data. Recommend: (1) implement int8_per_tensor and int8_per_channel as the most commonly needed quantization ops, and (2) fix the benchmark harness to not attempt benching impl=N ops.</div>
+</div>
+<div class="detail-item">
+<h3>Sampling</h3>
+<div class="detail-issues"><strong>Issues:</strong> Only 1/7 ops implemented (chain_speculative_sampling). No benchmark data for any op. Core sampling primitives (top_k, top_p, temperature_scale) all missing.</div>
+<div class="detail-eval"><strong>Evaluation:</strong> Sampling is nearly unimplemented. chain_speculative_sampling being the only implemented op is an unusual prioritization given it depends on top_k/top_p which don't exist yet. Recommend: (1) implement temperature_scale and top_k first as foundational primitives, then build top_p and top_k_top_p on top.</div>
+</div>
+<div class="detail-item">
+<h3>Flash Attention</h3>
+<div class="detail-issues"><strong>Issues:</strong> 8/16 ops implemented. All benchmarks failing with no data. Key missing ops: flash_prefill_varlen_bwd, flash_chunked_prefill_fwd, all MLA paged/prefill variants, nsa_decode_fwd, dsa_prefill_fwd. No test data available.</div>
+<div class="detail-eval"><strong>Evaluation:</strong> Flash Attention has reasonable implementation breadth (50%) but zero validated performance or correctness data. This is high-risk for a library positioning itself as high-performance. Recommend: (1) fix bench=FAIL blockers for flash_prefill_fwd and flash_decode_fwd immediately as these are the most critical ops, and (2) add correctness tests against FlashAttention2 reference before any perf claims.</div>
+</div>
+<div class="detail-item">
+<h3>MoE</h3>
+<div class="detail-issues"><strong>Issues:</strong> Zero implementation progress. All 6 ops unimplemented with no test or benchmark data.</div>
+<div class="detail-eval"><strong>Evaluation:</strong> MoE is entirely unimplemented. Given its importance for DeepSeek/Qwen/GLM model families, this is a significant gap. Recommend: (1) start with permute_align and unpermute_depad as the infrastructure primitives, then layer fused_moe variants on top, prioritizing fused_moe_deepseek given current model popularity.</div>
+</div>
+<div class="detail-item">
+<h3>Linear Attention</h3>
+<div class="detail-issues"><strong>Issues:</strong> 4/8 ops implemented (all deltanet variants). All benchmarks failing with no data. GLA, RetNet variants entirely missing.</div>
+<div class="detail-eval"><strong>Evaluation:</strong> Deltanet coverage is complete on the implementation side but unvalidated. GLA and RetNet are missing entirely. Recommend: (1) unblock benchmarks for the 4 implemented deltanet ops to validate they work before expanding, and (2) add gla_chunkwise as the next implementation target given GLA's architectural relevance.</div>
+</div>
+<div class="detail-item">
+<h3>SSM</h3>
+<div class="detail-issues"><strong>Issues:</strong> Zero implementation progress. Both mamba1 and mamba2 unimplemented.</div>
+<div class="detail-eval"><strong>Evaluation:</strong> SSM category is entirely unstarted. Recommend: (1) implement mamba2 first as it is more relevant to current model deployments, and (2) defer until higher-priority categories (GEMM, Flash Attention) have passing benchmarks.</div>
+</div>
+</div>
+<div class='card'>
+<h2 style='margin-top:0'>Overall Assessment</h2>
+<p style='font-size:.88rem;line-height:1.6'>TileOPs has solid implementation breadth (122/186 ops) but zero validated correctness and a critical systemic performance regression affecting all reduction-heavy ops (softmax, rms_norm, vector_norm showing 800-4000x slowdowns vs baseline). The benchmark infrastructure is also broadly broken (bench=FAIL across GEMM, Flash Attention, Linear Attention, Quantize), meaning the true performance picture is largely unknown. The project is not yet in a shippable state for any category.</p>
+<h3>Recommendations</h3>
+<ol class='rec-list'>
+<li>Immediately investigate and fix the ~55-80ms latency floor in reduction ops (softmax, rms_norm, logsumexp, vector_norm) — this is almost certainly a shared root cause in TileLang's reduction/synchronization path and is the single highest-impact fix available.</li>
+<li>Fix the benchmark runner infrastructure to (a) skip impl=N ops cleanly and (b) resolve the bench=FAIL failures blocking GEMM, Flash Attention, and Linear Attention — without benchmark data these categories cannot be evaluated or shipped.</li>
+<li>Stand up a correctness test suite immediately; with 122 implemented ops and 0 tested, there is no confidence in functional correctness for any operator, and perf optimizations on broken ops are wasted effort.</li>
+</ol>
+</div>
+<p style='text-align:center;color:var(--muted);font-size:.72rem;margin-top:1.5rem'>
+Generated by Claude &mdash; review for accuracy before acting on recommendations.
+</p>
+</body></html>

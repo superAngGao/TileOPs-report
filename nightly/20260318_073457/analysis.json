@@ -1,0 +1,199 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": 3,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 52,
+        "missing": 20
+      },
+      "bench_summary": {
+        "qualified": 3,
+        "underperforming": 3,
+        "failed": 51,
+        "missing": 15
+      },
+      "issues": "All 72 ops have zero passing tests. Bench data exists for only a handful of ops: rope_neox exceeds baseline (qualified), exp and gelu are near-parity (qualified), but logical_not and bitwise_not underperform baseline significantly (~40-67% ratio). rms_norm-equivalent ops show catastrophic latency regression (~55ms vs ~0.07ms baseline). 51 bench mappings returned no results. 20 ops have no test mapping at all.",
+      "evaluation": "The category has broad implementation coverage (70/72) but zero functional validation and mostly missing benchmark results. rope_neox and exp are bright spots. Immediate priorities: (1) fix the bench runner to surface results for the 51 failed bench mappings, and (2) wire up test mappings for the 20 missing ops and investigate why all 52 mapped tests are failing."
+    },
+    "Reduce": {
+      "perf_score": 1,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 20,
+        "missing": 0
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 5,
+        "missing": 15
+      },
+      "issues": "All 20 ops fail tests. Benchmark data available for sum, mean, amax, amin, prod, std, var, var_mean — but tflops/bandwidth values are extremely low (near 0) for softmax, log_softmax, logsumexp, and vector_norm (l1/l2/inf), with latencies in the 65-80ms range vs sub-millisecond baselines, indicating a severe performance regression or hang. The partial reduce ops (sum, mean, etc.) show only raw numbers without tileops vs baseline comparison in the log, making ratio calculation impossible for those.",
+      "evaluation": "Reduce is in critical shape — softmax family and vector norm ops are effectively non-functional at benchmark time (80ms latency suggests a kernel hang or synchronization bug). Fix the softmax/logsumexp/vector_norm kernel hang as the top priority. Then establish proper tileops vs baseline pairing for sum/mean/amax/amin/prod/std/var/var_mean to enable ratio scoring."
+    },
+    "Norm": {
+      "perf_score": 1,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 9,
+        "missing": 1
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 9,
+        "missing": 1
+      },
+      "issues": "rms_norm shows catastrophic latency regression: ~55ms tileops vs ~0.07-0.25ms baseline (ratio ~0.001). All 9 implemented ops have bench=failed or show near-zero throughput. qk_norm is not implemented. No tests pass.",
+      "evaluation": "Norm ops are critically broken at the kernel level — rms_norm latency is ~800x worse than baseline, suggesting a fundamental issue in the TileLang kernel (possible infinite loop, missing parallelism, or incorrect launch config). Diagnose and fix the rms_norm kernel first as a representative case, then audit all norm kernels for the same root cause before re-running benchmarks."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "issues": "No operators implemented. All 16 ops are missing tests and benchmarks.",
+      "evaluation": "This category is entirely unstarted. It should be deprioritized until core categories (Elementwise, Reduce, Norm, GEMM) are stabilized. When ready, begin with conv2d and max_pool2d as the highest-utility entry points."
+    },
+    "GEMM": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 3,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 11,
+        "missing": 8
+      },
+      "issues": "Only 9/19 ops implemented. 11 bench mappings exist but returned no results. 3 ops have test mappings but all fail. 10 ops (lowbit_gemm, sparse_gemm, outer) have no implementation. bmm variants are unimplemented despite having bench mappings.",
+      "evaluation": "GEMM has partial implementation coverage for fp16/fp8 variants but no validated results from either tests or benchmarks. Fix the bench runner for the 11 failed mappings (gemm_fp16, gemv_fp16, groupgemm variants, bmm variants) to get baseline performance data. Add test mappings for the 6 implemented ops currently marked test=missing."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 1,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 2,
+        "missing": 8
+      },
+      "issues": "Only fp8_per_tensor is implemented; its test fails and bench returns no result. fp8_per_block has a bench mapping but no implementation and no result. All int8/int4/nf4 ops are unimplemented.",
+      "evaluation": "Quantize is nearly entirely unimplemented. fp8_per_tensor is the only foothold — debug its test failure and bench runner issue first. Given the importance of quantization for LLM inference, prioritize int8_per_tensor and fp8_per_block as the next implementation targets."
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 1,
+        "missing": 6
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 1,
+        "missing": 6
+      },
+      "issues": "Only chain_speculative_sampling is implemented; its test fails and bench returns no result. All other 6 ops are unimplemented with no test or bench mappings.",
+      "evaluation": "Sampling is minimally started. Fix chain_speculative_sampling test and bench before expanding. Prioritize top_k and top_p next as they are the most commonly used sampling ops in LLM inference pipelines."
+    },
+    "Flash Attention": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 8,
+        "missing": 8
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 7,
+        "missing": 9
+      },
+      "issues": "8/16 ops implemented, all tests fail. 7 bench mappings exist but returned no results. MLA prefill, paged decode, NSA decode, DSA prefill, chunked prefill, and varlen decode are unimplemented.",
+      "evaluation": "Flash Attention has meaningful implementation breadth (prefill fwd/bwd, varlen, decode, paged, MLA decode, NSA, DSA) but zero validated results. This is a high-priority category for LLM workloads. Fix the bench runner for the 7 failed mappings immediately, and investigate why all 8 test mappings fail — likely a shared infrastructure issue given the pattern across all categories."
+    },
+    "MoE": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 1,
+        "missing": 5
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 1,
+        "missing": 5
+      },
+      "issues": "0/6 ops implemented. permute_align has a test mapping that fails and a bench mapping with no result, despite impl=N — likely a data integrity issue in the operator registry. All fused_moe variants are unimplemented.",
+      "evaluation": "MoE is unimplemented. The permute_align entry showing test=failed and bench=failed with impl=N suggests a registry/mapping inconsistency that should be corrected. Defer implementation until core categories are stable; fused_moe_deepseek is the highest-value target when ready."
+    },
+    "Linear Attention": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 6,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 2,
+        "missing": 6
+      },
+      "issues": "4/8 ops implemented (deltanet and gated_deltanet variants). All 6 mapped tests fail. gla_chunkwise and gla_recurrence have test mappings but impl=N — same registry inconsistency as MoE permute_align. 2 bench mappings (gla variants) returned no results. retnet variants are unimplemented.",
+      "evaluation": "Linear Attention has a solid implementation start with deltanet variants, but nothing is validated. Fix the impl=N + test=failed inconsistency for gla ops. Prioritize getting deltanet tests passing as a correctness baseline, then expand to gla implementation."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "Neither mamba1 nor mamba2 is implemented. No test or bench mappings exist.",
+      "evaluation": "SSM is entirely unstarted. Low priority relative to other categories. When scoping implementation, mamba2 is more relevant to current model architectures and should be targeted first."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs has broad implementation coverage (122/186 ops) but zero passing tests across all 186 operators and severely degraded benchmark results — several categories show kernel latencies 100-800x worse than baseline, strongly suggesting a systemic infrastructure issue (test runner misconfiguration, kernel launch bug, or environment regression) rather than isolated operator failures. The benchmark log reveals a split picture: a small number of elementwise ops (rope_neox, exp, gelu) perform at or above baseline, while reduce/norm/softmax kernels appear to hang or stall entirely. Resolving the shared test and bench infrastructure failures is the critical path before any operator-level work can be meaningfully assessed.",
+    "recommendations": [
+      "Diagnose and fix the systemic test runner failure causing 0 passed tests across all 186 operators — the uniform failure pattern points to a shared infrastructure issue (e.g., import error, fixture misconfiguration, or environment mismatch) rather than individual operator bugs.",
+      "Investigate the kernel hang/stall affecting softmax, log_softmax, logsumexp, rms_norm, and vector_norm — these show ~65-80ms latencies vs sub-millisecond baselines, indicating a likely deadlock or incorrect thread synchronization in the TileLang kernel launch configuration.",
+      "Audit and fix the operator registry for impl=N entries that have test=failed or bench=failed mappings (permute_align, gla_chunkwise, gla_recurrence) to ensure registry integrity, and add missing bench result collection for the 51+ bench mappings that returned no data."
+    ]
+  }
+}

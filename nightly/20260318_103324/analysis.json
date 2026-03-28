@@ -1,0 +1,199 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": 4,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 55,
+        "failed": 4,
+        "missing": 13
+      },
+      "bench_summary": {
+        "qualified": 25,
+        "underperforming": 3,
+        "failed": 0,
+        "missing": 11
+      },
+      "issues": "dropout, rope_neox, rope_non_neox, rope_llama31 tests failing. logical_and(0.33), logical_or(0.33), bitwise_not(0.50) significantly underperforming. 13 ops lack test coverage (where, clamp, masked_fill, nan_to_num, alibi, sinusoidal, etc.). bench_summary counts passed-status bench entries (log/sqrt/etc.) as missing since no ratio data.",
+      "evaluation": "Strongest category overall with broad coverage, but the three logical/bitwise underperformers need investigation — likely a kernel dispatch or dtype issue. Fix the four failing rope/dropout tests as a priority; they are implemented and benched but broken functionally."
+    },
+    "Reduce": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 3,
+        "missing": 17
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 20
+      },
+      "issues": "Only 3 of 20 ops implemented (l1_norm, l2_norm, inf_norm), all three fail tests, and no benchmark data exists for any op in this category.",
+      "evaluation": "Effectively unimplemented. The three norm variants that exist are broken. Prioritize fixing l1/l2/inf_norm correctness first, then begin implementing the high-value reduce primitives (sum, mean, softmax) which are blockers for many downstream use cases."
+    },
+    "Norm": {
+      "perf_score": 5,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 9,
+        "failed": 0,
+        "missing": 1
+      },
+      "bench_summary": {
+        "qualified": 2,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 1
+      },
+      "issues": "qk_norm has no test or benchmark mapping. Several ops report bench=passed without a ratio in the log (layer_norm, batch_norm, etc.) — treated as qualified but ratio unconfirmed.",
+      "evaluation": "Healthiest category in the project. Add test and benchmark coverage for qk_norm to reach full completion. Consider extracting ratio data for the passed-status bench entries to confirm they meet the 0.80 threshold."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "issues": "Zero implementation across all 16 operators. Entire category is missing.",
+      "evaluation": "Not started. Given the complexity of conv/pooling kernels on TileLang, recommend scoping a phased plan: start with conv2d and avg_pool2d as the highest-utility targets, then expand. This category will require significant engineering investment."
+    },
+    "GEMM": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 3,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "11 ops implemented but only 3 tested (gemm_fp16, gemv_fp16, groupgemm_fp16). 8 implemented ops have bench=passed entries but no ratio data. 8 lowbit/sparse ops not yet implemented.",
+      "evaluation": "Core GEMM kernels are functionally correct where tested, but test coverage is critically thin — 8 implemented ops have zero test mapping. Add tests for gemm_fp8, gemv_fp8, bmm variants, and groupgemm_fp8 immediately. Lowbit GEMM (w4a16, w8a8) should be the next implementation priority given LLM inference relevance."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 2,
+        "missing": 8
+      },
+      "issues": "fp8_per_tensor and fp8_per_block benchmarks exist in mapping but produced no results (failed). 8 of 10 ops unimplemented. Only fp8_per_tensor has a passing test.",
+      "evaluation": "Very early stage. The two benchmark failures for fp8 quantize need investigation — likely a runner or harness issue since the test passes. Implement int8_per_tensor and int8_per_channel next as they are foundational for the lowbit GEMM ops."
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 6
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 1,
+        "missing": 6
+      },
+      "issues": "chain_speculative_sampling benchmark mapping exists but produced no results. 6 of 7 ops unimplemented.",
+      "evaluation": "Only one op implemented and it passes functionally but has a broken benchmark. Fix the benchmark harness for chain_speculative_sampling, then prioritize top_k and top_p as the most commonly used sampling primitives."
+    },
+    "Flash Attention": {
+      "perf_score": 5,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 8,
+        "failed": 0,
+        "missing": 8
+      },
+      "bench_summary": {
+        "qualified": 2,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "8 ops not yet implemented (flash_prefill_varlen_bwd, flash_decode_varlen_fwd, flash_chunked_prefill_fwd, all MLA paged/prefill, NSA decode, DSA prefill). Bench entries without ratio data (flash_prefill_fwd, etc.) unconfirmed.",
+      "evaluation": "All implemented ops pass tests and benchmarks look strong where ratios are available (mla_decode 4.33x, nsa_prefill 2.43x). Next implementation targets should be flash_prefill_varlen_bwd and flash_chunked_prefill_fwd to complete the core attention suite."
+    },
+    "MoE": {
+      "perf_score": 5,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 5
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 5
+      },
+      "issues": "Only permute_align implemented. The four fused_moe variants (deepseek, glm, kimi, qwen) and unpermute_depad are missing — these are the high-value ops for MoE inference.",
+      "evaluation": "The one implemented op is healthy, but the category is essentially a stub. fused_moe_deepseek should be the top implementation priority here given its production relevance; unpermute_depad is a likely dependency and should be implemented alongside it."
+    },
+    "Linear Attention": {
+      "perf_score": 3,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 4,
+        "failed": 0,
+        "missing": 4
+      },
+      "bench_summary": {
+        "qualified": 2,
+        "underperforming": 1,
+        "failed": 0,
+        "missing": 4
+      },
+      "issues": "gated_deltanet_chunkwise severely underperforming at ratio=0.12, well below the 0.80 threshold. deltanet and retnet variants not yet implemented.",
+      "evaluation": "Functional correctness is solid across all tested ops, but gated_deltanet_chunkwise has a critical performance regression (0.12x) that needs immediate investigation — likely a tiling or memory layout issue specific to the chunkwise path. The recurrence variant of the same op performs at 4.47x, which suggests the chunkwise kernel has a specific bug."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "Neither mamba1 nor mamba2 implemented.",
+      "evaluation": "Not started. Mamba2 should be prioritized over mamba1 given its architectural relevance in current models. Recommend scoping implementation after MoE fused kernels are stabilized."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs has a solid foundation in Elementwise, Norm, and Flash Attention, with 73 of 186 ops fully done and strong performance where benchmarks exist. However, coverage is highly uneven — Conv & Pooling, SSM, and most of Reduce/Quantize/Sampling are effectively unstarted, and several implemented ops have critical gaps in either test coverage or benchmark harness health. The most urgent correctness issues are the rope/dropout test failures in Elementwise, the gated_deltanet_chunkwise performance collapse (0.12x), and the three failing Reduce norm ops.",
+    "recommendations": [
+      "Fix gated_deltanet_chunkwise performance regression (0.12x ratio) immediately — compare kernel config against the working recurrence variant to isolate the tiling or scheduling defect.",
+      "Close test coverage gaps for implemented-but-untested GEMM ops (gemm_fp8, gemv_fp8, bmm_fp16/fp8, groupgemm_fp8) and investigate the four failing Elementwise ops (rope variants, dropout) to unblock their done status.",
+      "Prioritize next implementation sprints on high-impact missing ops: fused_moe_deepseek (MoE), softmax/sum/mean (Reduce), and w4a16/w8a8 (lowbit GEMM), as these are direct blockers for production LLM inference workloads."
+    ]
+  }
+}

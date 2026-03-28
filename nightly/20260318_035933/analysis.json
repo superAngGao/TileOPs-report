@@ -1,0 +1,78 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": null,
+      "func_score": 4,
+      "issues": "Benchmarks entirely absent (all FAIL at collection). 17 ops untested: leaky_relu, elu, hardtanh, softplus, prelu, where, clamp, masked_fill, nan_to_num, dropout, rope_neox, rope_non_neox, rope_llama31, alibi, sinusoidal. yarn_rope and longrope not implemented.",
+      "evaluation": "Strong functional coverage on tested ops with 204/204 passing. Priority is (1) stand up the benchmark harness so perf data can be collected, and (2) add test coverage for the 17 untested ops, especially the RoPE variants which are critical for LLM inference."
+    },
+    "Reduce": {
+      "perf_score": null,
+      "func_score": 4,
+      "issues": "Benchmarks entirely absent. 5 ops untested: any, all, l1_norm, l2_norm, inf_norm.",
+      "evaluation": "15/20 ops tested and all passing. The untested ops are lower-priority utilities but should be covered. Fix the benchmark harness as the top action; then add tests for the logical reduce and norm vector ops."
+    },
+    "Norm": {
+      "perf_score": null,
+      "func_score": 5,
+      "issues": "Benchmarks entirely absent. qk_norm not implemented.",
+      "evaluation": "9/9 implemented ops all pass tests — cleanest category in the project. Implement qk_norm (needed for modern attention variants like Llama 3) and unblock benchmarking."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "0/16 ops implemented. No tests, no benchmarks. Entire category is a gap.",
+      "evaluation": "This category has not been started. Given TileOPs targets LLM workloads, conv/pooling is lower priority, but depthwise_conv2d and conv1d are used in some SSM and audio models. Recommend deferring until core LLM ops are complete, then prioritize conv1d and depthwise_conv2d first."
+    },
+    "GEMM": {
+      "perf_score": null,
+      "func_score": 3,
+      "issues": "Only 3/19 ops tested (gemm_fp16, gemv_fp16, groupgemm_fp16). 6 implemented ops lack tests: gemm_fp8, gemm_fp8_block_scaled, gemv_fp8, small_batch_gemm_fp16, small_batch_gemm_fp8, groupgemm_fp8. 10 ops not implemented including all lowbit_gemm variants, bmm, sparse_gemm, and outer. Benchmarks failing across all implemented ops.",
+      "evaluation": "Core fp16 paths are verified but fp8 and batch variants are untested despite being implemented. Lowbit GEMM (w4a16, w8a8, fp4) is entirely missing and is critical for quantized inference. Immediate actions: (1) add tests for all 6 implemented-but-untested ops, (2) prioritize w4a16 and w8a8 implementation as they gate quantized model serving."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": 4,
+      "issues": "Only fp8_per_tensor implemented and tested out of 10 ops. All int8 and int4 quantization ops missing. fp8_per_block and fp8_cast_transpose not implemented. fp8_per_block benchmark fails despite no implementation (collection artifact).",
+      "evaluation": "Quantization coverage is critically thin — 1/10 ops done. This directly blocks lowbit GEMM and quantized inference pipelines. Prioritize int8_per_tensor and int8_per_channel next as they are the most widely used, then fp8_per_block to complete the fp8 stack."
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": 4,
+      "issues": "Only chain_speculative_sampling implemented and tested. 6/7 ops not implemented: top_k, top_p, min_p, top_k_top_p, temperature_scale, sampling_from_probs.",
+      "evaluation": "Sampling is nearly entirely unimplemented. top_k, top_p, and temperature_scale are required for any standard inference pipeline. Implement those three first as they are prerequisites for the more complex sampling ops."
+    },
+    "Flash Attention": {
+      "perf_score": null,
+      "func_score": 4,
+      "issues": "dsa_decode_fwd implemented but untested. flash_prefill_varlen_fwd implemented but benchmark not configured. 8/16 ops not implemented: flash_prefill_varlen_bwd, flash_decode_varlen_fwd, flash_chunked_prefill_fwd, mla_prefill_fwd/bwd, mla_decode_paged_fwd, nsa_decode_fwd, dsa_prefill_fwd. Benchmarks failing on all implemented ops.",
+      "evaluation": "Core prefill and decode paths are solid with 7/8 tested ops passing. MLA decode is implemented and passing which is a notable win. Add a test for dsa_decode_fwd immediately, then focus implementation effort on flash_chunked_prefill_fwd and flash_decode_varlen_fwd as they are needed for production serving scenarios."
+    },
+    "MoE": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "0/6 ops implemented. No tests, no benchmarks.",
+      "evaluation": "MoE is entirely unstarted. fused_moe ops are high-value for DeepSeek, Qwen, and Kimi model families. Recommend starting with fused_moe_deepseek as a reference implementation, then generalizing to the other variants. permute_align and unpermute_depad are likely shared utilities that should be implemented first."
+    },
+    "Linear Attention": {
+      "perf_score": null,
+      "func_score": 5,
+      "issues": "Benchmark collection broken: bench_gated_deltanet.py fails with ImportError on GatedDeltaNetBwdTest, and two FLA validation benchmarks fail due to missing 'fla' module. 4/8 ops not implemented: gla, retnet variants.",
+      "evaluation": "All 4 implemented ops pass tests cleanly. The benchmark failures are purely infrastructure issues — GatedDeltaNetBwdTest was likely renamed or removed from the test module, and 'fla' is an optional comparison dependency not installed in CI. Fix the import in bench_gated_deltanet.py and make fla an optional import with a skip guard. Then implement gla_chunkwise and gla_recurrence."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "0/2 ops implemented. No tests, no benchmarks.",
+      "evaluation": "Mamba1 and Mamba2 are both unimplemented. These are important for SSM-based model families. Mamba2 is architecturally closer to linear attention and may benefit from reusing patterns from the deltanet implementation. Recommend implementing mamba2 first given its structural similarity to existing work."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs has solid functional foundations — 1132/1132 tests passing across implemented ops — but benchmark infrastructure is completely broken, leaving zero performance data for any category. Coverage is heavily skewed toward elementwise and reduce ops, while entire categories (Conv & Pooling, MoE, SSM) and critical inference primitives (quantization, sampling) remain unimplemented. The project is in a healthy early-to-mid stage for LLM core ops but needs significant work before it can be considered production-ready.",
+    "recommendations": [
+      "Fix the benchmark harness as the highest priority: investigate why all bench= FAIL entries fail at collection (likely a shared infrastructure issue), fix the GatedDeltaNetBwdTest import error in bench_gated_deltanet.py, and add optional guards for the 'fla' dependency — without benchmark data the project cannot validate performance claims.",
+      "Close the quantization and sampling gaps urgently: implement int8_per_tensor, int8_per_channel, fp8_per_block, top_k, top_p, and temperature_scale — these are hard blockers for any quantized or production inference pipeline and gate progress on lowbit GEMM as well.",
+      "Add test coverage for all implemented-but-untested ops before adding new implementations: gemm_fp8, gemm_fp8_block_scaled, gemv_fp8, small_batch_gemm variants, groupgemm_fp8, and dsa_decode_fwd are all implemented with no test signal, which is a correctness risk."
+    ]
+  }
+}

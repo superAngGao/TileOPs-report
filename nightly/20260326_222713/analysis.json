@@ -1,0 +1,199 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": 4,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 59,
+        "failed": 4,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 21,
+        "underperforming": 3,
+        "failed": 0,
+        "missing": 11
+      },
+      "issues": "4 test failures (dropout, rope variants), 3 underperforming ops (bitwise_not, logical_and, logical_or at 0.33 ratio), 11 ops missing benchmarks",
+      "evaluation": "Strong category with 82% test pass rate and most benchmarks qualified. Fix rope and dropout test failures, investigate logical/bitwise underperformance, add missing benchmarks for special_elementwise ops."
+    },
+    "Reduce": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 20,
+        "failed": 0,
+        "missing": 0
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 0
+      },
+      "issues": "",
+      "evaluation": "Perfect functional correctness with all 20 ops passing tests. No benchmark data available despite implementations existing. Add benchmark mappings to validate performance."
+    },
+    "Norm": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 9,
+        "failed": 0,
+        "missing": 1
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 1
+      },
+      "issues": "qk_norm missing test and benchmark mapping",
+      "evaluation": "Excellent functional status with 90% coverage. Add test and benchmark mapping for qk_norm to complete the category."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "issues": "Entire category unimplemented (0/16 ops)",
+      "evaluation": "Critical gap with zero implementation. Prioritize conv2d, max_pool2d, and avg_pool2d as foundational ops for CNN workloads."
+    },
+    "GEMM": {
+      "perf_score": null,
+      "func_score": 3,
+      "test_summary": {
+        "passed": 3,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 10
+      },
+      "issues": "Only 3/19 ops tested, 10/19 missing implementations, 6 implemented ops lack test mappings",
+      "evaluation": "Mixed progress with core GEMM ops implemented but undertested. Add test mappings for fp8 variants and small_batch ops, implement lowbit quantized GEMM for inference optimization."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": 2,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "Only 2/10 ops implemented, 9/10 missing tests, critical int8/int4 quantization absent",
+      "evaluation": "Severely underdeveloped category. Implement int8_per_tensor and int4_per_block as priorities for model compression and inference acceleration."
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": 2,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 6
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 6
+      },
+      "issues": "Only 1/7 ops implemented (chain_speculative_sampling), core sampling ops missing",
+      "evaluation": "Critical gap for LLM inference. Implement top_k, top_p, and temperature_scale as essential decoding primitives."
+    },
+    "Flash Attention": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 8,
+        "failed": 0,
+        "missing": 8
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "8/16 ops missing (varlen_bwd, chunked_prefill, MLA/NSA/DSA decode variants)",
+      "evaluation": "Solid foundation with core prefill/decode ops working. Complete varlen and paged variants for production serving, add benchmark mappings to validate performance claims."
+    },
+    "MoE": {
+      "perf_score": null,
+      "func_score": 2,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 5
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 5
+      },
+      "issues": "Only permute_align implemented, all fused_moe variants missing",
+      "evaluation": "Minimal coverage for critical MoE workloads. Implement fused_moe_deepseek and fused_moe_qwen to support popular MoE architectures."
+    },
+    "Linear Attention": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 4,
+        "failed": 0,
+        "missing": 4
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 4
+      },
+      "issues": "4/8 ops missing (deltanet and retnet variants)",
+      "evaluation": "Good progress on gated_deltanet and GLA. Complete deltanet and retnet implementations for broader linear attention architecture support."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "Entire category unimplemented (0/2 ops)",
+      "evaluation": "Complete gap for state space models. Implement mamba1 and mamba2 to support efficient sequence modeling architectures."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs shows strong functional correctness in implemented categories (106/110 tests passing, 96% pass rate) but has significant coverage gaps. Three categories (Conv & Pooling, SSM, Sampling) are critically underdeveloped. Performance validation is incomplete with most benchmarks showing 'passed' status but lacking ratio data for analysis.",
+    "recommendations": [
+      "Fix 4 failing tests in Elementwise (dropout, rope variants) and investigate 3 underperforming logical/bitwise ops",
+      "Implement missing core operators: conv2d/pooling (0/16), int8/int4 quantization (2/10), top_k/top_p sampling (1/7), and mamba SSM (0/2)",
+      "Add comprehensive benchmark mappings for Reduce, Norm, Flash Attention, and GEMM categories to validate performance claims and identify optimization opportunities"
+    ]
+  }
+}

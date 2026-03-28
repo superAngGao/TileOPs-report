@@ -1,0 +1,199 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 59,
+        "failed": 4,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 11
+      },
+      "issues": "Benchmark pipeline returned no results for any Elementwise ops — all 61 benched ops show no ratio data, making perf scoring impossible. 4 test failures in rope (rope_neox, rope_non_neox, rope_llama31) and dropout. 9 ops missing tests (leaky_relu, elu, hardtanh, softplus, prelu, alibi, sinusoidal, yarn_rope, longrope).",
+      "evaluation": "Functionally strong with 59/72 passing, but the rope and dropout failures need immediate attention as they are core LLM primitives. Fix the benchmark reporting pipeline to recover perf data for this category, then prioritize adding test coverage for the 5 activation ops missing tests."
+    },
+    "Reduce": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 20,
+        "failed": 0,
+        "missing": 0
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 0
+      },
+      "issues": "Benchmark log shows 0 missing for Reduce (all 20 ops benched) but no qualified/underperforming/failed counts are reported, indicating the benchmark results exist but ratio data was not surfaced in the log. Functionally complete.",
+      "evaluation": "The only fully tested category with 100% pass rate. The benchmark data gap is a reporting issue, not a correctness issue. Investigate why ratio extraction is failing for Reduce benchmarks to confirm perf status."
+    },
+    "Norm": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 9,
+        "failed": 0,
+        "missing": 1
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 1
+      },
+      "issues": "qk_norm is unimplemented (missing test and bench). Benchmark ratio data unavailable for all 9 benched ops due to the same pipeline issue affecting other categories.",
+      "evaluation": "Near-complete and fully passing. Implement qk_norm to close the last gap. Resolve benchmark ratio reporting to validate perf status."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "issues": "Entire category unimplemented — all 16 ops have impl=N with no tests or benchmarks.",
+      "evaluation": "This is a 0% category and a significant coverage gap for any workload involving convolutions or pooling. Prioritize at least conv2d and max_pool2d as foundational ops to unblock downstream use cases."
+    },
+    "GEMM": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 3,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "Only 3 of 19 ops have tests (gemm_fp16, gemv_fp16, groupgemm_fp16); all pass but 16 ops lack test coverage. 10 ops are unimplemented (lowbit_gemm variants, sparse_gemm, outer, bmm). Benchmark ratio data missing despite 11 ops being benched.",
+      "evaluation": "Core fp16 paths are functionally verified but the fp8, small_batch, and lowbit variants are untested. Add test mappings for the 6 implemented-but-untested ops (gemm_fp8, gemv_fp8, etc.) as a quick win, then plan lowbit_gemm implementation for w4a16/w8a8 coverage."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 2,
+        "missing": 8
+      },
+      "issues": "fp8_per_tensor passes tests but its benchmark failed (no results in log). fp8_per_block benchmark also failed despite impl=N, suggesting a stale or misconfigured bench mapping. 9 of 10 ops unimplemented.",
+      "evaluation": "Only fp8_per_tensor is functional; the category is largely a stub. Fix the fp8_per_tensor benchmark mapping to resolve the failed bench status, and remove or correct the fp8_per_block bench mapping since the op is not implemented."
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 6
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 1,
+        "missing": 6
+      },
+      "issues": "chain_speculative_sampling passes tests but benchmark failed. 6 of 7 ops unimplemented with no tests or benchmarks.",
+      "evaluation": "Minimal coverage — only one op implemented. Fix the chain_speculative_sampling benchmark mapping. Implement top_k and top_p next as they are the most commonly used sampling primitives."
+    },
+    "Flash Attention": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 8,
+        "failed": 0,
+        "missing": 8
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "8 ops unimplemented (flash_prefill_varlen_bwd, flash_decode_varlen_fwd, flash_chunked_prefill_fwd, all MLA paged/prefill, nsa_decode, dsa_prefill). Benchmark ratio data unavailable for the 8 benched ops.",
+      "evaluation": "All implemented ops pass tests — solid foundation. MLA decode and NSA/DSA prefill coverage is a differentiator worth prioritizing. Resolve benchmark reporting to confirm perf parity on the implemented attention kernels."
+    },
+    "MoE": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 5
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 5
+      },
+      "issues": "permute_align has test=passed and bench=passed despite impl=N, which is an inconsistency in the tracking data. All fused_moe variants are unimplemented. Benchmark ratio data unavailable.",
+      "evaluation": "Effectively unimplemented as a category. The impl=N but test=passed anomaly on permute_align should be audited. fused_moe_deepseek should be the first implementation target given its relevance to DeepSeek-style MoE architectures."
+    },
+    "Linear Attention": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 6,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "gla_chunkwise and gla_recurrence have test=passed and bench=passed but impl=N — same tracking inconsistency as MoE's permute_align. retnet_chunkwise and retnet_recurrence are unimplemented. Benchmark ratio data unavailable.",
+      "evaluation": "All tested ops pass. Audit the impl=N discrepancy for gla variants — if they are actually implemented, update the tracking. Implement retnet variants to complete the category."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "Both mamba1 and mamba2 are unimplemented with no tests or benchmarks.",
+      "evaluation": "Entirely unimplemented. Given SSM relevance to modern sequence models, mamba2 should be prioritized first as it supersedes mamba1 in most production use cases."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs has solid coverage in its mature categories — Reduce (100%), Norm (90%), Flash Attention (50% impl, 100% test pass rate), and Linear Attention — but large swaths of the library remain unimplemented, particularly Conv & Pooling (0%), SSM (0%), Sampling (14%), and Quantize (10%). The most critical systemic issue is that benchmark ratio data is unavailable across all categories, making it impossible to assess performance health for any of the 116 benched operators. Four Elementwise failures in rope and dropout are high-priority functional regressions given their role in LLM inference.",
+    "recommendations": [
+      "Fix the benchmark ratio extraction pipeline immediately — 116 ops are benched but zero ratios are being reported, which means the entire perf scoring system is blind. This is the highest-leverage fix available.",
+      "Resolve the 4 Elementwise test failures in rope_neox, rope_non_neox, rope_llama31, and dropout, as these are critical LLM inference primitives whose failures likely indicate a regression.",
+      "Audit and correct impl=N tracking inconsistencies for gla_chunkwise, gla_recurrence, and permute_align, which show passing tests and benchmarks despite being marked unimplemented, then plan Conv & Pooling and SSM implementation sprints to address the two fully-zero categories."
+    ]
+  }
+}

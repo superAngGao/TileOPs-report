@@ -1,0 +1,199 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": 4,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 55,
+        "failed": 4,
+        "missing": 13
+      },
+      "bench_summary": {
+        "qualified": 25,
+        "underperforming": 3,
+        "failed": 0,
+        "missing": 11
+      },
+      "issues": "dropout, rope_neox, rope_non_neox, rope_llama31 tests failing. logical_and(0.33), logical_or(0.33), bitwise_not(0.50) significantly underperforming. 13 ops lack test coverage (where, clamp, masked_fill, nan_to_num, alibi, sinusoidal, etc.). bench_status for many unary_math and activation ops recorded as 'passed' rather than qualified/underperforming — ratio data missing.",
+      "evaluation": "Strongest category overall with broad implementation coverage. Fix the 3 failing rope ops and dropout tests as a priority. Investigate logical_and/logical_or/bitwise_not performance regressions — ratios of 0.33 suggest a likely kernel or dispatch issue. Add test and bench mappings for the 13 uncovered special_elementwise and positional encoding ops."
+    },
+    "Reduce": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 3,
+        "missing": 17
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 17
+      },
+      "issues": "Only 3 of 20 ops implemented (l1_norm, l2_norm, inf_norm), all 3 fail tests. No benchmark data for any op. 17 ops entirely unimplemented.",
+      "evaluation": "Category is effectively non-functional. Fix the 3 linalg_vector_norm test failures immediately since those are the only implemented ops. The remaining 17 ops (sum, mean, softmax, argmax, cumsum, etc.) are critical for a complete LLM operator library and should be prioritized in the implementation roadmap."
+    },
+    "Norm": {
+      "perf_score": 5,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 9,
+        "failed": 0,
+        "missing": 1
+      },
+      "bench_summary": {
+        "qualified": 2,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 1
+      },
+      "issues": "qk_norm lacks both test and bench mapping. Several ops have bench status 'passed' without ratio data.",
+      "evaluation": "Healthiest category in the project — 9/10 ops passing with no failures and ada_layer_norm variants exceeding baseline. Add test and bench mapping for qk_norm to reach full coverage."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "issues": "Zero implementation across all 16 ops. No tests, no benchmarks.",
+      "evaluation": "Category has not been started. If Conv & Pooling is in scope for TileOPs, it needs to be scheduled. If it is out of scope for the current milestone, formally mark it as deferred to avoid noise in progress tracking."
+    },
+    "GEMM": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 3,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "11 ops implemented but only 3 have test mappings (gemm_fp16, gemv_fp16, groupgemm_fp16). 8 implemented ops have bench results recorded as 'passed' without ratio data, so qualified/underperforming status is unknown. 8 lowbit and sparse ops unimplemented.",
+      "evaluation": "Functional correctness looks solid for tested ops but test coverage is critically low — 8 implemented ops are untested. Add test mappings for all fp8 and bmm variants. Ensure benchmark results capture ratio data so performance qualification can be properly assessed."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 2,
+        "missing": 8
+      },
+      "issues": "fp8_per_tensor and fp8_per_block benchmarks exist but produced no results (failed). fp8_per_block and fp8_cast_transpose lack test mappings. 8 int8/int4 ops unimplemented.",
+      "evaluation": "Only 2 of 10 ops implemented and benchmark pipeline is broken for both fp8 ops. Fix the benchmark runner for fp8_quantize group — likely an environment or harness issue. Add test mapping for fp8_per_block."
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 6
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 1,
+        "missing": 6
+      },
+      "issues": "chain_speculative_sampling benchmark mapping exists but produced no results. 6 of 7 ops unimplemented.",
+      "evaluation": "Only chain_speculative_sampling is implemented and it passes tests but its benchmark is broken. Fix the benchmark harness for this op. The remaining 6 sampling ops (top_k, top_p, min_p, etc.) are important for inference pipelines and should be scheduled for implementation."
+    },
+    "Flash Attention": {
+      "perf_score": 5,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 8,
+        "failed": 0,
+        "missing": 8
+      },
+      "bench_summary": {
+        "qualified": 2,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "8 ops unimplemented (flash_prefill_varlen_bwd, flash_decode_varlen_fwd, flash_chunked_prefill_fwd, all MLA paged/prefill, NSA decode, DSA prefill). Several implemented ops have bench status 'passed' without ratio data.",
+      "evaluation": "All implemented ops pass tests and mla_decode_fwd(4.33) and nsa_prefill_fwd(2.43) significantly exceed baseline — strong results. Focus next on implementing flash_chunked_prefill_fwd and flash_decode_varlen_fwd as they are high-priority for production LLM serving."
+    },
+    "MoE": {
+      "perf_score": 5,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 5
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 5
+      },
+      "issues": "Only permute_align implemented. fused_moe variants for deepseek, glm, kimi, qwen all unimplemented — these are the high-value ops for the category.",
+      "evaluation": "The one implemented op is healthy but the category is essentially a stub. The fused_moe variants are critical for MoE inference performance and should be the top implementation priority for this category."
+    },
+    "Linear Attention": {
+      "perf_score": 3,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 4,
+        "failed": 0,
+        "missing": 4
+      },
+      "bench_summary": {
+        "qualified": 2,
+        "underperforming": 1,
+        "failed": 0,
+        "missing": 4
+      },
+      "issues": "gated_deltanet_chunkwise severely underperforming at ratio=0.12 — well below the 0.80 threshold. deltanet and retnet variants unimplemented.",
+      "evaluation": "All 4 implemented ops pass tests, and gated_deltanet_recurrence(4.47) and gla_recurrence(3.79) are strong. However gated_deltanet_chunkwise at 0.12 is a critical performance regression that needs immediate investigation — likely a tiling or memory access pattern issue in the chunkwise kernel."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "mamba1 and mamba2 both unimplemented.",
+      "evaluation": "Category not started. Mamba kernels are relevant for SSM-based model support. Schedule implementation if in scope for the current milestone."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs is at roughly 59% implementation coverage (110/186 ops) with strong results in mature categories like Norm, Flash Attention, and Elementwise, but significant gaps remain in Reduce, Conv & Pooling, Quantize, and MoE. Test coverage lags implementation — 28 implemented ops have no test mappings — and several benchmark pipelines are broken or missing ratio data, making performance qualification incomplete. The project has a solid foundation but needs focused effort on closing test/bench gaps and unblocking the failing kernels before broader rollout.",
+    "recommendations": [
+      "Fix the 3 failing rope ops (rope_neox, rope_non_neox, rope_llama31) and the 3 failing linalg_vector_norm ops (l1_norm, l2_norm, inf_norm) — these are regressions in implemented ops that should be green.",
+      "Investigate and resolve gated_deltanet_chunkwise performance (ratio=0.12) and the logical_and/logical_or/bitwise_not underperformance — these suggest kernel-level bugs rather than tuning issues.",
+      "Add test and benchmark mappings for all 8 implemented-but-untested GEMM ops (fp8 and bmm variants) and fix the broken benchmark harness for fp8_quantize and chain_speculative_sampling to restore full CI signal."
+    ]
+  }
+}

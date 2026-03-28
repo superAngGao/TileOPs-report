@@ -1,0 +1,199 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 59,
+        "missing": 13
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 11
+      },
+      "issues": "All 59 mapped tests fail. Benchmark log reports 0 qualified despite per-operator bench=passed entries — benchmark results are present in operator metadata but not reflected in the log summary, suggesting a reporting pipeline disconnect. 11 ops have no bench data at all.",
+      "evaluation": "Largest category with near-total test failure and a benchmark reporting anomaly. Investigate why bench log shows 0 qualified when individual ops show bench=passed — likely a log aggregation bug. Prioritize fixing the shared test harness for binary_arith and unary_math groups first since they cover the most ops."
+    },
+    "Reduce": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 20,
+        "missing": 0
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 0
+      },
+      "issues": "All 20 ops fail tests. Same benchmark log discrepancy as Elementwise — all ops show bench=passed individually but log reports 0 qualified. Full test and bench coverage exists, making this a high-priority fix.",
+      "evaluation": "100% test failure rate with complete operator and benchmark coverage means failures are likely systemic rather than op-specific. Run a single reduce op in isolation to confirm whether the issue is in the test framework or the ops themselves, then fix the benchmark aggregation reporting."
+    },
+    "Norm": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 9,
+        "missing": 1
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 1
+      },
+      "issues": "All 9 implemented ops fail tests. qk_norm is unimplemented with no test or bench. Same benchmark log discrepancy — 9 ops show bench=passed individually but log reports 0 qualified.",
+      "evaluation": "Well-covered category blocked by the same systemic test failure. qk_norm should be prioritized for implementation given its relevance to attention mechanisms. Resolve the global test failure root cause to unblock this category quickly."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "issues": "Zero implementation across all 16 ops. No tests, no benchmarks. Entire category is unstarted.",
+      "evaluation": "This category is a blank slate and likely deprioritized given TileOPs' LLM focus. If conv support is on the roadmap, start with conv2d and max_pool2d as the most commonly needed ops. Otherwise, formally mark this category as out-of-scope to keep metrics clean."
+    },
+    "GEMM": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 3,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "Only 9 of 19 ops implemented. 3 ops fail tests; 7 implemented ops have no test mapping. Lowbit GEMM variants (w4a16, w8a8, fp4, sparse) are entirely unimplemented. Benchmark log shows 0 qualified despite 11 ops showing bench=passed individually.",
+      "evaluation": "Core GEMM ops exist but test coverage is thin and lowbit variants are missing entirely. Given LLM inference workloads, w4a16 and w8a8 should be high-priority implementations. Add test mappings for the 7 implemented ops that currently show test=missing."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 1,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 2,
+        "missing": 8
+      },
+      "issues": "Only fp8_per_tensor is implemented; its test fails and its benchmark fails. fp8_per_block benchmark also fails despite no implementation. 8 of 10 ops are entirely unimplemented with no test or bench coverage.",
+      "evaluation": "Critical gap for an LLM operator library — quantization is foundational for inference efficiency. The fp8_per_tensor benchmark failure needs immediate investigation. Prioritize implementing int8_per_tensor and int8_per_channel as the most broadly applicable quantization ops."
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 1,
+        "missing": 6
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 1,
+        "missing": 6
+      },
+      "issues": "Only chain_speculative_sampling is implemented; both its test and benchmark fail. All other 6 ops are unimplemented with no coverage.",
+      "evaluation": "Sampling is nearly entirely unimplemented. top_k and top_p are the most critical ops for LLM decoding and should be implemented first. Fix the chain_speculative_sampling test and benchmark failures to validate the existing implementation before expanding."
+    },
+    "Flash Attention": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 8,
+        "missing": 8
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "8 of 16 ops implemented, all 8 fail tests. MLA variants (prefill fwd/bwd, decode paged), varlen decode, chunked prefill, and both DSA/NSA decode ops are unimplemented. Benchmark log shows 0 qualified despite 8 ops showing bench=passed individually.",
+      "evaluation": "Flash Attention has solid implementation breadth for a high-priority category but is blocked by the systemic test failure. MLA decode is implemented and should be a quick win once tests are fixed. Prioritize flash_prefill_varlen_bwd and mla_prefill_fwd as the next implementation targets."
+    },
+    "MoE": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 1,
+        "missing": 5
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 5
+      },
+      "issues": "Zero implementations across all 6 ops. permute_align has a test mapping that fails despite impl=N, which is a data integrity issue. Only 1 benchmark exists (permute_align bench=passed) but log reports 0 qualified.",
+      "evaluation": "MoE is unimplemented but critical for modern LLM architectures like DeepSeek and Qwen. The permute_align test=failed with impl=N is a metadata inconsistency that should be corrected. Start implementation with fused_moe_deepseek given its industry relevance."
+    },
+    "Linear Attention": {
+      "perf_score": null,
+      "func_score": 1,
+      "test_summary": {
+        "passed": 0,
+        "failed": 6,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "4 of 8 ops implemented; all 6 mapped tests fail. gla_chunkwise and gla_recurrence have test mappings and benchmarks but impl=N — metadata inconsistency. retnet variants are fully unimplemented. Benchmark log shows 0 qualified despite 6 ops showing bench=passed.",
+      "evaluation": "DeltaNet variants are implemented but blocked by systemic test failures. The gla impl=N with test=failed and bench=passed is a metadata conflict that needs resolution — either the implementation exists and impl flag is wrong, or the test/bench mappings are stale. Clarify gla status and implement retnet_chunkwise next."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "Both mamba1 and mamba2 are unimplemented with no test or benchmark coverage.",
+      "evaluation": "SSM category is entirely unstarted. Mamba2 should be prioritized over Mamba1 given its broader adoption in recent architectures. No blocking issues beyond missing implementation."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs has meaningful implementation breadth — 122 of 186 ops implemented — but zero functional validation: all 108 mapped tests fail across every category, suggesting a systemic issue in the test harness rather than widespread operator bugs. Benchmark data exists at the operator level for ~116 ops but the aggregation pipeline reports 0 qualified across all categories, indicating a second systemic failure in the reporting layer. Critical LLM inference categories like Quantize, Sampling, and MoE are severely underimplemented.",
+    "recommendations": [
+      "Diagnose the systemic test failure immediately by running a single well-understood op (e.g., add or sum) in isolation — if it passes standalone but fails in the CI harness, the issue is in test infrastructure (XML parsing, environment setup, or mapping config) rather than operator correctness.",
+      "Fix the benchmark log aggregation pipeline — individual ops correctly report bench=passed but the category-level log shows 0 qualified everywhere, meaning benchmark CI results are not being collected or parsed correctly and are masking real performance data.",
+      "Prioritize implementing Quantize (int8_per_tensor, int8_per_channel) and Sampling (top_k, top_p) as the next development targets, since these are foundational for LLM inference and currently have near-zero coverage."
+    ]
+  }
+}
