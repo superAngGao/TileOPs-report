@@ -2,11 +2,11 @@
 
 # TileOPs Operator Tracking
 
-**96/186** operators complete (51%)
+**99/186** operators complete (53%)
 
 [View full HTML report](https://superanggao.github.io/TileOPs-report/nightly/)
 
-Last updated: `2026-03-27T22:29:44Z`
+Last updated: `2026-03-28T22:26:58Z`
 
 </div>
 
@@ -18,16 +18,16 @@ Last updated: `2026-03-27T22:29:44Z`
 |:--|------:|:----|
 | Implemented | **125**/186 | `██████████░░░░░` 125/186 |
 | Test Passed | **106**/186 | `█████████░░░░░░` 106/186 |
-| Bench Passed | **112**/186 | `█████████░░░░░░` 112/186 |
-| **Done** | **96**/186 | `████████░░░░░░░` 96/186 |
+| Bench Passed | **115**/186 | `█████████░░░░░░` 115/186 |
+| **Done** | **99**/186 | `████████░░░░░░░` 99/186 |
 
 ### Status Breakdown
 
 | Test | | Bench | |
 |:-----|----:|:------|----:|
-| Passed | 106 | Qualified (ratio >= 0.8) | 21 |
-| Failed | 4 | Passed (no ratio) | 91 |
-| Missing | 76 | Underperforming | 3 |
+| Passed | 106 | Qualified (ratio >= 0.8) | 0 |
+| Failed | 4 | Passed (no ratio) | 115 |
+| Missing | 76 | Underperforming | 0 |
 | | | Failed | 0 |
 | | | Missing | 71 |
 
@@ -44,24 +44,24 @@ Last updated: `2026-03-27T22:29:44Z`
 |:--|:---------|:--|
 | Impl | `███████████████` 70/72 | |
 | Test | `████████████░░░` 59/72 | |
-| Bench | `████████████░░░` 58/72 | |
+| Bench | `█████████████░░` 61/72 | |
 
 <details>
-<summary>49/72 done - click to expand</summary>
+<summary>52/72 done - click to expand</summary>
 
 | | Operator | Test | Bench | Ratio |
 |:--|:---------|:----:|:-----:|------:|
 | ✅ | add | passed | passed | - |
-| ✅ | sub | passed | qualified | 1.00 |
-| ✅ | mul | passed | qualified | 1.00 |
-| ✅ | div | passed | qualified | 1.00 |
-| ✅ | remainder | passed | qualified | 1.00 |
-| ✅ | pow | passed | qualified | 1.00 |
-| ✅ | floor_divide | passed | qualified | 2.33 |
-| ✅ | lerp | passed | qualified | 1.00 |
-| ✅ | maximum | passed | qualified | 1.00 |
-| ✅ | minimum | passed | qualified | 1.00 |
-| ✅ | exp | passed | qualified | 1.00 |
+| ✅ | sub | passed | passed | - |
+| ✅ | mul | passed | passed | - |
+| ✅ | div | passed | passed | - |
+| ✅ | remainder | passed | passed | - |
+| ✅ | pow | passed | passed | - |
+| ✅ | floor_divide | passed | passed | - |
+| ✅ | lerp | passed | passed | - |
+| ✅ | maximum | passed | passed | - |
+| ✅ | minimum | passed | passed | - |
+| ✅ | exp | passed | passed | - |
 | ✅ | log | passed | passed | - |
 | ✅ | sqrt | passed | passed | - |
 | ✅ | rsqrt | passed | passed | - |
@@ -79,35 +79,35 @@ Last updated: `2026-03-27T22:29:44Z`
 | ✅ | log1p | passed | passed | - |
 | ✅ | expm1 | passed | passed | - |
 | ✅ | relu | passed | passed | - |
-| ✅ | gelu | passed | qualified | 1.00 |
+| ✅ | gelu | passed | passed | - |
 | ✅ | silu | passed | passed | - |
 | ✅ | sigmoid | passed | passed | - |
 | ✅ | tanh | passed | passed | - |
-| 🟦 | leaky_relu | missing | qualified | 1.00 |
-| 🟦 | elu | missing | qualified | 1.40 |
+| 🟦 | leaky_relu | missing | passed | - |
+| 🟦 | elu | missing | passed | - |
 | ✅ | selu | passed | passed | - |
 | ✅ | hardswish | passed | passed | - |
 | ✅ | hardsigmoid | passed | passed | - |
-| 🟦 | hardtanh | missing | qualified | 1.00 |
-| 🟦 | softplus | missing | qualified | 1.14 |
+| 🟦 | hardtanh | missing | passed | - |
+| 🟦 | softplus | missing | passed | - |
 | ✅ | mish | passed | passed | - |
 | 🟦 | prelu | missing | passed | - |
 | ✅ | silu_and_mul | passed | passed | - |
-| ✅ | gelu_and_mul | passed | qualified | 3.29 |
-| ✅ | gelu_tanh_and_mul | passed | qualified | 3.29 |
+| ✅ | gelu_and_mul | passed | passed | - |
+| ✅ | gelu_tanh_and_mul | passed | passed | - |
 | ✅ | eq | passed | passed | - |
 | ✅ | ne | passed | passed | - |
 | ✅ | gt | passed | passed | - |
 | ✅ | lt | passed | passed | - |
 | ✅ | ge | passed | passed | - |
 | ✅ | le | passed | passed | - |
-| ✅ | bitwise_and | passed | qualified | 1.00 |
-| ✅ | bitwise_or | passed | qualified | 1.00 |
-| ✅ | bitwise_xor | passed | qualified | 1.00 |
-| 🟡 | bitwise_not | passed | underperforming | 0.33 |
-| ✅ | logical_not | passed | qualified | 1.00 |
-| 🟡 | logical_and | passed | underperforming | 0.33 |
-| 🟡 | logical_or | passed | underperforming | 0.33 |
+| ✅ | bitwise_and | passed | passed | - |
+| ✅ | bitwise_or | passed | passed | - |
+| ✅ | bitwise_xor | passed | passed | - |
+| ✅ | bitwise_not | passed | passed | - |
+| ✅ | logical_not | passed | passed | - |
+| ✅ | logical_and | passed | passed | - |
+| ✅ | logical_or | passed | passed | - |
 | 🟡 | where | passed | missing | - |
 | 🟡 | clamp | passed | missing | - |
 | 🟡 | masked_fill | passed | missing | - |
