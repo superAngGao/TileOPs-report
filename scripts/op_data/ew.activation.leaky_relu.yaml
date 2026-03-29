@@ -5,46 +5,32 @@ category_id: 1
 sub: activation
 issue: 397
 files:
-  kernel:
-  - tileops/kernels/elementwise.py
+  kernel: []
   op:
   - tileops/ops/elementwise.py
   tests: []
-  bench:
-  - benchmarks/ops/bench_activation.py::bench_leaky_relu
-files_last_scanned: '2026-03-22T20:20:49Z'
-func_score: 2
-func_score_notes: 测试缺失，功能未验证，仅有基础实现
-func_score_updated: '2026-03-26'
-perf_score: 4
+  bench: []
+files_last_scanned: '2026-03-29T20:25:16Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
 perf_details:
   baseline: null
-  last_run: '2026-03-24'
+  last_run: null
   summary: null
-  results:
-  - bench_fn: leaky_relu
-    tileops: 0.0167 ms
-    baseline: 0.0167 ms
-    ratio: 1.0
-    summary: TileOps 0.0167ms vs Baseline 0.0167ms (ratio 1.00)
-perf_score_updated: '2026-03-26'
-has_bugs: true
-bugs:
-- 缺少单元测试
-kernel_last_updated: '2026-03-23T08:53:19Z'
-kernel_last_pr_number: 611
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/611
-kernel_last_pr_author: lcy-seso
-kernel_last_pr_title: '[Refactor][Elementwise] Extract shared base for parametric kernels'
+  results: []
+perf_score_updated: null
+has_bugs: null
+bugs: []
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-28'
+  last_run: null
   passed: null
   errors: []
-  status: missing
-last_updated: '2026-03-28T22:26:58Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-03-28'
-  status: passed
-  ratio: null
-  details: []
+last_updated: '2026-03-29T20:25:16Z'
+updated_by: bootstrap

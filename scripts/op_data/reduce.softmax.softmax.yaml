@@ -5,34 +5,23 @@ category_id: 2
 sub: softmax
 issue: 398
 files:
-  kernel:
-  - tileops/kernels/reduction/softmax/softmax_fwd.py
+  kernel: []
   op:
   - tileops/ops/reduction/softmax.py
-  tests:
-  - tests/ops/test_softmax.py::test_softmax_1d
-  - tests/ops/test_softmax.py::test_softmax_3d
-  - tests/ops/test_softmax.py::test_softmax_op
-  bench:
-  - benchmarks/ops/bench_softmax.py::bench_softmax
-  - benchmarks/ops/bench_reduce.py::bench_softmax
-files_last_scanned: '2026-03-22T20:20:49Z'
-func_score: 4
-func_score_notes: 测试通过，功能基本完整；性能处于 baseline 75-90% 区间，有优化空间。
-func_score_updated: '2026-03-25'
-perf_score: 3
+  tests: []
+  bench: []
+files_last_scanned: '2026-03-29T20:25:16Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
 perf_details:
   baseline: null
-  last_run: '2026-03-22'
+  last_run: null
   summary: null
-  results:
-  - bench_fn: softmax
-    tileops: 0.0300 ms
-    baseline: 0.0275 ms
-    ratio: 0.9167
-    summary: TileOps 0.0300ms vs Baseline 0.0275ms (ratio 0.92)
-perf_score_updated: '2026-03-25'
-has_bugs: false
+  results: []
+perf_score_updated: null
+has_bugs: null
 bugs: []
 kernel_last_updated: null
 kernel_last_pr_number: null
@@ -40,14 +29,8 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-28'
-  passed: true
+  last_run: null
+  passed: null
   errors: []
-  status: passed
-last_updated: '2026-03-28T22:26:58Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-03-28'
-  status: passed
-  ratio: null
-  details: []
+last_updated: '2026-03-29T20:25:16Z'
+updated_by: bootstrap

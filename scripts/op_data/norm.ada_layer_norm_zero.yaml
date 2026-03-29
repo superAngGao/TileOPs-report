@@ -5,32 +5,23 @@ category_id: 3
 sub: ada_layer_norm_zero
 issue: 399
 files:
-  kernel:
-  - tileops/kernels/norm/ada_layer_norm_zero/__init__.py
+  kernel: []
   op:
   - tileops/ops/norm/ada_layer_norm_zero.py
-  tests:
-  - tests/ops/test_ada_layer_norm_zero.py::test_ada_layer_norm_zero_3d
-  - tests/ops/test_ada_layer_norm_zero.py::test_ada_layer_norm_zero_op
-  bench:
-  - benchmarks/ops/bench_ada_layer_norm.py::bench_ada_layer_norm_zero
-files_last_scanned: '2026-03-22T20:20:49Z'
-func_score: 4
-func_score_notes: 功能接近完整，测试通过；benchmark ratio 为 null，历史 perf_score=5 无法从当前数据验证。
-func_score_updated: '2026-03-25'
+  tests: []
+  bench: []
+files_last_scanned: '2026-03-29T20:25:16Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
 perf_score: null
 perf_details:
   baseline: null
-  last_run: '2026-03-22'
+  last_run: null
   summary: null
-  results:
-  - bench_fn: ada_layer_norm_zero
-    tileops: 0.0375 ms
-    baseline: 0.0500 ms
-    ratio: 1.3333
-    summary: TileOps 0.0375ms vs Baseline 0.0500ms (ratio 1.33)
-perf_score_updated: '2026-03-25'
-has_bugs: false
+  results: []
+perf_score_updated: null
+has_bugs: null
 bugs: []
 kernel_last_updated: null
 kernel_last_pr_number: null
@@ -38,14 +29,8 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-28'
-  passed: true
+  last_run: null
+  passed: null
   errors: []
-  status: passed
-last_updated: '2026-03-28T22:26:58Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-03-28'
-  status: passed
-  ratio: null
-  details: []
+last_updated: '2026-03-29T20:25:16Z'
+updated_by: bootstrap

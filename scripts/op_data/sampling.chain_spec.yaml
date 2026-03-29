@@ -5,31 +5,23 @@ category_id: 7
 sub: chain_speculative_sampling
 issue: 426
 files:
-  kernel:
-  - tileops/kernels/deepseek_mla/topk_selector.py
+  kernel: []
   op:
   - tileops/ops/topk_selector.py
-  tests:
-  - tests/ops/test_topk_selector.py::test_topk_selector_op
-  bench:
-  - benchmarks/ops/bench_topk_selector.py::bench_topk_selector
-files_last_scanned: '2026-03-22T20:20:49Z'
-func_score: 3
-func_score_notes: 测试通过，链式投机采样主要功能实现；仅有单一 bench_fn 覆盖，边界场景未知。
-func_score_updated: '2026-03-22'
-perf_score: 5
+  tests: []
+  bench: []
+files_last_scanned: '2026-03-29T20:25:16Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
+perf_score: null
 perf_details:
   baseline: null
-  last_run: '2026-03-22'
+  last_run: null
   summary: null
-  results:
-  - bench_fn: topk_selector
-    tileops: 29.2675 ms
-    baseline: 63.1775 ms
-    ratio: 2.1586
-    summary: TileOps 29.2675ms vs Baseline 63.1775ms (ratio 2.16)
-perf_score_updated: '2026-03-22'
-has_bugs: false
+  results: []
+perf_score_updated: null
+has_bugs: null
 bugs: []
 kernel_last_updated: null
 kernel_last_pr_number: null
@@ -37,14 +29,8 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-28'
-  passed: true
+  last_run: null
+  passed: null
   errors: []
-  status: passed
-last_updated: '2026-03-28T22:26:58Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-03-28'
-  status: passed
-  ratio: null
-  details: []
+last_updated: '2026-03-29T20:25:16Z'
+updated_by: bootstrap

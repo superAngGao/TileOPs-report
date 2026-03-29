@@ -5,28 +5,23 @@ category_id: 2
 sub: argreduce
 issue: 398
 files:
-  kernel:
-  - tileops/kernels/reduction/argreduce/fwd.py
+  kernel: []
   op:
   - tileops/ops/reduction/argmax.py
-  tests:
-  - tests/ops/test_argreduce.py::test_argmax_1d
-  - tests/ops/test_argreduce.py::test_argmax_3d
-  - tests/ops/test_argreduce.py::test_argmax_op
-  bench:
-  - benchmarks/ops/bench_argreduce.py::bench_argmax
-files_last_scanned: '2026-03-22T20:20:49Z'
-func_score: 4
-func_score_notes: 测试通过，主要功能完整；benchmark ratio 数据缺失，无法量化性能评分。
-func_score_updated: '2026-03-25'
+  tests: []
+  bench: []
+files_last_scanned: '2026-03-29T20:25:16Z'
+func_score: null
+func_score_notes: ''
+func_score_updated: null
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: '2026-03-25'
-has_bugs: false
+perf_score_updated: null
+has_bugs: null
 bugs: []
 kernel_last_updated: null
 kernel_last_pr_number: null
@@ -34,14 +29,8 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-28'
-  passed: true
+  last_run: null
+  passed: null
   errors: []
-  status: passed
-last_updated: '2026-03-28T22:26:58Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-03-28'
-  status: passed
-  ratio: null
-  details: []
+last_updated: '2026-03-29T20:25:16Z'
+updated_by: bootstrap

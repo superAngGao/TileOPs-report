@@ -5,39 +5,32 @@ category_id: 1
 sub: sinusoidal
 issue: 397
 files:
-  kernel:
-  - tileops/kernels/elementwise.py
+  kernel: []
   op:
   - tileops/ops/elementwise.py
   tests: []
   bench: []
-files_last_scanned: '2026-03-22T20:20:49Z'
+files_last_scanned: '2026-03-29T20:25:16Z'
 func_score: null
-func_score_notes: 测试与 benchmark 均缺失，无法评估功能完整性。
-func_score_updated: '2026-03-24'
+func_score_notes: ''
+func_score_updated: null
 perf_score: null
 perf_details:
   baseline: null
   last_run: null
   summary: null
   results: []
-perf_score_updated: '2026-03-24'
+perf_score_updated: null
 has_bugs: null
 bugs: []
-kernel_last_updated: '2026-03-23T08:53:19Z'
-kernel_last_pr_number: 611
-kernel_last_pr_url: https://github.com/tile-ai/TileOPs/pull/611
-kernel_last_pr_author: lcy-seso
-kernel_last_pr_title: '[Refactor][Elementwise] Extract shared base for parametric kernels'
+kernel_last_updated: null
+kernel_last_pr_number: null
+kernel_last_pr_url: null
+kernel_last_pr_author: null
+kernel_last_pr_title: null
 test_status:
-  last_run: '2026-03-28'
+  last_run: null
   passed: null
   errors: []
-  status: missing
-last_updated: '2026-03-28T22:26:58Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-03-28'
-  status: missing
-  ratio: null
-  details: []
+last_updated: '2026-03-29T20:25:16Z'
+updated_by: bootstrap
