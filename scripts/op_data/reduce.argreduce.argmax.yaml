@@ -29,11 +29,11 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-04-03'
+  last_run: '2026-04-04'
   passed: null
   errors: []
   status: missing
-last_updated: '2026-04-03T22:30:20Z'
+last_updated: '2026-04-04T22:27:21Z'
 updated_by: nightly-auto
 bench_status:
   last_run: '2026-04-03'
