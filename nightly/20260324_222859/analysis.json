@@ -1,0 +1,199 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": 5,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 59,
+        "failed": 4,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 21,
+        "underperforming": 3,
+        "failed": 0,
+        "missing": 11
+      },
+      "issues": "dropout, rope_neox, rope_non_neox, rope_llama31 tests failing. bitwise_not, logical_and, logical_or underperforming at ratio=0.33. 9 ops missing tests (leaky_relu, elu, hardtanh, softplus, prelu, alibi, sinusoidal, yarn_rope, longrope). 11 ops missing benchmarks including where, clamp, masked_fill, nan_to_num, isnan, isinf, isfinite, alibi, sinusoidal, yarn_rope, longrope.",
+      "evaluation": "Elementwise is the most mature category with strong coverage and mostly excellent performance. Fix the 4 failing RoPE/dropout tests as a priority, then investigate the 0.33 ratio underperformers (bitwise_not, logical_and, logical_or) which suggest a systematic issue with boolean/bitwise ops. Add benchmark coverage for the 7 special_elementwise ops (where, clamp, masked_fill, etc.)."
+    },
+    "Reduce": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 20,
+        "failed": 0,
+        "missing": 0
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 0
+      },
+      "issues": "All 20 benchmarks report 'passed' status without ratio data, so quantitative performance scoring is unavailable.",
+      "evaluation": "Reduce is functionally complete with 100% test pass rate. However, all benchmark entries show 'passed' without ratio values, meaning performance cannot be quantitatively assessed. Add ratio-based benchmark reporting for all reduce ops to enable proper performance tracking."
+    },
+    "Norm": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 9,
+        "failed": 0,
+        "missing": 1
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 1
+      },
+      "issues": "qk_norm is missing both test and benchmark. All other benchmarks report 'passed' without ratio data.",
+      "evaluation": "Norm is nearly complete with 9/10 ops fully passing. Implement and test qk_norm to close the gap. As with Reduce, benchmark ratio data is absent — add quantitative ratio reporting to enable performance regression detection."
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 16
+      },
+      "issues": "Entire category unimplemented — 0/16 ops have any implementation, tests, or benchmarks.",
+      "evaluation": "Conv & Pooling is a complete gap in the library. Prioritize implementing the most commonly used ops first: conv2d, depthwise_conv2d, max_pool2d, and avg_pool2d. These are foundational for CNN-based model support and should be scheduled for the next development sprint."
+    },
+    "GEMM": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 3,
+        "failed": 0,
+        "missing": 16
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 10
+      },
+      "issues": "Only 9/19 ops implemented. 16 ops missing tests including gemm_fp8, gemm_fp8_block_scaled, gemv_fp8, small_batch_gemm variants, and all lowbit/sparse/bmm ops. All benchmarks report 'passed' without ratio data.",
+      "evaluation": "GEMM has a solid foundation with passing tests for gemm_fp16, gemv_fp16, and groupgemm_fp16, but coverage is critically low. Prioritize adding tests for the 6 already-implemented but untested ops (gemm_fp8, gemm_fp8_block_scaled, gemv_fp8, small_batch variants, groupgemm_fp8), then plan implementation of bmm and lowbit GEMM variants which are essential for LLM inference."
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": 4,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 9
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "Only 2/10 ops implemented (fp8_per_tensor, fp8_per_block). All int8, int4, nf4, and fp8_cast_transpose ops are unimplemented. fp8_per_block is implemented but missing tests.",
+      "evaluation": "Quantize coverage is very limited, with only FP8 ops partially implemented. Add a test for fp8_per_block immediately since it is implemented but untested. Then prioritize int8_per_tensor and int8_per_channel as they are the most widely used quantization schemes for LLM deployment."
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 6
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 6
+      },
+      "issues": "Only chain_speculative_sampling implemented. top_k, top_p, min_p, top_k_top_p, temperature_scale, and sampling_from_probs are all unimplemented.",
+      "evaluation": "Sampling is critically underdeveloped with only 1/7 ops implemented. top_k and top_p are essential for LLM text generation and should be the immediate implementation priority. temperature_scale is also straightforward and high-value."
+    },
+    "Flash Attention": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 8,
+        "failed": 0,
+        "missing": 8
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 8
+      },
+      "issues": "8/16 ops unimplemented: flash_prefill_varlen_bwd, flash_decode_varlen_fwd, flash_chunked_prefill_fwd, mla_prefill_fwd/bwd, mla_decode_paged_fwd, nsa_decode_fwd, dsa_prefill_fwd. All benchmarks report 'passed' without ratio data.",
+      "evaluation": "Flash Attention has excellent functional quality with 8/8 implemented ops passing all tests. The missing ops represent advanced features (varlen backward, chunked prefill, MLA variants). Add ratio-based benchmark reporting to detect performance regressions. Next implementation priority should be flash_chunked_prefill_fwd and flash_decode_varlen_fwd for broader model compatibility."
+    },
+    "MoE": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 1,
+        "failed": 0,
+        "missing": 5
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 5
+      },
+      "issues": "Only permute_align implemented. unpermute_depad and all 4 fused_moe variants (deepseek, glm, kimi, qwen) are unimplemented.",
+      "evaluation": "MoE support is minimal with only the permute utility implemented. The fused_moe variants are critical for MoE model inference performance. Prioritize implementing fused_moe_deepseek and unpermute_depad as they form the core MoE dispatch pipeline, then add the other model-specific variants."
+    },
+    "Linear Attention": {
+      "perf_score": null,
+      "func_score": 5,
+      "test_summary": {
+        "passed": 4,
+        "failed": 0,
+        "missing": 4
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 4
+      },
+      "issues": "deltanet_chunkwise, deltanet_recurrence, retnet_chunkwise, retnet_recurrence are unimplemented. All benchmarks report 'passed' without ratio data.",
+      "evaluation": "Linear Attention has solid coverage for gated_deltanet and GLA variants with 100% pass rate. Implement the base deltanet and retnet variants to complete the category. Add ratio-based benchmark reporting to enable performance tracking across all implemented ops."
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "test_summary": {
+        "passed": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "bench_summary": {
+        "qualified": 0,
+        "underperforming": 0,
+        "failed": 0,
+        "missing": 2
+      },
+      "issues": "Both mamba1 and mamba2 are unimplemented with no tests or benchmarks.",
+      "evaluation": "SSM is entirely unimplemented. Given the growing importance of Mamba-based architectures, schedule mamba2 implementation first as it is the more modern and widely adopted variant, followed by mamba1 for backward compatibility."
+    }
+  },
+  "overall": {
+    "summary": "TileOPs shows strong maturity in foundational categories — Elementwise, Reduce, Norm, Flash Attention, and Linear Attention all demonstrate high functional correctness — but the project has significant coverage gaps in Conv & Pooling (0% implemented), Sampling (14% implemented), MoE (17% implemented), and Quantize (20% implemented) that limit its utility for production LLM deployment. Performance data quality is inconsistent: many categories report benchmark 'passed' without ratio values, making it impossible to detect regressions, while the Elementwise category reveals concerning underperformance (ratio=0.33) in boolean/bitwise ops that warrants investigation.",
+    "recommendations": [
+      "Fix the 4 failing Elementwise tests (dropout, rope_neox, rope_non_neox, rope_llama31) and investigate the 0.33 performance ratio for bitwise_not, logical_and, and logical_or, as these suggest systematic correctness and performance issues in a high-usage operator group.",
+      "Standardize benchmark reporting to always emit ratio values instead of bare 'passed' status — Reduce, Norm, Flash Attention, Linear Attention, GEMM, Quantize, Sampling, and MoE categories currently have no quantitative performance data, making regression detection impossible.",
+      "Prioritize implementation of high-impact missing operator groups: (1) top_k/top_p/temperature_scale in Sampling for LLM text generation, (2) fused_moe_deepseek + unpermute_depad in MoE for MoE model inference, and (3) int8_per_tensor/int8_per_channel in Quantize for deployment-critical quantization support."
+    ]
+  }
+}
