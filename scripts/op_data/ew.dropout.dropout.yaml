@@ -10,7 +10,7 @@ files:
   - tileops/ops/dropout.py
   tests: []
   bench: []
-files_last_scanned: '2026-03-29T20:25:16Z'
+files_last_scanned: '2026-04-05T20:26:49Z'
 func_score: null
 func_score_notes: ''
 func_score_updated: null
@@ -29,14 +29,8 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-04-04'
+  last_run: null
   passed: null
   errors: []
-  status: missing
-last_updated: '2026-04-04T22:27:21Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-04-03'
-  status: missing
-  ratio: null
-  details: []
+last_updated: '2026-04-05T20:26:49Z'
+updated_by: bootstrap
