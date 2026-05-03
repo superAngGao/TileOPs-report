@@ -10,7 +10,7 @@ files:
   - tileops/ops/norm/batch_norm.py
   tests: []
   bench: []
-files_last_scanned: '2026-04-26T20:33:07Z'
+files_last_scanned: '2026-05-03T20:36:28Z'
 func_score: null
 func_score_notes: ''
 func_score_updated: null
@@ -29,14 +29,8 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-05-02'
+  last_run: null
   passed: null
   errors: []
-  status: missing
-last_updated: '2026-05-02T22:38:00Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-05-02'
-  status: missing
-  ratio: null
-  details: []
+last_updated: '2026-05-03T20:36:28Z'
+updated_by: bootstrap
