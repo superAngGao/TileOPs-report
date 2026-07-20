@@ -6,7 +6,7 @@
 
 [View full HTML report](https://superanggao.github.io/TileOPs-report/nightly/)
 
-Last updated: `2026-07-19T22:48:23Z`
+Last updated: `2026-07-20T22:57:16Z`
 
 </div>
 
@@ -51,78 +51,78 @@ Last updated: `2026-07-19T22:48:23Z`
 
 | | Operator | Test | Bench | Ratio |
 |:--|:---------|:----:|:-----:|------:|
-| ⬜ | add | - | - | - |
-| ⬜ | sub | - | - | - |
-| ⬜ | mul | - | - | - |
-| ⬜ | div | - | - | - |
-| ⬜ | remainder | - | - | - |
-| ⬜ | pow | - | - | - |
-| ⬜ | floor_divide | - | - | - |
-| ⬜ | lerp | - | - | - |
-| ⬜ | maximum | - | - | - |
-| ⬜ | minimum | - | - | - |
-| ⬜ | exp | - | - | - |
-| ⬜ | log | - | - | - |
-| ⬜ | sqrt | - | - | - |
-| ⬜ | rsqrt | - | - | - |
-| ⬜ | abs | - | - | - |
-| ⬜ | neg | - | - | - |
-| ⬜ | reciprocal | - | - | - |
-| ⬜ | sign | - | - | - |
-| ⬜ | sin | - | - | - |
-| ⬜ | cos | - | - | - |
-| ⬜ | floor | - | - | - |
-| ⬜ | ceil | - | - | - |
-| ⬜ | round | - | - | - |
-| ⬜ | trunc | - | - | - |
-| ⬜ | erf | - | - | - |
-| ⬜ | log1p | - | - | - |
-| ⬜ | expm1 | - | - | - |
-| ⬜ | relu | - | - | - |
-| ⬜ | gelu | - | - | - |
-| ⬜ | silu | - | - | - |
-| ⬜ | sigmoid | - | - | - |
-| ⬜ | tanh | - | - | - |
-| ⬜ | leaky_relu | - | - | - |
-| ⬜ | elu | - | - | - |
-| ⬜ | selu | - | - | - |
-| ⬜ | hardswish | - | - | - |
-| ⬜ | hardsigmoid | - | - | - |
-| ⬜ | hardtanh | - | - | - |
-| ⬜ | softplus | - | - | - |
-| ⬜ | mish | - | - | - |
-| ⬜ | prelu | - | - | - |
-| ⬜ | silu_and_mul | - | - | - |
-| ⬜ | gelu_and_mul | - | - | - |
-| ⬜ | gelu_tanh_and_mul | - | - | - |
-| ⬜ | eq | - | - | - |
-| ⬜ | ne | - | - | - |
-| ⬜ | gt | - | - | - |
-| ⬜ | lt | - | - | - |
-| ⬜ | ge | - | - | - |
-| ⬜ | le | - | - | - |
-| ⬜ | bitwise_and | - | - | - |
-| ⬜ | bitwise_or | - | - | - |
-| ⬜ | bitwise_xor | - | - | - |
-| ⬜ | bitwise_not | - | - | - |
-| ⬜ | logical_not | - | - | - |
-| ⬜ | logical_and | - | - | - |
-| ⬜ | logical_or | - | - | - |
-| ⬜ | where | - | - | - |
-| ⬜ | clamp | - | - | - |
-| ⬜ | masked_fill | - | - | - |
-| ⬜ | nan_to_num | - | - | - |
-| ⬜ | isnan | - | - | - |
-| ⬜ | isinf | - | - | - |
-| ⬜ | isfinite | - | - | - |
-| ⬜ | dropout | - | - | - |
-| ⬜ | rope_neox | - | - | - |
-| ⬜ | rope_non_neox | - | - | - |
-| ⬜ | rope_llama31 | - | - | - |
-| ⬜ | yarn_rope | - | - | - |
-| ⬜ | longrope | - | - | - |
-| ⬜ | alibi | - | - | - |
-| ⬜ | sinusoidal | - | - | - |
+| ⬜ | add | - | missing | - |
+| ⬜ | sub | - | missing | - |
+| ⬜ | mul | - | missing | - |
+| ⬜ | div | - | missing | - |
+| ⬜ | remainder | - | missing | - |
+| ⬜ | pow | - | missing | - |
+| ⬜ | floor_divide | - | missing | - |
+| ⬜ | lerp | - | missing | - |
+| ⬜ | maximum | - | missing | - |
+| ⬜ | minimum | - | missing | - |
+| ⬜ | exp | - | missing | - |
+| ⬜ | log | - | missing | - |
+| ⬜ | sqrt | - | missing | - |
+| ⬜ | rsqrt | - | missing | - |
+| ⬜ | abs | - | missing | - |
+| ⬜ | neg | - | missing | - |
+| ⬜ | reciprocal | - | missing | - |
+| ⬜ | sign | - | missing | - |
+| ⬜ | sin | - | missing | - |
+| ⬜ | cos | - | missing | - |
+| ⬜ | floor | - | missing | - |
+| ⬜ | ceil | - | missing | - |
+| ⬜ | round | - | missing | - |
+| ⬜ | trunc | - | missing | - |
+| ⬜ | erf | - | missing | - |
+| ⬜ | log1p | - | missing | - |
+| ⬜ | expm1 | - | missing | - |
+| ⬜ | relu | - | missing | - |
+| ⬜ | gelu | - | missing | - |
+| ⬜ | silu | - | missing | - |
+| ⬜ | sigmoid | - | missing | - |
+| ⬜ | tanh | - | missing | - |
+| ⬜ | leaky_relu | - | missing | - |
+| ⬜ | elu | - | missing | - |
+| ⬜ | selu | - | missing | - |
+| ⬜ | hardswish | - | missing | - |
+| ⬜ | hardsigmoid | - | missing | - |
+| ⬜ | hardtanh | - | missing | - |
+| ⬜ | softplus | - | missing | - |
+| ⬜ | mish | - | missing | - |
+| ⬜ | prelu | - | missing | - |
+| ⬜ | silu_and_mul | - | missing | - |
+| ⬜ | gelu_and_mul | - | missing | - |
+| ⬜ | gelu_tanh_and_mul | - | missing | - |
+| ⬜ | eq | - | missing | - |
+| ⬜ | ne | - | missing | - |
+| ⬜ | gt | - | missing | - |
+| ⬜ | lt | - | missing | - |
+| ⬜ | ge | - | missing | - |
+| ⬜ | le | - | missing | - |
+| ⬜ | bitwise_and | - | missing | - |
+| ⬜ | bitwise_or | - | missing | - |
+| ⬜ | bitwise_xor | - | missing | - |
+| ⬜ | bitwise_not | - | missing | - |
+| ⬜ | logical_not | - | missing | - |
+| ⬜ | logical_and | - | missing | - |
+| ⬜ | logical_or | - | missing | - |
+| ⬜ | where | - | missing | - |
+| ⬜ | clamp | - | missing | - |
+| ⬜ | masked_fill | - | missing | - |
+| ⬜ | nan_to_num | - | missing | - |
+| ⬜ | isnan | - | missing | - |
+| ⬜ | isinf | - | missing | - |
+| ⬜ | isfinite | - | missing | - |
+| ⬜ | dropout | - | missing | - |
+| ⬜ | rope_neox | - | missing | - |
+| ⬜ | rope_non_neox | - | missing | - |
+| ⬜ | rope_llama31 | - | missing | - |
+| ⬜ | yarn_rope | - | missing | - |
+| ⬜ | longrope | - | missing | - |
+| ⬜ | alibi | - | missing | - |
+| ⬜ | sinusoidal | - | missing | - |
 
 </details>
 
@@ -139,26 +139,26 @@ Last updated: `2026-07-19T22:48:23Z`
 
 | | Operator | Test | Bench | Ratio |
 |:--|:---------|:----:|:-----:|------:|
-| ⬜ | sum | - | - | - |
-| ⬜ | mean | - | - | - |
-| ⬜ | amin | - | - | - |
-| ⬜ | amax | - | - | - |
-| ⬜ | prod | - | - | - |
-| ⬜ | std | - | - | - |
-| ⬜ | var | - | - | - |
-| ⬜ | var_mean | - | - | - |
-| ⬜ | softmax | - | - | - |
-| ⬜ | log_softmax | - | - | - |
-| ⬜ | logsumexp | - | - | - |
-| ⬜ | argmax | - | - | - |
-| ⬜ | argmin | - | - | - |
-| ⬜ | cumsum | - | - | - |
-| ⬜ | cumprod | - | - | - |
-| ⬜ | any | - | - | - |
-| ⬜ | all | - | - | - |
-| ⬜ | l1_norm | - | - | - |
-| ⬜ | l2_norm | - | - | - |
-| ⬜ | inf_norm | - | - | - |
+| ⬜ | sum | - | missing | - |
+| ⬜ | mean | - | missing | - |
+| ⬜ | amin | - | missing | - |
+| ⬜ | amax | - | missing | - |
+| ⬜ | prod | - | missing | - |
+| ⬜ | std | - | missing | - |
+| ⬜ | var | - | missing | - |
+| ⬜ | var_mean | - | missing | - |
+| ⬜ | softmax | - | missing | - |
+| ⬜ | log_softmax | - | missing | - |
+| ⬜ | logsumexp | - | missing | - |
+| ⬜ | argmax | - | missing | - |
+| ⬜ | argmin | - | missing | - |
+| ⬜ | cumsum | - | missing | - |
+| ⬜ | cumprod | - | missing | - |
+| ⬜ | any | - | missing | - |
+| ⬜ | all | - | missing | - |
+| ⬜ | l1_norm | - | missing | - |
+| ⬜ | l2_norm | - | missing | - |
+| ⬜ | inf_norm | - | missing | - |
 
 </details>
 
@@ -175,16 +175,16 @@ Last updated: `2026-07-19T22:48:23Z`
 
 | | Operator | Test | Bench | Ratio |
 |:--|:---------|:----:|:-----:|------:|
-| ⬜ | layer_norm | - | - | - |
-| ⬜ | batch_norm | - | - | - |
-| ⬜ | group_norm | - | - | - |
-| ⬜ | instance_norm | - | - | - |
-| ⬜ | rms_norm | - | - | - |
-| ⬜ | qk_norm | - | - | - |
-| ⬜ | ada_layer_norm | - | - | - |
-| ⬜ | ada_layer_norm_zero | - | - | - |
-| ⬜ | fused_add_layer_norm | - | - | - |
-| ⬜ | fused_add_rmsnorm | - | - | - |
+| ⬜ | layer_norm | - | missing | - |
+| ⬜ | batch_norm | - | missing | - |
+| ⬜ | group_norm | - | missing | - |
+| ⬜ | instance_norm | - | missing | - |
+| ⬜ | rms_norm | - | missing | - |
+| ⬜ | qk_norm | - | missing | - |
+| ⬜ | ada_layer_norm | - | missing | - |
+| ⬜ | ada_layer_norm_zero | - | missing | - |
+| ⬜ | fused_add_layer_norm | - | missing | - |
+| ⬜ | fused_add_rmsnorm | - | missing | - |
 
 </details>
 
@@ -201,22 +201,22 @@ Last updated: `2026-07-19T22:48:23Z`
 
 | | Operator | Test | Bench | Ratio |
 |:--|:---------|:----:|:-----:|------:|
-| ⬜ | conv1d | - | - | - |
-| ⬜ | conv2d | - | - | - |
-| ⬜ | conv3d | - | - | - |
-| ⬜ | conv_transpose1d | - | - | - |
-| ⬜ | conv_transpose2d | - | - | - |
-| ⬜ | depthwise_conv2d | - | - | - |
-| ⬜ | grouped_conv2d | - | - | - |
-| ⬜ | dilated_conv2d | - | - | - |
-| ⬜ | max_pool1d | - | - | - |
-| ⬜ | max_pool2d | - | - | - |
-| ⬜ | max_pool3d | - | - | - |
-| ⬜ | avg_pool1d | - | - | - |
-| ⬜ | avg_pool2d | - | - | - |
-| ⬜ | avg_pool3d | - | - | - |
-| ⬜ | adaptive_avg_pool2d | - | - | - |
-| ⬜ | adaptive_max_pool2d | - | - | - |
+| ⬜ | conv1d | - | missing | - |
+| ⬜ | conv2d | - | missing | - |
+| ⬜ | conv3d | - | missing | - |
+| ⬜ | conv_transpose1d | - | missing | - |
+| ⬜ | conv_transpose2d | - | missing | - |
+| ⬜ | depthwise_conv2d | - | missing | - |
+| ⬜ | grouped_conv2d | - | missing | - |
+| ⬜ | dilated_conv2d | - | missing | - |
+| ⬜ | max_pool1d | - | missing | - |
+| ⬜ | max_pool2d | - | missing | - |
+| ⬜ | max_pool3d | - | missing | - |
+| ⬜ | avg_pool1d | - | missing | - |
+| ⬜ | avg_pool2d | - | missing | - |
+| ⬜ | avg_pool3d | - | missing | - |
+| ⬜ | adaptive_avg_pool2d | - | missing | - |
+| ⬜ | adaptive_max_pool2d | - | missing | - |
 
 </details>
 
@@ -233,25 +233,25 @@ Last updated: `2026-07-19T22:48:23Z`
 
 | | Operator | Test | Bench | Ratio |
 |:--|:---------|:----:|:-----:|------:|
-| ⬜ | gemm_fp16 | - | - | - |
-| ⬜ | gemm_fp8 | - | - | - |
-| ⬜ | gemm_fp8_block_scaled | - | - | - |
-| ⬜ | gemv_fp16 | - | - | - |
-| ⬜ | gemv_fp8 | - | - | - |
-| ⬜ | small_batch_gemm_fp16 | - | - | - |
-| ⬜ | small_batch_gemm_fp8 | - | - | - |
-| ⬜ | bmm_fp16 | - | - | - |
-| ⬜ | bmm_fp8 | - | - | - |
-| ⬜ | groupgemm_fp16 | - | - | - |
-| ⬜ | groupgemm_fp8 | - | - | - |
-| ⬜ | outer | - | - | - |
-| ⬜ | w4a16 | - | - | - |
-| ⬜ | w8a8 | - | - | - |
-| ⬜ | w8a8_int8 | - | - | - |
-| ⬜ | weight_only_int4 | - | - | - |
-| ⬜ | fp4 | - | - | - |
-| ⬜ | sparse_gemm_fp16 | - | - | - |
-| ⬜ | sparse_gemm_fp8 | - | - | - |
+| ⬜ | gemm_fp16 | - | missing | - |
+| ⬜ | gemm_fp8 | - | missing | - |
+| ⬜ | gemm_fp8_block_scaled | - | missing | - |
+| ⬜ | gemv_fp16 | - | missing | - |
+| ⬜ | gemv_fp8 | - | missing | - |
+| ⬜ | small_batch_gemm_fp16 | - | missing | - |
+| ⬜ | small_batch_gemm_fp8 | - | missing | - |
+| ⬜ | bmm_fp16 | - | missing | - |
+| ⬜ | bmm_fp8 | - | missing | - |
+| ⬜ | groupgemm_fp16 | - | missing | - |
+| ⬜ | groupgemm_fp8 | - | missing | - |
+| ⬜ | outer | - | missing | - |
+| ⬜ | w4a16 | - | missing | - |
+| ⬜ | w8a8 | - | missing | - |
+| ⬜ | w8a8_int8 | - | missing | - |
+| ⬜ | weight_only_int4 | - | missing | - |
+| ⬜ | fp4 | - | missing | - |
+| ⬜ | sparse_gemm_fp16 | - | missing | - |
+| ⬜ | sparse_gemm_fp8 | - | missing | - |
 
 </details>
 
@@ -268,16 +268,16 @@ Last updated: `2026-07-19T22:48:23Z`
 
 | | Operator | Test | Bench | Ratio |
 |:--|:---------|:----:|:-----:|------:|
-| ⬜ | int8_per_tensor | - | - | - |
-| ⬜ | int8_per_channel | - | - | - |
-| ⬜ | int8_per_block | - | - | - |
-| ⬜ | smooth_quant | - | - | - |
-| ⬜ | int4_per_channel | - | - | - |
-| ⬜ | int4_per_block | - | - | - |
-| ⬜ | nf4 | - | - | - |
-| ⬜ | fp8_per_tensor | - | - | - |
-| ⬜ | fp8_per_block | - | - | - |
-| ⬜ | fp8_cast_transpose | - | - | - |
+| ⬜ | int8_per_tensor | - | missing | - |
+| ⬜ | int8_per_channel | - | missing | - |
+| ⬜ | int8_per_block | - | missing | - |
+| ⬜ | smooth_quant | - | missing | - |
+| ⬜ | int4_per_channel | - | missing | - |
+| ⬜ | int4_per_block | - | missing | - |
+| ⬜ | nf4 | - | missing | - |
+| ⬜ | fp8_per_tensor | - | missing | - |
+| ⬜ | fp8_per_block | - | missing | - |
+| ⬜ | fp8_cast_transpose | - | missing | - |
 
 </details>
 
@@ -294,13 +294,13 @@ Last updated: `2026-07-19T22:48:23Z`
 
 | | Operator | Test | Bench | Ratio |
 |:--|:---------|:----:|:-----:|------:|
-| ⬜ | top_k | - | - | - |
-| ⬜ | top_p | - | - | - |
-| ⬜ | min_p | - | - | - |
-| ⬜ | top_k_top_p | - | - | - |
-| ⬜ | temperature_scale | - | - | - |
-| ⬜ | sampling_from_probs | - | - | - |
-| ⬜ | chain_speculative_sampling | - | - | - |
+| ⬜ | top_k | - | missing | - |
+| ⬜ | top_p | - | missing | - |
+| ⬜ | min_p | - | missing | - |
+| ⬜ | top_k_top_p | - | missing | - |
+| ⬜ | temperature_scale | - | missing | - |
+| ⬜ | sampling_from_probs | - | missing | - |
+| ⬜ | chain_speculative_sampling | - | missing | - |
 
 </details>
 
@@ -317,22 +317,22 @@ Last updated: `2026-07-19T22:48:23Z`
 
 | | Operator | Test | Bench | Ratio |
 |:--|:---------|:----:|:-----:|------:|
-| ⬜ | flash_prefill_fwd | - | - | - |
-| ⬜ | flash_prefill_bwd | - | - | - |
-| ⬜ | flash_prefill_varlen_fwd | - | - | - |
-| ⬜ | flash_prefill_varlen_bwd | - | - | - |
-| ⬜ | flash_decode_fwd | - | - | - |
-| ⬜ | flash_decode_paged_fwd | - | - | - |
-| ⬜ | flash_decode_varlen_fwd | - | - | - |
-| ⬜ | flash_chunked_prefill_fwd | - | - | - |
-| ⬜ | mla_prefill_fwd | - | - | - |
-| ⬜ | mla_prefill_bwd | - | - | - |
-| ⬜ | mla_decode_fwd | - | - | - |
-| ⬜ | mla_decode_paged_fwd | - | - | - |
-| ⬜ | nsa_prefill_fwd | - | - | - |
-| ⬜ | nsa_decode_fwd | - | - | - |
-| ⬜ | dsa_prefill_fwd | - | - | - |
-| ⬜ | dsa_decode_fwd | - | - | - |
+| ⬜ | flash_prefill_fwd | - | missing | - |
+| ⬜ | flash_prefill_bwd | - | missing | - |
+| ⬜ | flash_prefill_varlen_fwd | - | missing | - |
+| ⬜ | flash_prefill_varlen_bwd | - | missing | - |
+| ⬜ | flash_decode_fwd | - | missing | - |
+| ⬜ | flash_decode_paged_fwd | - | missing | - |
+| ⬜ | flash_decode_varlen_fwd | - | missing | - |
+| ⬜ | flash_chunked_prefill_fwd | - | missing | - |
+| ⬜ | mla_prefill_fwd | - | missing | - |
+| ⬜ | mla_prefill_bwd | - | missing | - |
+| ⬜ | mla_decode_fwd | - | missing | - |
+| ⬜ | mla_decode_paged_fwd | - | missing | - |
+| ⬜ | nsa_prefill_fwd | - | missing | - |
+| ⬜ | nsa_decode_fwd | - | missing | - |
+| ⬜ | dsa_prefill_fwd | - | missing | - |
+| ⬜ | dsa_decode_fwd | - | missing | - |
 
 </details>
 
@@ -349,12 +349,12 @@ Last updated: `2026-07-19T22:48:23Z`
 
 | | Operator | Test | Bench | Ratio |
 |:--|:---------|:----:|:-----:|------:|
-| ⬜ | permute_align | - | - | - |
-| ⬜ | unpermute_depad | - | - | - |
-| ⬜ | fused_moe_deepseek | - | - | - |
-| ⬜ | fused_moe_glm | - | - | - |
-| ⬜ | fused_moe_kimi | - | - | - |
-| ⬜ | fused_moe_qwen | - | - | - |
+| ⬜ | permute_align | - | missing | - |
+| ⬜ | unpermute_depad | - | missing | - |
+| ⬜ | fused_moe_deepseek | - | missing | - |
+| ⬜ | fused_moe_glm | - | missing | - |
+| ⬜ | fused_moe_kimi | - | missing | - |
+| ⬜ | fused_moe_qwen | - | missing | - |
 
 </details>
 
@@ -371,14 +371,14 @@ Last updated: `2026-07-19T22:48:23Z`
 
 | | Operator | Test | Bench | Ratio |
 |:--|:---------|:----:|:-----:|------:|
-| ⬜ | gated_deltanet_chunkwise | - | - | - |
-| ⬜ | gated_deltanet_recurrence | - | - | - |
-| ⬜ | deltanet_chunkwise | - | - | - |
-| ⬜ | deltanet_recurrence | - | - | - |
-| ⬜ | gla_chunkwise | - | - | - |
-| ⬜ | gla_recurrence | - | - | - |
-| ⬜ | retnet_chunkwise | - | - | - |
-| ⬜ | retnet_recurrence | - | - | - |
+| ⬜ | gated_deltanet_chunkwise | - | missing | - |
+| ⬜ | gated_deltanet_recurrence | - | missing | - |
+| ⬜ | deltanet_chunkwise | - | missing | - |
+| ⬜ | deltanet_recurrence | - | missing | - |
+| ⬜ | gla_chunkwise | - | missing | - |
+| ⬜ | gla_recurrence | - | missing | - |
+| ⬜ | retnet_chunkwise | - | missing | - |
+| ⬜ | retnet_recurrence | - | missing | - |
 
 </details>
 
@@ -395,8 +395,8 @@ Last updated: `2026-07-19T22:48:23Z`
 
 | | Operator | Test | Bench | Ratio |
 |:--|:---------|:----:|:-----:|------:|
-| ⬜ | mamba1 | - | - | - |
-| ⬜ | mamba2 | - | - | - |
+| ⬜ | mamba1 | - | missing | - |
+| ⬜ | mamba2 | - | missing | - |
 
 </details>
 
