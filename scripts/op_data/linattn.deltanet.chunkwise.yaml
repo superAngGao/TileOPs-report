@@ -33,5 +33,10 @@ test_status:
   last_run: null
   passed: null
   errors: []
-last_updated: '2026-07-19T20:39:44Z'
-updated_by: bootstrap
+last_updated: '2026-07-20T22:57:16Z'
+updated_by: nightly-auto
+bench_status:
+  last_run: '2026-07-20'
+  status: missing
+  ratio: null
+  details: []
