@@ -1,0 +1,74 @@
+{
+  "categories": {
+    "Elementwise": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "",
+      "evaluation": ""
+    },
+    "Reduce": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "",
+      "evaluation": ""
+    },
+    "Norm": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "",
+      "evaluation": ""
+    },
+    "Conv & Pooling": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "",
+      "evaluation": ""
+    },
+    "GEMM": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "",
+      "evaluation": ""
+    },
+    "Quantize": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "",
+      "evaluation": ""
+    },
+    "Sampling": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "",
+      "evaluation": ""
+    },
+    "Flash Attention": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "",
+      "evaluation": ""
+    },
+    "MoE": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "",
+      "evaluation": ""
+    },
+    "Linear Attention": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "",
+      "evaluation": ""
+    },
+    "SSM": {
+      "perf_score": null,
+      "func_score": null,
+      "issues": "",
+      "evaluation": ""
+    }
+  },
+  "overall": {
+    "summary": "Analysis unavailable.",
+    "recommendations": []
+  }
+}
