@@ -9,7 +9,7 @@ files:
   op: []
   tests: []
   bench: []
-files_last_scanned: '2026-09-27T22:45:02Z'
+files_last_scanned: '2026-10-04T22:39:43Z'
 func_score: null
 func_score_notes: ''
 func_score_updated: null
@@ -28,14 +28,8 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: '2026-10-04'
+  last_run: null
   passed: null
   errors: []
-  status: missing
-last_updated: '2026-10-04T00:21:08Z'
-updated_by: nightly-auto
-bench_status:
-  last_run: '2026-10-04'
-  status: missing
-  ratio: null
-  details: []
+last_updated: '2026-10-04T22:39:43Z'
+updated_by: bootstrap
