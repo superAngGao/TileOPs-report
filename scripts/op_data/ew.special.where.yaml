@@ -32,7 +32,7 @@ test_status:
   passed: null
   errors: []
   status: missing
-last_updated: '2026-10-24T00:15:14Z'
+last_updated: '2026-10-24T23:59:20Z'
 updated_by: nightly-auto
 bench_status:
   last_run: '2026-10-24'
