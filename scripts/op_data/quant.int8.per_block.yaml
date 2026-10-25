@@ -28,8 +28,14 @@ kernel_last_pr_url: null
 kernel_last_pr_author: null
 kernel_last_pr_title: null
 test_status:
-  last_run: null
+  last_run: '2026-10-25'
   passed: null
   errors: []
-last_updated: '2026-10-25T22:13:54Z'
-updated_by: bootstrap
+  status: missing
+last_updated: '2026-10-25T23:46:46Z'
+updated_by: nightly-auto
+bench_status:
+  last_run: '2026-10-25'
+  status: missing
+  ratio: null
+  details: []
